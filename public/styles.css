@@ -126,10 +126,53 @@ body {
     }
 }
 
+/* Homepage */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.fullscreen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.abstract-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.abstract-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.abstract-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.abstract-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+
+
+
 
 /* Footer Styling*/
-
-/* Footer Styling */
 
 footer {
     background-color: #373737;
