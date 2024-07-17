@@ -3,10 +3,11 @@
     - Creates a package.json file
     - Note: the -y turns off the interactive terminal filling of the project descriptions
 - Install Express as a web framework
-    - In terminal run: npm install express
+    - In terminal run: npm install express ejs
 - Creating a Server:
     - In bash terminal: touch app.js
     - Open app.js file and set up server code.
+- Run website by running: node app.js
 
 ### Wiki Page Guide
 - Project
