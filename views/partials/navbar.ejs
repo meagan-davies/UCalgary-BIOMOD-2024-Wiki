@@ -1,7 +1,36 @@
-<nav>
-    <ul>
-        <li><a href="/project/description">Project</a></li>
-        <li><a href="/elsi/safety">ELSI</a></li>
-        <li><a href="/team/members">Team</a></li>
-    </ul>
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/">
+                <img class="navbar-logo" src="/img/logo.png" alt="Logo">
+            </a>
+        </div>
+        <button class="navbar-toggle" id="navbarToggle">
+            <span class="navbar-toggle-icon">&#9776;</span>
+        </button>
+        <ul class="navbar-menu" id="navbarMenu">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Project</a>
+                <ul class="dropdown">
+                    <li><a href="/project/description">Description</a></li>
+                    <li><a href="/project/modelling">Modelling</a></li>
+                    <li><a href="/project/experiments">Experiments</a></li>
+                    <li><a href="/project/results">Results</a></li>
+                    <li><a href="/project/notebook">Notebook</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ELSI</a>
+                <ul class="dropdown">
+                    <li><a href="/elsi/safety">Safety</a></li>
+                    <li><a href="/elsi/ethics">Ethics</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Team</a>
+                <ul class="dropdown">
+                    <li><a href="/team/members">Members</a></li>
+                    <li><a href="/team/sponsors">Sponsors</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </nav>
