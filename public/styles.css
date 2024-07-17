@@ -168,8 +168,61 @@ body {
     line-height: 1.6;
 }
 
+.divider {
+    width: 150px; /* Adjust line width */
+    height: 2px; /* Adjust line thickness */
+    background-color: #ffffff; /* Line color */
+    margin: 0 auto 20px; /* Center and space below title */
+}
 
+.learn-more-section {
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
 
+.learn-more-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.learn-more-container h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.learn-more-button {
+    display: inline-flex; /* Use inline-flex to allow centering */
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    width: 150px; /* Set width and height for circle */
+    height: 150px;
+    border-radius: 50%; /* Use 50% for circle shape */
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.learn-more-button:hover {
+    background-color: #555;
+}
+
+.learn-more-button span {
+    display: block;
+    text-align: center;
+    width: 100%; /* Ensure text spans the entire button width */
+}
 
 
 /* Footer Styling*/
