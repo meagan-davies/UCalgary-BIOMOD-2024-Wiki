@@ -1,0 +1,17 @@
+{
+  "name": "ucalgary-biomod-2024-wiki",
+  "version": "1.0.0",
+  "description": "Wiki for BIOMOD UCalgary 2024",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "keywords": [],
+  "author": "meagan-davies",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
