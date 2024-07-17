@@ -129,9 +129,11 @@ body {
 
 /* Footer Styling*/
 
+/* Footer Styling */
+
 footer {
     background-color: #373737;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
@@ -143,17 +145,19 @@ footer {
 }
 
 .contact-section {
-    flex: 1 1 50%; /* Adjust to make this section wider */
-    max-width: 250px;
+    flex: 1 1 50%; 
+    max-width: 500px;
     margin-bottom: 20px;
     padding: 10px;
-    margin-right: 150px;
+    display: flex;
+    align-items: center;
 }
 
-.footer-section {
-    flex: 1 1 15%;
+.footer-page-section {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
-    align-items: flex-start;
 }
 
 .footer-links {
@@ -185,11 +189,6 @@ footer {
     padding-bottom: 36px;
 }
 
-.contact-section {
-    display: flex;
-    align-items: center;
-}
-
 .contact-nav {
     display: flex;
     align-items: center;
@@ -216,4 +215,25 @@ footer {
 .socials:hover {
     background-color: #f0f0f0;
     color: #000;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .contact-section {
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .footer-page-section {
+        flex-direction: column; /* Stack footer sections vertically */
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px; /* Space between sections */
+    }
 }
