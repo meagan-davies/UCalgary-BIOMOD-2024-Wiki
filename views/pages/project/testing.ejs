@@ -1,0 +1,362 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+
+    <style>
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        body {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .toc {
+            position: fixed;
+            left: 3em;
+            top: 6em;
+            padding: 1em;
+            width: 14em;
+            line-height: 2;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc ul ul {
+            padding-left: 2em;
+        }
+
+        .toc li a {
+            display: inline-block;
+            color: #e5e5e5;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .toc li.visible > a {
+            color: #14b8a6;
+            transform: translate(5px);
+        }
+
+        .toc-marker {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .toc-marker path {
+            transition: all 0.3s ease;
+        }
+
+        .contents {
+            padding-left: 17em;
+            max-width: 800px;
+            font-size: 1.2em;
+        }
+
+        .contents h2, h3 {
+            padding-top: 1em;
+        }
+
+        .contents h2 {
+            margin-top: 1.2em;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 1em;
+            left: 10px;
+            z-index: 1000;
+        }
+
+        .toc-container {
+            position: relative;
+            width: 14em;
+        }
+
+        .toc.hidden{
+            transform: translateX(-100%);
+        }
+
+        @media(max-width: 992px) {
+            .hamburger {
+                display: block;
+            }
+
+            .toc-container {
+                display: none;
+            }
+
+            .toc-container.show {
+                display: block;
+            }
+
+            .toc {
+                transform: translateX(-100%);
+            }
+
+            .toc-container.show .toc {
+                transform: translateX(0);
+            }
+        }
+        
+        @media screen and (max-width: 1200px) {
+            body {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+
+</head>
+<main>
+    <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+    <div class="toc-container">
+        <nav class="toc">
+            <ul>
+                <li><a href="#intro">intro</a></li>
+                <li>
+                    <a href="#title1">title</a>
+                    <ul>
+                        <li><a href="#sub1-1">sub1</a></li>
+                        <li><a href="#sub1-2">sub1-2</a></li>
+                        <li><a href="#sub1-3">sub1-3</a></li>
+                        <li><a href="#sub1-4">sub1-4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#title2">title2</a>
+                    <ul>
+                        <li><a href="#sub2-1">sub2</a></li>
+                        <li><a href="#sub2-2">sub2-2</a></li>
+                        <li><a href="#sub2-3">sub2-3</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <svg 
+                class="toc-marker"
+                width="200"
+                height="200"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <!-- stroke color -->
+                <path 
+                    stroke="#ccfbf1"
+                    stroke-width="3"
+                    fill="transparent"
+                    stroke-dasharray="0, 0, 0, 1000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="translate(-0.5, -0.5)" />
+            </svg>
+        </nav> 
+    </div>
+
+    <article class="contents">
+        <section id="intro">
+            <h2>intro</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet mauris tempor, mollis purus quis, consectetur sapien. Donec vehicula eros quis felis aliquam lobortis. Aliquam dapibus efficitur sollicitudin. Nam vestibulum ullamcorper est nec aliquet. Praesent vestibulum nec nunc non volutpat. Curabitur porta sapien et sodales ultricies. Suspendisse hendrerit ultricies accumsan. Nullam venenatis augue sit amet diam varius pharetra. Ut euismod magna purus, non aliquam eros sollicitudin facilisis. Suspendisse mi ipsum, rutrum quis imperdiet convallis, mattis non neque. Nunc porttitor eu ligula non sodales.</p>
+        </section>
+
+        <section>
+            <div id="title1">
+                <h2>title 1</h2>
+                <p>Fusce a orci urna. Vivamus tincidunt elementum odio eu rutrum. In nec facilisis odio. Donec sodales lacus luctus mauris bibendum consequat. Sed a pellentesque magna. Donec pellentesque posuere arcu, a consectetur felis tincidunt sit amet. Nulla lorem felis, iaculis sit amet molestie et, lacinia vel augue. Curabitur dapibus nibh ligula, nec tristique sem aliquam sit amet.</p>
+                <p>Donec lacus nunc, mollis ut lacinia sit amet, eleifend non lectus. Nam eu arcu iaculis lacus tincidunt ullamcorper. Donec nec pellentesque orci. Phasellus a elementum nunc. Cras eu scelerisque diam. Cras elit leo, tempus a feugiat sit amet, dictum id quam. Duis in magna in erat volutpat semper. Pellentesque lacinia, risus id posuere posuere, justo neque pulvinar purus, vitae tempor lacus justo volutpat lectus. Nulla at vestibulum libero. Maecenas consequat enim dapibus, porta odio vel, egestas risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            </div>
+
+            <div id="sub1-1">
+                <h3>sub 1-1</h3>
+                <p>Fusce nec orci eget nibh accumsan fermentum non ac diam. Ut non nunc eget turpis ultrices pellentesque. Proin quis nisl tellus. Nullam arcu sem, facilisis id nisl non, posuere mollis lorem. Phasellus fringilla pulvinar interdum. Phasellus efficitur rutrum nibh ut interdum. Ut ornare orci vitae placerat tincidunt. Donec bibendum tempor orci vel iaculis. In luctus, nunc et tempor rhoncus, odio lorem fermentum augue, eget eleifend tellus nisi quis odio.</p>
+                <p>Aliquam vel massa metus. Proin blandit nec erat quis suscipit. Quisque blandit erat bibendum ex eleifend blandit. Suspendisse vehicula, magna et fringilla feugiat, metus magna pharetra nibh, sit amet maximus dui lectus consequat quam. Fusce vestibulum erat eu nisi sagittis malesuada. Curabitur eros orci, interdum sed consequat non, rutrum ultricies elit. Donec ac magna vitae ipsum posuere ullamcorper. Duis enim elit, efficitur nec ipsum et, luctus ullamcorper turpis. Sed vulputate urna sit amet orci sagittis, a pellentesque tortor laoreet. Nam ex massa, pulvinar eu dignissim at, eleifend id justo.</p>
+            </div>
+
+            <div id="sub1-2">
+                <h3>sub 1-2</h3>
+                <p>Aliquam vel massa metus. Proin blandit nec erat quis suscipit. Quisque blandit erat bibendum ex eleifend blandit. Suspendisse vehicula, magna et fringilla feugiat, metus magna pharetra nibh, sit amet maximus dui lectus consequat quam. Fusce vestibulum erat eu nisi sagittis malesuada. Curabitur eros orci, interdum sed consequat non, rutrum ultricies elit. Donec ac magna vitae ipsum posuere ullamcorper. Duis enim elit, efficitur nec ipsum et, luctus ullamcorper turpis. Sed vulputate urna sit amet orci sagittis, a pellentesque tortor laoreet. Nam ex massa, pulvinar eu dignissim at, eleifend id justo.</p>
+            </div>
+
+            <div id="sub1-3">
+                <h3>sub1-3</h3>
+                <p>In ornare odio eu leo elementum, sit amet maximus arcu varius. Quisque at ullamcorper augue. Sed libero enim, sagittis quis arcu sit amet, condimentum congue ante. Phasellus accumsan justo nisi, eget tempor neque vestibulum quis. Suspendisse eget ornare sapien. Praesent suscipit, nisi nec vestibulum congue, urna nisl imperdiet magna, eget ullamcorper eros leo at est. Etiam nec nisl non nunc consectetur lobortis. Duis porta leo auctor ornare varius. Vestibulum eleifend malesuada nulla a tempor. Sed sit amet mattis magna, eu vulputate orci. Quisque laoreet, nisl vitae porttitor vehicula, tortor lacus viverra purus, congue vulputate orci ante in mi. Suspendisse gravida erat sed sapien suscipit, nec porttitor dui rutrum. Vestibulum consequat orci quis lectus placerat, tempus ullamcorper enim varius. Aenean et tortor vitae leo efficitur lacinia. Morbi rutrum pulvinar leo.</p>
+                <p>Nunc at luctus metus. Aenean porta rhoncus egestas. Fusce bibendum risus at mauris feugiat, vel semper orci condimentum. Donec venenatis tempor finibus. Phasellus gravida eleifend dapibus. Cras tellus lectus, cursus vitae tellus eget, iaculis malesuada felis. Maecenas vestibulum fermentum mi nec varius. Donec sit amet pellentesque risus, eget porta quam. Cras sed quam non sapien ultricies elementum sit amet a lorem. In eu egestas libero. Suspendisse potenti. Pellentesque facilisis malesuada pretium.
+
+                </p>
+            </div>
+
+            <div id="sub1-4">
+                <h3>sub1-4</h3>
+                <p>Aenean mattis, erat id aliquet laoreet, eros lacus congue massa, vitae pharetra odio nibh in magna. Donec efficitur, lacus id ornare imperdiet, felis ex ornare diam, nec pulvinar felis nunc et nisi. Morbi pellentesque mi purus, egestas ultrices odio vulputate imperdiet. Curabitur eu facilisis odio. Vestibulum id massa in lorem blandit cursus tempor sit amet erat. Mauris pulvinar ullamcorper viverra. Sed aliquam et enim sit amet condimentum. Donec finibus lorem sed posuere egestas. Aliquam vulputate, nisi quis fermentum luctus, felis ipsum lobortis purus, et tincidunt ex lorem varius sem. In gravida arcu sed velit convallis dapibus. Vivamus at bibendum libero, id interdum sem. Nulla cursus interdum ex, quis ornare sapien ornare eu.
+
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div id="title2">
+                <h2>title 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet mauris tempor, mollis purus quis, consectetur sapien. Donec vehicula eros quis felis aliquam lobortis. Aliquam dapibus efficitur sollicitudin. Nam vestibulum ullamcorper est nec aliquet. Praesent vestibulum nec nunc non volutpat. Curabitur porta sapien et sodales ultricies. Suspendisse hendrerit ultricies accumsan. Nullam venenatis augue sit amet diam varius pharetra. Ut euismod magna purus, non aliquam eros sollicitudin facilisis. Suspendisse mi ipsum, rutrum quis imperdiet convallis, mattis non neque. Nunc porttitor eu ligula non sodales.
+
+                </p>
+            </div>
+
+            <div id="sub2-1">
+                <h3>sub 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet mauris tempor, mollis purus quis, consectetur sapien. Donec vehicula eros quis felis aliquam lobortis. Aliquam dapibus efficitur sollicitudin. Nam vestibulum ullamcorper est nec aliquet. Praesent vestibulum nec nunc non volutpat. Curabitur porta sapien et sodales ultricies. Suspendisse hendrerit ultricies accumsan. Nullam venenatis augue sit amet diam varius pharetra. Ut euismod magna purus, non aliquam eros sollicitudin facilisis. Suspendisse mi ipsum, rutrum quis imperdiet convallis, mattis non neque. Nunc porttitor eu ligula non sodales.</p>
+            </div>
+
+            <div id="sub2-2">
+                <h3>sub 2-2</h3>
+                <p>Aliquam vel massa metus. Proin blandit nec erat quis suscipit. Quisque blandit erat bibendum ex eleifend blandit. Suspendisse vehicula, magna et fringilla feugiat, metus magna pharetra nibh, sit amet maximus dui lectus consequat quam. Fusce vestibulum erat eu nisi sagittis malesuada. Curabitur eros orci, interdum sed consequat non, rutrum ultricies elit. Donec ac magna vitae ipsum posuere ullamcorper. Duis enim elit, efficitur nec ipsum et, luctus ullamcorper turpis. Sed vulputate urna sit amet orci sagittis, a pellentesque tortor laoreet. Nam ex massa, pulvinar eu dignissim at, eleifend id justo.</p>
+            </div>
+
+            <div id="sub2-3">
+                <h3>sub2-3</h3>
+                <p>In ornare odio eu leo elementum, sit amet maximus arcu varius. Quisque at ullamcorper augue. Sed libero enim, sagittis quis arcu sit amet, condimentum congue ante. Phasellus accumsan justo nisi, eget tempor neque vestibulum quis. Suspendisse eget ornare sapien. Praesent suscipit, nisi nec vestibulum congue, urna nisl imperdiet magna, eget ullamcorper eros leo at est. Etiam nec nisl non nunc consectetur lobortis. Duis porta leo auctor ornare varius. Vestibulum eleifend malesuada nulla a tempor. Sed sit amet mattis magna, eu vulputate orci. Quisque laoreet, nisl vitae porttitor vehicula, tortor lacus viverra purus, congue vulputate orci ante in mi. Suspendisse gravida erat sed sapien suscipit, nec porttitor dui rutrum. Vestibulum consequat orci quis lectus placerat, tempus ullamcorper enim varius. Aenean et tortor vitae leo efficitur lacinia. Morbi rutrum pulvinar leo.</p>
+                <p>Nunc at luctus metus. Aenean porta rhoncus egestas. Fusce bibendum risus at mauris feugiat, vel semper orci condimentum. Donec venenatis tempor finibus. Phasellus gravida eleifend dapibus. Cras tellus lectus, cursus vitae tellus eget, iaculis malesuada felis. Maecenas vestibulum fermentum mi nec varius. Donec sit amet pellentesque risus, eget porta quam. Cras sed quam non sapien ultricies elementum sit amet a lorem. In eu egestas libero. Suspendisse potenti. Pellentesque facilisis malesuada pretium.
+
+                </p>
+            </div>
+        </section>
+    </article>
+
+
+    <script>
+
+        function toggleSidebar() {
+            var tocContainer = document.querySelector('.toc-container');
+            tocContainer.classList.toggle('show');
+        }
+
+        window.onload = function() {
+            var toc = document.querySelector('.toc');
+            var tocPath = document.querySelector('.toc-marker path');
+            var tocItems;
+
+            var TOP_MARGIN = 0.1,
+                BOTTOM_MARGIN = 0.2;
+
+            var pathLength;
+
+            var lastPathStart, lastPathEnd;
+
+            window.addEventListener('resize', drawPath, false);
+            window.addEventListener('scroll', sync, false);
+
+            drawPath();
+
+            function drawPath() {
+                tocItems = [].slice.call(toc.querySelectorAll('li'));
+
+                // cache element ref and measurements
+                tocItems = tocItems.map(function(item) {
+                    var anchor = item.querySelector('a');
+                    var target = document.getElementById(anchor.getAttribute('href').slice(1));
+
+                    return {
+                        listItem: item,
+                        anchor: anchor,
+                        target: target
+                    };
+                });
+
+                // remove missing targets
+                tocItems = tocItems.filter(function(item) {
+                    return !!item.target;
+                });
+
+                var path = [];
+                var pathIndent;
+
+                tocItems.forEach(function(item, i) {
+                    var x = item.anchor.offsetLeft - 5,
+                        y = item.anchor.offsetTop,
+                        height = item.anchor.offsetHeight;
+
+                    if(i===0) {
+                        // move to x, y. line to x, y + height
+                        path.push('M', x, y, 'L', x, y + height);
+                        item.pathStart = 0;
+                    }
+                    else {
+                        // draw extra line if there's an indent
+                        if(pathIndent !== x) path.push('L', pathIndent, y);
+
+                        path.push('L', x, y);
+
+                        // set current path for correct measurement, path data attribute
+                        tocPath.setAttribute('d', path.join(' '));
+                        item.pathStart = tocPath.getTotalLength() || 0;
+
+                        path.push('L', x, y + height);
+                    }
+
+                    pathIndent = x;
+
+                    tocPath.setAttribute('d', path.join(' '));
+                    item.pathEnd = tocPath.getTotalLength();
+                });
+
+                pathLength = tocPath.getTotalLength();
+
+                sync();
+            }
+
+            function sync() {
+                var windowHeight = window.innerHeight;
+                
+                var pathStart = pathLength,
+                    pathEnd = 0;
+
+                var visibleItems = 0;
+
+                tocItems.forEach(function(item) {
+                    var targetBounds = item.target.getBoundingClientRect();
+
+                    if(targetBounds.bottom > windowHeight * TOP_MARGIN && targetBounds.top < windowHeight * (1 - BOTTOM_MARGIN)) {
+                        pathStart = Math.min(item.pathStart, pathStart);
+                        pathEnd = Math.max(item.pathEnd, pathEnd);
+
+                        visibleItems += 1;
+
+                        item.listItem.classList.add('visible');
+                    } else {
+                        item.listItem.classList.remove('visible');
+                    }
+
+                });
+
+                // specify visible path or hide if no visible items
+                if(visibleItems > 0 && pathStart < pathEnd) {
+                    if(pathStart !== lastPathStart || pathEnd !== lastPathEnd) {
+                        tocPath.setAttribute('stroke-dashoffset', '1');
+                        tocPath.setAttribute('stroke-dasharray', `1, ${pathStart},${pathEnd - pathStart}, ${pathLength}`);
+                        tocPath.setAttribute('opacity', 1);
+                    }
+                } else {
+                    tocPath.setAttribute('opacity', 0);
+                }
+
+                lastPathStart = pathStart;
+                lastPathEnd = pathEnd;
+            }
+
+        };
+    </script>
+</main>
