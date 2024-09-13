@@ -17,13 +17,14 @@
             line-height: 1.6;
         }
 
+        /* Styling will have to depend on final version to account for not overlapping on footer area */
         .toc {
             position: fixed;
             left: 3em;
             top: 6em;
-            padding: 1em;
+            padding: 0.5em;
             width: 14em;
-            line-height: 2;
+            line-height: 1.5;
         }
 
         .toc ul {
@@ -62,7 +63,7 @@
         }
 
         .contents {
-            padding-left: 17em;
+            padding-left: 16em;
             max-width: 1000px;
             font-size: 1.2em;
         }
@@ -80,7 +81,7 @@
             font-size: 30px;
             cursor: pointer;
             position: fixed;
-            top: 1em;
+            top: 4em;
             left: 10px;
             z-index: 1000;
         }
@@ -109,10 +110,17 @@
 
             .toc {
                 transform: translateX(-100%);
+                top: 4em;
+                background-color: black;
             }
 
             .toc-container.show .toc {
                 transform: translateX(0);
+            }
+
+            .contents {
+                padding-left: 5em;
+                max-width: 800px;
             }
         }
         

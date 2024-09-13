@@ -4,81 +4,30 @@
         <div class="divider"></div>
     </div>
 </header> -->
-<main>
-    <section class="member-container">
+<main class="members-container">
+    <section class="cards-grid" id="cardsGrid">
+
+        <!-- script will add member cards -->
         
-        <div class="cards-grid">
-
-            <div class="card" 
-            card-blurb = "This is a blurb">
-                <img class="card-photo">
-                <div class="card-info">
-                    <h3>Name</h3>
-                    <p>role</p>
-                    <button onclick="toggleCard(this)"></button>
-                </div>
-
-                <!-- when a card is clicked, display a window with more information -->
-                <div id="card-second">
-                    <p style="font-size: large; color: aquamarine;">HAS BEEN CLICKED</p>
-                </div>
-            </div>
-
-            <div class="card" 
-            card-blurb = "This is a blurb">
-                <img class="card-photo">
-                <div class="card-info">
-                    <h3>Name</h3>
-                    <p>role</p>
-                </div>
-            </div>
-
-            <div class="card" 
-            card-blurb = "This is a blurb">
-                <img class="card-photo">
-                <div class="card-info">
-                    <h3>Name</h3>
-                    <p>role</p>
-                </div>
-            </div>
-
-            <div class="card" 
-            card-blurb = "This is a blurb">
-                <img class="card-photo">
-                <div class="card-info">
-                    <h3>Name</h3>
-                    <p>role</p>
-                </div>
-            </div>
-
-            <div class="card" 
-            card-blurb = "This is a blurb">
-                <img class="card-photo">
-                <div class="card-info">
-                    <h3>Name</h3>
-                    <p>role</p>
-                </div>
-            </div>
-
-            <div class="card" 
-            card-blurb = "This is a blurb">
-                <img class="card-photo">
-                <div class="card-info">
-                    <h3>Name</h3>
-                    <p>role</p>
-                </div>
-            </div>
-
-            <div class="card" 
-            card-blurb = "This is a blurb">
-                <img class="card-photo">
-                <div class="card-info">
-                    <h3>Name</h3>
-                    <p>role</p>
-                </div>
-            </div>
-        </div>
     </section>
 
+    <!-- Second screen to be displayed when clicked button on card -->
+    <div id="secondScreen" class="second-screen">
+        <div class="second-content">
+            <span class="second-close" onclick="closeInfo()">×</span>
+            
+            <div class="second-left">
+                <img id="infoImage" src="" alt="member info" class="info-image">
+                <h3 id="infoName"></h3>
+                <p id="infoRole"></p>
+            </div>
+
+            <div class="second-right">
+                <p id="infoBlurb"></p>
+            </div>
+            
+        </div>
+    </div>
+    
     <script src="/member.js"></script>
 </main>
