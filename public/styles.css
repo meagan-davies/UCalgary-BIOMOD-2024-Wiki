@@ -329,6 +329,93 @@ body {
 /* Team Members section */
 .members-container {
     position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* carousel */
+/* .carousel-containter {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(10, 70vw);
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+    overflow: scroll;
+    height: 70vh;
+    scroll-snap-type: both mandatory;
+    scroll-padding: 1rem;
+    max-width: 1200px;
+}
+
+.active {
+    scroll-snap-type: unset;
+}
+
+.carousel li {
+    scroll-snap-align: center;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 0;
+} */
+
+.carousel-container {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-container img {
+    width: 100%;
+    z-index: -2;
+}
+
+.carousel-container button {
+    height: 10%;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 1em;
+    display: flex;
+}
+
+.carousel-container button .arrow {
+    border: solid #797979;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 10px;
+    transition: transform 0.3s ease-out;
+    outline: none;
+}
+
+.carousel-container button .arrow:hover {
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+}
+
+#carousel-right-btn {
+    margin: auto 0 auto -2em;
+}
+
+#carousel-right-btn .arrow {
+    transform: rotate(-45deg);
+}
+
+#carousel-left-btn {
+    z-index: 0;
+    margin: auto -2em auto 0;
+}
+
+#carousel-left-btn .arrow {
+    transform: rotate(135deg);
 }
 
 .cards-grid {
@@ -336,7 +423,12 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 50px;
     padding: 50px;
+    justify-content: center;
+    width: 100%;
 }
+
+
+
 
 .card {
     position: relative;
@@ -346,6 +438,7 @@ body {
     background-position: center;
     transition: transform 0.3s ease;
     height: 300px;
+    width: 100%;
 }
 
 /* .card:hover {
