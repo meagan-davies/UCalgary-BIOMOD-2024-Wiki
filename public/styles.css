@@ -357,17 +357,47 @@ body {
 
 /* carousel */
 .carousel-container {
-    width: 900px;
+    width: 1000px;
     height: 500px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    overflow: hidden;
 }
 
 .carousel-container img {
-    width: 100%;
-    z-index: -2;
+    max-width: 950px;
+    height: auto;
+    display: block;
+    max-height: 90%;
+    object-fit: cover;
+}
+
+#dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #bbb;
 }
 
 
