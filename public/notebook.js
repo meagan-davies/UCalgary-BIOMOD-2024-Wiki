@@ -21,7 +21,6 @@ const timelineItems = [
 
 document.addEventListener("DOMContentLoaded", () => {
     const timelineScroll = document.querySelector('.timeline-scroll');
-    const weekContentContainers = document.querySelectorAll('.week-content');
     let currentIndex = 0;
 
     // Function to create timeline items
@@ -59,6 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
         activeBlurb.style.opacity= '1'
     }
 
+    function updateActiveContent(index) {
+        const weekContentContainers = document.querySelectorAll('.week-content');
+        weekContentContainers.forEach((item, _) => {
+            item.classList.remove('active-content')
+        })
+        weekContentContainers[index].classList.add('active-content')
+    }
+
     // Function to scroll to a specific week
     function scrollToWeek(index) {
         if (index < 0 || index >= timelineItems.length) return;
@@ -70,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         timelineScroll.style.transform = `translateX(${scrollPosition}px)`;
         updateActiveWeek(index);
+        updateActiveContent(index)
         currentIndex = index;
     }
 

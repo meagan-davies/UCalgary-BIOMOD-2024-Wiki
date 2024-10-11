@@ -653,16 +653,6 @@ footer {
 
 
 /* Notebook Section */
-/* .notebook-line {
-    width: 100vw;
-    border: none;
-    height: 5px;
-    background-color: #bbb;
-    position: relative;
-    top: 35vh;
-    z-index: -2;
-} */
-
 .timeline-container {
     position: relative;
     height: 100vh; /* Full viewport height */
@@ -677,10 +667,11 @@ footer {
     padding: 30px; /* Padding around the timeline */
 }
 
+/* visual only (horizontal line) */
 .timeline-container::before {
     content: '';
     position: absolute;
-    top: 10%;
+    top: 10vh;
     left: 0;
     right: 0;
     height: 3px;
