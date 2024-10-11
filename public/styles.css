@@ -328,28 +328,25 @@ body {
 
 /* Description(Diagram) styling */
 #diagram-container {
-    position: relative;
-    width: 100%;
+    width: 1000px;
     height: 600px;
     overflow: hidden;
 }
 
-#description-diagram {
+#description-main {
     width: 100%;
     height: auto;
     transition: transform 0.5s ease;
     object-fit: cover;
     object-position: center;
-    cursor: zoom-in;
 }
 
-.diagram-label {
+#tooltip {
     position: absolute;
-    cursor: pointer;
-    background-color: rgba(255, 0, 0, 0.7);
-    padding: 5px;
-    border-radius: 5px;
-    transform: translate(-50%, -50%);
+    width: max-content;
+    top: 0;
+    left: 0;
+    background-color: aqua;
 }
 
 /* Team Members section */
@@ -653,6 +650,96 @@ footer {
         margin-bottom: 20px; /* Space between sections */
     }
 }
+
+
+/* Notebook Section */
+/* .notebook-line {
+    width: 100vw;
+    border: none;
+    height: 5px;
+    background-color: #bbb;
+    position: relative;
+    top: 35vh;
+    z-index: -2;
+} */
+
+.timeline-container {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    top: 25vh;
+    overflow-x: hidden; /* Hide horizontal scroll bar */
+}
+
+.timeline-scroll {
+    display: flex;
+    transition: transform 0.3s ease; /* Smooth scrolling effect */
+    align-items: center; /* Center items vertically */
+    padding: 30px; /* Padding around the timeline */
+}
+
+.timeline-item {
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    width: 100px; /* Fixed width for items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px; /* Space between items */
+    transition: transform 0.5s ease; /* Smooth scaling effect */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.timeline-week {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: transform 0.5s ease;
+    font-weight: bold;
+}
+
+.timeline-blurb {
+    text-align: center; /* Center text */
+    font-size: 14px; /* Blurb text size */
+    opacity: 0; /* Start hidden */
+    padding-top: 15px;
+}
+
+.timeline-item.active-week {
+    transform: scale(1.4); /* Scale up active item */
+    z-index: 2; /* Ensure active item is on top */
+    margin: 0 25vw;
+    color: #ffffff;
+}
+
+.timeline-item.active-week .timeline-blurb {
+    opacity: 1; /* Show blurb for active item */
+}
+
+.timeline-item.active-week .timeline-week {
+    background-color: #f0f0f0;
+}
+
+
+.week-content-container {
+    overflow-y: auto;
+    height: calc(100vh - 50px);
+}
+
+.week-content {
+    display: none;
+}
+
+.week-content.active-content {
+    display: block;
+}
+
+
+
 
 
 /* Scroll to top button */
