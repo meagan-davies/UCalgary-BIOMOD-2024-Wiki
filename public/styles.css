@@ -238,6 +238,18 @@ body {
     text-align: center;
 }
 
+.notebook-header {
+    background-image: url('/img/journal-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .header-content {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
