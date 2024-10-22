@@ -1,4 +1,6 @@
 const timelineItems = [
+    // assumptions: no additional styling needed for the blurb.
+    // if additional styling is need e.g. bold and italics, add them as you would in html. <h1>, <strong>, etc.
     { week: 1, blurb: 'Week 1 blurb' },
     { week: 2, blurb: 'Week 2 blurb' },
     { week: 3, blurb: 'Week 3 blurb' },
@@ -90,6 +92,16 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollToWeek(currentIndex - 1);
         }
     });
+
+    // arrow keys can update as well
+    timelineScroll.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') {
+            scrollToWeek(currentIndex + 1)
+        } else if (event.key === 'ArrowRight') {
+            scrollToWeek(currentIndex - 1)
+        }
+    });
+    
 
     // Initialize timeline items and active week
     createTimelineItems();

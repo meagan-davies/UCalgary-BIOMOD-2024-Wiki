@@ -679,6 +679,7 @@ footer {
     z-index: -3;
 }
 
+/* will need to fix styling with actual blurbs */
 .timeline-item {
     flex: 0 0 auto; /* Prevent flex items from shrinking */
     width: 100px; /* Fixed width for items */
@@ -734,6 +735,7 @@ footer {
 
 .week-content {
     display: none;
+    margin: 0 3rem;
 }
 
 .week-content.active-content {
@@ -741,6 +743,70 @@ footer {
 }
 
 
+/* Experiments section */
+.experiments-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.experiments-diagram {
+    min-height: 100vh;
+}
+
+.experiments-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-top: 2px solid #333;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.experiments-month {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-right: 1px solid #ccc;
+    position: relative;
+}
+
+.experiments-month:last-child {
+    border-right: none;
+}
+
+.experiments-events {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experiments-event {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* color of timeline box */
+    background-color: #f0f0f0;
+    color: red;
+
+    height: 40px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    /* multiply by 20% because there are five months shown */
+    left: calc((var(--start) - 1) * 20%);
+    width: calc(var(--span) * 20%);
+    top: calc(var(--index) * 60px);
+}
 
 
 
