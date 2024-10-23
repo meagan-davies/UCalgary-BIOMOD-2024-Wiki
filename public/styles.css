@@ -239,19 +239,11 @@ body {
 }
 
 .notebook-header {
-<<<<<<< Updated upstream
-    background-image: url('/img/journal-header.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 70vh; /* Adjust as needed */
-=======
     background-image: url('/img/notebook-header.png');
     background-size: contain;
     background-repeat: repeat;
     background-position: center;
     height: 40vh; /* Adjust as needed */
->>>>>>> Stashed changes
     display: flex;
     justify-content: center;
     align-items: center;
@@ -455,8 +447,6 @@ footer {
         margin-bottom: 20px; /* Space between sections */
     }
 }
-<<<<<<< Updated upstream
-=======
 
 
 /* Notebook Section */
@@ -622,4 +612,3 @@ footer {
 #scrollToTopBtn svg {
     fill: white;
 }
->>>>>>> Stashed changes
