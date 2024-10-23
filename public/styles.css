@@ -239,11 +239,19 @@ body {
 }
 
 .notebook-header {
+<<<<<<< Updated upstream
     background-image: url('/img/journal-header.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     height: 70vh; /* Adjust as needed */
+=======
+    background-image: url('/img/notebook-header.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    height: 40vh; /* Adjust as needed */
+>>>>>>> Stashed changes
     display: flex;
     justify-content: center;
     align-items: center;
@@ -447,3 +455,171 @@ footer {
         margin-bottom: 20px; /* Space between sections */
     }
 }
+<<<<<<< Updated upstream
+=======
+
+
+/* Notebook Section */
+.timeline-container {
+    position: relative;
+    height: 65vh; /* Full viewport height */
+    top: 25vh;
+    overflow-x: hidden; /* Hide horizontal scroll bar */
+}
+
+.timeline-scroll {
+    display: flex;
+    transition: transform 0.3s ease; /* Smooth scrolling effect */
+    align-items: center; /* Center items vertically */
+    padding: 30px; /* Padding around the timeline */
+}
+
+/* visual only (horizontal line) */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #fff;
+    z-index: -3;
+}
+
+.timeline-item {
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    width: 115px; /* Fixed width for items */
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px; /* Space between items */
+    transition: transform 0.8s ease; /* Smooth scaling effect */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.timeline-week {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: transform 0.8s ease;
+    font-weight: bold;
+}
+
+.timeline-blurb {
+    text-align: center; /* Center text */
+    font-size: 14px; /* Blurb text size */
+    opacity: 0; /* Start hidden */
+    padding-top: 15px;
+}
+
+.timeline-item.active-week {
+    transform: scale(1.4); /* Scale up active item */
+    z-index: 2; /* Ensure active item is on top */
+    margin: 0 18vw;
+    color: #ffffff;
+}
+
+.timeline-item.active-week .timeline-blurb {
+    opacity: 1; /* Show blurb for active item */
+}
+
+.timeline-item.active-week .timeline-week {
+    background-color: #f0f0f0;
+}
+
+
+.week-content-container {
+    margin: auto;
+    width: 80%;
+    overflow-y: auto;
+    height: calc(150vh - 50px);
+    
+}
+
+.week-content {
+    display: none;
+}
+
+.week-content.active-content {
+    display: block;
+    text-align: center;
+}
+
+.news-table {
+    width: 100%;
+    border: 1px solid #000; /* Optional for border */
+    border-spacing: 0;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+
+/* Header styling */
+.news-table .header {
+    background-color: #e0e0e0;
+    padding: 15px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Content row styling */
+.news-table .content {
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    color: #555;
+}
+
+/* Section Title styling */
+.news-table h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    color: #000;
+}
+
+/* Description styling */
+.news-table p {
+    margin: 10px 0;
+    padding: 0;
+}
+
+/* Witness comments styling */
+.news-table .witness-comments {
+    margin-top: 15px;
+    font-style: italic;
+    color: #777;
+}
+
+
+/* Scroll to top button */
+/* change styling as needed */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 99;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: #575757;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+#scrollToTopBtn svg {
+    fill: white;
+}
+>>>>>>> Stashed changes
