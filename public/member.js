@@ -8,6 +8,11 @@ const members = [
     { id: 7, name: 'Jezrael Carpio', role: 'role', img: '/img/temp.jpg', blurb: 'this is a blurb' }
 ]
 
+// TODO: add advisors (or just get #)
+const advisors = [
+    {}
+]
+
 function generateCards() {
     const cardsGrid = document.getElementById('cardsGrid')
     members.forEach(member => {

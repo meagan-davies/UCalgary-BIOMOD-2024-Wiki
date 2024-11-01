@@ -243,7 +243,35 @@
             </div>
         </section>
     </article>
+    <div id="testing-viewer" style="width: 30%; height: 300px; position: relative; margin: 0 auto;"></div>
 
+    <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+
+    <script>
+        let element = document.querySelector('#testing-viewer');
+        let config = { backgroundColor: 'white' };
+        let viewer = $3Dmol.createViewer(element, config);
+        let pdbUri = '/1ql2.pdb';
+
+        fetch(pdbUri)
+        .then(response => {
+            if (!response.ok) {
+            throw new Error(`Failed to load PDB file: ${response.statusText}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+    
+            viewer.addModel(data, 'pdb');
+            viewer.setStyle({}, { cartoon: { color: 'spectrum' } });
+            viewer.zoomTo();
+            viewer.render();
+            viewer.zoom(1.2, 1000);
+        })
+        .catch(error => console.error("Error loading PDB file:", error));
+
+
+    </script>
 
     <script>
 

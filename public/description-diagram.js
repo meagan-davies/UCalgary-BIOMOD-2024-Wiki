@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (newImage) {
                     // Change background image
                     container.style.backgroundImage = `url(${newImage})`;
-                    // Hide original labels and show new ones
+                    // Hide original labels and show new ones (change for labels to display with more than one set)
                     labelSets.original.style.display = 'none';
-                    labelSets.image1.style.display = 'block'; // Display the next set of labels
+                    labelSets.image1.style.display = 'block';
                 } else if (info) {
                     // Show info box with relevant text
                     infoText.textContent = info;
