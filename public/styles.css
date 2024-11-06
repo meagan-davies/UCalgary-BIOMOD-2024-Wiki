@@ -238,6 +238,18 @@ body {
     text-align: center;
 }
 
+.notebook-header {
+    background-image: url('/img/notebook-header.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    height: 40vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .header-content {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -661,7 +673,7 @@ footer {
 /* Notebook Section */
 .timeline-container {
     position: relative;
-    height: 100vh; /* Full viewport height */
+    height: 65vh; /* Full viewport height */
     top: 25vh;
     overflow-x: hidden; /* Hide horizontal scroll bar */
 }
@@ -685,29 +697,30 @@ footer {
     z-index: -3;
 }
 
-/* will need to fix styling with actual blurbs */
 .timeline-item {
     flex: 0 0 auto; /* Prevent flex items from shrinking */
-    width: 100px; /* Fixed width for items */
+    width: 115px; /* Fixed width for items */
     display: flex;
+    margin: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 10px; /* Space between items */
-    transition: transform 0.5s ease; /* Smooth scaling effect */
+    transition: transform 0.8s ease; /* Smooth scaling effect */
     cursor: pointer; /* Change cursor on hover */
 }
 
 .timeline-week {
     width: 100px;
     height: 100px;
+    margin: auto;
     border-radius: 50%;
     background-color: #bbb;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s ease;
     font-weight: bold;
 }
 
@@ -721,7 +734,7 @@ footer {
 .timeline-item.active-week {
     transform: scale(1.4); /* Scale up active item */
     z-index: 2; /* Ensure active item is on top */
-    margin: 0 25vw;
+    margin: 0 18vw;
     color: #ffffff;
 }
 
@@ -735,17 +748,66 @@ footer {
 
 
 .week-content-container {
+    margin: auto;
+    width: 80%;
     overflow-y: auto;
-    height: calc(100vh - 50px);
+    height: calc(150vh - 50px);
 }
 
 .week-content {
     display: none;
-    margin: 0 3rem;
 }
 
 .week-content.active-content {
     display: block;
+    text-align: center;
+}
+
+.news-table {
+    width: 100%;
+    border: 1px solid #000; /* Optional for border */
+    border-spacing: 0;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+
+/* Header styling */
+.news-table .header {
+    background-color: #e0e0e0;
+    padding: 15px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Content row styling */
+.news-table .content {
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    color: #555;
+}
+
+/* Section Title styling */
+.news-table h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    color: #000;
+}
+
+/* Description styling */
+.news-table p {
+    margin: 10px 0;
+    padding: 0;
+}
+
+/* Witness comments styling */
+.news-table .witness-comments {
+    margin-top: 15px;
+    font-style: italic;
+    color: #777;
 }
 
 
