@@ -175,7 +175,6 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 }); 
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const timelineScroll = document.querySelector('.timeline-scroll');
     let currentIndex = 0;
@@ -247,6 +246,17 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollToWeek(currentIndex - 1);
         }
     });
+
+
+    // arrow keys can update as well
+    timelineScroll.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') {
+            scrollToWeek(currentIndex + 1)
+        } else if (event.key === 'ArrowRight') {
+            scrollToWeek(currentIndex - 1)
+        }
+    });
+    
 
     // Initialize timeline items and active week
     createTimelineItems();
