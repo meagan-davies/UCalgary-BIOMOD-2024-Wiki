@@ -699,7 +699,6 @@ footer {
 
 .timeline-item {
     flex: 0 0 auto; /* Prevent flex items from shrinking */
-    width: 115px; /* Fixed width for items */
     display: flex;
     margin: auto;
     flex-direction: column;
@@ -713,7 +712,7 @@ footer {
 .timeline-week {
     width: 100px;
     height: 100px;
-    margin: auto;
+    margin: 5px;
     border-radius: 50%;
     background-color: #bbb;
     display: flex;
@@ -728,7 +727,7 @@ footer {
     text-align: center; /* Center text */
     font-size: 14px; /* Blurb text size */
     opacity: 0; /* Start hidden */
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .timeline-item.active-week {
@@ -745,7 +744,6 @@ footer {
 .timeline-item.active-week .timeline-week {
     background-color: #f0f0f0;
 }
-
 
 .week-content-container {
     margin: auto;
