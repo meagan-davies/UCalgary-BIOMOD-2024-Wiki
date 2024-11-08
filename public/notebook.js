@@ -262,3 +262,71 @@ document.addEventListener("DOMContentLoaded", () => {
     createTimelineItems();
     scrollToWeek(currentIndex);
 });
+
+
+
+// Lab notebook data for grid (sample structure)
+const labNotebookPages = [
+    { id: 1, date: '2024-05-08', week: 2, experimentType: 'Biochemistry', classification: 'Type A', content: 'Page content for week 2...' },
+    { id: 2, date: '2024-06-13', week: 7, experimentType: 'Cell Culture', classification: 'Type B', content: 'Page content for week 7...' },
+    // Add more entries as needed
+];
+
+// Render notebook grid for each selected week
+function renderNotebookGrid(week) {
+    const notebookGrid = document.getElementById('notebookGrid');
+    notebookGrid.innerHTML = '';  // Clear previous content
+
+    const filteredPages = labNotebookPages.filter(page => page.week === week);
+    filteredPages.forEach(page => {
+        const pageBox = document.createElement('div');
+        pageBox.classList.add('page-box');
+        pageBox.innerText = `Page ${page.id}`;
+        pageBox.onclick = () => openPageModal(page);
+        notebookGrid.appendChild(pageBox);
+    });
+}
+
+// Open a modal to show page details
+function openPageModal(page) {
+    const modal = document.getElementById('pageModal');
+    modal.querySelector('.modal-content').innerText = page.content;
+    modal.style.display = 'block';
+}
+
+// Close the modal
+function closePageModal() {
+    document.getElementById('pageModal').style.display = 'none';
+}
+
+// Event to close modal on outside click
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('pageModal');
+    if (event.target == modal) {
+        closePageModal();
+    }
+});
+
+// Trigger grid display on timeline week click
+function scrollToWeek(index) {
+    if (index < 0 || index >= timelineItems.length) return;
+    const week = timelineItems[index].week;
+    renderNotebookGrid(week);  // Display lab notebook entries for this week
+
+    const containerWidth = window.innerWidth;
+    const itemWidth = timelineScroll.children[index].offsetWidth;
+    const activeSpacing = 390;
+    const offset = (containerWidth / 2) - (itemWidth / 2) - activeSpacing;
+    const scrollPosition = -index * (itemWidth + 20) + offset;
+
+    timelineScroll.style.transform = `translateX(${scrollPosition}px)`;
+    updateActiveWeek(index);
+    updateActiveContent(index);
+    currentIndex = index;
+}
+
+// Initialize notebook entries for the default week (0) on load
+document.addEventListener('DOMContentLoaded', () => {
+    renderNotebookGrid(timelineItems[0].week);
+});
+
