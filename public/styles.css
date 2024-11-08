@@ -367,7 +367,18 @@ body {
     cursor: pointer;
 }
 
-
+/* ELSI Page Styling */
+.ethics-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 /* Team Members section */
 /* carousel */
