@@ -10,6 +10,7 @@ body {
 }
 
 
+
 /* Styling will have to depend on final version to account for not overlapping on footer area */
 .toc-container {
     overflow-y: auto;
@@ -18,7 +19,7 @@ body {
 
 /* Style for sticky TOC when the header is out of view */
 .fixed-toc {
-    position: fixed;
+    position: sticky;
     top: 10px;
     left: 0;
     max-height: 100vh;
@@ -28,8 +29,8 @@ body {
 }
 
 .toc {
-    position: relative;
-    left: 2em;
+    position: sticky;
+    left: 0;
     padding: 0.5em;
     width: 16em;
     line-height: 1.5;
@@ -84,6 +85,7 @@ body {
 }
 
 .contents {
+    margin-top: -75%;
     padding-left: 18em;
     max-width: 1200px;
     font-size: 1.2em;
@@ -150,4 +152,9 @@ body {
 ul {
     list-style-type: disc;
     margin-left: 30px;
+}
+
+.section {
+    visibility: visible;
+    opacity: 1;
 }
