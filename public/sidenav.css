@@ -9,24 +9,48 @@ body {
     line-height: 1.6;
 }
 
+
 /* Styling will have to depend on final version to account for not overlapping on footer area */
-.toc {
+.toc-container {
+    overflow-y: auto;
+    padding-right: 40px;
+}
+
+/* Style for sticky TOC when the header is out of view */
+.fixed-toc {
     position: fixed;
-    left: 3em;
-    top: 6em;
+    top: 10px;
+    left: 0;
+    max-height: 100vh;
+    padding-bottom: 400px;
+    transition: top 0.3s ease;
+    overflow-y: hidden;
+}
+
+.toc {
+    position: relative;
+    left: 2em;
     padding: 0.5em;
-    width: 14em;
+    width: 16em;
     line-height: 1.5;
 }
 
-.toc ul {
+.toc ul, .toc li {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.toc ul ul {
-    padding-left: 2em;
+.toc > ul > li {
+    padding-left: 0;
+}
+
+.toc > ul > li > ul > li {
+    padding-left: 20px;
+}
+
+.toc > ul > li > ul > li > ul > li {
+    padding-left: 40px;
 }
 
 .toc li a {
@@ -34,6 +58,11 @@ body {
     color: #e5e5e5;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.toc a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .toc li.visible > a {
@@ -55,8 +84,8 @@ body {
 }
 
 .contents {
-    padding-left: 16em;
-    max-width: 1000px;
+    padding-left: 18em;
+    max-width: 1200px;
     font-size: 1.2em;
 }
 
@@ -78,10 +107,6 @@ body {
     z-index: 1000;
 }
 
-.toc-container {
-    position: relative;
-    width: 14em;
-}
 
 .toc.hidden{
     transform: translateX(-100%);
@@ -120,4 +145,9 @@ body {
     body {
         font-size: 14px;
     }
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 30px;
 }
