@@ -85,7 +85,7 @@ body {
 }
 
 .contents {
-    margin-top: -75%;
+    margin-top: -60%;
     padding-left: 18em;
     max-width: 1200px;
     font-size: 1.2em;
@@ -138,6 +138,7 @@ body {
     }
 
     .contents {
+        margin-top: -75%;
         padding-left: 5em;
         max-width: 800px;
     }
@@ -146,6 +147,15 @@ body {
 @media screen and (max-width: 1200px) {
     body {
         font-size: 14px;
+    }
+    .contents {
+        margin-top: -75%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .contents {
+        margin-top: -75%;
     }
 }
 
