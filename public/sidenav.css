@@ -168,3 +168,19 @@ ul {
     visibility: visible;
     opacity: 1;
 }
+
+table {
+    border: 1px solid rgb(140, 140, 140);
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    border: 1px solid rgb(160, 160, 160);
+    padding: 4px 10px;
+}
+
+td:first-child {
+    text-align: center;
+}
