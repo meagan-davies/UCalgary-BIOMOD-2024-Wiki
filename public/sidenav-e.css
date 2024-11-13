@@ -33,7 +33,7 @@ body {
     padding-bottom: 400px;
     transition: top 0.3s ease;
     overflow-y: hidden;
-    width: 13rem;
+    width: 16rem;
     z-index: 1;
 }
 
@@ -95,7 +95,7 @@ body {
 
 .contents {
     margin-top: -60%;
-    padding-left: 13em;
+    padding-left: 14em;
     max-width: 1200px;
     font-size: 1.2em;
 }
@@ -110,7 +110,7 @@ body {
 
 .contents-e {
     margin-top: -45%;
-    padding-left: 13em;
+    padding-left: 14em;
     max-width: 1200px;
     font-size: 1.2em;
 }
