@@ -118,7 +118,241 @@
     </div>
 </div>
 
-
-    <script src="/notebook.js"></script>
+<script src="/notebook.js"></script>
+    
 </main>
 
+<main class="notebook-container">
+    <!-- Folder Tabs for each month -->
+    <div class="tabs-container">
+        <div class="tab" onclick="showTab('June')" id="tab-June">June</div>
+        <div class="tab" onclick="showTab('July')" id="tab-July">July</div>
+        <div class="tab" onclick="showTab('August')" id="tab-August">August</div>
+    </div>
+
+    <!-- Experiment Sections for each month -->
+    <div id="content-June" class="tab-content"></div>
+    <div id="content-July" class="tab-content"></div>
+    <div id="content-August" class="tab-content"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const experiments = [
+                { 
+                    date: "24/06/05", 
+                    month: "June", 
+                    type: "DEPC-treated Water", 
+                    title: "Preparing DEPC-treated Water (Ultrapure)", 
+                    details: `
+                        <strong>Partner(s):</strong> Jezrael Carpio, Amber Quo <br>
+                        <strong>Purpose/ Objective of the lab:</strong> Make 500 mL of DEPC-treated water<br>
+                        <strong>Last Edited (yy/mm/dd):</strong>
+                        24/06/06 – Taken out of orbital shaker/stored, 
+                        24/06/10 – Sent to the Autoclave <br>
+                        
+                        <strong>Materials:</strong> <br>
+                        <ul>
+                            <li>0.5mL DEPC</li>
+                            <li>499.5 mL Milli-Q Water</li>
+                            <li>1 L glass container with a lid</li>
+                            <li>Magnetic Stirring Apparatus/Orbital Shaker</li>
+                            <li>Autoclave</li>
+                        </ul>
+                        
+                        <strong>Procedure:</strong><br>
+                        <ol>
+                            <li>Add 0.1% (v/v) (500 uL) of DEPC to 499.5 mL of Milli-Q Water to a 1L glass container.</li>
+                            <li>Shake to gently mix.
+                                <ul>
+                                    <li>Don't mix with reagents with an amine group.</li>
+                                </ul>
+                            </li>
+                            <li>Shake for 1 hour to overnight on orbital shaker. </li>
+                            <ol start="4">
+                                <li>Alternative Method: Mix with a magnetic stirrer for 30 minutes.</li>
+                                <li>Autoclave for 45 minutes at 15 PSI on liquid cycle.</li>
+                            </ol>
+                        </ol>
+                        
+                        <strong>Notes/Observations:</strong><br>
+                        <ul>
+                            <li>DEPC was transparent, a blob near the bottom of the bottle.</li>
+                            <li>Magnetic stirrer was cleaned with ethanol and Milli-Q Water before use.</li>
+                            <li>Stirred from 1:50 PM to 2:20 PM at Level 4-5.</li>
+                            <li>Bubbles on the surface of the solution went away after resting.</li>
+                            <li>Retrieved the magnetic stir bar with a magnetic stick.</li>
+                            <li>The stick did not make contact with the DEPC-Water.</li>
+                            <li>The bottle was shaken by hand one more time.</li>
+                            <li>Put in shaker overnight from June 5 at 2:54 PM at 150 RPM and 37°C.</li>
+                            <li>RPM changed to 220 at 4:15 PM.</li>
+                            <li>Taken out of the shaker at 9 AM on June 6, no autoclave due to water shortage.</li>
+                            <li>Stored in Buffer Cabinet.</li>
+                            <li>Sent to autoclave on 24/06/10 at 9:09 AM.</li>
+                        </ul>`
+                },
+                { 
+                    date: "24/06/10", 
+                    month: "June", 
+                    type: "PCR Prep", 
+                    title: "Aptazyme PCR Prep", 
+                    details: "Test" 
+                },
+                { 
+                    date: "24/07/01", 
+                    month: "July", 
+                    type: "DNA Electrophoresis", 
+                    title: "DNA Agarose Gel Electrophoresis", 
+                    details: "Objective: Analyze PCR results..." 
+                },
+                { 
+                    date: "24/08/15", 
+                    month: "August", 
+                    type: "RNA Analysis", 
+                    title: "RNA Analysis and Sequencing", 
+                    details: "Objective: Final analysis of RNA samples." 
+                }
+            ];
+
+            // Function to show a specific month's tab
+            function showTab(month) {
+                // Hide all content sections
+                const allContents = document.querySelectorAll('.tab-content');
+                allContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                // Remove active class from all tabs
+                const allTabs = document.querySelectorAll('.tab');
+                allTabs.forEach(tab => {
+                    tab.classList.remove('active-tab');
+                });
+
+                // Show selected month's content and activate tab
+                const selectedContent = document.getElementById(`content-${month}`);
+                const selectedTab = document.getElementById(`tab-${month}`);
+                
+                if (selectedContent && selectedTab) {
+                    selectedContent.style.display = 'block';
+                    selectedTab.classList.add('active-tab');
+                    
+                    // Clear existing content
+                    selectedContent.innerHTML = '';
+                    
+                    // Add experiments for this month
+                    experiments
+                        .filter(exp => exp.month === month)
+                        .forEach(exp => {
+                            const experimentBox = document.createElement('div');
+                            experimentBox.classList.add('experiment-box');
+                            experimentBox.innerHTML = `
+                                <h3>${exp.title}</h3>
+                                <p>${exp.date}</p>
+                            `;
+                            experimentBox.addEventListener('click', () => toggleDetails(exp, experimentBox));
+                            selectedContent.appendChild(experimentBox);
+                        });
+                }
+            }
+
+            // Function to toggle the experiment details
+            function toggleDetails(experiment, box) {
+                let detailsSection = box.querySelector('.experiment-details');
+                
+                // If details are already showing, hide them
+                if (detailsSection) {
+                    detailsSection.style.display = detailsSection.style.display === 'none' ? 'block' : 'none';
+                } else {
+                    // Otherwise, create a new details section and append it
+                    detailsSection = document.createElement('div');
+                    detailsSection.classList.add('experiment-details');
+                    detailsSection.innerHTML = `
+                        <strong>Type:</strong> ${experiment.type}<br>
+                        ${experiment.details}
+                    `;
+                    box.appendChild(detailsSection);
+                }
+            }
+
+            // Add click event listeners to tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const month = tab.id.replace('tab-', '');
+                    showTab(month);
+                });
+            });
+
+            // Show June tab by default
+            showTab('June');
+        });
+    </script>
+
+    <style>
+        .notebook-container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tabs-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background-color: #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .tab.active-tab {
+            background-color: #c1a3eb;
+            font-weight: bold;
+        }
+
+        .tab:hover {
+            background-color: #b3a2db;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .experiment-box {
+            background-color: #451161;
+            color: white;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 30px;  /* Increased margin between experiments */
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .experiment-box:hover {
+            transform: scale(1.03); /* Subtle hover effect */
+        }
+
+        .experiment-details {
+            white-space: nowrap; /* Prevents line break */
+            line-height: 1.6;
+            font-size: 16px;
+            margin-top: 10px;
+            display: none; /* Initially hidden */
+            text-align: left; /* Align text to the left */
+            overflow-x: auto; /* Allows horizontal scrolling */
+            max-width: 100%; /* Ensures it doesn't exceed the container width */
+        }
+
+        /* Ensure that the container doesn't overflow on smaller screens */
+        @media (max-width: 768px) {
+            .experiment-details {
+                max-width: 100%; /* Prevents going beyond the screen */
+                overflow-x: auto; /* Enable horizontal scrolling */
+                white-space: nowrap; /* Prevents wrapping */
+            }
+        }
+    </style>
+</main>

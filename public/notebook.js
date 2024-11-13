@@ -166,11 +166,11 @@ document.addEventListener("DOMContentLoaded", function(){
         injectNewsTable(10);
     }
     const week15Content = document.getElementById('content-week15');
-    if (week10Content) {
+    if (week15Content) {
         injectNewsTable(15);
     }
     const week16Content = document.getElementById('content-week16');
-    if (week10Content) {
+    if (week16Content) {
         injectNewsTable(16);
     }
 }); 
@@ -296,7 +296,11 @@ function openPageModal(page) {
 
 // Close the modal
 function closePageModal() {
-    document.getElementById('pageModal').style.display = 'none';
+    document.getElementById('pageModal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('pageModal') || e.target.classList.contains('close')) {
+            closeModal();
+        }
+    });
 }
 
 // Event to close modal on outside click
@@ -330,3 +334,118 @@ document.addEventListener('DOMContentLoaded', () => {
     renderNotebookGrid(timelineItems[0].week);
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const experiments = [
+        { date: "24/06/05", month: "June", type: "DEPC-treated Water", title: "Preparing DEPC-treated Water (Ultrapure)", details: "Objective: Make 500 mL of DEPC-treated water..." },
+        { date: "24/06/05", month: "June", type: "PCR Prep", title: "Aptazyme PCR Prep", details: "Objective: Prepare PCR amplification..." },
+        { date: "24/06/10", month: "June", type: "DNA Electrophoresis", title: "DNA Agarose Gel Electrophoresis", details: "Objective: Analyze PCR results..." },
+        { date: "24/07/15", month: "July", type: "RNA Prep", title: "Preparing RNA Sample", details: "Objective: Prepare RNA from blood samples..." },
+        { date: "24/08/01", month: "August", type: "Protein Extraction", title: "Protein Extraction Procedure", details: "Objective: Extract proteins from cell culture..." }
+    ];
+
+    const notebookGrid = document.getElementById('notebookGrid');
+    const monthCheckboxContainer = document.getElementById('monthCheckboxContainer');
+    const typeCheckboxContainer = document.getElementById('typeCheckboxContainer');
+    
+    const uniqueMonths = [...new Set(experiments.map(exp => exp.month))];
+    const uniqueTypes = [...new Set(experiments.map(exp => exp.type))];
+    
+    // Create toggle checkboxes for months
+    uniqueMonths.forEach(month => {
+        const toggle = createToggle(month, "month");
+        monthCheckboxContainer.appendChild(toggle);
+    });
+
+    // Create toggle checkboxes for experiment types
+    uniqueTypes.forEach(type => {
+        const toggle = createToggle(type, "type");
+        typeCheckboxContainer.appendChild(toggle);
+    });
+
+    // Create toggle for months and types
+    function createToggle(label, category) {
+        const container = document.createElement('label');
+        container.classList.add('toggle-container');
+        container.innerHTML = `${label}`;
+        
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.value = label;
+        input.classList.add('toggle-input');
+        
+        // Add event listener to each input (checkbox)
+        input.addEventListener('change', function() {
+            filterExperiments();
+            highlightSelectedMonth(this); // Highlight the month when clicked
+        });
+
+        const slider = document.createElement('span');
+        slider.classList.add('slider');
+
+        container.appendChild(input);
+        container.appendChild(slider);
+        return container;
+    }
+
+    // Highlight the selected month when clicked
+    function highlightSelectedMonth(input) {
+        const monthLabels = document.querySelectorAll('.toggle-container');
+        monthLabels.forEach(label => label.style.backgroundColor = ''); // Reset all
+
+        if (input.checked) {
+            input.closest('.toggle-container').style.backgroundColor = 'lightpurple'; // Highlight the selected month
+        }
+    }
+
+    // Filter experiments based on selected months and types
+    function filterExperiments() {
+        const selectedMonths = Array.from(document.querySelectorAll('#monthCheckboxContainer input:checked')).map(input => input.value);
+        const selectedTypes = Array.from(document.querySelectorAll('#typeCheckboxContainer input:checked')).map(input => input.value);
+
+        const filteredExperiments = experiments.filter(exp => {
+            const matchesMonth = selectedMonths.length === 0 || selectedMonths.includes(exp.month);
+            const matchesType = selectedTypes.length === 0 || selectedTypes.includes(exp.type);
+            return matchesMonth && matchesType;
+        });
+
+        renderNotebookGrid(filteredExperiments);
+    }
+
+    // Render notebook grid based on filtered experiments
+    function renderNotebookGrid(filteredExperiments) {
+        notebookGrid.innerHTML = ''; // Clear previous grid
+        filteredExperiments.forEach(exp => {
+            const experimentBox = document.createElement('div');
+            experimentBox.classList.add('experiment-box');
+            experimentBox.innerHTML = `<h3>${exp.title}</h3><p>${exp.date}</p>`;
+            experimentBox.addEventListener('click', () => openModal(exp));
+            notebookGrid.appendChild(experimentBox);
+        });
+    }
+
+    // Modal functionality
+    function openModal(experiment) {
+        const modal = document.getElementById('pageModal');
+        const modalContent = document.getElementById('experimentDetails');
+        modalContent.innerHTML = `
+            <h2>${experiment.title}</h2>
+            <p><strong>Date:</strong> ${experiment.date}</p>
+            <p><strong>Details:</strong><br>${experiment.details}</p>
+        `;
+        modal.style.display = 'flex';
+    }
+
+    // Close modal functionality
+    function closeModal() {
+        document.getElementById('pageModal').style.display = 'none';
+    }
+
+    document.getElementById('pageModal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('pageModal') || e.target.classList.contains('close')) {
+            closeModal();
+        }
+    });
+
+    renderNotebookGrid(experiments); // Initialize grid on load
+});
