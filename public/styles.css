@@ -827,6 +827,11 @@ footer {
     max-width: 1200px;
 }
 
+.experiments-container section {
+    margin-bottom: 3rem;
+}
+
+/* Experiments diagram */
 .experiments-diagram {
     min-height: 100vh;
 }
@@ -952,6 +957,18 @@ footer {
 .tab-window {
     width: 100%;
     display: none;
+    line-height: 2;
+    padding: 20px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.tab-window ol {
+    padding-left: 4rem;
+}
+
+.tab-window table caption {
+    font-size: 14px;
 }
 
 .tab-window.active {

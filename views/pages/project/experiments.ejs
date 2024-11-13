@@ -12,13 +12,444 @@
         <div class="experiments-events">
             <!-- --start = which month to start (1-May~5-September), --span = how many months it spaned -->
              <!-- add click and lead to section  -->
-            <div class="experiments-event" style="--start: 1; --span: 1.7; --index: 0;">Aptazyme</div>
-            <div class="experiments-event" style="--start: 1.5; --span: 2; --index: 1;">Nanopore</div>
-            <div class="experiments-event" style="--start: 2; --span: 1.7; --index: 2;">TMSD</div>
-            <div class="experiments-event" style="--start: 3; --span: 1.7;--index: 3;">Vesicles</div>
-            <div class="experiments-event" style="--start: 1.2; --span: 1.7; --index: 4;">Dye Flux</div>
+            <a href="#experiments-aptazyme">
+                <div class="experiments-event" style="--start: 1; --span: 1.7; --index: 0;">Aptazyme</div>
+            </a>
+            <a href="#experiments-nanopore">
+                <div class="experiments-event" style="--start: 1.5; --span: 2; --index: 1;">Nanopore</div>
+            </a>
+            <a href="#experiments-tmsd">
+                <div class="experiments-event" style="--start: 2; --span: 1.7; --index: 2;">TMSD</div>
+            </a>
+            <a href="#experiments-vesicles">
+                <div class="experiments-event" style="--start: 3; --span: 1.7;--index: 3;">Vesicles</div>
+            </a>
+            
+            <a href="#experiments-dyeflux">
+                <div class="experiments-event" style="--start: 1.2; --span: 1.7; --index: 4;">Dye Flux</div>
+            </a>
         </div>
     </div>
+
+    <section id="experiments-tmsd">
+        <h2>Toehold Strand Displacement (TMSD)</h2>
+        <p>We planned to use TMSD to provide our sensor with on-demand modularity, allowing the various parts of the sensor to be bound and dissociated on demand. This was done by first modifying the TMSD reaction from literature to suit our sensor use and followed by a series of experiments to test the functionality of the modified strands.</p>
+
+        <div class="results-sub">
+            <div class="results-tabs">
+                <!-- openTab(event, name of corresponding tab window id) -->
+                <button class="results-tab active" onclick="openTab(event, 'tab1')" style="border-top-left-radius: 10px;">Sample Preparation</button>
+                <button class="results-tab" onclick="openTab(event, 'tab2')">Non-SDS Native PAGE</button>
+                <button class="results-tab" onclick="openTab(event, 'tab3')" style="border-top-right-radius: 10px;">Non-SDS Native PAGE Staining and Image Processing</button>
+            </div>
+    
+            <div class="results-window">
+                <div id="tab1" class="tab-window active" style="border-top-left-radius: 10px;">
+                    <p><strong>Objective: </strong>To prepare samples of 200uM stock of TMSD oligos and 20uM working solutions for TMSD for TMSD strand interactions on PAGE.</p>
+                    <br>
+                    <ol>
+                        <li>
+                            <p>Prepare and resuspend samples to 200uM (keep all samples inside an ice bath) as follows:</p>
+                            <table>
+                                <tr>
+                                    <th>Sample</th>
+                                    <th>Label</th>
+                                    <th>nmoles</th>
+                                    <th>Mass (mg)</th>
+                                    <th>Volume (uL) to resuspend in:</th>
+                                </tr>
+                                <tr>
+                                    <td>TMSDTAR</td>
+                                    <td>TMSDTAR</td>
+                                    <td>28.7</td>
+                                    <td>0.35</td>
+                                    <td>143.3</td>
+                                </tr>
+                                <tr>
+                                    <td>TMSDKEY</td>
+                                    <td>KEY</td>
+                                    <td>85.1</td>
+                                    <td>1.30</td>
+                                    <td>426.5</td>
+                                </tr>
+                                <tr>
+                                    <td>TMSDNAN</td>
+                                    <td>NAN</td>
+                                    <td>29.5</td>
+                                    <td>0.30</td>
+                                    <td>513.3</td>
+                                </tr>
+                            </table>
+                            <ol type="a">
+                                <li>Centrifuge at 10000 for 30 seconds or 3000 x g</li>
+                                <li>Add deionized water</li>
+                                <li>Vortex and centrifuge</li>
+                            </ol>
+                        </li>
+                        <li>Prepare 20uM of 100 uL sample working stocks</li>
+                        <li>Store all Oligo stocks in the -20C fridge</li>
+                    </ol>
+                </div>
+    
+                <div id="tab2" class="tab-window">
+                    <p><strong>Objective: </strong>Visualizing the modified TMSD strands with the original TMSD strands to confirm functionality using PAGE.</p>
+                    <br>
+
+                    <ol>
+                        <li>Prepare 1xTBE running buffer</li>
+                        <li>Prepare samples for experiment 1 and experiment and incubate them for 30 minutes at 25 C.</li>
+                        <li>Prepare the ladder by thawing and centrifuge briefly before loading.</li>
+                        <li>Prepare PAGE apparatus and check for leakage
+                            <ol type="a">
+                                <li>Clean plates and spacers with deionized water, ethanol, dry, and assemble the apparatus</li>
+                                <li>Assemble 2 Hoeffer minigels of 1mm thickness</li>
+                                <li>Add DEPC-water and check for leakage (leave the set up for 20 minutes)
+                                    <ol type="i">
+                                        <li>If no leakage is observed then drain the water in the sink and use a folded paper towel to dry the casting apparatus as much as possible making sure not to move the glass plates in the process.</li>
+                                    </ol>
+                                </li>
+                                <li>Prepare a 15% gel solution of 12mL according to Table 1 for 1 running gel and Table 2 for 2 running gels.
+
+                                    <table>
+                                        <caption><strong>Table 2.</strong> PAGE% preparation for 16mL</caption>
+                                        <tr>
+                                            <th>%</th>
+                                            <th>30% Acrylamide/Bisacrylamide (29:1) (mL)</th>
+                                            <th>H20 (Milli-Q or DEPC-treated) (mL)</th>
+                                            <th>5X TBE (mL)</th>
+                                            <th>10%APS (uL)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>8</td>
+                                            <td>5.4</td>
+                                            <td>2.4</td>
+                                            <td>200</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>Add SYBRSafe according to gel preparation volume
+                                    <ol type="i">
+                                        <li>1.2 uL for 12mL of gel preparation or;</li>
+                                        <li>1.6 uL for 16mL of gel preparation</li>
+                                    </ol>
+                                </li>
+                                <li>Vortex the solution </li>
+                                <li>Add 10uL of TEMED
+                                    <ol type="i">
+                                        <li>Do this in a fume hood as TEMED is toxic</li>
+                                    </ol>
+                                </li>
+                                <li>Immediately vortex for 2 seconds and pour the gel into the casting apparatus
+                                    <ol type="i">
+                                        <li>Make sure to cast two gels to complete the circuit for PAGE</li>
+                                        <li>You cannot perform PAGE with only one casted gel </li>
+                                    </ol>
+                                </li>
+                                <li>Insert a comb and let the gel polymerize for 20-30 minutes
+                                    <ol type="i">
+                                        <li>A good way to estimate polymerization is to see whether the left over gel in the gel preparation centrifuge tube has solidified or not.</li>
+                                        <li>The polymerized gel can be placed in 1X TBE and stored in 4C for overnight storage</li>
+                                    </ol>
+                                </li>
+                                <li>Remove the comb and set the running PAGE apparatus by adding the gel (with both glass slides) to the electrophoresis tank. Cover the gels with 1X TBE buffer </li>
+                                <li>Prepare samples according to the experiment being performed.Incubate each sample for 30 minutes at 25C. Do not incubate the samples with the DNA ladder.
+                                    <ol type="i">
+                                        <li>For experiment 1 (seeing whether the reaction from literature works or not) prepare samples according to Table 3.</li>
+                                        <li>For experiment 2 (seeing whether the reaction works when the nanopore strand of TMSD is modified) prepare samples according to Table 4.</li>
+                                        <li>For experiment 3 (seeing whether the reaction works when the target strand of TMSD is modified) prepare samples according to Table 5. </li>
+                                        <li>For experiment 4 (seeing whether the reaction works when the nanopore strand and aptazyme strands of TMSD are modified) prepare samples according to Table 6
+                                            <table>
+                                                <caption><strong>Table 3. </strong>TMSD Experiment 1 (original reaction)</caption>
+                                                <tr>
+                                                    <th>Tubes</th>
+                                                    <th>Content</th>
+                                                    <th>Amount (uL)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>TMSDNAN</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>TMSDTAR</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>TMSDKEY</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>TMSDNAN + TMSDTAR</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>TMSDNAN + TMSDTAR + TMSDKEY</td>
+                                                    <td>3.33, 3.33, 3.33</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>TMSDNAN + TMSDKEY</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>TMSDTAR + TMSDKEY</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>LADDER</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>LADDER</td>
+                                                    <td>20</td>
+                                                </tr>
+                                            </table>
+                                            <br>
+                                            <table>
+                                                <caption><strong>Table 4. </strong>TMSD Experiment 2 (modified nanopore strand)</caption>
+                                                <tr>
+                                                    <th>Tubes</th>
+                                                    <th>Content</th>
+                                                    <th>Amount (uL)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>TMSDNAN</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>TMSDNANL</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>TMSDTAR</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>TMSDKEY</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>TMSDTAR + TMSDNAN</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>TMSDTAR + TMSDNANL</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>LADDER</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>TMSDTAR+ TMSDNANL + TMSDKEY</td>
+                                                    <td>3.33, 3.33, 3.33</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>TMSDNANL + TMSDKEY</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>LADDER</td>
+                                                    <td>20</td>
+                                                </tr>
+                                            </table>
+                                            <br>
+                                            <table>
+                                                <caption><strong>Table 5. </strong>TMSD Experiment 3 (modified target strand)</caption>
+                                                <tr>
+                                                    <th>Tubes</th>
+                                                    <th>Content</th>
+                                                    <th>Amount (uL)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>TMSDNAN</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>TMSDTAR</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>TMSDKEY</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>TMSDNAN + TMSDTAR</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>TMSDNAN + TMSDTAR + TMSDKEY</td>
+                                                    <td>3.33, 3.33, 3.33</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>TMSDNAN + TMSDKEY</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>TMSDTAR + TMSDKEY</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>LADDER</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>LADDER</td>
+                                                    <td>20</td>
+                                                </tr>
+                                            </table>
+                                            <br>
+                                            <table>
+                                                <caption><strong>Table 6. </strong>TMSD Experiment 4 (modified nanopore and target strands)</caption>
+                                                <tr>
+                                                    <th>Tubes</th>
+                                                    <th>Content</th>
+                                                    <th>Amount (uL)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>TMSDNAN</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>TMSDTAR</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>TMSDKEY</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>TMSDNAN + TMSDTAR</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>TMSDNAN + TMSDTAR + TMSDKEY</td>
+                                                    <td>3.33, 3.33, 3.33</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>TMSDNAN + TMSDKEY</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>TMSDTAR + TMSDKEY</td>
+                                                    <td>5, 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>LADDER</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>LADDER</td>
+                                                    <td>20</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>Add 2uL of loading dye to each sample and briefly centrifuge the samples down before loading 12uL of each sample into the wells.</li>
+                                <li>Run gel at 1V/cm - 8V/cm until the dye front has reached the end of the gel or washed past the gel length
+                                    <ol type="i">
+                                        <li>If no current is detected, run the gel at 120V</li>
+                                        <li>Run at constant volts; do not change the other parameters</li>
+                                    </ol>
+                                </li>
+                                <li>Turn the apparatus off, discard the buffer in a bottle and image the gels</li>
+                                <li>If no bands are visible then perform post-run staining either with SYBRSafe or with Ethidium Bromide
+                                    <ol type="i">
+                                        <!-- TODO? -->
+                                        <li>Refer to (add link for post-run staining here) for protocol and notes </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>Resuspend gels in 50mL of 1X TBE and store overnight at 4C</li>
+                    </ol>
+                </div>
+    
+                <div id="tab3" class="tab-window">
+                    <p><strong>Objective: </strong>To visualize the ethidium bromide stained TMSD experiment PAGE gels.</p>
+                    <br>
+                    <ol>
+                        <li>Add 2.5uL of EtBr in 50mL of the 1X TBE buffer that the gels are soaked in.
+                            <ol type="a">
+                                <li>Dispose of gloves that have come into EtBr in an EtBr-specific waste container in the fume hood </li>
+                                <li>Keep all pipettes and pipette tips outside of the fume hood</li>
+                            </ol>
+                        </li>
+                        <li>Cover the gel box with aluminum foil and avoid exposing the box to direct light </li>
+                        <li>Transfer gels to a rocking platform and agitate them for 30 minutes at room temperature</li>
+                        <li>Image the gel using a transilluminator</li>
+                        <li>If there is high background observed, destain the gel in deionized water for 5-15 minutes to remove excess dye</li>
+                        <li>Post-stain image processing
+                            <ol type="a">
+                                <li>Open the gel image in ImageJ. Click on image on the top panel> color > split channels. Three windows should appear. Select the window with the green for the best results. </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+    
+                <div id="tab4" class="tab-window" style="border-top-right-radius: 10px;">
+    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiments-aptazyme">
+        <h2>Aptazyme</h2>
+        <p>The aptazyme serves as the gate of the nanopore and detecting mechanism of the sensor design. The first task with aptazyme experiments was to synthesize it from the DNA template strand.  The goal with aptazyme experimentation was to first and foremost show that aptazyme performs a cleavage reaction in the presence of theophylline target. Secondly, ideal cleavage conditions would be important to explore as well as specificity of the aptazymes. These factors would influence the function of the overall biosensor design.</p>
+    </section>
+
+    <section id="experiments-nanopore">
+        <h2>Nanopore</h2>
+        <p>The objective of the protocol is to fold the nanopore with varying magnesium chloride concentrations. Afterwards, we confirm proper assembly by performing agarose gel electrophoresis on a daily basis. Then we purify and then quantify the final concentration of the folded nanopore to ensure that it is ready to be inserted into the sensor component and to be tested for dye flux. </p>
+    </section>
+
+    <section id="experiments-liposome">
+        <h2>Liposome</h2>
+        <p>In order to create a housing construct for our fluorescence dye and allow for nanopore insertion, we decided to create DOPC:DOPE liposomes of about 150 nm in diameter. </p>
+    </section>
+
+    <section id="experiments-dyeflux">
+        <h2>Dye Flux</h2>
+        <p>We used a plate reader to determine the ideal fluorescence wavelength range to detect SRB, gather high throughput data on the change in fluorescence once the nanopore inserts, and confirm SRB encapsulation by liposomes. This allowed us to confirm whether our liposomes performed as expected while informing us of any nanopore insertion events with fluorescence as an output. </p>
+    </section>
 
 
     <div class="experiments-pdf">
@@ -30,4 +461,5 @@
         />
     </div>
 
+    <script src="/results.js"></script>
 </main>
