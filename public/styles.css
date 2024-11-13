@@ -824,16 +824,30 @@ footer {
 .experiments-container {
     width: 100%;
     margin: 0 auto;
-    max-width: 1200px;
 }
 
 .experiments-container section {
     margin-bottom: 3rem;
 }
 
+.experiments-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
 /* Experiments diagram */
 .experiments-diagram {
     min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .experiments-timeline {
@@ -842,7 +856,7 @@ footer {
     position: relative;
     border-top: 2px solid #333;
     padding-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .experiments-month {
@@ -955,6 +969,7 @@ footer {
 }
 
 .tab-window {
+    margin-top: 2rem;
     width: 100%;
     display: none;
     line-height: 2;
