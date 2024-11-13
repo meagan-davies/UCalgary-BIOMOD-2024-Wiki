@@ -1,3 +1,17 @@
+<head>
+    <style>
+        :root {
+            --1: #a1c5ff;
+            --2: #ff8ae9;
+            --3: #dfa3e6;
+            --4: #a6a3e6;
+            --5: #7680c6;
+            --6: #d1ffc9;
+            --7: #ffc9fa;
+            --8: #cfa8e3;
+        }
+    </style>
+</head>
 <main class="experiments-container">
 
     <div class="experiments-diagram">
@@ -35,12 +49,12 @@
         <h2>Toehold Strand Displacement (TMSD)</h2>
         <p>We planned to use TMSD to provide our sensor with on-demand modularity, allowing the various parts of the sensor to be bound and dissociated on demand. This was done by first modifying the TMSD reaction from literature to suit our sensor use and followed by a series of experiments to test the functionality of the modified strands.</p>
 
-        <div class="results-sub">
+        <div class="results-sub" data-group="tmsd">
             <div class="results-tabs">
                 <!-- openTab(event, name of corresponding tab window id) -->
-                <button class="results-tab active" onclick="openTab(event, 'tab1')" style="border-top-left-radius: 10px;">Sample Preparation</button>
-                <button class="results-tab" onclick="openTab(event, 'tab2')">Non-SDS Native PAGE</button>
-                <button class="results-tab" onclick="openTab(event, 'tab3')" style="border-top-right-radius: 10px;">Non-SDS Native PAGE Staining and Image Processing</button>
+                <button class="results-tab active" onclick="openTab(event, 'tab1', 'tmsd')" style="border-top-left-radius: 10px;">Sample Preparation</button>
+                <button class="results-tab" onclick="openTab(event, 'tab2', 'tmsd')">Non-SDS Native PAGE</button>
+                <button class="results-tab" onclick="openTab(event, 'tab3', 'tmsd')" style="border-top-right-radius: 10px;">Non-SDS Native PAGE Staining and Image Processing</button>
             </div>
     
             <div class="results-window">
@@ -390,12 +404,7 @@
                                     </ol>
                                 </li>
                                 <li>Turn the apparatus off, discard the buffer in a bottle and image the gels</li>
-                                <li>If no bands are visible then perform post-run staining either with SYBRSafe or with Ethidium Bromide
-                                    <ol type="i">
-                                        <!-- TODO? -->
-                                        <li>Refer to (add link for post-run staining here) for protocol and notes </li>
-                                    </ol>
-                                </li>
+                                <li>If no bands are visible then perform post-run staining either with SYBRSafe or with Ethidium Bromide</li>
                             </ol>
                         </li>
                         <li>Resuspend gels in 50mL of 1X TBE and store overnight at 4C</li>
@@ -439,16 +448,255 @@
     <section id="experiments-nanopore">
         <h2>Nanopore</h2>
         <p>The objective of the protocol is to fold the nanopore with varying magnesium chloride concentrations. Afterwards, we confirm proper assembly by performing agarose gel electrophoresis on a daily basis. Then we purify and then quantify the final concentration of the folded nanopore to ensure that it is ready to be inserted into the sensor component and to be tested for dye flux. </p>
+        
     </section>
 
     <section id="experiments-liposome">
         <h2>Liposome</h2>
         <p>In order to create a housing construct for our fluorescence dye and allow for nanopore insertion, we decided to create DOPC:DOPE liposomes of about 150 nm in diameter. </p>
+
+        <div class="results-sub" data-group="liposome">
+            <div class="results-tabs">
+                <!-- openTab(event, name of corresponding tab window id) -->
+                <button class="results-tab active" onclick="openTab(event, 'tab5', 'liposome')" style="border-top-left-radius: 10px;">Lipid Film</button>
+                <button class="results-tab" onclick="openTab(event, 'tab6', 'liposome')">Synthesis, Extrusion and Purification</button>
+                <button class="results-tab" onclick="openTab(event, 'tab7', 'liposome')" style="border-top-right-radius: 10px;">Size Characterization and Lamellarity</button>
+            </div>
+    
+            <div class="results-window">
+                <div id="tab5" class="tab-window active">
+                    <p><strong>Objective: </strong>To create liposomes we first need to generate a lipid film at the proper ratio</p>
+                    <ol>
+                        <li>Place tin foil on Sartorius Microbalance MC 5 analytical scale, and weigh by difference approximately 1 mg of lipid (or less)</li>
+                        <li>Transfer the lipids to the clean vial, attempting to deposit as much lipid as possible towards the bottom of the vial</li>
+                        <li>Reweigh the tin foil to determine the amount of lipid deposited into the vial</li>
+                        <li>Dissolve the lipids in chloroform to approximately 1 mg/mL of buffer</li>
+                        <li>Briefly Sonicate to ensure dissolution of lipids (30-60 seconds)</li>
+                        <li>Evaporate solvent in the fume hood, by using a steady and smooth stream of argon gas – Be sure to avoid too much force as this will cause solution to spill and continue this process until there is little to no solvent remaining
+                            <ol type="a">
+                                <li>There should be a noticeable formation of lipid film after evaporation</li>
+                            </ol>
+                        </li>
+                        <li>Place the vial in the vacuum overnight at ~20 inHg to ensure complete evaporation of the organic solvent</li>
+                    </ol>
+                </div>
+    
+                <div id="tab6" class="tab-window">
+                    <p><strong>Objective: </strong>To synthesize 150 nm liposomes that encapsulate SRB and purify the liposomes. </p>
+                    <ol>
+                        <li>Clean the mini extruder parts with a 4 solvent wash. Let everything dry. </li>
+                        <li>Assemble the extruder as shown: <a href="https://www.youtube.com/watch?v=D-rxpnyR2T8" target="_blank">https://www.youtube.com/watch?v=D-rxpnyR2T8</a></li>
+                        <li>Take dried lipid films and resuspend vial 1 with 1 mL of buffer and vial 2 with 1 mL of  buffer+50mM sulforhodamine B </li>
+                        <li>Vortex and sonicate the vials briefly </li>
+                        <li>Run each sample through 5 freeze-thaw cycles starting from sonicating for 30 seconds by half submerging the samples in a bath sonicator. Freeze the samples by placing them for 5 minutes in -80c freezer followed by thawing the vials on a hotplate set at 30-40C. </li>
+                        <li>Prep the mini extruder by extruding the buffer from the right syringe to the left one.</li>
+                        <li>Empty both syringes and load non encapsulated lipids on the right syringe. Extrude 21 to 25 times. Collect extruded liposome fractions in the right syringe.</li>
+                        <li>Purify vesicle solution using standard desalting columns</li>
+                    </ol>
+                </div>
+
+    
+                <div id="tab7" class="tab-window" style="border-top-right-radius: 10px;">
+                    <p><strong>Objective: </strong>To ensure that the liposomes are formed uniformly and have a diameter that ranges between 100 nm to 150 nm as determined by the mean size and a polydispersity of &lt;0.30 </p> <br>
+                    <p>To perform dynamic light scattering to ensure the desired liposomes are 150nm as determined by the mean diameter value and are uniform by the polydisperrsity value. </p>
+                    <ol>
+                        <li>Dilute 100uL of purified liposomes by adding 900uL of buffer. </li>
+                        <li>Run DLS analysis thrice for each sample and generate the report note average size and polydispersity. </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="experiments-dyeflux">
         <h2>Dye Flux</h2>
         <p>We used a plate reader to determine the ideal fluorescence wavelength range to detect SRB, gather high throughput data on the change in fluorescence once the nanopore inserts, and confirm SRB encapsulation by liposomes. This allowed us to confirm whether our liposomes performed as expected while informing us of any nanopore insertion events with fluorescence as an output. </p>
+
+        <div class="results-sub" data-group="dyeflux">
+            <div class="results-tabs">
+                <!-- openTab(event, name of corresponding tab window id) -->
+                <button class="results-tab active" onclick="openTab(event, 'df-tab1', 'dyeflux')" style="border-top-left-radius: 10px;">SRB Gradient Sample Preparation and Plate Reader Reading</button>
+                <button class="results-tab" onclick="openTab(event, 'df-tab2', 'dyeflux')" style="border-top-right-radius: 10px;">Nanopore Insertion Testing Sample Preparation and Plate Reader Reading</button>
+            </div>
+    
+            <div class="results-window">
+                <div id="df-tab1" class="tab-window active" style="border-top-left-radius: 10px;">
+                    <p><strong>Objective:</strong> To set up a 96 well plate to determine ideal wavelengths for SRB. determine nanopore insertion events through a 30 minute kinetic run. </p>
+                    <ol>
+                        <li>Prepare a buffer solution with 1X TAE, 0.5M NaCl, and 16 mM MgCl2</li>
+                        <li>Prepare a 100mM SRB stock</li>
+                        <li>
+                            Prepare an SRB gradient plate as shown below: 
+                            <ul style="list-style-type: none;">
+                                <li>A1 → 100 uL Buffer Solution</li>
+                                <li>A2 → 0.01 mM: 1 μL 1 mM SRB and 99 μL Buffer Solution</li>
+                                <li>A3 → 0.02 mM: 2 μL 1 mM SRB and 98 μL Buffer Solution</li>
+                                <li>A4 → 0.05 mM: 5 μL 1 mM SRB and 95 μL Buffer Solution</li>
+                                <li>A5 → 0.1 mM: 10 μL 1 mM SRB and 90 μL Buffer Solution</li>
+                                <li>A6 → 0.5 mM: 50 μL 1 mM SRB and 50 uL Buffer Solution</li>
+                                <li>A7 → 1 mM: 100 μL 1 mM SRB</li>
+                                <li>A8 → 2 mM: 6.67 μL 30 mM SRB and 93.33 μL Buffer Solution</li>
+                                <li>A9 → 5 mM: 16.67 μL 30 mM SRB and 83.33 μL Buffer Solution</li>
+                                <li>A10 → 10 mM: 33.33 μL 30 mM SRB and 66.67 μL Buffer Solution</li>
+                                <li>A11 → 15 mM: 50 μL 30 mM SRB and 50 μL Buffer Solution</li>
+                                <li>A12 → 30 mM: 100 μL 30 mM SRB</li>
+                            </ul>
+                        </li>
+                        <li>On the plate reader, configure to the following specifications and press read:
+                            <ol type="a">
+                                <li>Read Mode: FL (fluorescence)</li>
+                                <li>Read Type: Spectrum</li>
+                                <li>Wavelengths: Excitation = 544 nm / Emission = 564 - 700 nm / Step = 9 nm</li>
+                                <li>Plate Type: 96 Well Standard clrbtm*</li>
+                                <li>Read Area: Highlight the follow wells that were populated in the 96 well plate</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+    
+                <div id="df-tab2" class="tab-window" style="border-top-right-radius: 10px;">
+                    <p><strong>Objective: </strong>To set up a 96 well plate to identify nanopore insertion events through a 30 minute kinetic run. </p>
+                    <ol>
+                        <li>Prepare a buffer solution with 1X TAE, 0.5M NaCl, and 16 mM MgCl2</li>
+                        <li>Prepare a 100mM SRB stock</li>
+                        <li>Prepare the samples to a total volume of 100uL on the plate as shown below: <br>(note: R6S1 indicates the first nanopore sample from the 6th folding run)
+
+                        
+                            <table style="font-size: 12px; line-height: 1.2;">
+                                <tr>
+                                    <th style="background-color: var(--1);">Buffer</th>
+                                    <th style="background-color: var(--1);">Buffer</th>
+                                    <th style="background-color: var(--1);">Blank</th>
+                                    <th style="background-color: var(--2);">Liposome</th>
+                                    <th style="background-color: var(--2);">Liposome</th>
+                                    <th style="background-color: var(--2);">Liposome</th>
+                                    <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome</th>
+                                    <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome</th>
+                                    <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome</th>
+                                    <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome</th>
+                                    <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome</th>
+                                    <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome</th>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: var(--5);">10uM Cholesterol</th>
+                                    <th style="background-color: var(--5);">10uM Cholesterol</th>
+                                    <th style="background-color: var(--5);">10uM Cholesterol</th>
+                                    <th style="background-color: var(--2);">Triton + Liposome</th>
+                                    <th style="background-color: var(--2);">Triton + Liposome</th>
+                                    <th style="background-color: var(--2);">Triton + Liposome</th>
+                                    <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome + Triton</th>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: var(--6);">1% Triton</th>
+                                    <th style="background-color: var(--6);">1% Triton</th>
+                                    <th style="background-color: var(--6);">1% Triton</th>
+                                    <th style="background-color: var(--2);">10mM SRB liposome</th>
+                                    <th style="background-color: var(--2);">10mM SRB liposome</th>
+                                    <th style="background-color: var(--2);">10mM SRB liposome</th>
+                                    <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome</th>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: var(--4);">1uM SRB</th>
+                                    <th style="background-color: var(--4);">1uM SRB</th>
+                                    <th style="background-color: var(--4);">1uM SRB</th>
+                                    <th style="background-color: var(--2);">Triton + 10mM SRB liposome</th>
+                                    <th style="background-color: var(--2);">Triton + 10mM SRB liposome</th>
+                                    <th style="background-color: var(--2);">Triton + 10mM SRB liposome</th>
+                                    <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome +Triton</th>
+                                    <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome +Triton</th>
+                                    <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome +Triton</th>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: var(--4);">100uM SRB</th>
+                                    <th style="background-color: var(--4);">100uM SRB</th>
+                                    <th style="background-color: var(--4);">100uM SRB</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome</th>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: var(--4);">500uM SRB</th>
+                                    <th style="background-color: var(--4);">500uM SRB</th>
+                                    <th style="background-color: var(--4);">500uM SRB</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome +Triton</th>
+                                    <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome +Triton</th>
+                                    <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome +Triton</th>
+                                    <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome +Triton</th>
+                                    <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome +Triton</th>
+                                    <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome +Triton</th>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: var(--4);">1mM SRB</th>
+                                    <th style="background-color: var(--4);">1mM SRB</th>
+                                    <th style="background-color: var(--4);">1mM SRB</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome</th>
+                                    <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome</th>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: var(--4);">10mM SRB</th>
+                                    <th style="background-color: var(--4);">10mM SRB</th>
+                                    <th style="background-color: var(--4);">10mM SRB</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome + Triton</th>
+                                    <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome + Triton</th>
+                                </tr>
+                            </table>
+                        </li>
+
+                        <li>On the plate reader, press the “Settings” button on the Plate Reader Window and configure to the following specifications below and read the plate:
+                            <ol type="a">
+                                <li>Read Mode: FL (fluorescence)</li>
+                                <li>Read Type: Kinetic</li>
+                                <li>Read Length: 30 minutes</li>
+                                <li>Wavelengths:
+                                    <ol type="i">
+                                        <li>Excitation:559nm </li>
+                                        <li>Emission: 579nm</li>
+                                    </ol>
+                                </li>
+                                <li>Plate Type: 96 Well Standard clrbtm*</li>
+                            </ol>
+                        </li>
+                        <li>The plate reader should initialize before reading the signals from the samples. </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
     </section>
 
 

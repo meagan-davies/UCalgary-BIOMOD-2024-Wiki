@@ -1,10 +1,20 @@
-function openTab(event, tabId) {
-    const tabContents = document.querySelectorAll('.tab-window')
-    tabContents.forEach(content => content.classList.remove('active'))
+function openTab(event, tabId, group) {
 
-    const tabButtons = document.querySelectorAll('.results-tab')
-    tabButtons.forEach(button => button.classList.remove('active'))
+    const tabGroup = document.querySelector(`.results-sub[data-group="${group}"]`);
 
-    document.getElementById(tabId).classList.add('active')
-    event.currentTarget.classList.add('active')
+    if (!tabGroup) {
+        console.error('Tab group not found:', group); // Log error if no tab group is found
+        return;
+    }
+
+
+    const tabContents = tabGroup.querySelectorAll('.tab-window');
+    const tabButtons = tabGroup.querySelectorAll('.results-tab');
+
+
+    tabContents.forEach(content => content.classList.remove('active'));
+    tabButtons.forEach(button => button.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
 }
