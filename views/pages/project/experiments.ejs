@@ -1,6 +1,29 @@
+<head>
+    <style>
+        :root {
+            --1: #a1c5ff;
+            --2: #ff8ae9;
+            --3: #dfa3e6;
+            --4: #a6a3e6;
+            --5: #7680c6;
+            --6: #d1ffc9;
+            --7: #ffc9fa;
+            --8: #cfa8e3;
+        }
+    </style>
+</head>
+
+
+
 <main class="experiments-container">
 
     <div class="experiments-diagram">
+        <header class="experiments-header">
+            <div class="header-content">
+                <h1>Experiments</h1>
+                <div class="divider"></div>
+            </div>
+        </header>
         <div class="experiments-timeline">
             <div class="experiments-month">May</div>
             <div class="experiments-month">June</div>
@@ -12,22 +35,765 @@
         <div class="experiments-events">
             <!-- --start = which month to start (1-May~5-September), --span = how many months it spaned -->
              <!-- add click and lead to section  -->
-            <div class="experiments-event" style="--start: 1; --span: 1.7; --index: 0;">Aptazyme</div>
-            <div class="experiments-event" style="--start: 1.5; --span: 2; --index: 1;">Nanopore</div>
-            <div class="experiments-event" style="--start: 2; --span: 1.7; --index: 2;">TMSD</div>
-            <div class="experiments-event" style="--start: 3; --span: 1.7;--index: 3;">Vesicles</div>
-            <div class="experiments-event" style="--start: 1.2; --span: 1.7; --index: 4;">Dye Flux</div>
+            <a href="#experiments-aptazyme">
+                <div class="experiments-event" style="--start: 1; --span: 1.7; --index: 0;">Aptazyme</div>
+            </a>
+            <a href="#experiments-nanopore">
+                <div class="experiments-event" style="--start: 1.5; --span: 2; --index: 1;">Nanopore</div>
+            </a>
+            <a href="#experiments-tmsd">
+                <div class="experiments-event" style="--start: 2; --span: 1.7; --index: 2;">TMSD</div>
+            </a>
+            <a href="#experiments-liposome">
+                <div class="experiments-event" style="--start: 3; --span: 1.7;--index: 3;">Liposome</div>
+            </a>
+            
+            <a href="#experiments-dyeflux">
+                <div class="experiments-event" style="--start: 1.2; --span: 1.7; --index: 4;">Dye Flux</div>
+            </a>
         </div>
     </div>
 
+    <div class="experiments-body">
+        <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+        <div class="toc-container-e">
+            <nav class="toc">
+                <ul>
+                    <li>
+                        <a href="#experiments-tmsd">TMSD</a>
+                        <ul>
+                            <li><a href="#tmsd-tabs" onclick="openTab(event, 'tab1', 'tmsd')" class="toc-link">Sample Preparation</a></li>
+                            <li><a href="#tmsd-tabs" onclick="openTab(event, 'tab2', 'tmsd')" class="toc-link">Non-SDS Native PAGE</a></li>
+                            <li><a href="#tmsd-tabs" onclick="openTab(event, 'tab3', 'tmsd')" class="toc-link">Non-SDS Native PAGE Staining and Image Processing</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#experiments-aptazyme">Aptazyme</a>
+                        <ul>
+                            <li><a href="#sub2-1">sub2</a></li>
+                            <li><a href="#sub2-2">sub2-2</a></li>
+                            <li><a href="#sub2-3">sub2-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#experiments-nanopore">Nanopore</a>
+                        <ul>
+                            <li><a href="#sub2-1">sub2</a></li>
+                            <li><a href="#sub2-2">sub2-2</a></li>
+                            <li><a href="#sub2-3">sub2-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#experiments-liposome">Liposome</a>
+                        <ul>
+                            <li><a href="#liposome-tabs" onclick="openTab(event, 'tab5', 'liposome')" class="toc-link">Lipid Film</a></li>
+                            <li><a href="#liposome-tabs" onclick="openTab(event, 'tab6', 'liposome')" class="toc-link">Synthesis, Extrusion and Purification</a></li>
+                            <li><a href="#liposome-tabs" onclick="openTab(event, 'tab7', 'liposome')" class="toc-link">Size Characterization and Lamellarity</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#experiments-dyeflux">Dye Flux</a>
+                        <ul>
+                            <li><a href="#dyeflux-tabs" onclick="openTab(event, 'df-tab1', 'dyeflux')" class="toc-link">SRB Gradient Sample Preparation and Plate Reader Reading</a></li>
+                            <li><a href="#dyeflux-tabs" onclick="openTab(event, 'df-tab2', 'dyeflux')" class="toc-link">Nanopore Insertion Testing Sample Preparation and Plate Reader Reading</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#experiments-protocol">Protocol</a></li>
+                </ul>
+                <svg 
+                    class="toc-marker"
+                    width="200"
+                    height="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <!-- stroke color -->
+                    <path 
+                        stroke="#ccfbf1"
+                        stroke-width="3"
+                        fill="transparent"
+                        stroke-dasharray="0, 0, 0, 1000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        transform="translate(-0.5, -0.5)" />
+                </svg>
+            </nav> 
+        </div>
 
-    <div class="experiments-pdf">
-        <embed 
-            src="/Experiments.pdf"
-            type="application/pdf"
-            width="100%"
-            height="600px"
-        />
+        <article class="contents-e">
+            <section id="experiments-tmsd">
+                <h2>Toehold Strand Displacement (TMSD)</h2>
+                <p>We planned to use TMSD to provide our sensor with on-demand modularity, allowing the various parts of the sensor to be bound and dissociated on demand. This was done by first modifying the TMSD reaction from literature to suit our sensor use and followed by a series of experiments to test the functionality of the modified strands.</p>
+        
+                <div class="results-sub" data-group="tmsd">
+                    <div class="results-tabs" id="tmsd-tabs">
+                        <!-- openTab(event, name of corresponding tab window id) -->
+                        <button class="results-tab active" onclick="openTab(event, 'tab1', 'tmsd')" style="border-top-left-radius: 10px;">Sample Preparation</button>
+                        <button class="results-tab" onclick="openTab(event, 'tab2', 'tmsd')">Non-SDS Native PAGE</button>
+                        <button class="results-tab" onclick="openTab(event, 'tab3', 'tmsd')" style="border-top-right-radius: 10px;">Non-SDS Native PAGE Staining and Image Processing</button>
+                    </div>
+            
+                    <div class="results-window">
+                        <div id="tab1" class="tab-window active" style="border-top-left-radius: 10px;">
+                            <p><strong>Objective: </strong>To prepare samples of 200uM stock of TMSD oligos and 20uM working solutions for TMSD for TMSD strand interactions on PAGE.</p>
+                            <br>
+                            <ol>
+                                <li>
+                                    <p>Prepare and resuspend samples to 200uM (keep all samples inside an ice bath) as follows:</p>
+                                    <table>
+                                        <tr>
+                                            <th>Sample</th>
+                                            <th>Label</th>
+                                            <th>nmoles</th>
+                                            <th>Mass (mg)</th>
+                                            <th>Volume (uL) to resuspend in:</th>
+                                        </tr>
+                                        <tr>
+                                            <td>TMSDTAR</td>
+                                            <td>TMSDTAR</td>
+                                            <td>28.7</td>
+                                            <td>0.35</td>
+                                            <td>143.3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TMSDKEY</td>
+                                            <td>KEY</td>
+                                            <td>85.1</td>
+                                            <td>1.30</td>
+                                            <td>426.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TMSDNAN</td>
+                                            <td>NAN</td>
+                                            <td>29.5</td>
+                                            <td>0.30</td>
+                                            <td>513.3</td>
+                                        </tr>
+                                    </table>
+                                    <ol type="a">
+                                        <li>Centrifuge at 10000 for 30 seconds or 3000 x g</li>
+                                        <li>Add deionized water</li>
+                                        <li>Vortex and centrifuge</li>
+                                    </ol>
+                                </li>
+                                <li>Prepare 20uM of 100 uL sample working stocks</li>
+                                <li>Store all Oligo stocks in the -20C fridge</li>
+                            </ol>
+                        </div>
+            
+                        <div id="tab2" class="tab-window">
+                            <p><strong>Objective: </strong>Visualizing the modified TMSD strands with the original TMSD strands to confirm functionality using PAGE.</p>
+                            <br>
+        
+                            <ol>
+                                <li>Prepare 1xTBE running buffer</li>
+                                <li>Prepare samples for experiment 1 and experiment and incubate them for 30 minutes at 25 C.</li>
+                                <li>Prepare the ladder by thawing and centrifuge briefly before loading.</li>
+                                <li>Prepare PAGE apparatus and check for leakage
+                                    <ol type="a">
+                                        <li>Clean plates and spacers with deionized water, ethanol, dry, and assemble the apparatus</li>
+                                        <li>Assemble 2 Hoeffer minigels of 1mm thickness</li>
+                                        <li>Add DEPC-water and check for leakage (leave the set up for 20 minutes)
+                                            <ol type="i">
+                                                <li>If no leakage is observed then drain the water in the sink and use a folded paper towel to dry the casting apparatus as much as possible making sure not to move the glass plates in the process.</li>
+                                            </ol>
+                                        </li>
+                                        <li>Prepare a 15% gel solution of 12mL according to Table 1 for 1 running gel and Table 2 for 2 running gels.
+        
+                                            <table>
+                                                <caption><strong>Table 2.</strong> PAGE% preparation for 16mL</caption>
+                                                <tr>
+                                                    <th>%</th>
+                                                    <th>30% Acrylamide/Bisacrylamide (29:1) (mL)</th>
+                                                    <th>H20 (Milli-Q or DEPC-treated) (mL)</th>
+                                                    <th>5X TBE (mL)</th>
+                                                    <th>10%APS (uL)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>15</td>
+                                                    <td>8</td>
+                                                    <td>5.4</td>
+                                                    <td>2.4</td>
+                                                    <td>200</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                        <li>Add SYBRSafe according to gel preparation volume
+                                            <ol type="i">
+                                                <li>1.2 uL for 12mL of gel preparation or;</li>
+                                                <li>1.6 uL for 16mL of gel preparation</li>
+                                            </ol>
+                                        </li>
+                                        <li>Vortex the solution </li>
+                                        <li>Add 10uL of TEMED
+                                            <ol type="i">
+                                                <li>Do this in a fume hood as TEMED is toxic</li>
+                                            </ol>
+                                        </li>
+                                        <li>Immediately vortex for 2 seconds and pour the gel into the casting apparatus
+                                            <ol type="i">
+                                                <li>Make sure to cast two gels to complete the circuit for PAGE</li>
+                                                <li>You cannot perform PAGE with only one casted gel </li>
+                                            </ol>
+                                        </li>
+                                        <li>Insert a comb and let the gel polymerize for 20-30 minutes
+                                            <ol type="i">
+                                                <li>A good way to estimate polymerization is to see whether the left over gel in the gel preparation centrifuge tube has solidified or not.</li>
+                                                <li>The polymerized gel can be placed in 1X TBE and stored in 4C for overnight storage</li>
+                                            </ol>
+                                        </li>
+                                        <li>Remove the comb and set the running PAGE apparatus by adding the gel (with both glass slides) to the electrophoresis tank. Cover the gels with 1X TBE buffer </li>
+                                        <li>Prepare samples according to the experiment being performed.Incubate each sample for 30 minutes at 25C. Do not incubate the samples with the DNA ladder.
+                                            <ol type="i">
+                                                <li>For experiment 1 (seeing whether the reaction from literature works or not) prepare samples according to Table 3.</li>
+                                                <li>For experiment 2 (seeing whether the reaction works when the nanopore strand of TMSD is modified) prepare samples according to Table 4.</li>
+                                                <li>For experiment 3 (seeing whether the reaction works when the target strand of TMSD is modified) prepare samples according to Table 5. </li>
+                                                <li>For experiment 4 (seeing whether the reaction works when the nanopore strand and aptazyme strands of TMSD are modified) prepare samples according to Table 6
+                                                    <table>
+                                                        <caption><strong>Table 3. </strong>TMSD Experiment 1 (original reaction)</caption>
+                                                        <tr>
+                                                            <th>Tubes</th>
+                                                            <th>Content</th>
+                                                            <th>Amount (uL)</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>TMSDNAN</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>TMSDTAR</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>TMSDKEY</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>TMSDNAN + TMSDTAR</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>TMSDNAN + TMSDTAR + TMSDKEY</td>
+                                                            <td>3.33, 3.33, 3.33</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>TMSDNAN + TMSDKEY</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>TMSDTAR + TMSDKEY</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>LADDER</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>LADDER</td>
+                                                            <td>20</td>
+                                                        </tr>
+                                                    </table>
+                                                    <br>
+                                                    <table>
+                                                        <caption><strong>Table 4. </strong>TMSD Experiment 2 (modified nanopore strand)</caption>
+                                                        <tr>
+                                                            <th>Tubes</th>
+                                                            <th>Content</th>
+                                                            <th>Amount (uL)</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>TMSDNAN</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>TMSDNANL</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>TMSDTAR</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>TMSDKEY</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>TMSDTAR + TMSDNAN</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>TMSDTAR + TMSDNANL</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>LADDER</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>TMSDTAR+ TMSDNANL + TMSDKEY</td>
+                                                            <td>3.33, 3.33, 3.33</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>TMSDNANL + TMSDKEY</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>LADDER</td>
+                                                            <td>20</td>
+                                                        </tr>
+                                                    </table>
+                                                    <br>
+                                                    <table>
+                                                        <caption><strong>Table 5. </strong>TMSD Experiment 3 (modified target strand)</caption>
+                                                        <tr>
+                                                            <th>Tubes</th>
+                                                            <th>Content</th>
+                                                            <th>Amount (uL)</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>TMSDNAN</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>TMSDTAR</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>TMSDKEY</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>TMSDNAN + TMSDTAR</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>TMSDNAN + TMSDTAR + TMSDKEY</td>
+                                                            <td>3.33, 3.33, 3.33</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>TMSDNAN + TMSDKEY</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>TMSDTAR + TMSDKEY</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>LADDER</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>LADDER</td>
+                                                            <td>20</td>
+                                                        </tr>
+                                                    </table>
+                                                    <br>
+                                                    <table>
+                                                        <caption><strong>Table 6. </strong>TMSD Experiment 4 (modified nanopore and target strands)</caption>
+                                                        <tr>
+                                                            <th>Tubes</th>
+                                                            <th>Content</th>
+                                                            <th>Amount (uL)</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>TMSDNAN</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>TMSDTAR</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>TMSDKEY</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>TMSDNAN + TMSDTAR</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>TMSDNAN + TMSDTAR + TMSDKEY</td>
+                                                            <td>3.33, 3.33, 3.33</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>TMSDNAN + TMSDKEY</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>TMSDTAR + TMSDKEY</td>
+                                                            <td>5, 5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>LADDER</td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>LADDER</td>
+                                                            <td>20</td>
+                                                        </tr>
+                                                    </table>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li>Add 2uL of loading dye to each sample and briefly centrifuge the samples down before loading 12uL of each sample into the wells.</li>
+                                        <li>Run gel at 1V/cm - 8V/cm until the dye front has reached the end of the gel or washed past the gel length
+                                            <ol type="i">
+                                                <li>If no current is detected, run the gel at 120V</li>
+                                                <li>Run at constant volts; do not change the other parameters</li>
+                                            </ol>
+                                        </li>
+                                        <li>Turn the apparatus off, discard the buffer in a bottle and image the gels</li>
+                                        <li>If no bands are visible then perform post-run staining either with SYBRSafe or with Ethidium Bromide</li>
+                                    </ol>
+                                </li>
+                                <li>Resuspend gels in 50mL of 1X TBE and store overnight at 4C</li>
+                            </ol>
+                        </div>
+            
+                        <div id="tab3" class="tab-window">
+                            <p><strong>Objective: </strong>To visualize the ethidium bromide stained TMSD experiment PAGE gels.</p>
+                            <br>
+                            <ol>
+                                <li>Add 2.5uL of EtBr in 50mL of the 1X TBE buffer that the gels are soaked in.
+                                    <ol type="a">
+                                        <li>Dispose of gloves that have come into EtBr in an EtBr-specific waste container in the fume hood </li>
+                                        <li>Keep all pipettes and pipette tips outside of the fume hood</li>
+                                    </ol>
+                                </li>
+                                <li>Cover the gel box with aluminum foil and avoid exposing the box to direct light </li>
+                                <li>Transfer gels to a rocking platform and agitate them for 30 minutes at room temperature</li>
+                                <li>Image the gel using a transilluminator</li>
+                                <li>If there is high background observed, destain the gel in deionized water for 5-15 minutes to remove excess dye</li>
+                                <li>Post-stain image processing
+                                    <ol type="a">
+                                        <li>Open the gel image in ImageJ. Click on image on the top panel> color > split channels. Three windows should appear. Select the window with the green for the best results. </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+            
+                        <div id="tab4" class="tab-window" style="border-top-right-radius: 10px;">
+            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="experiments-aptazyme">
+                <h2>Aptazyme</h2>
+                <p>The aptazyme serves as the gate of the nanopore and detecting mechanism of the sensor design. The first task with aptazyme experiments was to synthesize it from the DNA template strand.  The goal with aptazyme experimentation was to first and foremost show that aptazyme performs a cleavage reaction in the presence of theophylline target. Secondly, ideal cleavage conditions would be important to explore as well as specificity of the aptazymes. These factors would influence the function of the overall biosensor design.</p>
+            </section>
+        
+            <section id="experiments-nanopore">
+                <h2>Nanopore</h2>
+                <p>The objective of the protocol is to fold the nanopore with varying magnesium chloride concentrations. Afterwards, we confirm proper assembly by performing agarose gel electrophoresis on a daily basis. Then we purify and then quantify the final concentration of the folded nanopore to ensure that it is ready to be inserted into the sensor component and to be tested for dye flux. </p>
+                
+            </section>
+        
+            <section id="experiments-liposome">
+                <h2>Liposome</h2>
+                <p>In order to create a housing construct for our fluorescence dye and allow for nanopore insertion, we decided to create DOPC:DOPE liposomes of about 150 nm in diameter. </p>
+        
+                <div class="results-sub" data-group="liposome">
+                    <div class="results-tabs" id="liposome-tabs">
+                        <!-- openTab(event, name of corresponding tab window id) -->
+                        <button class="results-tab active" onclick="openTab(event, 'tab5', 'liposome')" style="border-top-left-radius: 10px;">Lipid Film</button>
+                        <button class="results-tab" onclick="openTab(event, 'tab6', 'liposome')">Synthesis, Extrusion and Purification</button>
+                        <button class="results-tab" onclick="openTab(event, 'tab7', 'liposome')" style="border-top-right-radius: 10px;">Size Characterization and Lamellarity</button>
+                    </div>
+            
+                    <div class="results-window">
+                        <div id="tab5" class="tab-window active">
+                            <p><strong>Objective: </strong>To create liposomes we first need to generate a lipid film at the proper ratio</p>
+                            <ol>
+                                <li>Place tin foil on Sartorius Microbalance MC 5 analytical scale, and weigh by difference approximately 1 mg of lipid (or less)</li>
+                                <li>Transfer the lipids to the clean vial, attempting to deposit as much lipid as possible towards the bottom of the vial</li>
+                                <li>Reweigh the tin foil to determine the amount of lipid deposited into the vial</li>
+                                <li>Dissolve the lipids in chloroform to approximately 1 mg/mL of buffer</li>
+                                <li>Briefly Sonicate to ensure dissolution of lipids (30-60 seconds)</li>
+                                <li>Evaporate solvent in the fume hood, by using a steady and smooth stream of argon gas – Be sure to avoid too much force as this will cause solution to spill and continue this process until there is little to no solvent remaining
+                                    <ol type="a">
+                                        <li>There should be a noticeable formation of lipid film after evaporation</li>
+                                    </ol>
+                                </li>
+                                <li>Place the vial in the vacuum overnight at ~20 inHg to ensure complete evaporation of the organic solvent</li>
+                            </ol>
+                        </div>
+            
+                        <div id="tab6" class="tab-window">
+                            <p><strong>Objective: </strong>To synthesize 150 nm liposomes that encapsulate SRB and purify the liposomes. </p>
+                            <ol>
+                                <li>Clean the mini extruder parts with a 4 solvent wash. Let everything dry. </li>
+                                <li>Assemble the extruder as shown: <a href="https://www.youtube.com/watch?v=D-rxpnyR2T8" target="_blank">https://www.youtube.com/watch?v=D-rxpnyR2T8</a></li>
+                                <li>Take dried lipid films and resuspend vial 1 with 1 mL of buffer and vial 2 with 1 mL of  buffer+50mM sulforhodamine B </li>
+                                <li>Vortex and sonicate the vials briefly </li>
+                                <li>Run each sample through 5 freeze-thaw cycles starting from sonicating for 30 seconds by half submerging the samples in a bath sonicator. Freeze the samples by placing them for 5 minutes in -80c freezer followed by thawing the vials on a hotplate set at 30-40C. </li>
+                                <li>Prep the mini extruder by extruding the buffer from the right syringe to the left one.</li>
+                                <li>Empty both syringes and load non encapsulated lipids on the right syringe. Extrude 21 to 25 times. Collect extruded liposome fractions in the right syringe.</li>
+                                <li>Purify vesicle solution using standard desalting columns</li>
+                            </ol>
+                        </div>
+        
+            
+                        <div id="tab7" class="tab-window" style="border-top-right-radius: 10px;">
+                            <p><strong>Objective: </strong>To ensure that the liposomes are formed uniformly and have a diameter that ranges between 100 nm to 150 nm as determined by the mean size and a polydispersity of &lt;0.30 </p> <br>
+                            <p>To perform dynamic light scattering to ensure the desired liposomes are 150nm as determined by the mean diameter value and are uniform by the polydisperrsity value. </p>
+                            <ol>
+                                <li>Dilute 100uL of purified liposomes by adding 900uL of buffer. </li>
+                                <li>Run DLS analysis thrice for each sample and generate the report note average size and polydispersity. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="experiments-dyeflux">
+                <h2>Dye Flux</h2>
+                <p>We used a plate reader to determine the ideal fluorescence wavelength range to detect SRB, gather high throughput data on the change in fluorescence once the nanopore inserts, and confirm SRB encapsulation by liposomes. This allowed us to confirm whether our liposomes performed as expected while informing us of any nanopore insertion events with fluorescence as an output. </p>
+        
+                <div class="results-sub" data-group="dyeflux">
+                    <div class="results-tabs" id="dyeflux-tabs">
+                        <!-- openTab(event, name of corresponding tab window id) -->
+                        <button class="results-tab active" onclick="openTab(event, 'df-tab1', 'dyeflux')" style="border-top-left-radius: 10px;">SRB Gradient Sample Preparation and Plate Reader Reading</button>
+                        <button class="results-tab" onclick="openTab(event, 'df-tab2', 'dyeflux')" style="border-top-right-radius: 10px;">Nanopore Insertion Testing Sample Preparation and Plate Reader Reading</button>
+                    </div>
+            
+                    <div class="results-window">
+                        <div id="df-tab1" class="tab-window active" style="border-top-left-radius: 10px;">
+                            <p><strong>Objective:</strong> To set up a 96 well plate to determine ideal wavelengths for SRB. determine nanopore insertion events through a 30 minute kinetic run. </p>
+                            <ol>
+                                <li>Prepare a buffer solution with 1X TAE, 0.5M NaCl, and 16 mM MgCl2</li>
+                                <li>Prepare a 100mM SRB stock</li>
+                                <li>
+                                    Prepare an SRB gradient plate as shown below: 
+                                    <ul style="list-style-type: none;">
+                                        <li>A1 → 100 uL Buffer Solution</li>
+                                        <li>A2 → 0.01 mM: 1 μL 1 mM SRB and 99 μL Buffer Solution</li>
+                                        <li>A3 → 0.02 mM: 2 μL 1 mM SRB and 98 μL Buffer Solution</li>
+                                        <li>A4 → 0.05 mM: 5 μL 1 mM SRB and 95 μL Buffer Solution</li>
+                                        <li>A5 → 0.1 mM: 10 μL 1 mM SRB and 90 μL Buffer Solution</li>
+                                        <li>A6 → 0.5 mM: 50 μL 1 mM SRB and 50 uL Buffer Solution</li>
+                                        <li>A7 → 1 mM: 100 μL 1 mM SRB</li>
+                                        <li>A8 → 2 mM: 6.67 μL 30 mM SRB and 93.33 μL Buffer Solution</li>
+                                        <li>A9 → 5 mM: 16.67 μL 30 mM SRB and 83.33 μL Buffer Solution</li>
+                                        <li>A10 → 10 mM: 33.33 μL 30 mM SRB and 66.67 μL Buffer Solution</li>
+                                        <li>A11 → 15 mM: 50 μL 30 mM SRB and 50 μL Buffer Solution</li>
+                                        <li>A12 → 30 mM: 100 μL 30 mM SRB</li>
+                                    </ul>
+                                </li>
+                                <li>On the plate reader, configure to the following specifications and press read:
+                                    <ol type="a">
+                                        <li>Read Mode: FL (fluorescence)</li>
+                                        <li>Read Type: Spectrum</li>
+                                        <li>Wavelengths: Excitation = 544 nm / Emission = 564 - 700 nm / Step = 9 nm</li>
+                                        <li>Plate Type: 96 Well Standard clrbtm*</li>
+                                        <li>Read Area: Highlight the follow wells that were populated in the 96 well plate</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+            
+                        <div id="df-tab2" class="tab-window" style="border-top-right-radius: 10px;">
+                            <p><strong>Objective: </strong>To set up a 96 well plate to identify nanopore insertion events through a 30 minute kinetic run. </p>
+                            <ol>
+                                <li>Prepare a buffer solution with 1X TAE, 0.5M NaCl, and 16 mM MgCl2</li>
+                                <li>Prepare a 100mM SRB stock</li>
+                                <li>Prepare the samples to a total volume of 100uL on the plate as shown below: <br>(note: R6S1 indicates the first nanopore sample from the 6th folding run)
+        
+                                
+                                    <table style="font-size: 12px; line-height: 1.2;">
+                                        <tr>
+                                            <th style="background-color: var(--1);">Buffer</th>
+                                            <th style="background-color: var(--1);">Buffer</th>
+                                            <th style="background-color: var(--1);">Blank</th>
+                                            <th style="background-color: var(--2);">Liposome</th>
+                                            <th style="background-color: var(--2);">Liposome</th>
+                                            <th style="background-color: var(--2);">Liposome</th>
+                                            <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome</th>
+                                            <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome</th>
+                                            <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome</th>
+                                            <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome</th>
+                                            <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome</th>
+                                            <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: var(--5);">10uM Cholesterol</th>
+                                            <th style="background-color: var(--5);">10uM Cholesterol</th>
+                                            <th style="background-color: var(--5);">10uM Cholesterol</th>
+                                            <th style="background-color: var(--2);">Triton + Liposome</th>
+                                            <th style="background-color: var(--2);">Triton + Liposome</th>
+                                            <th style="background-color: var(--2);">Triton + Liposome</th>
+                                            <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--3);">R6S1 + Chol + 10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--4);">R6S2 + Chol + 10mM SRB liposome + Triton</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: var(--6);">1% Triton</th>
+                                            <th style="background-color: var(--6);">1% Triton</th>
+                                            <th style="background-color: var(--6);">1% Triton</th>
+                                            <th style="background-color: var(--2);">10mM SRB liposome</th>
+                                            <th style="background-color: var(--2);">10mM SRB liposome</th>
+                                            <th style="background-color: var(--2);">10mM SRB liposome</th>
+                                            <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: var(--4);">1uM SRB</th>
+                                            <th style="background-color: var(--4);">1uM SRB</th>
+                                            <th style="background-color: var(--4);">1uM SRB</th>
+                                            <th style="background-color: var(--2);">Triton + 10mM SRB liposome</th>
+                                            <th style="background-color: var(--2);">Triton + 10mM SRB liposome</th>
+                                            <th style="background-color: var(--2);">Triton + 10mM SRB liposome</th>
+                                            <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--7);">R6S3 + Chol +10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome +Triton</th>
+                                            <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome +Triton</th>
+                                            <th style="background-color: var(--8);">R6S4 + Chol +10mM SRB liposome +Triton</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: var(--4);">100uM SRB</th>
+                                            <th style="background-color: var(--4);">100uM SRB</th>
+                                            <th style="background-color: var(--4);">100uM SRB</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: var(--4);">500uM SRB</th>
+                                            <th style="background-color: var(--4);">500uM SRB</th>
+                                            <th style="background-color: var(--4);">500uM SRB</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome +Triton</th>
+                                            <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome +Triton</th>
+                                            <th style="background-color: var(--3);">R6S5 + Chol +10mM SRB liposome +Triton</th>
+                                            <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome +Triton</th>
+                                            <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome +Triton</th>
+                                            <th style="background-color: var(--4);">R6S6 + Chol +10mM SRB liposome +Triton</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: var(--4);">1mM SRB</th>
+                                            <th style="background-color: var(--4);">1mM SRB</th>
+                                            <th style="background-color: var(--4);">1mM SRB</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome</th>
+                                            <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: var(--4);">10mM SRB</th>
+                                            <th style="background-color: var(--4);">10mM SRB</th>
+                                            <th style="background-color: var(--4);">10mM SRB</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--7);">R6S7 + Chol +10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome + Triton</th>
+                                            <th style="background-color: var(--8);">R6S8 + Chol +10mM SRB liposome + Triton</th>
+                                        </tr>
+                                    </table>
+                                </li>
+        
+                                <li>On the plate reader, press the “Settings” button on the Plate Reader Window and configure to the following specifications below and read the plate:
+                                    <ol type="a">
+                                        <li>Read Mode: FL (fluorescence)</li>
+                                        <li>Read Type: Kinetic</li>
+                                        <li>Read Length: 30 minutes</li>
+                                        <li>Wavelengths:
+                                            <ol type="i">
+                                                <li>Excitation:559nm </li>
+                                                <li>Emission: 579nm</li>
+                                            </ol>
+                                        </li>
+                                        <li>Plate Type: 96 Well Standard clrbtm*</li>
+                                    </ol>
+                                </li>
+                                <li>The plate reader should initialize before reading the signals from the samples. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+        
+            <section id="experiments-protocol">
+                <h2>Protocols</h2>
+                <div class="experiments-pdf">
+                    <embed 
+                        src="/Experiments.pdf"
+                        type="application/pdf"
+                        width="100%"
+                        height="600px"
+                    />
+                </div>
+            </section>
+        </article>
+
     </div>
+    
+    
 
+    
+    <link rel="stylesheet" href="/sidenav-e.css">
+    <script src="/results.js"></script>
+    <script src="/sidenav-e.js"></script>
 </main>

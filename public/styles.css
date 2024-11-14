@@ -824,11 +824,30 @@ footer {
 .experiments-container {
     width: 100%;
     margin: 0 auto;
-    max-width: 1200px;
 }
 
+.experiments-container section {
+    margin-bottom: 3rem;
+}
+
+.experiments-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Experiments diagram */
 .experiments-diagram {
     min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .experiments-timeline {
@@ -837,7 +856,7 @@ footer {
     position: relative;
     border-top: 2px solid #333;
     padding-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .experiments-month {
@@ -950,14 +969,72 @@ footer {
 }
 
 .tab-window {
+    margin-top: 2rem;
     width: 100%;
     display: none;
+    line-height: 2;
+    padding: 20px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.tab-window ol {
+    padding-left: 4rem;
+}
+
+.tab-window table caption {
+    font-size: 14px;
 }
 
 .tab-window.active {
     display: block;
 }
 
+/* Safety Section */
+.safety-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.safety-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    font-size: 1.2em;
+}
+
+.safety-table1 {
+    margin: 0 auto;
+}
+
+.safety-container ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+.safety-container table {
+    border: 1px solid rgb(140, 140, 140);
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.safety-container th,
+.safety-container td {
+    border: 1px solid rgb(160, 160, 160);
+    padding: 4px 10px;
+}
+
+.safety-container td:first-child {
+    text-align: center;
+}
 
 /* Scroll to top button */
 /* change styling as needed */

@@ -119,54 +119,9 @@ window.onload = function() {
 
 };
 
+const tocContainer = document.querySelector('.toc-container-e');
+const header = document.querySelector('.experiments-diagram');
 
-// Query all sections and TOC links
-const sections = document.querySelectorAll('.section');
-const tocLinks = document.querySelectorAll('.toc a');
-const tocContainer = document.querySelector('.toc-container');
-
-// Helper function to find the corresponding TOC link
-function getTocLinkByHref(href) {
-    return document.querySelector(`.toc a[href="${href}"]`);
-}
-
-// Intersection Observer to highlight and center the active TOC item
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                // Find the corresponding TOC link
-                const href = `#${entry.target.id}`;
-                const activeLink = getTocLinkByHref(href);
-
-                // Remove active class from all links, then add to the active one
-                tocLinks.forEach((link) => link.classList.remove('active'));
-                if (activeLink) activeLink.classList.add('active');
-
-                // Center the active TOC item within the TOC container
-                if (activeLink) {
-                    const linkPosition = activeLink.offsetTop;
-                    const tocContainerHeight = tocContainer.clientHeight;
-                    const linkHeight = activeLink.offsetHeight;
-                    
-                    // Scroll to center the active link in the TOC container
-                    tocContainer.scrollTop = linkPosition - tocContainerHeight / 2 + linkHeight / 2;
-                }
-            }
-        });
-    },
-    {
-        rootMargin: '0px 0px -50% 0px', // Activate when the section is halfway in view
-        threshold: 0.5,
-    }
-);
-
-// Observe each section in the main content
-sections.forEach((section) => observer.observe(section));
-
-const header = document.querySelector('.ethics-header');
-
-// Adjust the TOC position when header scrolls out of view
 function adjustTocPosition() {
     const headerBottom = header.getBoundingClientRect().bottom;
     if (headerBottom <= 0) {
@@ -176,5 +131,6 @@ function adjustTocPosition() {
     }
 }
 
-// Scroll event to handle TOC position adjustment
 window.addEventListener('scroll', adjustTocPosition);
+
+
