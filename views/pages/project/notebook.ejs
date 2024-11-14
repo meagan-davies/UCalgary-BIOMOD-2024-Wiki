@@ -124,11 +124,19 @@
 
 <main class="notebook-container">
     <!-- Folder Tabs for each month -->
+
     <div class="tabs-container">
         <div class="tab" onclick="showTab('June')" id="tab-June">June</div>
         <div class="tab" onclick="showTab('July')" id="tab-July">July</div>
         <div class="tab" onclick="showTab('August')" id="tab-August">August</div>
         <div class="tab" onclick="showTab('September')" id="tab-September">September</div>
+    </div>
+
+     <!-- Type Filter Section -->
+     <div class="filter-container">
+        <div class="checkbox-group" id="type-filters">
+            <!-- Checkboxes will be dynamically added here -->
+        </div>
     </div>
 
     <!-- Experiment Sections for each month -->
@@ -1921,7 +1929,7 @@ Possible reasons for the faint bands could be that the amount of templates were 
 {
     "date": "24/06/19",
     "month": "June",
-    "type": "DNA",
+    "type": "Aptazyme",
     "title": "Aptazyme DNA PCR, Checking for Faulty SuperMix",
     "details": `
         <strong>Partner(s):</strong> Stavan Patel, Ziyad Syed <br>
@@ -2203,7 +2211,7 @@ Possible reasons for the faint bands could be that the amount of templates were 
 {
     "date": "24/06/20",
     "month": "June",
-    "type": "DNA",
+    "type": "Aptazyme",
     "title": "Aptazyme DNA PCR, Checking for faulty Thermal Cycler PCR Machine",
     "details": `
         <strong>Partner(s):</strong> Stavan Patel, Ziyad Syed <br>
@@ -2258,7 +2266,7 @@ Possible reasons for the faint bands could be that the amount of templates were 
 {
     "date": "24/06/20",
     "month": "June",
-    "type": "DNA",
+    "type": "Aptazyme",
     "title": "Aptazyme PCR Purification",
     "details": `
         <strong>Partner(s):</strong> Ziyad, Jezrael <br>
@@ -2314,7 +2322,7 @@ Possible reasons for the faint bands could be that the amount of templates were 
 {
     "date": "24/06/20",
     "month": "June",
-    "type": "DNA",
+    "type": "Aptazyme",
     "title": "DNA Agarose Gel Electrophoresis and Aptazyme PCR",
     "details": `
         <strong>Partner(s):</strong> Stavan Patel, Amber Quo <br>
@@ -5754,7 +5762,7 @@ Lane 4: S3.3 (APTMSD)
 {
     date: "24/07/11",
     month: "July",
-    type: "PAGE",
+    type: "TMSD",
     title: "Non-SDS Native PAGE - TMSD (1 of 2)",
     details: `
         <strong>Partner(s):</strong> Amber, Sana <br>
@@ -5958,7 +5966,7 @@ Lane 4: S3.3 (APTMSD)
 {
     date: "24/07/12",
     month: "July",
-    type: "Aptazyme Activity Assay",
+    type: "Aptazyme",
     title: "Aptazyme Activity Assay",
     details: `
         <strong>Partner(s):</strong> Ziyad, Jezrael <br>
@@ -6015,7 +6023,7 @@ Lane 4: S3.3 (APTMSD)
 {
     date: "24/07/12",
     month: "July",
-    type: "Non-SDS Native PAGE -TMSD",
+    type: "TMSD",
     title: "Non-SDS Native PAGE -TMSD (1 of 2)",
     details: `
         <strong>Partner(s):</strong> Amber Quo, Emma <br>
@@ -9239,7 +9247,7 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
 {
     "date": "24/08/07",
     "month": "August",
-    "type": "Nanopore #3 Gel Electrophoresis",
+    "type": "Nanopore",
     "title": "Nanopore #3 Gel Electrophoresis",
     "details": `
         <strong>Partner(s):</strong> Stavan Patel <br>
@@ -10184,7 +10192,7 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
 {
     "date": "24/08/13",
     "month": "August",
-    "type": "Nanopor",
+    "type": "Nanopore",
     "title": "Nanopore Purification: PEG Precipitation (1 of 1)",
     "details": `
         <strong>Partner(s):</strong> Sana Wahab <br>
@@ -10316,7 +10324,7 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
 {
     "date": "24/08/13",
     "month": "August",
-    "type": "Dye Flux",
+    "type": "Vesicles",
     "title": "Dye Flux – Stage 1.3",
     "details": `
         <strong>Partner(s):</strong> Jezrael Carpio, Meagan Davies <br>
@@ -10571,7 +10579,7 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
 {
     "date": "24/08/14",
     "month": "August",
-    "type": "PCR Amplification",
+    "type": "Aptazyme",
     "title": "PCR Amplification with Q5 High Fidelity Kit",
     "details": `
         <strong>Partner(s):</strong> Emma Klaffke <br>
@@ -10693,7 +10701,7 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
 {
     "date": "24/08/15",
     "month": "August",
-    "type": "In-Vitro Transcription",
+    "type": "Aptazyme",
     "title": "In-Vitro Transcription",
     "details": `
         <strong>Partner(s):</strong> Emma Klaffke, Ziyad <br>
@@ -10750,7 +10758,7 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
 {
     "date": "24/08/15",
     "month": "August",
-    "type": "Vesicle",
+    "type": "Vesicles",
     "title": "Dye Flux Stage 2.1",
     "details": `
         <strong>Partner(s):</strong> Jezrael Carpio, Meagan Davies <br>
@@ -10973,7 +10981,7 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
 {
     "date": "24/08/19",
     "month": "August",
-    "type": "PCR Amplification with Q5 High Fidelity Kit",
+    "type": "Aptazyme",
     "title": "PCR Amplification with Q5 High Fidelity Kit",
     "details": `
         <strong>Partner(s):</strong> Emma Klaffke <br>
@@ -11435,7 +11443,7 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
 {
     "date": "24/08/21",
     "month": "August",
-    "type": "Gel Electrophoresis",
+    "type": "Nanopore",
     "title": "Nanopore #5 Gel Electrophoresis",
     "details": `
         <strong>Partner(s):</strong> Stavan Patel <br>
@@ -11705,7 +11713,7 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
 {
     "date": "24/08/22",
     "month": "August",
-    "type": "Nanopore #5 Gel Electrophoresis",
+    "type": "Nanopore",
     "title": "Nanopore #5 Gel Electrophoresis",
     "details": `
         <strong>Partner(s):</strong> Stavan Patel <br>
@@ -11981,7 +11989,7 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
 {
     "date": "24/08/26",
     "month": "August",
-    "type": "Aptazyme Activity 3",
+    "type": "Aptazyme",
     "title": "Aptazyme Activity 3",
     "details": `
         <strong>Partner(s):</strong> Ziyad <br>
@@ -13030,9 +13038,43 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
 
 ];
 
+// Get unique experiment types
+const experimentTypes = [...new Set(experiments.map(exp => exp.type))];
+            let selectedTypes = new Set();
+
+            // Create type filter checkboxes
+            const filterContainer = document.getElementById('type-filters');
+            experimentTypes.forEach(type => {
+                const label = document.createElement('label');
+                label.className = 'checkbox-wrapper';
+                label.innerHTML = `
+                    <input type="checkbox" value="${type}">
+                    <span class="checkbox-custom">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </span>
+                    <span class="checkbox-label">${type}</span>
+                `;
+                filterContainer.appendChild(label);
+
+                // Add change event listener
+                const checkbox = label.querySelector('input');
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        selectedTypes.add(type);
+                    } else {
+                        selectedTypes.delete(type);
+                    }
+                    showTab(currentTab);
+                });
+            });
+
+            let currentTab = 'June';
 
             // Function to show a specific month's tab
-            function showTab(month) {
+            window.showTab = function(month) {
+                currentTab = month;
                 // Hide all content sections
                 const allContents = document.querySelectorAll('.tab-content');
                 allContents.forEach(content => {
@@ -13056,19 +13098,24 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
                     // Clear existing content
                     selectedContent.innerHTML = '';
                     
-                    // Add experiments for this month
-                    experiments
-                        .filter(exp => exp.month === month)
-                        .forEach(exp => {
-                            const experimentBox = document.createElement('div');
-                            experimentBox.classList.add('experiment-box');
-                            experimentBox.innerHTML = `
-                                <h3>${exp.title}</h3>
-                                <p>${exp.date}</p>
-                            `;
-                            experimentBox.addEventListener('click', () => toggleDetails(exp, experimentBox));
-                            selectedContent.appendChild(experimentBox);
-                        });
+                    // Filter experiments by month and selected types
+                    const filteredExperiments = experiments.filter(exp => 
+                        exp.month === month && 
+                        (selectedTypes.size === 0 || selectedTypes.has(exp.type))
+                    );
+
+                    // Add filtered experiments
+                    filteredExperiments.forEach(exp => {
+                        const experimentBox = document.createElement('div');
+                        experimentBox.classList.add('experiment-box');
+                        experimentBox.innerHTML = `
+                            <h3>${exp.title}</h3>
+                            <p>${exp.date}</p>
+                            <span class="experiment-type">${exp.type}</span>
+                        `;
+                        experimentBox.addEventListener('click', () => toggleDetails(exp, experimentBox));
+                        selectedContent.appendChild(experimentBox);
+                    });
                 }
             }
 
@@ -13076,11 +13123,9 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
             function toggleDetails(experiment, box) {
                 let detailsSection = box.querySelector('.experiment-details');
                 
-                // If details are already showing, hide them
                 if (detailsSection) {
                     detailsSection.style.display = detailsSection.style.display === 'none' ? 'block' : 'none';
                 } else {
-                    // Otherwise, create a new details section and append it
                     detailsSection = document.createElement('div');
                     detailsSection.classList.add('experiment-details');
                     detailsSection.innerHTML = `
@@ -13091,133 +13136,174 @@ Nanopore gel: 2% 150 mL 1X TAE agarose gel, run at 0.1A for 2:31, stained with E
                 }
             }
 
-            // Add click event listeners to tabs
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.addEventListener('click', () => {
-                    const month = tab.id.replace('tab-', '');
-                    showTab(month);
-                });
-            });
-
             // Show June tab by default
             showTab('June');
         });
     </script>
 
     <style>
+        /* Base container styles */
         .notebook-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: white;
+        }
 
-.tabs-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
+        /* Month tabs styles */
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
 
-.tab {
-    padding: 10px 20px;
-    background-color: #25132a;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+        .tab {
+            padding: 10px 30px;
+            background-color: #25132a;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
 
-.tab.active-tab {
-    background-color: #c1a3eb;
-    font-weight: bold;
-}
+        .tab.active-tab {
+            background-color: #c1a3eb;
+            font-weight: bold;
+        }
 
-.tab:hover {
-    background-color: #b3a2db;
-}
+        .tab:hover {
+            background-color: #b3a2db;
+            transform: translateY(-2px);
+        }
 
-.tab-content {
-    display: none;
-}
+        /* Filter section styles */
+        .filter-container {
+            background-color: rgba(37, 19, 42, 0.5);
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+        }
 
-.experiment-box {
-    background-color: #451161;
-    color: white;
-    border-radius: 20px;
-    padding: 15px;
-    margin-bottom: 30px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
+        .checkbox-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
 
-.experiment-box:hover {
-    transform: scale(1.03);
-}
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            padding: 5px;
+        }
 
-.experiment-details {
-    line-height: 1.6;
-    font-size: 16px;
-    margin-top: 10px;
-    display: none;
-    text-align: left;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin-top: 15px;
-}
+        .checkbox-custom {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #c1a3eb;
+            border-radius: 6px;
+            position: relative;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+            background-color: rgba(193, 163, 235, 0.1);
+        }
 
-/* List styling */
-.experiment-details ul,
-.experiment-details ol {
-    white-space: normal;
-    padding-left: 20px;
-    margin: 10px 0;
-}
+        .checkbox-custom svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: white;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.3s ease;
+        }
 
-.experiment-details li {
-    margin: 5px 0;
-    white-space: normal;
-}
+        .checkbox-wrapper:hover .checkbox-custom {
+            border-color: #d4c0f0;
+            box-shadow: 0 0 10px rgba(193, 163, 235, 0.3);
+        }
 
-/* Nested lists */
-.experiment-details ul ul,
-.experiment-details ol ol,
-.experiment-details ul ol,
-.experiment-details ol ul {
-    margin: 5px 0;
-    padding-left: 20px;
-}
+        .checkbox-wrapper input:checked + .checkbox-custom {
+            background-color: #c1a3eb;
+            border-color: #c1a3eb;
+        }
 
-/* Table styling */
-.experiment-details table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 15px 0;
-    background-color: rgba(255, 255, 255, 0.05);
-}
+        .checkbox-wrapper input:checked + .checkbox-custom svg {
+            transform: translate(-50%, -50%) scale(1);
+        }
 
-.experiment-details th,
-.experiment-details td {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    text-align: left;
-}
+        .checkbox-label {
+            color: white;
+            font-size: 1em;
+        }
 
-.experiment-details th {
-    background-color: rgba(255, 255, 255, 0.1);
-}
+        /* Hide actual checkbox */
+        .checkbox-wrapper input {
+            display: none;
+        }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .experiment-details {
-        max-width: 100%;
-        overflow-x: auto;
-    }
-    
-    .experiment-details table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-}
+        /* Experiment box styles */
+        .experiment-box {
+            background-color: #451161;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .experiment-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .experiment-type {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: rgba(193, 163, 235, 0.2);
+            border-radius: 15px;
+            margin-top: 8px;
+            font-size: 0.9em;
+        }
+
+        .experiment-details {
+            line-height: 1.6;
+            font-size: 16px;
+            margin-top: 15px;
+            display: none;
+            text-align: left;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .tabs-container {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .tab {
+                padding: 8px 20px;
+            }
+
+            .checkbox-group {
+                gap: 15px;
+            }
+
+            .experiment-details {
+                max-width: 100%;
+                overflow-x: auto;
+            }
+        }
     </style>
 </main>
