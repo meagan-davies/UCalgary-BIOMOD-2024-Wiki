@@ -929,8 +929,44 @@ footer {
 .results-container {
     width: 100%;
     height: 100vh;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.results-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.results-contents {
+    margin: 0 auto;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.results-container table {
+    border: 1px solid rgb(140, 140, 140);
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.results-container th,
+.results-container td {
+    border: 1px solid rgb(160, 160, 160);
+    padding: 4px 10px;
 }
 
 /* results subwindow with tabs */

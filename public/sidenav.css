@@ -1,11 +1,11 @@
-.toc {
-    position: fixed;
+/* .toc {
+    position: sticky;
     left: 3em;
     top: 6em;
     padding: 0.5em;
     width: 13em;
     line-height: 1.5;
-}
+} */
 
 .toc ul {
     list-style: none;
@@ -67,8 +67,13 @@
 }
 
 .toc-container {
-    position: relative;
+    position: sticky;
     width: 10em;
+    top: 0;
+    left: 2rem;
+    padding-top: 3rem;
+    max-height: 100vh;
+    margin-right: 2em;
 }
 
 .toc.hidden{

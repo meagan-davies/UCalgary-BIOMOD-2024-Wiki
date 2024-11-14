@@ -1,11 +1,130 @@
-<!-- tab format // have tabs on top with each tab selection and display image and text box under when clicked, like browser tab and viewing (maybe min the tab text (maybe just replace text/images)) -->
-
-<!-- test 3d model formatting stuff (see if it works or not) -->
+<header class="results-header">
+    <div class="header-content">
+        <h1>Results</h1>
+        <div class="divider"></div>
+    </div>
+</header>
 
 <main class="results-container">
-    <div class="results-sub">
+    <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+    <div class="toc-container">
+        <nav class="toc">
+            <ul>
+                <li><a href="#nanopore">Nanopore</a></li>
+                <li><a href="#dyeflux">Dye Flux</a></li>
+                <li><a href="#tmsd">TMSD</a></li>
+                <li><a href="#vesicles">Vesicles</a></li>
+                <li><a href="#aptazyme">Aptazyme</a></li>
+            </ul>
+            <svg 
+                class="toc-marker"
+                width="200"
+                height="200"
+                xmlns="http://www.w3.org/2000/svg">
+                <path 
+                    stroke="#ccfbf1"
+                    stroke-width="3"
+                    fill="transparent"
+                    stroke-dasharray="0, 0, 0, 1500"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="translate(-0.5, -0.5)" />
+            </svg>
+        </nav>
+    </div>
+    
+    <article class="results-contents">
+        <section id="nanopore">
+            <div class="container">
+                <h2>Nanopore</h2>
+                <div class="divider"></div>
+            </div>
+        </section>
+        <section id="dyeflux">
+            <div class="container">
+                <h2>Dye Flux</h2>
+                <div class="divider"></div>
+                <p>The primary aim of performing dye flux experiments was to assess the success of nanopore insertion into the vesicles. </p> <br>
+                <p>The first step is to characterize the fluorescence properties of both Sulforhodamine (SRB) and Fluorescein Isothiocyanate-Dextran (FITC-Dextran) dyes in the buffer solutions used for vesicle synthesis. In this step we also want to determine which concentration(s) can be used to apply “self-quenching” characteristics of the dyes when synthesizing vesicles.</p> <br>
+                <figure class="image-container">
+                    <img src="/img/results-df1.png" alt="Dye Flux 1">
+                    <figcaption class="figure-label">Figure 1. Tested a fluorescence Spectra of SRB from concentrations 0.1 mM to 100 mM. Maximum fluorescence is detected from an SRB concentration of 0.1 mM whereas minimum fluorescence is detected from 100 mM. Maximum fluorescence for all SRB concentrations occurs at around 591 nm.</figcaption>
+                </figure>
+                <p class="flow-text">
+                    Once the SRB concentration reaches 10 mM, further increase in concentration does not affect the fluorescence intensity by a significant amount. This suggests that SRB begins to self quench at around 10 mM. Therefore, this test indicates that the concentration of SRB in the vesicles has potential to be lower to a value between 10-30 mM. Additionally this test indicates that lower values of SRB should be tested to discover what the true peak concentration is as well as where the fluorescence lowers to provide a better comparison to diluted dye from the vesicles later in application.
+                </p>
+            </div>
+            <div class="container">
+                <figure class="image-container">
+                    <img src="/img/results-df2.png" alt="Dye Flux 2">
+                    <figcaption class="figure-label">Figure 2. Fluorescence spectra of FITC in a buffer with a concentration gradient of 1 nm to 1 mM. There are 2 fluorescence peaks at 515 and 535 nm when the excitation wavelength is 480 nm.</figcaption>
+                </figure>
+                <p class="flow-text">This demonstrates that FITC at 1mM does not express self quenching properties. Additionally, the fluorescence intensity decreases with lower concentrations of dye. The spectrum demonstrates that the fluorescence peaks at approximately 535 nm, therefore, in subsequent experiments for kinetic sensor testing an excitation wavelength of 535 nm for FITC peak fluorescence should be used.<br><br>
+                Our final step had two objectives: first, to determine if SRB was encapsulated by the vesicles, and second, to observe whether adding folded nanopore samples functionalized with cholesterol anchors would produce a significant change in fluorescence to indicate nanopore insertion.<br><br>
+                To induce vesicle rupture and observe the maximum fluorescence of the encapsulated SRB, Triton X-100 was mixed with the vesicle solution. To observe an increase in fluorescence once the nanopore samples were added and characterize it, we calculated the fluorescence difference between R6S1 and 10mMSRB and performed an ANOVA to determine if it was statistically significant (see table 1. and figure 3.)
+                </p>
+                <br><br>
+                <table style="margin: 0 auto;">
+                    <caption><strong>Table 1.</strong> Sample set up for the nanopore insertion experiment. R6S2 indicates nanopores from run 6 and sample number 2.</caption>
+                    <tr>
+                        <td>Name</td>
+                        <td>Composition</td>
+                    </tr>
+                    <tr>
+                        <td>10mM SRB</td>
+                        <td>10mM SRB liposome solution</td>
+                    </tr>
+                    <tr>
+                        <td>R6S2</td>
+                        <td>10mM SRB liposomes solution + R6S2 nanopores</td>
+                    </tr>
+                    <tr>
+                        <td>R6S2T</td>
+                        <td>10mM SRB liposomes solution + R6S2 nanopores + TritonX-100</td>
+                    </tr>
+                </table>
+                <br><br>
+                <figure class="image-container">
+                    <img src="/img/results-df3.png" alt="Dye Flux 3">
+                    <figcaption class="figure-label">Figure 3. Averaged fluorescence of triplicates from 10mM SRB liposomes, R6S2, and R6S2T samples over time (30 minutes). </figcaption>
+                </figure>
+                <p class="flow-text">The figure does not show any large increase in fluorescence in the R6S2 sample over time. This indicates that nanopore insertion likely did not happen. However, further statistical analysis is needed to confirm this observation. The overall for all the samples is stable over the 30 minute recording. R6S2T has a large averaged fluorescence due to the availability of the SRB from the ruptured liposomes. This indicates that SRB was likely self-quenched at 10mM inside the vesicles.</p>
+            </div>
+            <div class="container">
+                <figure class="image-container">
+                    <img src="/img/results-df4.png" alt="Dye Flux 4">
+                    <figcaption class="figure-label">Figure 4. Averaged fluorescence (AU) of the 10mM SRB vesicles (10mM SRB) triplicates with nanopore sample 2 from run 6 (R6S2), and with R6S2 and TritonX-100 added at 30 minutes. The bars represent standard error. </figcaption>
+                </figure>
+                <p class="flow-text">This graph shows that the SRB vesicles on their own produced a detectable fluorescence signal. The addition of the folded nanopores from sample 2 produced a fluorescence signal that was similar to the ones produced by SRB. The rupturing of liposomes in R6S2T produced a signal greater than the other samples. <br><br>
+                An ANOVA was performed to compare the difference in mean fluorescence between the three samples (10mM SRB, R6S2, R6S2T). The ANOVA results indicated that there was a statistically significant difference in mean fluorescence between at least two samples (F(4,10) = [225.7], p = 9.39 × 10⁻¹⁰). Tukey’s HSD Test for multiple comparisons found that the averaged fluorescence was significantly different between R6S2T and 10mM SRB (p = 0.00, 95% C.I. = -612355.27, -442748.06) as well as between R6S2T and R6S2 (p = 0.00, 95% C.I. = 385520.73, 555127.94). The averaged fluorescence between 10mM SRB and R6S2 was not statistically significant (p = 0.25, 95% C.I. = -142030.94, 27575.27).
+                </p>
+                <br><br>
+                <p>Overall, fluorescence did not change between the 10mM SRB liposomes only sample and the sample with these liposomes and the nanopores indicating that nanopore insertion did not occur which does not align with the expected results for the design. This could be due to various reasons such as a limited time allowed for insertion, the buffer composition, improper storage of the nanopore samples, or a lack of proper nanopore folding. The large change in fluorescence upon the addition of tritonX-100 indicates that SRB encapsulation was successful and that SRB was encapsulated at concentration where some self-quenching was observed. These results confirm the functionality of the vesicles providing pathways for further fluxing testing of the sensor constructs.</p><br>
+                <p>FITC vesicles were not tested in the last stage, however, future experiments would involve FITC-encapsulated dyes for verifying aptazyme attachment to the nanopore. If the aptazyme is attached to the nanopore, SRB dye would be allowed to efflux out whilst FITC dye would not due to the size difference. Addition of target molecules would cleave the aptazyme or the addition of the TMSD key strand would displace the aptazyme, both of which would allow the FITC dye to efflux out. Based on the fluorescence behaviour of both dye fluorescence, a clear indicator of aptazyme functionality would be provided.</p>
+            </div>
+        </section>
+        <section id="tmsd">
+            <div class="container">
+                <h2>TMSD</h2>
+                <div class="divider"></div>
+            </div>
+        </section>
+        <section id="vesicles">
+            <div class="container">
+                <h2>Vesicles</h2>
+                <div class="divider"></div>
+            </div>
+        </section>
+        <section id="aptazyme">
+            <div class="container">
+                <h2>Aptazyme</h2>
+                <div class="divider"></div>
+            </div>
+        </section>
+    </article>
+
+    <!-- <div class="results-sub">
         <div class="results-tabs">
-            <!-- openTab(event, name of corresponding tab window id) -->
             <button class="results-tab active" onclick="openTab(event, 'tab1')">Tab 1</button>
             <button class="results-tab" onclick="openTab(event, 'tab2')">Tab 2</button>
             <button class="results-tab" onclick="openTab(event, 'tab3')">Tab 3</button>
@@ -30,5 +149,7 @@
             </div>
         </div>
     </div>
-    <script src="/results.js"></script>
+    <script src="/results.js"></script> -->
+    <link rel="stylesheet" href="/sidenav.css">
+    <script src="/sidenav.js"></script>
 </main>
