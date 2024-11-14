@@ -14,7 +14,20 @@
                 <li><a href="#dyeflux">Dye Flux</a></li>
                 <li><a href="#tmsd">TMSD</a></li>
                 <li><a href="#vesicles">Vesicles</a></li>
-                <li><a href="#aptazyme">Aptazyme</a></li>
+                <li>
+                    <a href="#aptazyme">Aptazyme</a>
+                    <ul>
+                        <li><a href="#apt-overview">Overview</a></li>
+                        <li><a href="#apt-methods">Methods</a></li>
+                        <li>
+                            <a href="#apt-ri">Results and Interpretation</a>
+                            <ul>
+                                <li><a href="#apt-sub1">Time Influence</a></li>
+                                <li><a href="#apt-sub2">Specificity</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
             </ul>
             <svg 
                 class="toc-marker"
@@ -38,6 +51,173 @@
             <div class="container">
                 <h2>Nanopore</h2>
                 <div class="divider"></div>
+                <p><u>Important Nanopore folding Gels</u></p>
+                <p>These are the gels from the first run of the nanopore. In this round, there was 20uL of the nanopore sample that was going through the folding protocol. From this gel we can see that there are bright bands present in the wells for sample #8 and #10 around the 500bp - 900bp range which could be indicative of nanopore folding. Sample #8 has 1.4mM MgCl<sub>2</sub> while sample #10 has 2.1mM MgCl<sub>2</sub>.</p>
+                <figure>
+                    <div class="nano-content">
+                        <table>
+                            <tr>
+                                <th>Tube #</th>
+                                <th>MgCl<sub>2</sub> Concentration (mM)</th>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>0.7</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>1.4</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>1.4</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>2.1</td>
+                            </tr>
+                        </table>
+                        <img src="/img/results-nano1.png" alt="Nanopore 1" style="width: 500px; height: auto;">
+                    </div>
+                    <figcaption>Figure 1. Gel electrophoresis for nanopore samples ran in 1X TAE Buffer. Stained using EtBr. The ladder is 1kb.</figcaption>
+                </figure>
+            </div>
+
+            <div class="sub-container">
+                <p>This is the gel from day 3 of our second run, in this gel there is a band seen in the gel for sample #4 (2.1mM MgCl<sub>2</sub>).  Which could be indicative of nanopore folding. </p>
+                <figure>
+                    <div class="nano-content">
+                        <img src="/img/results-nano2.png" alt="Nanopore 2">
+                        <table>
+                            <tr>
+                                <th>Tube #</th>
+                                <th>MgCl<sub>2</sub> Concentration (mM)</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>0.7</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>1.4</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>2.1</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <figcaption>Figure 2. Gel electrophoresis for nanopore samples ran in 1X TAE Buffer. Stained using EtBr. The ladder is 1kb.</figcaption>
+                </figure><br>
+            </div>
+            <div class="sub-container">
+                <p>This gel is from day 7 of our third run of the nanopore gel. In this gel, and in this gel we see bands for both samples 7 and 8 which show folding at the same MgCl<sub>2</sub> concentration.</p>
+                <figure>
+                    <div class="nano-content">
+                        <table>
+                            <tr>
+                                <th>Tube #</th>
+                                <th>MgCl<sub>2</sub> Concentration (mM)</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>0.7</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>0.7</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>1.4</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>1.4</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>2.1</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>2.1</td>
+                            </tr>
+                        </table>
+                        <img src="/img/results-nano3.png" alt="Nanopore 3">
+                    </div>
+                    <figcaption>Figure 3. Gel electrophoresis for nanopore samples ran in 1X TBE Buffer. Stained using EtBr. The ladder is 1kb. </figcaption>
+                </figure><br>
+            </div>
+            <div class="sub-container">
+                <p>This is day 3 of our sixth and final run of the nanopore, in this gel there is a bright band for sample 8 and 9 (which had a large concentration of magnesium chloride). From this we saw a consistent pattern across the series of gel electrophoresis runs that were performed. A higher magnesium chloride concentration resulted in improved folding of the nanopore. </p><br>
+                <figure>
+                    <div class="nano-content">
+                        <table>
+                            <tr>
+                                <th>Tube #</th>
+                                <th>MgCl<sub>2</sub> Concentration (mM)</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>1.4</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>1.4</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>2.1</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>2.1</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>21</td>
+                            </tr>
+                        </table>
+                        <img src="/img/results-nano4.png" alt="Nanopore 4">
+                    </div>
+                    <figcaption>Figure 4. Gel electrophoresis for nanopore samples ran in 0.5X TBE with 6mM MgCl<sub>2</sub> Buffer. Stained using EtBr. The ladder is 1kb. </figcaption>
+                </figure><br>
+            </div>
+            <div class="sub-container">
+                <p>In the end, from these various gel results we were able to see a consistent pattern that with an increase in concentration of magnesium chloride (MgCl<sub>2</sub>), we were able to see an increase in folding of the nanopore. This was especially evident in the earlier days of each run, however as the days of the run progressed we were still able to see bands indicative of nanopore folding on the gels, however the bands were not as bright as seen in the earlier days of the runs. Furthermore, when the gel was ran in 0.5X TBE with 6mM MgCl<sub>2</sub> instead of 1X TAE (figure 4) we saw brighter bands for the gels, which could also be due to the concentration of MgCl<sub>2</sub> being present in the TBE gels compared to the TAE gels. </p>
             </div>
         </section>
 
@@ -110,7 +290,7 @@
                 <h2>TMSD</h2>
                 <div class="divider"></div>
                 <p>The aim of these series of experiments was to test whether the TMSD reaction would allow for sensor modularity by modifying a reaction from Cabello-Garcia et al. (2021). This was done by adding theophylline aptazyme sequences to the target strand (TAR) and attaching a DNA linker to the strand that binds to a nanopore overhang (NAN), to create the APT and NANL strands, respectively.</p> <br>
-                <img src="/img/results-tmsd1.png" alt="TMSD 1">
+                <img src="/img/results-tmsd1.png" alt="TMSD 1" style="width: 100%;">
                 <img src="/img/results-tmsd2.png" alt="TMSD 2" style="width: 100%;">
                 <br><br>
                 <p>Our next step was to see whether these newly modified strands would work as intended. To do this we first tested NANL with the rest of the original strand displacement reaction strands on a 15% PAGE gel. </p> <br>
@@ -164,6 +344,89 @@
             <div class="container">
                 <h2>Aptazyme</h2>
                 <div class="divider"></div>
+                <div id="apt-overview">
+                    <h3>Overview</h3>
+                    <div class="subtitle-divider"></div>
+                    <p>Aptazymes are highly specific receptors of their target ligands. The theophylline-responsive aptazyme utilized in our project was tested against its target as well as non-target molecules in incubation experiments to characterize its activity. Both incubation temperature and time were tested to determine the effect they had on aptazyme activity. Self-cleavage of the aptazyme product was expected to result in multiple bands at a molecular weight smaller than the original sequence. </p><br>
+                </div>
+
+                <div id="apt-methods">
+                    <h3>Methods</h3>
+                    <div class="subtitle-divider"></div>
+                    <p><u>Urea-PAGE gel</u></p>
+                    <p>Polyacrylamide gels were the go-to-option for analyzing the band sizes as they offered high resolution and better separation than agarose gels. 8M Urea was utilized as a denaturing agent to prevent secondary structure formation as the samples loaded are single stranded RNA molecules. Additionally, the RNA samples were subjected to a 70°C heat treatment and cooling on ice to further denature unwanted structures.</p><br>
+                    <p>The gels were stained post-run via ethidium bromide solution to prevent contamination of gel running apparatus. Ethidium bromide has higher sensitivity than other oligonucleotide staining gels but carries a carcinogenic risk.</p><br>
+
+                    <p><u>Analysis Methodology</u></p>
+                    <p>After separation of bands on the gel, the Low Range RiboRuler bands were used to correlate gel resolution distance to base pair size which is a logarithmic relationship. This relationship was used to determine the base pair size of the bands, matching the closest band to the actual size of the intact aptazyme samples. This also allowed analysis of the smaller cleaved fragments.</p><br>
+                    <p>Densitometry using ImageJ software was used to determine the band intensities which correlates to the amount of RNA present in each band. Band intensity approximates the amount of RNA present in a linear relationship. The most intense bands smaller than the original aptazyme sequence were used to compare and determine the level of cleavage. The band intensities had the background intensity of the gels subtracted.</p><br>
+                    <p>To determine the level of cleavage the log ratio of the band intensities was taken:</p><br>
+                    <p style="text-align: center;"><i>log (Aptazyme band intensity/Degraded band intensity) </i></p><br>
+                    <p>The log ratio was used to show proportional changes in band intensities rather than the absolute difference. The log ratio also helps to preserve symmetry in intensity changes so that a similar magnitude change in band intensity would register as such regardless of whether it was an increase or decrease. In practice, this means that a high value represents high intensity of the intact aptazyme compared to the degraded fragments, the intensity</p><br>   
+                </div>
+                
+                <div id="apt-ri">
+                    <h3>Results and Interpretation</h3>
+                    <div class="subtitle-divider"></div>
+                    <div class="apt-content">
+                        <figure>
+                            <img src="/img/results-apt1.png" alt="Aptazyme 1">
+                            <figcaption>Figure 1. 15%, 1.5mm 1X TBE UREA PAGE gel, run at 120V for 1:13, gel was stained with EtBr. 10 µL of Aptazyme at a concentration of 100 ng/µL were loaded. Theophylline concentration was set at 27.75 mM. Samples are loaded as follows: 1-3 are AP, APL, 4-6 are negative controls for AP, APL, APT (no theophylline), 7 is RiboRuler Low Range RNA Ladder (10 µL), degrading RNA is labelled with D. All samples were incubated at 37°C for 30 min. All samples were treated in Tris-HCl buffer.</figcaption>
+                        </figure><br><br>
+                        <figure>
+                            <img src="/img/results-apt2.png" alt="Aptazyme 2">
+                            <figcaption>Figure 2. 15%, 1.0mm 1X TBE UREA PAGE gel, run at 120V for 1:48, gel was stained with EtBr. 10 µL of Aptazyme at a concentration of 100 ng/µL were loaded. Theophylline concentration was set at 27.75 mM. Samples are loaded as follows: 1-3 are APT, APL, AP incubated at 25°C for 20 min, 4-6 are APT, APL, AP incubated at 10°C for 20 min, 7-9 are negative controls of APT, APL, and AP (no theophylline) incubated at 10°C for 20 min, 10 is RiboRuler Low Range RNA Ladder (10 µL), degrading RNA is labelled with D. All samples were treated in Tris-HCl buffer.</figcaption>
+                        </figure><br><br>
+                    </div>
+                    <figure class="image-container">
+                        <img src="/img/results-apt3.png" alt="Aptazyme 3">
+                        <figcaption>Figure 3A. Cleavage of aptazymes AP, APL, and APT in response treatment with target substrate. Log ratio of band intensities where A represents the intact aptazyme and D represents the most intense degraded RNA band for incubation with and without theophylline of 27.75 mM concentration. Samples were incubated for 20 min.</figcaption>
+                    </figure>
+                    <p class="flow-text">Figure 3A illustrates the effect of temperature on aptazyme cleavage; it is evident that temperature affects the final amount of cleavage; samples treated at 10°C seem to show little change as expressed by the difference in the log ratio for the band intensities. We see a clear increase in cleavage for the samples incubated at 25°C. AP shows a change of -3.826 units, APL shows -3.419 units, and APT -3.518 units. These translate to decreases of 6699-fold, 2624-fold, and 3296-fold. This shows temperatures of at least 25°C are crucial to outputting a measurable distinct change in the aptazyme for detecting purposes.</p>
+                    <div class="sub-container" id="apt-sub1">
+                        <p><u>Time Influence</u></p>
+                        <div class="apt-content">
+                            <figure>
+                                <img src="/img/results-apt4.png" alt="Aptazyme 4">
+                                <figcaption>Figure 4. 15%, 1.0mm 1X TBE UREA PAGE gel, run at 120V for 1:08, gel was stained with EtBr. 10 µL of Aptazyme at a concentration of 100 ng/µL were loaded. Theophylline concentration was set at 27.75 mM. Samples are loaded as follows: 1 is RiboRuler Low Range RNA Ladder (10 µL), 2-3 are APT and APL incubated with theophylline at 37°C for 30 min, 5-6 are APT and APL incubated with theophylline at 37°C for 15 min, 8-9 are negative controls for APT and APL with no theophylline also incubated at 37°C for 30 min, 3, 7, and 10 were AP samples but were too degraded to use, degrading RNA is labelled with D. All samples were treated in Tris-HCl buffer.</figcaption>
+                            </figure><br>
+                            <figure>
+                                <img src="/img/results-apt5.png" alt="Aptazyme 5">
+                                <figcaption>Figure 4A. Cleavage of aptazymes AP, APL, and APT in response treatment with target substrate. Log ratio of band intensities where A represents the intact aptazyme and D represents the most intense degraded RNA band for incubation with and without theophylline of 27.75 mM concentration. Samples were incubated at 25°C.</figcaption>
+                            </figure>
+                        </div><br>
+                        <p>As for time influence on the kinetics of the aptazyme cleavage, it is also apparent that at least a minimum incubation time of 15 minutes is required to see noticeable cleavage, except for the APT aptazyme which shows noticeable cleavage through an 1811-fold decrease in intensity ratio even at 7.5 minutes. Given how similarly the aptazymes behaved in the temperature trials and the fact that the aptazymes only differ in their non-enzymatic regions replicates should be done in further research to determine if this discrepancy is a result of biological variability or not. </p><br>
+                        <p>As for the samples incubated at 15 minutes, their resulting intensity changes show a decrease of 1.294-fold (AP), 1.694-fold (APL), and 6,698,846-fold (APT). While we do see a higher level of cleavage, it's not nearly as significant and noticeable. This does not apply to APT which shows a large change of -6.826 units on the log ratio scale, further research needs to confirm these results.</p><br>
+                        <p>With the current results it seems reasonable to presume that temperature is a more effective control of the rate of cleavage than time, although further experimentation is required to determine at what temperature the aptazymes denature beyond their ability to perform effectively as an enzyme.</p><br>
+                    </div>
+
+                    <div class="sub-container" id="apt-sub2">
+                        <p><u>Specificity</u></p>
+                        <div class="apt-content">
+                            <figure>
+                                <img src="/img/results-apt6.png" alt="Aptazyme 6">
+                                <figcaption>Figure 5A. Cleavage of aptazymes APL in response treatment with target substrate. Log ratio of band intensities where A represents the intact aptazyme and D represents the most intense degraded RNA band for incubation with and without target substrates theophylline, caffeine, and adenosine, all at concentrations of 10 µM. Samples were incubated at 37°C for 30 min.</figcaption>
+                            </figure><br>
+                            <table class="apt-table">
+                                <tr>
+                                    <td><img src="/img/theophylline.png" alt="Theophylline"></td>
+                                    <td><img src="/img/caffeine.png" alt="Caffeine"></td>
+                                    <td><img src="/img/adenosine.png" alt="Adenosine"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td>Theophylline</td>
+                                    <td>Caffeine</td>
+                                    <td>Adenosine</td>
+                                </tr>
+                            </table><br>
+                        </div>
+                        <p>To determine the specificity of target recognition against analogous target molecules, theophylline-responsive aptazymes were tested against caffeine and adenosine as well as theophylline. The structure of caffeine most closely resembles theophylline, featuring only an additional methyl group on N7 of its core structure which is otherwise identical to theophylline. Adenosine also has a similar 6 and 5-membered fused ring structure with nitrogen substitutions in it, but with an additional 5-membered ring containing oxygen-containing side chain branching off the original 5-membered ring. It was hypothesized that caffeine would show target activity similar to theophylline due to similarity in structure and that the bulkiness of adenosine branching ring would limit its compatibility with the aptazymes.</p><br>
+                        <p>These analogous compounds were tested against APL aptazyme only. Analysis showed that there seemed to be little to no change in cleavage, with the largest change appearing in the sample incubated with caffeine, with a 1.679-fold decrease, which is lower than most observed changes. Overall, these results need to be further investigated due to their unexpectedness, showing even less cleavage in the theophylline sample compared to the negative control. The decrease in target concentration from 27.75 mM to 10 µM is potentially another effect that accounts for the unexpected result.</p><br>
+                        <p>While lack of further experimentation and replication of results was a major factor in not being able to make stronger concluding results, due to the sensitivity of producing the RNA samples and lack of yield, future directions and insights are still possible. The ability to utilize a target-sensitive aptazyme to produce self-cleavage reaction and result conformational and structural change, the first step in identifying aptazymes as possible detection and nanopore-gating mechanism for the proposed biosensor.</p><br>
+                    </div>
+                    <p><u>Base pair size determination and background adjusted densitometry data</u></p>
+                    <img src="/img/results-apt7.png" alt="Aptazyme 7" style="width: 100%; background-color: white;">
+                </div>
             </div>
         </section>
     </article>

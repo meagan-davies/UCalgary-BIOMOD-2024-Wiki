@@ -70,10 +70,10 @@
     position: sticky;
     width: 10em;
     top: 0;
-    left: 2rem;
     padding-top: 3rem;
     max-height: 100vh;
-    margin-right: 2em;
+    padding-right: 2em;
+    padding-left: 2em;
 }
 
 .toc.hidden{

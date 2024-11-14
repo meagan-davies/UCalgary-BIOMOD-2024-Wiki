@@ -987,6 +987,30 @@ footer {
     padding: 4px 10px;
 }
 
+.nano-content {
+    display: flex;
+    align-items: center;
+}
+
+.apt-content {
+    text-align: center;
+}
+
+.apt-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.apt-table td {
+    width: 33.33%;
+}
+
+.apt-table img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 /* results subwindow with tabs */
 .results-sub {
     padding-top: 3rem;

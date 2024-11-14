@@ -115,6 +115,7 @@ window.onload = function() {
 
         lastPathStart = pathStart;
         lastPathEnd = pathEnd;
+
     }
 
 };
