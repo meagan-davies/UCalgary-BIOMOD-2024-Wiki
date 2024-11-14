@@ -40,6 +40,7 @@
                 <div class="divider"></div>
             </div>
         </section>
+
         <section id="dyeflux">
             <div class="container">
                 <h2>Dye Flux</h2>
@@ -103,18 +104,62 @@
                 <p>FITC vesicles were not tested in the last stage, however, future experiments would involve FITC-encapsulated dyes for verifying aptazyme attachment to the nanopore. If the aptazyme is attached to the nanopore, SRB dye would be allowed to efflux out whilst FITC dye would not due to the size difference. Addition of target molecules would cleave the aptazyme or the addition of the TMSD key strand would displace the aptazyme, both of which would allow the FITC dye to efflux out. Based on the fluorescence behaviour of both dye fluorescence, a clear indicator of aptazyme functionality would be provided.</p>
             </div>
         </section>
+
         <section id="tmsd">
             <div class="container">
                 <h2>TMSD</h2>
                 <div class="divider"></div>
+                <p>The aim of these series of experiments was to test whether the TMSD reaction would allow for sensor modularity by modifying a reaction from Cabello-Garcia et al. (2021). This was done by adding theophylline aptazyme sequences to the target strand (TAR) and attaching a DNA linker to the strand that binds to a nanopore overhang (NAN), to create the APT and NANL strands, respectively.</p> <br>
+                <img src="/img/results-tmsd1.png" alt="TMSD 1">
+                <img src="/img/results-tmsd2.png" alt="TMSD 2" style="width: 100%;">
+                <br><br>
+                <p>Our next step was to see whether these newly modified strands would work as intended. To do this we first tested NANL with the rest of the original strand displacement reaction strands on a 15% PAGE gel. </p> <br>
+
+                <figure class="image-container">
+                    <img src="/img/results-tmsd3.png" alt="TMSD 3">
+                    <figcaption>Figure 1. Toehold mediated strand displacement reaction with a linker modified nanopore strand. The gel was stained using EtBr. A 1kb DNA ladder was used.</figcaption>
+                </figure>
+                <p class="flow-text">We can observe that, in lane 7,  NANL interacts with the unmodified target strand (TAR) indicating that the addition of the linker does not hinder target binding. When a key strand was introduced (lane 8),  the formation of an intermediate was observed indicating that NANL, TAR, and KEY are strongly bound while the dissociation of NANL and the formation of a TAR-KEY complex was minimal. Overall, this indicates that the linker modification added to NAN results in a secondary structure that favours strong binding of TAR and KEY to NANL.</p> <br>
+                <p>We then characterized how the modified theophylline target strand (APT) interacts with the modified nanopore strand to understand the impact of these modifications on the strand displacement reaction. In this experiment we aimed to observe two outcomes: (1) that the aptazyme strand would effectively link with the nanopore strand, ensuring successful integration of both sensor components, and (2) that the addition of the KEY strand would facilitate the dissociation of the aptazyme from the nanopore, enabling on-demand disassembly of the aptazyme from the sensor.</p><br>
+                <figure class="image-container">
+                    <img src="/img/results-tmsd4.png" alt="TMSD 4">
+                    <figcaption>Figure 2. Toehold mediated strand displacement reaction with the aptazyme modified APT strand and linker modified NANL strands. The gel was stained using EtBr. A 1kb DNA ladder was used. </figcaption>
+                </figure>
+                <p>APT binding to NANL or KEY reduces the instability of the aptazyme and creates distinct bands (lanes 4, 5, 6, and 7).  The binding of NANL and KEY creates a complex as observed in previous experiments however, once APT is added, it is not entirely clear to what extent the KEY binds to NANL and APT as it’s band could be covered up by the high abundance of NANL-APT interactions.  Overall, this indicates that the modified strands interact with each other and can be used to link various parts of the sensor together. Further analysis needs to be performed to determine what is causing the NANL, APT, and KEY to complex together and why the binding of KEY strand does not result in APT dissociation from the complex. </p><br>
+                <p>The TMSD reaction aimed to link the nanopore to the aptazyme. The modified nanopore strand binds strongly with both the unmodified target and the aptazyme-modified target, suggesting successful linking. However, the second goal of dissociating the aptazyme from the nanopore strand was not achieved. The presence of a high-abundance intermediate indicates that dissociation does not occur as intended, and warrants further analysis of the KEY strand's secondary structure. Thus, while linking is effective, the current TMSD design does not enable the expected dissociation.</p>
             </div>
         </section>
+
         <section id="vesicles">
             <div class="container">
                 <h2>Vesicles</h2>
                 <div class="divider"></div>
+                <p>The aim of these results and analyses was to characterize the purified vesicles (or liposomes) in order for them to be used for the final nanopore insertion tests. Before we could do that, we had to first characterize the size of the synthesized vesicles on their own as well as their uniformity. Uniformity would be indicated by getting a polydispersity value of  0.1 ideally,  or between 0.1 to 0.3 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6027495/" target="_blank">[1]</a>. We intended to synthesize uniform vesicles with a diameter of approximately 100 nm as a 100 nm filter was used during extrusions.</p> <br>
+                <figure class="image-container">
+                    <img src="/img/results-v1.png" alt="Vesicles 1">
+                    <figcaption>Figure 1. Light scattering intensity (%) and diameter (nm) of vesicles made with  7:3 DOPC:DOPE lipids at 25 °C. Each line indicates a recording from a run on the same sample. </figcaption>
+                </figure>
+                <p class="flow-text">According to the dynamic light scattering report generated by the Zetasizer, the average diameter of these vesicles was 159.2nm while the polydispersity, which indicates the uniformity of the vesicles, was 0.115. These results show that the vesicles were slightly larger than intended. Because this sample did not require gravity flow filtration, it likely retained larger lipid clusters that were not properly extruded. These larger clusters could scatter more light and shift the diameter of the vesicles to be shifted towards larger values when recorded by a Zetasizer. This can be resolved by increasing the freeze-thaw cycles during synthesis, increasing the extrusions, and, if necessary, filtering the vesicles through gravity flow filtration.</p>
+            </div>
+            <div class="sub-container">
+                <p>In order to see whether the nanopore folded properly and inserted into the liposomes through its cholesterol anchors, we also synthesized and purified vesicles that encapsulated SRB at a self-quenching concentration of 10mM -  this concentration was determined by the first round of dye flux experiments. In this sample we expected to see uniform vesicles that have an average diameter of 100 nm.</p> <br>
+                <figure class="image-container">
+                    <img src="/img/results-v2.png" alt="Vesicles 2">
+                    <figcaption>Figure 2. Light scattering intensity (%) and diameter (nm) of vesicles that encapsulated 10mM of SRB. These vesicles were made with  7:3 DOPC:DOPE lipids at 25 °C. Each line indicates a recording from a run on the same sample.</figcaption>
+                </figure>
+                <p class="flow-text">According to the dynamic light scattering report generated by the Zetasizer, the average diameter of these vesicles was 105.2 nm while the polydispersity was 0.125. These results show that the vesicles were uniform, close to the intended diameter of 100 nm, and can be used for subsequent nanopore insertion testing.</p>
+            </div>
+            <div class="sub-container">
+                <p>To test the aptazyme's function by observing FITC-Dextran-20K (FITC) flux upon aptazyme cleavage from nanopores embedded in vesicles, we needed to synthesize vesicles that encapsulated FITC. Due to limited availability of this custom FITC, achieving self-quenching concentrations was not feasible. Instead, we encapsulated 1 mM FITC, a concentration chosen based on initial dye flux experiments for optimal fluorescence detection.</p><br>
+                <figure class="image-container">
+                    <img src="/img/results-v3.png" alt="Vesicles 3">
+                    <figcaption>Figure 3. Light scattering intensity (%) and diameter (nm) of vesicles that encapsulated 1mM of FITC-Dextran-20K. These vesicles were made with  7:3 DOPC:DOPE lipids at 25 °C. Each line indicates a recording from a run on the same sample.</figcaption>
+                </figure>
+                <p class="flow-text">According to the dynamic light scattering report generated by the Zetasizer, the average diameter of these vesicles was 133.2 nm while the polydispersity was 0.141. These results show that the vesicles were uniform, close to the intended diameter of 100 nm, though they could benefit from further freeze thaw and extrusion cycles. Overall, these vesicles could be used for further aptazyme testing at the final sensor assembly stage. </p><br>
+                <p>To summarize, vesicle synthesis and encapsulation of both 10mM SRB and 1mM FITC into their respective liposome samples was successful. These samples were uniform and could be used in tests that detect nanopore insertion events as well in tests that detect aptazyme activity upon sensor assembly. </p>
             </div>
         </section>
+
         <section id="aptazyme">
             <div class="container">
                 <h2>Aptazyme</h2>

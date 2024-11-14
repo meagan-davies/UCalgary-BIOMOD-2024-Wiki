@@ -289,6 +289,12 @@ body {
     text-align: left;
 }
 
+.sub-container {
+    padding: 10px 50px;
+    text-align: left;
+    display: inline-block;
+}
+
 .subtitle-divider {
     width: 150px; /* Adjust line width */
     height: 2px; /* Adjust line thickness */
