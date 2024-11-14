@@ -1,0 +1,403 @@
+<header class="modelling-header">
+    <div class="header-content">
+        <h1>Modelling</h1>
+        <div class="divider"></div>
+    </div>
+</header>
+
+<main>
+    
+
+    <div class="container">
+        <section class="contents-m">
+            <div>
+                <p>Multiple stages of modelling took place during the design and initial testing phase of our sensor involving key stages including: nanopore design, aptazyme structure and target confirmation, and sensor visualization.</p>
+            </div>
+            <div id="title1" class="section">
+                <h2>Nanopore Design</h2>
+                <p>To develop the nanopore, a series of computation modelling methods were utilized to design DNA origami nanopore and perform subsequent modelling to investigate behaviour of the system. The stages in designing a DNA origami structure are as follows:</p>
+                <ol>
+                    <li>Conceptual Design</li>
+                    <li>Sequence Design</li>
+                    <li>Simulation and Stability Testing</li>
+                </ol>
+            </div>
+
+            <div id="sub1-1" class="section">
+                <h3>Conceptual Design</h3>
+                <p>To develop the DNA origami structure, the first step was to define the overall shape and function. In the selection of the nanopore a significant focus was placed onto the attachment of the pore to vesicles. Literature was consulted to explore potential structures, leading to the selection of a 72-helix bundle (HB) structure [1]. This structure had been tested through multiple papers to insert into vesicles through the use of cholesterol and other lipid anchoring [1, 2]. To tailor the design for its application as a biosensor, additional features were incorporated to facilitate attachment to sensor components and enable insertion into dye-loaded vesicles.</p>
+                <br>
+                <p>In this stage it was important to identify parameters involved in the design such as overall shape and size. Target size was identified to ensure that the target can reach the aptazyme serving as a gate on the sensor, this ties into having a funnel like shape to assist with molecular access. In this process the lumen was determined for a 72HB nanopore and used as a design constraint for applicable dye molecules.</p>
+                <figure class="image-container image-center">
+                    <img src="/img/modelling1.png" alt="Nanopore Conceptual Drawing">
+                    <figcaption class="figure-label">Figure 1: Conceptual sketch of 72 HB DNA origami nanopore demonstrating size and shape considerations.</figcaption>
+                </figure>
+                <p>Furthermore, when designing a DNA origami structure further consideration was put into place surrounding the height and overlap regions shown in Figure 1. A key design constraint was the attachment of lipid anchors along the bottom of the structure for vesicle insertion. Considering the thickness of a lipid bilayer as an approximate 4-6nm thickness [3] it was essential to have >5 nm in overlap for the bottom layer. To design this, a conversion factor for common DNA base pairing of 0.34 nm/bp was applied [4]. Additionally, for square lattice DNA origami structures crossovers can occur every 8 base pairs (bp). Therefore, when designing heights in the structure multiples of 8 were used to assist in optimizing crossovers distances [1]. Therefore, using multiples of 8 bp and dividing by the conversion factor provided a height approximation used to move forward into sequence design. </p>
+            </div>
+
+            <div id="sub1-2" class="section">
+                <h3>Sequence Design</h3>
+                <figure class="image-container image-right">
+                    <img src="/img/modelling2.png" alt="CaDNAno Strand Routing">
+                    <figcaption class="figure-label">Figure 2: Routing of scaffold and staple strands for 72HB nanopore.</figcaption>
+                </figure>
+                <p>The sequence design of the 72-helix bundle (HB) nanopore was accomplished using the software caDNAno. This software was used to create both the scaffold and staple strand sequences. The scaffold, a long single-stranded DNA, was designed to fold into the desired nanopore shape. Staple strands, which are short DNA sequences, were strategically designed to bind to specific regions of the scaffold, guiding the folding process and ensuring the correct 3D structure of the nanopore. The length of staple strands was carefully considered to promote better binding, and the scaffold routed to create the funnel-like shape as previously defined in Figure 1.</p>
+                <br>
+                <p>In the process of sequence design there are multiple considerations involved for routing the strands. Using caDNAno software the following stages were performed to create models and generate sequences to use in the lab.</p>
+                <h4><i>Step 1: Scaffold Routing</i></h4>
+                <p>In the first step of sequence design, the scaffold strand is routed to define the nanopore’s shape and provide a base for staple strand attachment. This routing follows the structural map created in the conceptual stage, ensuring alignment with the desired funnel-like geometry. It uses the calculated base pair lengths to follow the mapped out shape and ensure proper length overlapping.</p>
+                <h4><i>Step 2: Staple Routing</i></h4>
+                <p>Next caDNAno software is used to auto-generate staple strands that bind to the scaffold and reinforce the desired nanopore structure. Once generated these staple strands require adjustments to ensure optimal stability and folding, especially for in-vitro applications. One key consideration is blunt-end stacking, where staple strands terminate flush with scaffold edges. While this interaction can add rigidity, it also raises the risk of unwanted aggregation. To mitigate this, staples are trimmed slightly short on the edges to reduce end-to-end contact, minimizing unwanted blunt-end interactions. Additionally, the structure’s crossovers are designed to occur every 8 bp in a square lattice arrangement, enhancing structural integrity by distributing tension evenly and providing stability [1]. These aspects are caused by the inherent helical twist of DNA that introduces rotational constraints, which are particularly relevant in a square lattice. With each DNA helix turn covering approximately 10.5 bp, crossovers must align carefully to avoid torsional strain. Staple strands are also kept within an ideal length range, typically between 18-60 bp, to maintain correct folding without introducing strain or misfolds [5]. These considerations are crucial in creating a DNA origami structure that is structurally sound.</p>
+                <h4><i>Step 3: Generate Sequences</i></h4>
+                <p>For sequence generation, the M13mp18 DNA was chosen as the scaffold due to its compatibility and established use in DNA origami [6]. Using caDNAno, staple sequences were generated and exported into a spreadsheet format, facilitating easy ordering for lab synthesis. After sequence generation, specific modifications were made to prepare the nanopore for its biosensor role. These included the addition of lipid attachment sequences at targeted regions of the nanopore to enable secure integration with vesicles. Additionally, a linker sequence was added to connect the scaffold with the toehold-mediated strand displacement (TMSD) strands, allowing modularity in aptazyme attachment and facilitating the sensor's adaptability for different targets.</p>
+                <br>
+                <p>Overall, utilizing this structured approach to sequence design ensures that the final 72HB nanopore structure is robust, functional, and precisely tailored for experimental use in biosensing.</p>
+            </div>
+
+            <div id="sub1-3" class="section">
+                <h3>Simulation and Stability Testing</h3>
+                <p>In simulating the structural stability of the 72-helix bundle (HB) nanopore, CanDo software was used to test the mechanical properties and stability of different design iterations. CanDo is a software tool specifically developed to simulate and predict the mechanical properties of DNA nanostructures [7]. It uses finite element analysis (FEA) to estimate structural deformations, allowing us to evaluate how modifications impact stability under various conditions [1, 6].</p>
+                <br>
+                <p>The CanDo interface allows jobs to be submitted for processing, with the model output sent through email. It offers a variety of model options, such as fine or coarse grain as well as atomic models and/or videos. The software also provides default settings using standard values for DNA geometry and mechanical properties, providing reliable presets for initial analyses [7, 8].</p>
+                <br>
+                <p>Two primary iterations of the 72-helix bundle (HB) nanopore were tested using CanDo. The models utilized general presets for DNA properties, while .json files and sequence .csv files from CaDNAno were uploaded to create fine and atomic models. This enabled confirmation of the intended structural shape and provided insights into areas of relative stability or instability. The structural stability is demonstrated through a heat map of Root Mean Square Fluctuation (RMSF) values. Understanding the stability is significant in predicting the viability of a model where higher RMSF values can lead to higher chances of misfolding [1, 8, 9].</p>
+                <figure class="image-container image-center">
+                    <img src="/img/modelling3.png" alt="CanDo Simulated Model Iterations">
+                    <figcaption class="figure-label">Figure 3: The first iteration of the DNA origami nanopore (left) compared to the final iteration (right). Blue regions represent areas with lower RMSF while red regions indicate higher RMSF.</figcaption>
+                </figure>
+                <p>The first iteration underwent structural simulations to assess folding and stability. Based on these results, the second iteration was modified with additional crossovers to improve stability. Table 1 compares the RMSF values for both iterations.</p>
+                <br>
+                <table class="table-container">
+                    <caption>Table 1: Root Mean Square Fluctuation (RMSF) values for 72HB nanopore model iterations.</caption>
+                    <thead>
+                        <tr>
+                            <th>Iteration</th>
+                            <th>Minimum RMSF (bluest)</th>
+                            <th>95% RMSF (reddest)</th>
+                            <th>Maximum RMSF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Iteration 1</td>
+                            <td>0.228155 nm</td>
+                            <td>1.290411 nm</td>
+                            <td>2.876863 nm</td>
+                        </tr>
+                        <tr>
+                            <td>Iteration 2</td>
+                            <td>0.158418 nm</td>
+                            <td>1.002402 nm</td>
+                            <td>1.921085 nm</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>To achieve optimal stability, a design goal is to maintain RMSF values below 1 nm, as this threshold is associated with improved structural integrity [1]. As shown in Table 1, the second iteration demonstrated enhanced stability with reduced RMSF values, supporting its selection for subsequent in-lab testing.</p>
+            </div>
+
+            <div id="title2" class="section">
+                <h2>Aptazyme Structure and Binding Analysis</h2>
+            </div>
+                
+            <div id="sub2-1" class="section">
+                <h3>Primary Structure</h3>
+                <p>The RNA aptazyme we used was based upon a literature developed aptazyme for theophylline, a small molecule. The primary structure is the sequence of the aptazyme and was provided from literature [10].</p>
+                <br>
+                <p><i>RNA sequence:</i></p>
+                <p>5’-UAACUGAGGUGCAGGUACAUCCAGCUGACGAGUCCCAAAUAGGACGAAAGCCAUACCAGCCGAAAGGCCCUUGGCAGGGUUCCUGGAUUCCACUGCUAUCCAC-3’</p>
+            </div>
+
+            <div id="sub2-2" class="section">
+                <h3>Secondary Structure</h3>
+                <figure class="image-container image-right">
+                    <img src="/img/modelling4.png" alt="Theophylline Aptazyme">
+                    <figcaption class="figure-label">Figure 4: Theophylline aptazyme secondary structure [10].</figcaption>
+                </figure>
+                <p>Next the secondary structure was determined and tested through multiple methods. Using a literature diagram of the folding pattern of the RNA aptazyme the dot bracket notation was constructed [10].</p>
+                <p>Dot Bracket notation works where the pairing is indicated by “(”and the other pairing “)”, lone pairs are designated by “.” using the provided literature diagram the secondary structure was determined as:</p>
+                <br>
+                <p><i>Dot-bracket notation:</i></p>
+                <p>....((.(.(((((....((((((.......((((......))))...(.((...((((((....)))...)))...)).).))))))....)))).).))).</p>
+                <br>
+                <p>Using this structure as well as the sequence the thermodynamics of the system was analysed using RNAFold [11]. The minimum free energy (MFE) was determined as -29.90 kcal/mol. The MFE corresponds to the optimal folding configuration where the RNA structure has reached a point of low energy. This indicates that it is in a stable conformation and less likely to unfold or change spontaneously. In general, a more negative MFE suggests a more stable structure, as it indicates that more energy would be required to disrupt the folded RNA.</p>
+                <figure class="image-container image-center">
+                    <img src="/img/modelling5.png" alt="Minimum Free Energy Analysis">
+                    <figcaption class="figure-label">Figure 5: Minimum free energy structure coloured based on base-pairing probabilities using RNAFold [12].</figcaption>
+                </figure>
+                <p>To confirm the stability of the secondary structure, we tested the system using both the provided sequence with its secondary structure and an iteration without the secondary structure. The results were consistent, with similar MFE values for both configurations, further suggesting that the predicted secondary structure is energetically favorable and optimal for the RNA [11].</p>
+            </div>
+
+            <div id="sub2-3" class="section">
+                <h3>Tertiary Structure</h3>
+                <figure class="image-container image-right" style="max-width: 30%;">
+                    <img src="/img/modelling6.png" alt="Theophylline Aptazyme Models">
+                    <figcaption class="figure-label">Figure 6: On the left is the aptazyme connected to the TMSD strand and on the right is the literature aptazyme.</figcaption>
+                </figure>
+                <p>To develop the tertiary structure RNAComposer was utilized which takes both the RNA sequence as well as the secondary structure in dot-bracket notation as input [13]. Models were developed for both the aptazyme connected to the TMSD strand attachment and the aptazyme sequence and structure from literature [10]. RNAComposer takes the input files and generates a pdb file which can be visualized and compared to other components as well as used in subsequent docking analysis.</p>
+                <br>
+                <p>In Figure 6, the structure of the RNA aptazyme is shown, with both 3D structures generated using RNAComposer and visualized in UCSF Chimera. One model illustrates the aptazyme connected to the TMSD strand which allows for modular attachment and replacement of the aptazyme. Additionally, a model based on the aptazyme sequence and structure from literature provides a comparison to assess the stability and conformation of the structure.</p>
+            </div>
+
+            <div id="sub2-4" class="section">
+                <h3>Docking Simulations</h3>
+                <p>Docking simulations were used to assess the specificity of the selected aptazyme by comparing its binding affinity with different ligands. By simulating interactions between the aptazyme and both the target ligand and non-target controls, the binding affinities provided insights into the aptazyme's preference for the target molecule. A higher binding affinity for the target ligand compared to controls indicates that the aptazyme is more likely to bind specifically to the desired target, enhancing the biosensor’s accuracy and reliability.</p>
+                <br>
+                <p>To perform docking simulations, AutoDock Vina was selected to streamline the docking process due to its efficiency and accuracy in calculating binding affinities [14, 15]. The docking process involved several key stages: file preparation, simulation, and analysis.</p>
+                <br>
+                <p>First, AutoDockTools was used to prepare the necessary input files, including the addition of hydrogens and the generation of .pdbqt files for both the aptazyme and the ligands [16]. An important parameter to determine for the docking simulation is the area of binding, which helps constrain the system. This area, referred to as the grid box, was defined for the aptazyme based on the sequence region of the aptamer component, as analyzed in Chimera. Using these files and parameters, a configuration file was developed and used as the input to run the simulation.</p>
+                <br>
+                <p>The docking simulation was then run using AutoDock Vina, which predicts the optimal binding conformation and calculates the binding affinity between the aptazyme and the ligand. This simulation provides insight into the most favorable binding interaction, which is crucial for evaluating the efficiency of different ligands in binding to the aptazyme structure.</p>
+                <br>
+                <div class="dropdown-container">
+                    <div class="dropdown-header" onclick="toggleDropdown()">
+                        Docking Simulation Guide [16] <span class="dropdown-arrow">▼</span>
+                    </div>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <h3>Step 1: File Preparation using AutoDockTools</h3>
+                        <div class="step">
+                            <h4>1. Start with PDB Files</h4>
+                            <p>Obtain the PDB files of both the receptor (e.g., aptazyme or protein) and the ligand. These files need to be converted into PDBQT format for docking.</p>
+                            <ul>
+                                <li><strong>Receptor:</strong> The rigid part of the receptor (e.g., RNA aptazyme or protein).</li>
+                                <li><strong>Flex:</strong> Include flexible side chains, if applicable.</li>
+                                <li><strong>Ligand:</strong> The ligand (e.g., caffeine, theobromine, etc.).</li>
+                            </ul>
+                        </div>
+
+                        <div class="step">
+                            <h4>2. Using AutoDockTools (ADT)</h4>
+                            <p>Open AutoDockTools to prepare the files and modify the structure for docking.</p>
+                            <ul>
+                                <li><strong>Separate Dashboard Widgets:</strong> Use the widgets to control molecule display, such as surface or color settings.</li>
+                                <li><strong>Movement Controls:</strong>
+                                    <ul>
+                                        <li>Right-click to move the molecule.</li>
+                                        <li>Left-click to rotate the molecule.</li>
+                                        <li>Scroll wheel to zoom in/out.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="step">
+                            <h4>3. Import the PDB File</h4>
+                            <ul>
+                                <li>Go to <strong>File > Read Molecule</strong> and import the receptor PDB file.</li>
+                                <li>Since most PDB files do not have hydrogen atoms, go to <strong>Edit > Hydrogens > Add > Polar Only</strong> to add polar hydrogens.</li>
+                            </ul>
+                        </div>
+
+                        <div class="step">
+                            <h4>4. Set Up the Grid Box</h4>
+                            <ul>
+                                <li>Go to <strong>Grid > Macromolecule > Choose</strong> to select your receptor molecule.</li>
+                                <li>Save the Protein PDBQT File: Save the file to the same directory.</li>
+                                <li>Define the search space by setting the Grid Box:
+                                    <ul>
+                                        <li>Enter the center coordinates (x, y, z).</li>
+                                        <li>Adjust spacing to 1 (angstroms), setting the scaling factor.</li>
+                                        <li>Set the number of points per map (based on visualization size).</li>
+                                    </ul>
+                                </li>
+                                <li>These values will later be useful for docking configuration.</li>
+                            </ul>
+                        </div>
+
+                        <div class="step">
+                            <h4>5. Import the Ligand File</h4>
+                            <ul>
+                                <li>Go to <strong>Ligand > Input > Open</strong> and load your ligand file.</li>
+                                <li>You can hide the receptor to better view the ligand. It’s recommended to have a model for better visualization.</li>
+                            </ul>
+                        </div>
+
+                        <div class="step">
+                            <h4>6. Adjust Rotatable Bonds</h4>
+                            <ul>
+                                <li>Go to <strong>Ligand > Torsion Tree > Choose Torsions</strong> to adjust any rotatable bonds in your ligand.</li>
+                            </ul>
+                        </div>
+
+                        <div class="step">
+                            <h4>7. Save Ligand as PDBQT</h4>
+                            <ul>
+                                <li>Go to <strong>Ligand > Output > Save as PDBQT</strong> to save the ligand in the correct format.</li>
+                            </ul>
+                        </div>
+                        
+                        <br>
+                        <h3>Step 2: Prepare Simulation and Run using AutoDock Vina</h3>
+                        <div class="step">
+                            <h4>1. Navigate to the Folder Containing Files</h4>
+                            <p>In your terminal, navigate to the folder where the receptor and ligand PDBQT files are located.</p>
+                        </div>
+
+                        <div class="step">
+                            <h4>2. Check Vina Command Options</h4>
+                            <p>Run the following command to list all available commands in AutoDock Vina:</p>
+                            <pre>
+                                "\The Scripps Research Institute\Vina\vina.exe" --help
+                            </pre>
+                        </div>
+
+                        <div class="step">
+                            <h4>3. Create a Configuration File</h4>
+                            <p>To streamline the process, create a configuration file (<code>conf.txt</code>) in the same folder. The configuration file should include:</p>
+                            <pre>
+                                receptor = protein.pdbqt
+                                ligand = ligand.pdbqt
+
+                                out = all.pdbqt          # Optional: Saves all binding conformations into one file
+
+                                center_x = ___           # X coordinate of the center
+                                center_y = ___           # Y coordinate of the center
+                                center_z = ___           # Z coordinate of the center
+
+                                size_x = ___             # Size in the X dimension (Angstroms)
+                                size_y = ___             # Size in the Y dimension (Angstroms)
+                                size_z = ___             # Size in the Z dimension (Angstroms)
+
+                                exhaustiveness = 8       # Optional: Proportional to computation time; looks for the global minimum
+                            </pre>
+                            <p>After editing, save the configuration file.</p>
+                        </div>
+
+                        <div class="step">
+                            <h4>4. Run AutoDock Vina</h4>
+                            <p>Run the docking simulation by executing the following command:</p>
+                            <pre>
+                                "\The Scripps Research Institute\Vina\vina.exe" --config conf.txt --log log.txt
+                            </pre>
+                            <p>Press Enter to begin the docking process.</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p>When testing the aptazyme a series of simulations were performed. Based upon literature the aptazyme has high specificity, therefore, through these simulations we aimed to test if the aptazyme could differentiate between similar small molecules to theophylline [10]. Specifically, we tested three other small molecules to compare to theophylline: caffeine, theobromine and adenosine. Using the steps outlined above each small molecule was tested for its binding affinity to the aptazyme.</p>
+                <table>
+                    <caption>Table 2: Binding affinities of aptazyme to small molecules determined through AutoDock Vina simulations.</caption>
+                    <thead>
+                        <tr>
+                            <th>Target Molecule</th>
+                            <th>Binding Affinity (kcal/mol)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Theophylline</td>
+                            <td>-7.2</td>
+                        </tr>
+                        <tr>
+                            <td>Caffeine</td>
+                            <td>-7.6</td>
+                        </tr>
+                        <tr>
+                            <td>Theobromine</td>
+                            <td>-7.2</td>
+                        </tr>
+                        <tr>
+                            <td>Adenosine</td>
+                            <td>-7.8</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The docking simulation results suggested that the aptazyme had a broad binding affinity across multiple molecules, not displaying strong specificity for theophylline alone. In ideal cases, a highly specific aptazyme would exhibit a significantly higher affinity for the target molecule compared to other similar compounds, as specificity is crucial for distinguishing between target biomarkers and irrelevant molecules in complex biological samples. As outlined in Table 2 the binding affinities for caffeine, theobromine, and adenosine were close to that of the target, theophylline, indicating that the aptazyme could not reliably differentiate between these molecules.</p>
+                <br>
+                <p>Despite this limitation, the aptazyme was still selected for lab testing due to its sufficiently strong binding affinities, as evidenced by the negative kcal/mol values indicating favorable interactions. These results justified moving forward with experimental validation to assess the aptazyme's in-lab binding performance. After the docking simulation, the results were analyzed and visualized using Chimera and other visualization tools to assess the interactions between the aptazyme and its potential ligands.</p>
+                <br>
+                <p>In future iterations, a more selective aptazyme, preferably one optimized for high specificity to neurodegenerative disease biomarkers, will be applied to ensure precise binding in sensor applications. This refinement will be essential for developing a biosensor that can reliably identify specific disease indicators, improving diagnostic accuracy for conditions like Alzheimer's and other neurodegenerative diseases.</p>
+            </div>
+
+            <div id="title3" class="section">
+                <h2>Sensor Visualization</h2>
+                <p>The final stage in modeling involved visualizing the assembled sensor components to assess size compatibility and confirm the spatial relationships among nanopore, TMSD, and aptazyme structures. UCSF Chimera was selected for this task due to its advanced 3D modeling capabilities and its versatile set of analysis tools. Through Chimera, the assembled components could be visualized, rotated, and measured, enabling precise validation of their interactions.</p>
+                <br>
+                <figure class="viewer-container image-center">
+                    <div class="pdb-container">
+                        <div id="pdb-viewer1" class="viewer"></div>
+                        <div id="pdb-viewer2" class="viewer"></div>
+                    </div>
+                    <figcaption class="figure-label">Figure 7: Model of Nanopore on left compared with Aptazyme model with modified ends on the right. </figcaption>
+                </figure>
+                <br>
+                <p>To access the models the nanopore and aptazyme modified with TMSD attachment were both visualised and compared shown in Figure 7. Observing the shape of these structures provided the basis for the linker attachment site. This step was essential such that the aptazyme would be aligned at the top and act effectively as a gate. One of the key tools used in Chimera for this purpose was the distance measurement feature, which allowed us to analyze critical distances between components. The measurement process guided iterative design refinements by identifying regions where spatial constraints could potentially interfere with sensor function.</p>
+                <figure class="image-container image-center">
+                    <img src="/img/modelling8.png" alt="Dimension Visualization">
+                    <figcaption class="figure-label">Figure 8: Dimensions of nanopore and aptazyme tested using Chimera visualization distance measurements. </figcaption>
+                </figure>
+                <p>Based upon the measurements shown in Figure 8 we carefully selected dye molecules with dimensions that ensured they could travel through the nanopore lumen but would be obstructed by the aptazyme in its intact state. This precise sizing assessment was crucial to the sensor's design, as it confirmed the functionality of the aptazyme as a selective gate. By confirming these spatial constraints, this final modeling stage validated key aspects of the sensor’s design, preparing it for synthesis and further testing in the lab.</p>
+            </div>
+                    
+        </section>
+
+    </div>
+    <link rel="stylesheet" href="/sidenav.css">
+    <link rel="stylesheet" href="/modelling.css">
+    <script src="/sidenav.js"></script>
+    <script>
+        function toggleDropdown() {
+            const content = document.getElementById("dropdownContent");
+            const arrow = document.querySelector(".dropdown-arrow");
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                arrow.classList.remove("active");
+            } else {
+                content.style.display = "block";
+                arrow.classList.add("active");
+            }
+        }
+    </script>
+
+    <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+
+    <script>
+        let element = document.querySelector('#pdb-viewer1');
+        let config = { backgroundColor: 'white' };
+        let viewer = $3Dmol.createViewer(element, config);
+        let pdbUri = '/modelling7-1.pdb';
+
+        fetch(pdbUri)
+        .then(response => {
+            if (!response.ok) {
+            throw new Error(`Failed to load PDB file: ${response.statusText}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+
+            viewer.addModel(data, 'pdb');
+            viewer.setStyle({}, { cartoon: { color: 'spectrum' } });
+            viewer.zoomTo();
+            viewer.render();
+            viewer.zoom(1.2, 1000);
+        })
+        .catch(error => console.error("Error loading PDB file:", error));
+    </script>
+
+<script>
+    let element2 = document.querySelector('#pdb-viewer2');
+    let config2 = { backgroundColor: 'white' };
+    let viewer2 = $3Dmol.createViewer(element2, config2);
+    let pdbUri2 = '/modelling7-2.pdb';
+
+    fetch(pdbUri2)
+    .then(response => {
+        if (!response.ok) {
+        throw new Error(`Failed to load PDB file: ${response.statusText}`);
+        }
+        return response.text();
+    })
+    .then(data => {
+
+        viewer2.addModel(data, 'pdb');
+        viewer2.setStyle({}, { cartoon: { color: 'spectrum' } });
+        viewer2.zoomTo();
+        viewer2.render();
+        viewer2.zoom(1.2, 1000);
+    })
+    .catch(error => console.error("Error loading PDB file:", error));
+</script>
+
+
+</main>

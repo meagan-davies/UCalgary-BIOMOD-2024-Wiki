@@ -297,17 +297,59 @@ body {
     align-self: flex-start;
 }
 
-.image-container {
-    float: left; /* Float the image to the left */
+/* Modelling Page */
+.modelling-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.modelling-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.modelling-container section {
+    margin-bottom: 3rem;
+}
+
+.image-container{
     margin: 0 20px 20px 0; /* Adjust margins as needed */
     text-align: center;
     max-width: 50%; /* Ensure the image does not exceed 50% of the container width */
 }
 
+.image-left{
+    float: left; /* Float the image to the left */
+}
+
+.image-right{
+    float: right; /* Float the image to the left */
+}
+
+.image-center{
+    place-self: center;
+}
 .image-container img {
     max-width: 100%;
-    height: auto;
+    max-height: 75vh;
+    place-self: center;
     display: block;
+}
+
+.contents-m ol li{
+    margin-left: 50px;
+}
+
+.contents-m h4{
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .figure-label {
