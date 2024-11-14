@@ -128,90 +128,382 @@
         <div class="tab" onclick="showTab('June')" id="tab-June">June</div>
         <div class="tab" onclick="showTab('July')" id="tab-July">July</div>
         <div class="tab" onclick="showTab('August')" id="tab-August">August</div>
+        <div class="tab" onclick="showTab('September')" id="tab-September">September</div>
     </div>
 
     <!-- Experiment Sections for each month -->
     <div id="content-June" class="tab-content"></div>
     <div id="content-July" class="tab-content"></div>
     <div id="content-August" class="tab-content"></div>
+    <div id="content-September" class="tab-content"></div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const experiments = [
-                { 
-                    date: "24/06/05", 
-                    month: "June", 
-                    type: "DEPC-treated Water", 
-                    title: "Preparing DEPC-treated Water (Ultrapure)", 
-                    details: `
-                        <strong>Partner(s):</strong> Jezrael Carpio, Amber Quo <br>
-                        <strong>Purpose/ Objective of the lab:</strong> Make 500 mL of DEPC-treated water<br>
-                        <strong>Last Edited (yy/mm/dd):</strong>
-                        24/06/06 – Taken out of orbital shaker/stored, 
-                        24/06/10 – Sent to the Autoclave <br>
-                        
-                        <strong>Materials:</strong> <br>
-                        <ul>
-                            <li>0.5mL DEPC</li>
-                            <li>499.5 mL Milli-Q Water</li>
-                            <li>1 L glass container with a lid</li>
-                            <li>Magnetic Stirring Apparatus/Orbital Shaker</li>
-                            <li>Autoclave</li>
-                        </ul>
-                        
-                        <strong>Procedure:</strong><br>
-                        <ol>
-                            <li>Add 0.1% (v/v) (500 uL) of DEPC to 499.5 mL of Milli-Q Water to a 1L glass container.</li>
-                            <li>Shake to gently mix.
-                                <ul>
-                                    <li>Don't mix with reagents with an amine group.</li>
-                                </ul>
+    { 
+        date: "24/06/05", 
+        month: "June", 
+        type: "Reagents", 
+        title: "Preparing DEPC-treated Water (Ultrapure) I", 
+        details: `
+            <strong>Partner(s):</strong> 
+            Jezrael Carpio, Amber Quo 
+            <br>
+            <strong>Purpose/ Objective of the lab:</strong> 
+            Make 500 mL of DEPC-treated water
+            <br>
+            <strong>Last Edited (yy/mm/dd):</strong><br>
+            24/06/06 – Taken out of orbital shaker/stored 
+            <br>
+            24/06/10 – Sent to the Autoclave 
+            <br>
+            
+            <strong>Materials:</strong>
+            <ul>
+                <li>0.5mL DEPC</li>
+                <li>499.5 mL Milli-Q Water</li>
+                <li>1 L glass contained with a lid</li>
+                <li>Magnetic Stirring Apparatus/Orbital Shaker</li>
+                <li>Autoclave</li>
+            </ul>
+            
+            <strong>Procedure:</strong><br>
+            <ol>
+                <li>Add 0.1% (v/v) (500 uL) of DEPC to 499.5 mL of Milli-Q Water to a 1L glass container.
+                    <ul>
+                        <li>Shake to gently mix.
                             </li>
-                            <li>Shake for 1 hour to overnight on orbital shaker. </li>
-                            <ol start="4">
-                                <li>Alternative Method: Mix with a magnetic stirrer for 30 minutes.</li>
-                                <li>Autoclave for 45 minutes at 15 PSI on liquid cycle.</li>
-                            </ol>
-                        </ol>
-                        
-                        <strong>Notes/Observations:</strong><br>
-                        <ul>
-                            <li>DEPC was transparent, a blob near the bottom of the bottle.</li>
-                            <li>Magnetic stirrer was cleaned with ethanol and Milli-Q Water before use.</li>
-                            <li>Stirred from 1:50 PM to 2:20 PM at Level 4-5.</li>
-                            <li>Bubbles on the surface of the solution went away after resting.</li>
-                            <li>Retrieved the magnetic stir bar with a magnetic stick.</li>
-                            <li>The stick did not make contact with the DEPC-Water.</li>
-                            <li>The bottle was shaken by hand one more time.</li>
-                            <li>Put in shaker overnight from June 5 at 2:54 PM at 150 RPM and 37°C.</li>
-                            <li>RPM changed to 220 at 4:15 PM.</li>
-                            <li>Taken out of the shaker at 9 AM on June 6, no autoclave due to water shortage.</li>
-                            <li>Stored in Buffer Cabinet.</li>
-                            <li>Sent to autoclave on 24/06/10 at 9:09 AM.</li>
-                        </ul>`
-                },
-                { 
-                    date: "24/06/10", 
-                    month: "June", 
-                    type: "PCR Prep", 
-                    title: "Aptazyme PCR Prep", 
-                    details: "Test" 
-                },
-                { 
-                    date: "24/07/01", 
-                    month: "July", 
-                    type: "DNA Electrophoresis", 
-                    title: "DNA Agarose Gel Electrophoresis", 
-                    details: "Objective: Analyze PCR results..." 
-                },
-                { 
-                    date: "24/08/15", 
-                    month: "August", 
-                    type: "RNA Analysis", 
-                    title: "RNA Analysis and Sequencing", 
-                    details: "Objective: Final analysis of RNA samples." 
-                }
-            ];
+                        <li>Don’t mix with reagents with an amine group.
+                            </li>
+                    </ul>
+                </li>
+                <li>Shake for 1 hour to overnight on orbital shaker.
+                    </li>
+                    <ul>  
+                        <li>Alternative Method: Mix with a magnetic stirrer for 30 minutes.
+                            </li>
+                    </ul>
+                <li>Autoclave for 45 minutes at 15 PSI on liquid cycle.
+                    </li>
+                </ol>
+        
+            
+            <strong>Notes/Observations:</strong>
+            <ul>
+                <li>DEPC was transparent blob near bottom of bottle
+                    </li>
+                <li>Magnetic stirrer was heavily cleansed with ethanol and Milli-Q Water before dropping in the DEPC-Water mixture
+                    </li>
+                <li>Magnetically stirred (VWR) from 1:50 PM-2:20 PM at Level 4-5
+                    </li>
+                <ul>
+                <li>There were bubbles on the surface of the solution which went away after resting
+                    </li>
+                </ul>
+                <li>Retrieved the magnetic stir bar with a magnetic stick and another magnetic stir bar
+                    <ul>
+                        <li>The magnetic stick did not make contact with the DEPC-Water
+                            </li>
+                        <li>The bottle was shaken by hand one more time
+                            </li>
+                    </ul>
+                </li>
+                <li>Brought to autoclave at 2:40 PM but were too late for the last cycle
+                    </li>
+                <li>Put in shaker overnight from June 5 2:54 PM at 150RPM and 37°C
+                    </li>
+                <li>RPM was changed to 220 at 4:15pm
+                    </li>
+                <li>Taken out of orbital shaker at 9 AM Jun 6 → No autoclave due to water shortage
+                    </li>
+                <li>Stored in Buffer Cabinet
+                    </li>
+                <li>At 24/06/10 9:09 AM, the 500 mL bottles with the DEPC-treated water was sent to the autoclave
+                    </li>
+            </ul>
+             `
+    },
+    {
+        date: "24/06/05",
+        month: "June",
+        type: "PCR",
+        title: "Aptazyme PCR Prep",
+        details: `
+            <strong>Partner(s):</strong> Stavan Patel, Ziyad Syed <br>
+            <strong>Purpose/ Objective of the lab:</strong> Prepare for PCR amplification<br>
+            <strong>Last Edited (yy/mm/dd):</strong>  24/06/06 <br>
+            
+            <strong>Materials:</strong>
+            <ul>
+                <li>RNAse free water</li>
+                <li>Pipette</li>
+                <li>RNAse free pipette tips</li>
+                <li>Ice tray</li>
+                <li>Ice</li>
+                <li>Bunsen burner</li>
+            </ul>
+            
+            <strong>Procedure:</strong><br>
+            <ol>
+                <li>Thaw components of PCR MasterMix, briefly centrifuge to collect at the bottom.</li>
+                <li>Set up a PCR Master mix in a 1.5mL microcentrifuge tube, mix by pipetting up and down, spin down to combine everything</li>
+                <li>Label PCR tubes, determine the components that will go in each.</li>
+                <li>Determine the volume of stock solution and the volume of water required to obtain the desired final concentration</li>
+            </ol>
+            
+            <strong>Notes/Observations:</strong><br>
+            <ul>
+                <li>Notes about ordered oligos
+                    <ul>
+                        <li>Primers were suspended in 1mL of UltraPure water</li>
+                        <li>ds DNA was resuspended in UltraPure water
+                            <ul>
+                                <li>Template DNA (5SeqT7Ap, 5SeqT7ApL, 5SeqT7ApTMSDTar) were diluted too low for nanodrop concentration</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <strong>Table 1. DNA primer and their respective information</strong><br>
+            <table>
+                <tr>
+                    <th>Primers</th>
+                    <th>Tm (°C)</th>
+                    <th>Size (nmol)</th>
+                    <th>Mass (mg)</th>
+                </tr>
+                <tr>
+                    <td>5seqT7ApFwd</td>
+                    <td>62</td>
+                    <td>104.1</td>
+                    <td>0.76</td>
+                </tr>
+                <tr>
+                    <td>5seqT7ApRev</td>
+                    <td>59.2</td>
+                    <td>68.4</td>
+                    <td>0.53</td>
+                </tr>
+                <tr>
+                    <td>5seqT7ApLRev</td>
+                    <td>58.1</td>
+                    <td>69.5</td>
+                    <td>0.56</td>
+                </tr>
+                <tr>
+                    <td>5seqT7ApTMSDTARRev</td>
+                    <td>57.8</td>
+                    <td>77</td>
+                    <td>0.58</td>
+                </tr>
+            </table>
+            
+            <ul>
+                <li>Volume used: 1mL </li>
+                <li>Desired concentration: 10 μM</li>
+            </ul>
+
+            <strong>Table 2. Preliminary volumes for PCR </strong><br>
+            <table>
+                <tr>
+                    <th>Primers</th>
+                    <th>Concentration (μmol/L)</th>
+                    <th>Total Volume of Stock and Water Needed (μL)</th>
+                    <th>Mass (mg)</th>
+                </tr>
+                <tr>
+                    <td>5seqT7ApFwd</td>
+                    <td>62</td>
+                    <td>104.1</td>
+                    <td>0.76</td>
+                </tr>
+                <tr>
+                    <td>5seqT7ApRev</td>
+                    <td>59.2</td>
+                    <td>68.4</td>
+                    <td>0.53</td>
+                </tr>
+                <tr>
+                    <td>5seqT7ApLRev</td>
+                    <td>58.1</td>
+                    <td>69.5</td>
+                    <td>0.56</td>
+                </tr>
+                <tr>
+                    <td>5seqT7ApTMSDTARRev</td>
+                    <td>57.8</td>
+                    <td>77</td>
+                    <td>0.58</td>
+                </tr>
+            </table>
+
+            <strong>Results:</strong>
+
+            <strong>Sample Calculation:</strong><br>
+            <ul>
+                <li>For 5SeqT7APFwd (Forward Primer)
+                    <ul>
+                        <li>Size: 104.1 nmol × 1µ / 1000n = 0.1041µmol</li>
+                        <li>C1: 0.1041µmol / 1 mL × 1000mL / 1 L = 104.1 µmol/L</li>
+                        <li>V1: ?</li>
+                        <li>C2: 10 µmol/L</li>
+                        <li>V2: 3µL</li>
+                        <li>C1V1 = C2V2</li>
+                        <li>V1 = C2V2 / C1</li>
+                        <li>V1 = 10 µmol/L × 3µL / 104.1 µmol/L = 0.288 µL</li>
+                        <li>Vwater = V2 - V1</li>
+                        <li>Vwater = 3µL − 0.288 µL = 2.711 µL</li>
+                    </ul>
+                </li>
+            </ul>
+            
+        `
+    },
+    { 
+        date: "24/06/05", 
+        month: "June", 
+        type: "PCR", 
+        title: "Aptazyme PCR", 
+        details: `
+            <strong>Partner(s):</strong> Stavan Patel, Ziyad Syed <br>
+            <strong>Purpose/ Objective of the lab:</strong> Prepare for PCR amplification<br>
+            <strong>Last Edited (yy/mm/dd):</strong> <br>
+            
+            <strong>Materials:</strong>
+            <ul>
+                <li>RNAse free water</li>
+                <li>Pipette</li>
+                <li>RNAse free pipette tips</li>
+                <li>Ice tray</li>
+                <li>Ice</li>
+                <li>Bunsen burner</li>
+            </ul>
+            
+            <strong>Procedure:</strong>
+            <ol>
+                <li>Thaw components of PCR MasterMix, briefly centrifuge to collect at the bottom.</li>
+                <li>Set up a PCR Master mix in a 1.5mL microcentrifuge tube, mix by pipetting up and down, spin down to combine everything</li>
+                <li>Label PCR tubes, determine the components that will go in each.</li>
+                <li>Determine the volume of stock solution and the volume of water required to obtain the desired final concentration</li>
+            </ol>
+            
+            <strong>Notes/Observations:</strong>
+            <ul>
+                <li>Notes about ordered oligos
+                    <ul>
+                        <li>Primers were suspended in 1mL of UltraPure water</li>
+                        <li>ds DNA was resuspended in UltraPure water
+                            <ul>
+                                <li>Template DNA (5SeqT7Ap, 5SeqT7ApL, 5SeqT7ApTMSDTar) were diluted too low for nanodrop concentration</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <strong>Table 1. DNA primer and their respective information</strong>
+            <table>
+                <tr>
+                    <th>Primers</th>
+                    <th>Tm (°C)</th>
+                    <th>Size (nmol)</th>
+                    <th>Mass (mg)</th>
+                </tr>
+                <tr>
+                    <td>5seqT7ApFwd</td>
+                    <td>62</td>
+                    <td>104.1</td>
+                    <td>0.76</td>
+                </tr>
+                <tr>
+                    <td>5seqT7ApRev</td>
+                    <td>59.2</td>
+                    <td>68.4</td>
+                    <td>0.53</td>
+                </tr>
+                <tr>
+                    <td>5seqT7ApLRev</td>
+                    <td>58.1</td>
+                    <td>69.5</td>
+                    <td>0.56</td>
+                </tr>
+                <tr>
+                    <td>5seqT7ApTMSDTARRev</td>
+                    <td>57.8</td>
+                    <td>77</td>
+                    <td>0.58</td>
+                </tr>
+            </table>
+            
+            <strong>Results:</strong><br>
+            
+            <strong>Sample Calculation:</strong>
+            <ul>
+                <li>For 5SeqT7APFwd (Forward Primer)
+                    <ul>
+                        <li>Size: 104.1 nmol × 1µ / 1000n = 0.1041µmol</li>
+                        <li>C1: 0.1041µmol / 1 mL × 1000mL / 1 L = 104.1 µmol/L</li>
+                        <li>V1: ?</li>
+                        <li>C2: 10 µmol/L</li>
+                        <li>V2: 3µL</li>
+                        <li>C1V1 = C2V2</li>
+                        <li>V1 = C2V2 / C1</li>
+                        <li>V1 = 10 µmol/L × 3µL / 104.1 µmol/L = 0.288 µL</li>
+                        <li>Vwater = V2 - V1</li>
+                        <li>Vwater = 3µL − 0.288 µL = 2.711 µL</li>
+                    </ul>
+                </li>
+            </ul>
+            
+        `
+    }, { 
+        date: "24/06/05", 
+        month: "June", 
+        type: "Reagants", 
+        title: "Preparing DEPC-treated Water (Ultrapure) II", 
+        details: `
+            <strong>Partner(s):</strong> Jezrael Carpio, Amber Quo <br>
+            <strong>Purpose/ Objective of the lab:</strong> Make 2x250 mL of DEPC-treated water<br>
+            <strong>Last Edited (yy/mm/dd):</strong>
+            24/06/10 – Sent to the Autoclave
+            
+            <strong>Materials:</strong>
+            <ul>
+                <li>0.5mL DEPC</li>
+                <li>499.5 mL Milli-Q Water</li>
+                <li>2 250mL glass containers with a lid</li>
+                <li>Magnetic Stirring Apparatus/Orbital Shaker</li>
+                <li>Autoclave</li>
+            </ul>
+            
+            <strong>Procedure:</strong><br>
+            <ol>
+                <li>Add 0.1% (v/v) (500 uL) of DEPC to 499.5 mL of Milli-Q Water to a 1L glass container.
+                    <ul>
+                        <li>Shake to gently mix.</li>
+                        <li>Don’t mix with reagents with an amine group.</li>
+                    </ul>
+                </li>
+                <li>Shake for 1 hour to overnight on orbital shaker.</li>
+                <ol start="4">
+                    <li>Alternative Method: Mix with a magnetic stirrer for 30 minutes.</li>
+                    <li>Autoclave for 45 minutes at 15 PSI on liquid cycle.</li>
+                </ol>
+            </ol>
+            
+            <strong>Notes/Observations:</strong>
+            <ul>
+                <li>Rinsed autoclaved bottles with Milli Q water</li>
+                <li>DEPC was transparent blob near bottom of bottle</li>
+                <li>Put in shaker overnight from June 6 3:34 PM - (____) at 200RPM and 37°C</li>
+                <li>NEED TO: 1.see if properly dissolved, if not, magnetically stir for ~30min, 2. Add autoclave tape and loosen cap, 3. Bring to autoclave</li>
+                <li>At 24/06/10 9:09 AM, both the 250 mL bottles with the DEPC-treated water were sent to the autoclave</li>
+            </ul>  `
+    },
+
+];
+
 
             // Function to show a specific month's tab
             function showTab(month) {
@@ -288,71 +580,118 @@
 
     <style>
         .notebook-container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .tabs-container {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
+.tabs-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
 
-        .tab {
-            padding: 10px 20px;
-            background-color: #ddd;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+.tab {
+    padding: 10px 20px;
+    background-color: #25132a;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-        .tab.active-tab {
-            background-color: #c1a3eb;
-            font-weight: bold;
-        }
+.tab.active-tab {
+    background-color: #c1a3eb;
+    font-weight: bold;
+}
 
-        .tab:hover {
-            background-color: #b3a2db;
-        }
+.tab:hover {
+    background-color: #b3a2db;
+}
 
-        .tab-content {
-            display: none;
-        }
+.tab-content {
+    display: none;
+}
 
-        .experiment-box {
-            background-color: #451161;
-            color: white;
-            border-radius: 20px;
-            padding: 15px;
-            margin-bottom: 30px;  /* Increased margin between experiments */
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.2s ease-in-out;
-        }
+.experiment-box {
+    background-color: #451161;
+    color: white;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
 
-        .experiment-box:hover {
-            transform: scale(1.03); /* Subtle hover effect */
-        }
+.experiment-box:hover {
+    transform: scale(1.03);
+}
 
-        .experiment-details {
-            white-space: nowrap; /* Prevents line break */
-            line-height: 1.6;
-            font-size: 16px;
-            margin-top: 10px;
-            display: none; /* Initially hidden */
-            text-align: left; /* Align text to the left */
-            overflow-x: auto; /* Allows horizontal scrolling */
-            max-width: 100%; /* Ensures it doesn't exceed the container width */
-        }
+.experiment-details {
+    line-height: 1.6;
+    font-size: 16px;
+    margin-top: 10px;
+    display: none;
+    text-align: left;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 15px;
+}
 
-        /* Ensure that the container doesn't overflow on smaller screens */
-        @media (max-width: 768px) {
-            .experiment-details {
-                max-width: 100%; /* Prevents going beyond the screen */
-                overflow-x: auto; /* Enable horizontal scrolling */
-                white-space: nowrap; /* Prevents wrapping */
-            }
-        }
+/* List styling */
+.experiment-details ul,
+.experiment-details ol {
+    white-space: normal;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.experiment-details li {
+    margin: 5px 0;
+    white-space: normal;
+}
+
+/* Nested lists */
+.experiment-details ul ul,
+.experiment-details ol ol,
+.experiment-details ul ol,
+.experiment-details ol ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+/* Table styling */
+.experiment-details table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.experiment-details th,
+.experiment-details td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    text-align: left;
+}
+
+.experiment-details th {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .experiment-details {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    
+    .experiment-details table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
     </style>
 </main>
