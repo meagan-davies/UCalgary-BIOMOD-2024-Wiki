@@ -226,7 +226,7 @@
     {
         date: "24/06/05",
         month: "June",
-        type: "PCR",
+        type: "Aptazyme",
         title: "Aptazyme PCR Prep",
         details: `
             <strong>Partner(s):</strong> Stavan Patel, Ziyad Syed <br>
@@ -310,35 +310,38 @@
                     <th>Primers</th>
                     <th>Concentration (μmol/L)</th>
                     <th>Total Volume of Stock and Water Needed (μL)</th>
-                    <th>Mass (mg)</th>
+                    <th>Volume needed from Stock (μL)</th>
+                    <th>Volume of Water Needed (μL) </th>
                 </tr>
                 <tr>
                     <td>5seqT7ApFwd</td>
-                    <td>62</td>
                     <td>104.1</td>
-                    <td>0.76</td>
+                    <td>3</td>
+                    <td>0.288</td>
+                    <td>2.711</td>
                 </tr>
                 <tr>
                     <td>5seqT7ApRev</td>
-                    <td>59.2</td>
                     <td>68.4</td>
-                    <td>0.53</td>
+                    <td>1</td>
+                    <td>0.146</td>
+                    <td>0.854</td>
                 </tr>
                 <tr>
                     <td>5seqT7ApLRev</td>
-                    <td>58.1</td>
                     <td>69.5</td>
-                    <td>0.56</td>
+                    <td>1</td>
+                    <td>0.144</td>
+                    <td>0.856</td>
                 </tr>
                 <tr>
                     <td>5seqT7ApTMSDTARRev</td>
-                    <td>57.8</td>
                     <td>77</td>
-                    <td>0.58</td>
+                    <td>1</td>
+                    <td>0.130</td>
+                    <td>0.870</td>
                 </tr>
             </table>
-
-            <strong>Results:</strong>
 
             <strong>Sample Calculation:</strong><br>
             <ul>
@@ -361,15 +364,15 @@
         `
     },
     { 
-        date: "24/06/05", 
+        date: "24/06/06", 
         month: "June", 
-        type: "PCR", 
+        type: "Aptazyme", 
         title: "Aptazyme PCR", 
         details: `
             <strong>Partner(s):</strong> Stavan Patel, Ziyad Syed <br>
             <strong>Purpose/ Objective of the lab:</strong> Prepare for PCR amplification<br>
-            <strong>Last Edited (yy/mm/dd):</strong> <br>
-            
+            <strong>Last Edited (yy/mm/dd):</strong> 
+            24/06/10 – S.P. Updated miswritten value in table 3
             <strong>Materials:</strong>
             <ul>
                 <li>RNAse free water</li>
@@ -382,83 +385,159 @@
             
             <strong>Procedure:</strong>
             <ol>
-                <li>Thaw components of PCR MasterMix, briefly centrifuge to collect at the bottom.</li>
-                <li>Set up a PCR Master mix in a 1.5mL microcentrifuge tube, mix by pipetting up and down, spin down to combine everything</li>
-                <li>Label PCR tubes, determine the components that will go in each.</li>
-                <li>Determine the volume of stock solution and the volume of water required to obtain the desired final concentration</li>
+                <li>Place a 96-well plate into an ice bucket, and place the PCR tubes inside
+                    </li>
+                <li>Pipette 45uL Master Mix into PCR tubes except for negative control
+                    </li>
+                <li>Set up negative control in a separate PCR tube:
+                        <ul>
+                            <li>Add all the same reagents as Master Mix except for the template DNA
+                                </li>
+                            <li>Add 3 uL of water in place of the template DNA
+                                </li>
+                        </ul>
+                    </li>
+                <li>Add Template DNA
+                    </li>
+                <li>Centrifuge down briefly to combine
+                    </li>
+                <li>Cap PCR tubes and place onto thermal cycler
+                    </li>
+                <li>Set thermal cycler to the setting labeled “BIOMOD” and run
+                    </li>
+                <li>Four 50uL reactions were performed, with 30 PCR cycles
+                    <ul>
+                        <li>One for each of the three template sequences
+                    </li>
+                    <li>One for negative control
+                    </li>
+                    <li>Lid temp was set for 105°C
+                    </li>
+                    <li>3uL of template DNA for the forward primer was made, 1uL of the primer was used in each reaction 
+                    </li>
+                    <li>1uL of the template DNA for the reverse primers was used in the reaction 
+                    </li>
+                        </ul>
+                    </li>
+                    <li>After the program runs, store PCR tubes at 4°C for few days or -20°C for several months
+                        </li>
             </ol>
             
             <strong>Notes/Observations:</strong>
             <ul>
-                <li>Notes about ordered oligos
-                    <ul>
-                        <li>Primers were suspended in 1mL of UltraPure water</li>
-                        <li>ds DNA was resuspended in UltraPure water
-                            <ul>
-                                <li>Template DNA (5SeqT7Ap, 5SeqT7ApL, 5SeqT7ApTMSDTar) were diluted too low for nanodrop concentration</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+                <li>Due to there being a minimum limit of 0.2L on the pipette, the volumes of stock and water were adjusted to comply with the restrictions associated with the pipette. 
+                    </li>
             </ul>
-            
+    
             <strong>Table 1. DNA primer and their respective information</strong>
             <table>
                 <tr>
                     <th>Primers</th>
-                    <th>Tm (°C)</th>
-                    <th>Size (nmol)</th>
-                    <th>Mass (mg)</th>
+                    <th>Concentration (μmol/L)</th>
+                    <th>Volume of Stock Originally Needed  (μL)</th>
+                    <th>Volume Used From Stock (μL)</th>
+                    <th>Volume of Water Originally Needed </th>
+                    <th>Volume of Water Used (μL) </th>
                 </tr>
                 <tr>
                     <td>5seqT7ApFwd</td>
-                    <td>62</td>
-                    <td>104.1</td>
-                    <td>0.76</td>
+                    <td>10</td>
+                    <td>0.288</td>
+                    <td>0.288</td>
+                    <td>2.711</td>
+                    <td>2.711</td>
                 </tr>
                 <tr>
                     <td>5seqT7ApRev</td>
-                    <td>59.2</td>
-                    <td>68.4</td>
-                    <td>0.53</td>
+                    <td>10</td>
+                    <td>0.146</td>
+                    <td>0.200</td>
+                    <td>0.854</td>
+                    <td>1.169</td>
                 </tr>
                 <tr>
                     <td>5seqT7ApLRev</td>
-                    <td>58.1</td>
-                    <td>69.5</td>
-                    <td>0.56</td>
+                    <td>10</td>
+                    <td>0.144</td>
+                    <td>0.200</td>
+                    <td>0.856</td>
+                    <td>1.188</td>
                 </tr>
                 <tr>
                     <td>5seqT7ApTMSDTARRev</td>
-                    <td>57.8</td>
-                    <td>77</td>
-                    <td>0.58</td>
+                    <td>10</td>
+                    <td>0.130</td>
+                    <td>0.200</td>
+                    <td>0.870</td>
+                    <td>1.338</td>
                 </tr>
             </table>
             
             <strong>Results:</strong><br>
-            
-            <strong>Sample Calculation:</strong>
             <ul>
-                <li>For 5SeqT7APFwd (Forward Primer)
+                <li>Nanodrop
                     <ul>
-                        <li>Size: 104.1 nmol × 1µ / 1000n = 0.1041µmol</li>
-                        <li>C1: 0.1041µmol / 1 mL × 1000mL / 1 L = 104.1 µmol/L</li>
-                        <li>V1: ?</li>
-                        <li>C2: 10 µmol/L</li>
-                        <li>V2: 3µL</li>
-                        <li>C1V1 = C2V2</li>
-                        <li>V1 = C2V2 / C1</li>
-                        <li>V1 = 10 µmol/L × 3µL / 104.1 µmol/L = 0.288 µL</li>
-                        <li>Vwater = V2 - V1</li>
-                        <li>Vwater = 3µL − 0.288 µL = 2.711 µL</li>
-                    </ul>
-                </li>
+                        <li>For the 5seqT7APRev Primer
+                            <ul>
+                                <li> Concentration = 1.7500 ng / µL
+                                    </li>
+                                </ul>
+                            </li>
+                        <li>5seqT7APLRev 
+                            <ul>
+                                <li> No result
+                                    </li>
+                                </ul>
+                            </li>
+                        <li>5seqT7APTMSDTARRev
+                            <ul>
+                                <li> No result
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                <li>PCR tubes have etched numbers 1-4 on them
+                    <ol>
+                        <li>5seqT7AP
+                            </li>
+                        <li>5seqT7APL
+                            </li>
+                        <li>5seqT7APTMSDTAR
+                            </li>
+                        <li>Negative control, primers for 5seqT7AP, no template
+                            </li>
+                        </ol>
+                    </li>
+
             </ul>
+                    
+            <strong>Sample Calculation:</strong>
+           <ul>
+            <li>For Volume of Stock & Water used for 5seqT7APRev</li>
+            <ul>
+                <li>Vstock initial = 0.146 L
+                    </li>
+                <li>Vstock final = 0.2 L
+                    </li>
+                <li>Vwater initial = 0.854 L
+                    </li>
+                <li>Vwater final = ?
+                    </li>
+                <li>Vstock final / Vstock initial = Vwater final / Vwater initial
+                    </li>
+                <li>Vwater final=(Vstock final * Vwater initial)/ Vstock initial
+                    </li>
+                <li>Vwater final=(0.2µL * 0.854µL)/ 0.146µL = 1.169µL
+                    </li>
+                </ul>
+            </ul>
+            
             
         `
     }, { 
-        date: "24/06/05", 
+        date: "24/06/06", 
         month: "June", 
         type: "Reagants", 
         title: "Preparing DEPC-treated Water (Ultrapure) II", 
@@ -481,26 +560,1963 @@
             <ol>
                 <li>Add 0.1% (v/v) (500 uL) of DEPC to 499.5 mL of Milli-Q Water to a 1L glass container.
                     <ul>
-                        <li>Shake to gently mix.</li>
-                        <li>Don’t mix with reagents with an amine group.</li>
+                        <li>Shake to gently mix.
+                            </li>
+                        <li>Don’t mix with reagents with an amine group.
+                            </li>
                     </ul>
                 </li>
-                <li>Shake for 1 hour to overnight on orbital shaker.</li>
-                <ol start="4">
-                    <li>Alternative Method: Mix with a magnetic stirrer for 30 minutes.</li>
-                    <li>Autoclave for 45 minutes at 15 PSI on liquid cycle.</li>
+                <li>Shake for 1 hour to overnight on orbital shaker.
+                    </li>
+                    <ul>  
+                        <li>Alternative Method: Mix with a magnetic stirrer for 30 minutes.
+                            </li>
+                    </ul>
+                <li>Autoclave for 45 minutes at 15 PSI on liquid cycle.
+                    </li>
                 </ol>
-            </ol>
             
             <strong>Notes/Observations:</strong>
             <ul>
                 <li>Rinsed autoclaved bottles with Milli Q water</li>
                 <li>DEPC was transparent blob near bottom of bottle</li>
-                <li>Put in shaker overnight from June 6 3:34 PM - (____) at 200RPM and 37°C</li>
+                <li>Put in shaker overnight from June 6 3:34 PM at 200RPM and 37°C</li>
                 <li>NEED TO: 1.see if properly dissolved, if not, magnetically stir for ~30min, 2. Add autoclave tape and loosen cap, 3. Bring to autoclave</li>
                 <li>At 24/06/10 9:09 AM, both the 250 mL bottles with the DEPC-treated water were sent to the autoclave</li>
             </ul>  `
     },
+    {
+    date: "24/06/10",
+    month: "June",
+    type: "Aptazyme",
+    title: "DNA Agarose Gel Electrophoresis",
+    details: `
+        <strong>Partner(s):</strong> Ziyad Syed, Sana Wahab, Stavan Patel <br>
+        <strong>Purpose/ Objective of the lab:</strong> To analyze the PCR results from 5/6/2024<br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/10
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>DNA agarose gel electrophoresis</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ul>
+            <li>DNA agarose gel electrophoresis procedure was followed as described, except for the following specifications</li>
+            <li>Ran a 150mL 2% agarose gel with TBE buffer</li>
+            <li>10µL of PCR product was used to prepare sample to run for the gel, to this 2µL of gel loading dye was added</li>
+            <li>12µL of 1kB plus DNA ladder was added</li>
+            <li>Mix everything in the tube with a pipette before loading</li>
+            <li>Load the samples</li>
+            <li>When loading, don’t go to the second stop in the pipette to avoid introducing air bubbles into the gel</li>
+            <li>The first lane was skipped since it looked a little squished</li>
+            <li>Lanes 2-6 were loaded as follows (lane 1 was skipped):
+                <ul>
+                    <li>Lane 2: DNA ladder</li>
+                    <li>Lane 3: 5seqT7AP sample</li>
+                    <li>Lane 4: 5seqT7APL sample</li>
+                    <li>Lane 5: 5seqT7APTMSDTAR sample</li>
+                    <li>Lane 6: Negative Control sample (no template)</li>
+                </ul>
+            </li>
+            <li>Gel was ran at 100V for XX min at 3.00A</li>
+        </ul>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>Started running gel at 2:24 pm, stopped at 5 pm</li>
+            <li>The negative control sample (lane 6) was moving the slowest</li>
+            <li>Checked gel at 3:24 pm, had not traveled past the halfway point</li>
+            <li>Decided to let the gel keep running until it at least made it to the halfway point</li>
+            <li>Nick suggested running future gels at 120V for closer to 30 mins.</li>
+        </ul>
+
+        <strong>Results:</strong><br>
+        <img src="/img/gel1.png" alt="Gel"><br>
+        Figure 1. 2% agarose gel run with TBE buffer, run for 2hr36m at 100V. Lane 1 was loaded with 12µL of DNA ladder, lanes 2-4 were loaded with 10µL PCR product samples (5seqT7AP, 5seqT7APL, 5seqT7APTMSDTAR; from 5/6/2024) mixed with 2µL of 6X Gel loading dye. Gel was visualized with a UV transilluminator and stained prior to running with SYBR Safe DNA Stain.
+
+    `
+},
+{
+    "date": "24/06/11",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "Aptazyme PCR",
+    "details": `
+        <strong>Partner(s):</strong> Jezrael Carpio, Meagan Davies <br>
+        <strong>Purpose/Objective of the lab:</strong> PCR Amplification for Aptazyme<br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/11<br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>PCR SuperMix</li>
+            <li>Template DNA</li>
+            <li>Fwd primers</li>
+            <li>Rev primers</li>
+            <li>DEPC/UltraPure Water</li>
+            <li>RNase-free microcentrifuge tubes</li>
+            <li>RNase-free PCR tubes</li>
+            <li>96-well PCR tube holder</li>
+            <li>Ice bucket</li>
+            <li>Thermal cycler</li>
+            <li>-4°C and/or -20°C storage</li>
+            <li>Pipettes</li>
+            <li>RNase-free pipette tips</li>
+            <li>Bunsen Burner</li>
+        </ul>
+        
+        <strong>Procedure:</strong>
+        <ol>
+            <li>Thaw components of PCR MasterMix, briefly centrifuge to collect at the bottom.</li>
+            <li>Create 10 µM dilutions of the forward and reverse primers for each template:</li>
+        </ol>
+        
+        <strong>Table 1: Dilutions of Primers in Water</strong>
+        <table>
+            <tr>
+                <th>Primer</th>
+                <th>Total Quantity (µL)</th>
+                <th>Volume of Primer Stock (µL)</th>
+                <th>Volume of RNase-Free Water (µL)</th>
+            </tr>
+            <tr>
+                <td>5seqT7APFwd</td>
+                <td>3</td>
+                <td>0.29</td>
+                <td>2.71</td>
+            </tr>
+            <tr>
+                <td>5seqT7APRev</td>
+                <td>1.37</td>
+                <td>0.20</td>
+                <td>1.17</td>
+            </tr>
+            <tr>
+                <td>5seqT7APLRev</td>
+                <td>1.39</td>
+                <td>0.20</td>
+                <td>1.19</td>
+            </tr>
+            <tr>
+                <td>5seqT7APTMSDTARRev</td>
+                <td>1.54</td>
+                <td>0.20</td>
+                <td>1.34</td>
+            </tr>
+        </table>
+
+        <ol start="3">
+            <li>Set up a PCR Master mix in a 1.5 mL microcentrifuge tube, mix by pipetting up and down, spin down to combine everything.</li>
+        </ol>
+
+        <strong>Table 2: Description of the volumes of components in each tube</strong>
+        <table>
+            <tr>
+                <th>Component</th>
+                <th>50 µL rxn</th>
+                <th>Tube 5</th>
+                <th>Tube 6</th>
+                <th>Tube 7</th>
+                <th>Tube 8</th>
+            </tr>
+            <tr>
+                <td>RNase-free Water</td>
+                <td>To 50 µL</td>
+                <td>0 µL</td>
+                <td>0 µL</td>
+                <td>0 µL</td>
+                <td>3 µL</td>
+            </tr>
+            <tr>
+                <td>PCR SuperMix</td>
+                <td>45 µL</td>
+                <td>45 µL</td>
+                <td>45 µL</td>
+                <td>45 µL</td>
+                <td>45 µL</td>
+            </tr>
+            <tr>
+                <td>10 µM Fwd primer</td>
+                <td>1 µL</td>
+                <td>1 µL</td>
+                <td>1 µL</td>
+                <td>1 µL</td>
+                <td>1 µL</td>
+            </tr>
+            <tr>
+                <td>10 µM Rev Primer</td>
+                <td>1 µL</td>
+                <td>1 µL</td>
+                <td>1 µL</td>
+                <td>1 µL</td>
+                <td>1 µL</td>
+            </tr>
+            <tr>
+                <td>DNA Template</td>
+                <td>3 µL</td>
+                <td>3 µL</td>
+                <td>3 µL</td>
+                <td>3 µL</td>
+                <td>0 µL</td>
+            </tr>
+            <tr>
+                <td>Total Volume</td>
+                <td>50 µL</td>
+                <td>50 µL</td>
+                <td>50 µL</td>
+                <td>50 µL</td>
+                <td>50 µL</td>
+            </tr>
+        </table>
+
+        <ul>
+            <li>Tube 5 – 5seqT7AP</li>
+            <li>Tube 6 – 5seqT7APL</li>
+            <li>Tube 7 – 5seqT7APTMSDTAR</li>
+            <li>Tube 9 – Negative Control (Use Primers for 5seqT7AP)</li>
+        </ul>
+
+        <ol start="4">
+            <li>Label PCR tubes, determine the components that will go in each.</li>
+            <li>Place a 96-well plate into an ice bucket, place PCR tubes inside.</li>
+            <li>Pipette Master Mix into PCR tubes except for negative control.</li>
+            <li>Set up negative control in a separate PCR tube:
+                <ul>
+                    <li>Add all the same reagents as Master Mix except for the template DNA.</li>
+                    <li>Increase the volume of water (3 µL) added to account for the missing template DNA.</li>
+                </ul>
+            </li>
+            <li>Add Template DNA as determined by the table above. Spin down briefly to combine.</li>
+            <li>Cap PCR tubes and place onto thermal cycler.</li>
+            <li>Thermal cycler settings:
+                <ul>
+                    <li>Initial denaturation: 94°C, 2 min</li>
+                    <li>25-35 PCR cycles:
+                        <ul>
+                            <li>Denature: 94°C, 15s</li>
+                            <li>Anneal: 62°C (based on primer Tm and template Tm), 30s</li>
+                            <li>Extend: 72°C, 1 min/kb</li>
+                        </ul>
+                    </li>
+                    <li>Hold: 4°C, indefinite</li>
+                </ul>
+            </li>
+            <li>When the program is run, store PCR tubes at 4°C for a few days or -20°C for several months.</li>
+            <li>Use 10 µL of PCR product for gel electrophoresis.</li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>The components of the mastermix were thawed for 10 minutes.</li>
+            <li>The added primers/RNase-free water volumes were rounded to the nearest hundredth µL.</li>
+            <li>The dilution of the forward primer was prepared twice.</li>
+            <li>The first forward primer solution was distributed into tube 5 and 6.</li>
+            <li>The second forward primer solution was distributed into tube 7 and 8.</li>
+            <li>The dilution of the 5seqT7APRev was prepared twice.</li>
+            <li>The first reverse primer was distributed into tube 5.</li>
+            <li>The second reverse primer was distributed into tube 8.</li>
+            <li>The thermocycler was run for 56 minutes.</li>
+        </ul>
+    `
+},
+{
+    "date": "24/06/11",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "DNA Agarose Gel Electrophoresis",
+    "details": `
+        <strong>Partner(s):</strong> Jezrael Carpio, Amber Quo <br>
+        <strong>Purpose/Objective of the lab:</strong> PCR Amplification Confirmation for Aptazyme <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/11 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>2% Agarose</li>
+            <li>1X TBE or TAE Buffer</li>
+            <li>Milli-Q Water</li>
+            <li>SYBR Safe dye</li>
+            <li>Gel Tray and Casting Apparatus</li>
+            <li>Comb</li>
+            <li>DNA Samples</li>
+            <li>6X Loading Dye</li>
+            <li>DNA Size Marker</li>
+            <li>Power Supply</li>
+            <li>UV Transilluminator</li>
+            <li>Gel Documentation System (Gel Doc)</li>
+            <li>Erlenmeyer Flask</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ul>
+            <li><strong>Preparation of the Gel</strong></li>
+            <ul>
+                <li>Weigh out a 2% agarose gel in an Erlenmeyer flask (3 grams of agarose for 150 mL gel).</li>
+                <li>Add the correct volume of running buffer to the agarose-containing flask and swirl to mix.</li>
+                <li>Use milli-q water to dilute; final volume should be 150 mL.</li>
+                <li>Melt the agarose/buffer mixture in a microwave in 30 s intervals. Swirl between intervals until the agarose has completely dissolved.</li>
+                <li>Allow the flask to cool until it can be touched, then add 15 µL of SYBR Safe dye.</li>
+                <li>Place the gel tray into the casting apparatus, insert a comb to create wells, and pour the molten agarose into the gel mold. Let the gel set at room temperature.</li>
+                <li>Once set, remove the comb and place the gel in the gel tank with DNA running from negative to positive.</li>
+            </ul>
+            
+            <li><strong>Running the Gel</strong></li>
+            <ul>
+                <li>Add loading dye to DNA samples (10 µL of DNA products).</li>
+                <li>For each sample, mix 2 µL of loading dye with 10 µL of DNA sample.</li>
+                <li>Program power supply to 120V (1-5V/cm between electrodes). Add enough running buffer (~700 mL) to cover the surface of the gel.</li>
+                <li>Load the DNA samples into the gel, including a DNA size marker (typically 12 µL).</li>
+                <li>Replace the lid on the gel box and double-check connections before starting the power. Run for ~30 minutes or until dye has migrated to desired distance.</li>
+            </ul>
+            
+            <li><strong>Observing Results</strong></li>
+            <ul>
+                <li>Turn off power, remove the gel from the tank, and drain off excess buffer.</li>
+                <li>Place the gel on paper towels to absorb extra buffer.</li>
+                <li>Observe gel using a UV transilluminator, then capture images with the Gel Doc system.</li>
+                <li>Dispose of gel and running buffer as per lab protocols.</li>
+            </ul>
+        </ul>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>Used a 500 mL Erlenmeyer flask to prevent boiling over in the microwave.</li>
+            <li>Accidentally loaded 12 µL of DNA into Lane 3.</li>
+            <li><strong>Loading Details:</strong></li>
+            <ul>
+                <li>Lane 2: DNA Ladder (1kB)</li>
+                <li>Lane 3: 5seqT7AP</li>
+                <li>Lane 4: 5seqT7APL</li>
+                <li>Lane 5: 5seqT7APTMSDTAR</li>
+                <li>Lane 6: Negative Control</li>
+            </ul>
+            <li><strong>Gel Electrophoresis:</strong> Started at 3:03 PM, ended at 4:53 PM.</li>
+            <li>For sample prep, 4 µL dots of dye were placed on a parafilm sheet, mixed with 10 µL DNA samples, and loaded immediately into wells.</li>
+        </ul>
+
+        <strong>Results:</strong><br>
+        <img src="/img/gel2.png" alt="Gel"><br>
+        Figure 1. 2% agarose gel run with TBE buffer, run for 1hr50m at 120V. Lane 2 was loaded with 12µL of DNA ladder, lanes 3-6 were loaded with 10µL PCR product samples (5seqT7AP, 5seqT7APL, 5seqT7APTMSDTAR; from 11/6/2024) mixed with 2µL of 6X Gel loading dye. (Except for Lane 4, which had 12uL of PCR product on accident. Gel was visualized with a UV transilluminator and stained prior to running with SYBR Safe DNA Stain. Lane 3 = ~125-145bp, Lane 4 =~135-155bp, Lane 5 = ~160-180bp
+    `   
+},
+{
+    "date": "24/06/12",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "Oligo Stock Dilutions",
+    "details": `
+        <strong>Partner(s):</strong> Sana Wahab, Jezrael Carpio, Stavan Patel <br>
+        <strong>Purpose/Objective of the lab:</strong> Make 10M of Oligo Primers and Set Aside 50 µL of the DNA Templates <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/12 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>Pipette Tips</li>
+            <li>Pipettes</li>
+            <li>Ice/Ice Tray</li>
+            <li>Bunsen Burner</li>
+            <li>RNase-free Water</li>
+            <li>Oligo Primers:</li>
+            <ul>
+                <li>5seqT7APFwd</li>
+                <li>5seqT7APRev</li>
+                <li>5seqT7APLRev</li>
+                <li>5seqT7APTMSDTARRev</li>
+            </ul>
+            <li>DNA Templates:</li>
+            <ul>
+                <li>5seqT7AP</li>
+                <li>5seqT7APL</li>
+                <li>5seqT7APTMSDTAR</li>
+            </ul>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ul>
+            <li>Label all 7 test tubes according to the following table:</li>
+        </ul>
+
+        <table>
+            <tr>
+                <th>Tube Label</th><th>Total Volume (µL)</th><th>Volume of Stock Needed (µL)</th><th>Volume of RNase-Free Water Needed (µL)</th><th>Concentration (ng/µL)</th>
+            </tr>
+            <tr><td>1F</td><td>50</td><td>4.80307</td><td>45.19693</td><td>73.00666</td></tr>
+            <tr><td>1R</td><td>50</td><td>7.30994</td><td>42.69006</td><td>77.48536</td></tr>
+            <tr><td>1LR</td><td>50</td><td>7.19424</td><td>42.80576</td><td>80.57549</td></tr>
+            <tr><td>1RR</td><td>50</td><td>6.49351</td><td>43.50649</td><td>75.32472</td></tr>
+            <tr><td>1AP</td><td>50</td><td>50</td><td></td><td>0.25</td></tr>
+            <tr><td>1APL</td><td>50</td><td>50</td><td></td><td>0.25</td></tr>
+            <tr><td>1APT</td><td>50</td><td>50</td><td></td><td>0.25</td></tr>
+        </table>
+
+        <ul>
+            <li>Prepare a 50 µL PCR stock solution of each oligo by pipetting the indicated volume of stock and RNase-free water.</li>
+        </ul>
+
+        <strong>Notes/Observations:</strong>
+        <table>
+            <tr>
+                <th>Label</th><th>Tube</th><th>Stock Volume Used (µL)</th><th>RNase-Free Water Volume Used (µL)</th>
+            </tr>
+            <tr><td>1F</td><td>5seqT7ApFwd</td><td>4.80</td><td>45.20</td></tr>
+            <tr><td>1R</td><td>5seqT7ApRev</td><td>7.30</td><td>42.70</td></tr>
+            <tr><td>1LR</td><td>5SEQT7APLRev</td><td>7.20</td><td>42.80</td></tr>
+            <tr><td>1RR</td><td>5SEQT7APTMSDTARRev</td><td>6.50</td><td>43.50</td></tr>
+            <tr><td>1AP</td><td>5SEQT7AP</td><td>50</td><td></td></tr>
+            <tr><td>1APL</td><td>5SEQT7APL</td><td>50</td><td></td></tr>
+            <tr><td>1APT</td><td>5SEQT7APTMSDTAR</td><td>50</td><td></td></tr>
+        </table>
+    `
+},
+{
+    "date": "24/06/12",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "PCR Purification",
+    "details": `
+        <strong>Partner(s):</strong> Jezrael Carpio, Sana Wahab, Stavan Patel, Ziyad Syed <br>
+        <strong>Purpose/Objective of the lab:</strong> Purify PCR through column purification <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/12 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>Monarch® PCR & DNA Cleanup Kit</li>
+            <li>Monarch® DNA Cleanup Columns (5 μg)</li>
+            <li>Monarch® Collection Tubes (2 ml)</li>
+            <li>Monarch® DNA Wash Buffer</li>
+            <li>Monarch® DNA Cleanup Binding Buffer</li>
+            <li>Monarch® DNA Elution Buffer</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ul>
+            <li>Dilute sample with DNA Cleanup Binding Buffer (ensure that isopropanol has been added, as indicated on the bottle label) according to the following table:</li>
+        </ul>
+
+        <table>
+            <tr>
+                <th>Sample Type</th><th>Ratio of Binding Buffer:Sample</th><th>Example</th>
+            </tr>
+            <tr><td>dsDNA > 2 kb (plasmids, gDNA)</td><td>2:1</td><td>200 µL:100 µL</td></tr>
+            <tr><td>dsDNA < 2 kb (amplicons, fragments)</td><td>5:1</td><td>500 µL:100 µL</td></tr>
+            <tr><td>ssDNA > 200 nt</td><td>7:1</td><td>700 µL:100 µL</td></tr>
+        </table>
+
+        <ul>
+            <li>Mix well by pipetting up and down or flicking the tube. Do not vortex.</li>
+            <li>Insert column into collection tube and load sample onto column. Close the cap and spin for 1 minute, then discard flow-through.</li>
+            <li>Re-insert column into collection tube. Add 200 µL DNA Wash Buffer and spin for 1 minute. Discarding flow-through is optional.</li>
+            <li>Repeat Step 4.</li>
+            <li>Add ≥ 6 µL of DNA Elution Buffer to the center of the matrix. Wait for 1 minute, then spin for 1 minute to elute DNA.</li>
+            <li>Spin the tubes one more time for 1 minute.</li>
+        </ul>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>The tubes were spun an extra time (step 7) to ensure that all the buffer was removed.</li>
+        </ul>
+    `
+},{
+        "date": "24/06/13",
+        "month": "June",
+        "type": "Aptazyme",
+        "title": "In-Vitro Transcription",
+        "details": `
+            <strong>Partner(s):</strong> Amber, Jezrael <br>
+            <strong>Purpose/Objective of the lab:</strong> Create RNA <br>
+            <strong>Last Edited (yy/mm/dd):</strong> 24/06/13 <br>
+
+            <strong>Materials:</strong>
+            <ul>
+                <li>DEPC-treated water</li>
+                <li>5X TranscriptAid Reaction Buffer</li>
+                <li>ATP/CTP/GTP/UTP mix</li>
+                <li>Template DNA (1,2,3,5)</li>
+                <li>TranscriptAid Enzyme Mix</li>
+                <li>Control DNA</li>
+            </ul>
+
+            <strong>Procedure:</strong>
+            <ul>
+                <li><strong>IVT:</strong></li>
+                <ol>
+                <li>Thaw all frozen reaction components, mix and briefly centrifuge to collect everything at the bottom. </li>
+                <li>Keep TranscriptAid Enzyme Mix and nucleotides on ice (Keep 5X TranscriptAid Reaction buffer at room temp).</li>
+                <li>Combine equal volumes of the four NTP solution in one tube.</li>
+                <li>Combine the following reaction components at room temp in the given order:</li>
+            </ul>
+
+            <table>
+                <tr><th>Component</th><th>Volume</th></tr>
+                <tr><td>DEPC-treated water</td><td>To 20µL</td></tr>
+                <tr><td>5X TranscriptAid Reaction Buffer</td><td>4µL</td></tr>
+                <tr><td>ATP/CTP/GTP/UTP mix</td><td>8µL</td></tr>
+                <tr><td>Template DNA</td><td>5µL</td></tr>
+                <tr><td>TranscriptAid Enzyme Mix</td><td>2µL</td></tr>
+            </table>
+            <ul><li><ul>
+                <li>Equal amounts of the four NTP solutions should be used.
+                    </li>
+                <li>2-5µL of PCR mixture can be directly used in 20 µL of in vitro transcription reaction
+
+                    </li>
+                </ul></li>
+                </ul>
+            <ol start="5">
+                <li>Mix thoroughly by pipetting, spin to collect.</li>
+                <li>Incubate at 37°C for 2hrs. Proceed to purification of RNA transcripts.</li>
+            </ol>
+
+            <ul>
+                <li><strong>Control Reaction:</strong> </li>
+                <ol>
+                    <li>Combine the following components at room temp in the given order:</li>
+            </ol>
+
+            <table>
+                <tr><th>Component</th><th>Volume</th></tr>
+                <tr><td>DEPC-treated water</td><td>4µL</td></tr>
+                <tr><td>5X TranscriptAid Reaction Buffer</td><td>4µL</td></tr>
+                <tr><td>ATP/CTP/GTP/UTP mix</td><td>8µL</td></tr>
+                <tr><td>Control DNA (0.5µg/µL)</td><td>2µL</td></tr>
+                <tr><td>TranscriptAid Enzyme Mix</td><td>2µL</td></tr>
+            </table>
+
+            <ol start="2">
+                <li>Mix thoroughly by pipetting up and down, briefly spin to collect.</li>
+                <li>Incubate at 37°C for 2hrs. Proceed to purification of RNA transcripts.</li>
+            </ol>
+
+            <strong>Notes/Observations:</strong>
+            <ul>
+                <li>Updated protocol to keep DEPC-treated water at room temp (it was frozen).</li>
+                <li>Control and IVT incubated at 37°C for 2 hours, sat at 4°C for 31 minutes after in PCR machine.</li>
+                <li>Tube 2 died (please reference Centrifuge Incident of June 13) - replaced with Tube 5 from previous PCR.</li>
+            </ul>
+
+            <strong>Results:</strong> TBD after removal of template DNA.
+        `
+    },
+    {
+        "date": "24/06/13",
+        "month": "June",
+        "type": "Aptazyme",
+        "title": "Removal of Template DNA After Transcription",
+        "details": `
+            <strong>Partner(s):</strong> Ziyad Syed, Stavan Patel <br>
+            <strong>Purpose/Objective of the lab:</strong> Remove template DNA after transcription <br>
+            <strong>Last Edited (yy/mm/dd):</strong> 24/06/13 <br>
+
+            <strong>Materials:</strong>
+            <ul>
+                <li>DNase I, RNase-free, 1U/µL</li>
+                <li>Chloroform</li>
+                <li>Thermocycler</li>
+            </ul>
+
+            <strong>Procedure:</strong>
+            <ol>
+                <li>Add 2U of DNase I, RNase-free per 1µg of template DNA directly to the transcription reaction mixture. 
+                    <ul>
+                    <li>The DNase I from the kit comes in a concentration of 1U/µL. </li>
+                    <li>This amount can also be adjusted as seen with empirical results.</li>
+                    </ul></li>
+                <li>Incubate at 37°C for 15 min.</li>
+                <li>Inactivate DNase I by chloroform extraction or by adding 2µL of 0.5M EDTA, pH 8.0 and incubating at 65°C for 10 min.</li>
+            </ol>
+
+            <strong>Notes/Observations:</strong>
+            <ul>
+                <li>No notes.</li>
+            </ul>
+        `
+    },
+    {
+        "date": "24/06/13",
+        "month": "June",
+        "type": "Aptazyme",
+        "title": "Purification of RNA Transcripts",
+        "details": `
+            <strong>Partner(s):</strong> Ziyad Syed, Stavan Patel <br>
+            <strong>Purpose/Objective of the lab:</strong> Purify RNA transcripts <br>
+            <strong>Last Edited (yy/mm/dd):</strong> 24/06/13 <br>
+
+            <strong>Materials:</strong>
+            <ul>
+                <li>96+% Ethanol</li>
+                <li>70% ethanol</li>
+                <li>DEPC water</li>
+                <li>Chloroform</li>
+            </ul>
+
+            <strong>Procedure:</strong>
+            <ol>
+                <li>Extract three times with an equal volume of chloroform. 
+                    <ul>
+                        <li>Use chemical grade, if issues arise try DEPC treating the chloroform.</li>
+                        </ul>
+                        </li>
+                <li>Collect the aqueous phase and transfer to a new tube.</li>
+                <li>To XµL of reaction mixture, add 5.75XµL of DEPC-treated water and 0.75XµL of 3M sodium acetate solution (pH 5.2; provided). Mix by pipetting up and down.
+                <ul>
+                <li>To 20µL of reaction mixture, add 115µL of DEPC-treated water and 15µL of 3M sodium acetate solution (pH 5.2; provided). Mix by pipetting up and down.</li>
+                </ul></li>
+                <li>Precipitate RNA by adding 2 volumes of 96+% ethanol, incubate at -20°C for at least 30 minutes.</li>
+                <li>Centrifuge and carefully remove the supernatant, rinse the pellet with 500µL of cold 70% ethanol.</li>
+                <li>Centrifuge again for 3:00 min at 21130 rpm.</li>
+                <li>Resuspend the RNA in 20µL of DEPC-water.</li>
+                <li>Run Nanodrop on the RNA mixtures.</li>
+                <li>Store the RNA at -20°C short-term or -70°C long-term.</li>
+            </ol>
+
+            <strong>Notes/Observations:</strong>
+            <ul>
+                <li>The tubes were labeled as follows: 
+                    <ol>
+                        <li>AP
+                            </li>
+                        <li>APL
+                            </li>
+                        <li>APTMSD
+                            </li>
+                        <li>Control
+                            </li>
+                            </ol> </li>
+                    
+            </ul>
+
+            <strong>Results:</strong>
+            <table>
+                <tr><th>Sample</th><th>ng/µL</th><th>A260/A280</th><th>A260/A230</th></tr>
+                <tr><td>1</td><td>119.7</td><td>1.66</td><td>1.86</td></tr>
+                <tr><td>2</td><td>52.0</td><td>1.81</td><td>2.10</td></tr>
+                <tr><td>3</td><td>26.9</td><td>1.89</td><td>1.89</td></tr>
+                <tr><td>4</td><td>2202.6</td><td>2.05</td><td>2.22</td></tr>
+            </table>
+        `
+    },
+
+    {
+    "date": "24/06/13",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "RNase-Free Formaldehyde Denaturing Gel Electrophoresis",
+    "details": `
+        <strong>Partner(s):</strong> Sana, Jezrael <br>
+        <strong>Purpose/Objective of the lab:</strong> To prepare denaturing gel to test the transcription products <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/13 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>Agarose (RNase free unless specified otherwise)</li>
+            <li>Deionized water</li>
+            <li>10X TBE</li>
+            <li>37% Formaldehyde</li>
+            <li>SYBR Safe</li>
+            <li>500mL graduated cylinder</li>
+            <li>250mL Erlenmeyer flask</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li>Prepare 1X TBE running buffer:
+                <ul>
+                    <li>Add 450mL of RNase-free deionized water to 50mL of 10X TBE in a 500mL tube.</li>
+                    <li>Mix and set aside until needed.</li>
+                </ul>
+            </li>
+            <li><strong>Gel preparation:</strong>
+                <ul>
+                    <li>Wipe down all the gel casting and running equipment (gel casting tray, comb, gel holder, and gel apparatus) using ethanol and RNase Zap. Set aside in the fume hood.</li>
+                    <li>Weigh 1g of agarose.</li>
+                    <li>Add 35mL of deionized water to a 250mL Erlenmeyer flask.</li>
+                    <li>Heat at 15-second intervals until completely dissolved.</li>
+                    <li>In a 25mL cylinder, add 5mL of 10X TBE and 9mL of 37% formaldehyde under the fume hood. Mix well and set aside.</li>
+                    <li>Once the gel is warm to the touch, add the TBE and formaldehyde mixture.</li>
+                    <li>Add 5µL of SYBR Safe and mix well.</li>
+                    <li>Pour the gel, position the comb, and let the gel set.</li>
+                </ul>
+            </li>
+            <li><strong>Gel storage:</strong>
+                <ul>
+                    <li>Use ethanol and RNase Zap to clean an empty micropipette tip box.</li>
+                    <li>Transfer some 1X TBE buffer to the tip box.</li>
+                    <li>Add the casted gel.</li>
+                    <li>Cover the rest of the gel with 1X TBE buffer.</li>
+                    <li>Set aside in a 4°C fridge.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>Mass of agarose used was 0.9934g instead of 1g.</li>
+            <li>The first gel attempt failed because the gel solidified in the Erlenmeyer flask once the formaldehyde and TBE buffer was added.</li>
+            <li>Do not let the gel cool too much before adding the formaldehyde/TBE mixture.</li>
+            <li>A pipette tip was used to mix the SYBR Safe that wasn’t mixed properly once the gel was poured onto the casting tray.</li>
+            <li>The gel casting apparatus was not leveled flat completely.</li>
+            <li>Gel was stored overnight from 4:30 pm 13/06/24 to 14/06/24.</li>
+        </ul>
+
+        <strong>Results:</strong>
+        <p>Gel was formed successfully. Bubbles were present on the gel.</p>
+    `
+},
+
+{
+    "date": "24/06/13",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "Aptazyme PCR",
+    "details": `
+        <strong>Partner(s):</strong> Jezrael Carpio, Stavan Patel <br>
+        <strong>Purpose/Objective of the lab:</strong> PCR Amplification for Aptazyme <br>
+        <strong>Last Edited (yy/mm/dd):</strong> <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>PCR SuperMix</li>
+            <li>Template DNA</li>
+            <li>Fwd primers</li>
+            <li>Rev primers</li>
+            <li>DEPC/UltraPure Water</li>
+            <li>RNase-free microcentrifuge tubes</li>
+            <li>RNase-free PCR tubes</li>
+            <li>96-well PCR tube holder</li>
+            <li>Ice bucket</li>
+            <li>Thermal cycler</li>
+            <li>-4°C and/or -20°C storage</li>
+            <li>Pipettes</li>
+            <li>RNase-free pipette tips</li>
+            <li>Bunsen Burner</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li>Thaw components of PCR MasterMix, briefly centrifuge to collect at the bottom.</li>
+            <li>Create 10 µM dilutions of the forward and reverse primers for each template:
+                <table>
+                    <tr><th>Primer</th><th>Total Quantity (µL)</th><th>Volume of Primer Stock (µL)</th><th>Volume of RNase-Free Water (µL)</th></tr>
+                    <tr><td>5seqT7APFwd</td><td>3</td><td>0.29</td><td>2.71</td></tr>
+                    <tr><td>5seqT7APRev</td><td>1.37</td><td>0.20</td><td>1.17</td></tr>
+                    <tr><td>5seqT7APLRev</td><td>1.39</td><td>0.20</td><td>1.19</td></tr>
+                    <tr><td>5seqT7APTMSDTA-RRev</td><td>1.54</td><td>0.20</td><td>1.34</td></tr>
+                </table>
+            </li>
+            <li>Set up a PCR Master mix in a 1.5 mL microcentrifuge tube, mix by pipetting up and down, spin down to combine everything:
+                <table>
+                    <tr><th>Component</th><th>50 µL rxn</th><th>Tube 1</th><th>Tube 2</th><th>Tube 3</th><th>Tube 4</th></tr>
+                    <tr><td>RNase-free Water</td><td>To 50 µL</td><td>0 µL</td><td>0 µL</td><td>0 µL</td><td>3 µL</td></tr>
+                    <tr><td>PCR SuperMix</td><td>45 µL</td><td>45 µL</td><td>45 µL</td><td>45 µL</td><td>45 µL</td></tr>
+                    <tr><td>10µM Fwd primer</td><td>1 µL</td><td>1 µL</td><td>1 µL</td><td>1 µL</td><td>1 µL</td></tr>
+                    <tr><td>10µM Rev Primer</td><td>1 µL</td><td>1 µL</td><td>1 µL</td><td>1 µL</td><td>1 µL</td></tr>
+                    <tr><td>DNA Template</td><td>3 µL</td><td>3 µL</td><td>3 µL</td><td>3 µL</td><td>0 µL</td></tr>
+                    <tr><td>Total Volume:</td><td>50 µL</td><td>50 µL</td><td>50 µL</td><td>50 µL</td><td>50 µL</td></tr>
+                </table>
+                <ul>
+                    <li>Tube 1 – 5seqT7AP</li>
+                    <li>Tube 2 – 5seqT7APL</li>
+                    <li>Tube 3 – 5seqT7APTMSDTAR</li>
+                    <li>Tube 4 – Negative Control (Use Primers for 5seqT7AP)</li>
+                </ul>
+            </li>
+            <li>Label PCR tubes, determine the components that will go in each.</li>
+            <li>Place a 96-well plate into an ice bucket, place PCR tubes inside.</li>
+            <li>Pipette Master Mix into PCR tubes except for the negative control.</li>
+            <li>Set up the negative control in a separate PCR tube:
+                <ul>
+                    <li>Add all the same reagents as the Master Mix except for the template DNA.</li>
+                    <li>Increase the volume of water (3 µL) to account for the missing template DNA.</li>
+                </ul>
+            </li>
+            <li>Add Template DNA as determined by the table above. Spin down briefly to combine.</li>
+            <li>Cap PCR tubes and place onto the thermal cycler.
+                <ul>
+                    <li><strong>Thermal cycler settings:</strong>
+                        <ul>
+                            <li>Initial denaturation: 94°C, 2 min</li>
+                            <li>25-35 PCR cycles:</li>
+                            <ul>
+                                <li>Denature: 94°C, 15s</li>
+                                <li>Anneal: 62°C (based on primer Tm and template Tm), 30s</li>
+                                <li>Extend: 72°C, 1 min/kb</li>
+                            </ul>
+                            <li>Hold: 4°C, indefinite</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>When the program is complete, store PCR tubes at 4°C for a few days or -20°C for several months.</li>
+            <li>Use 10µL of PCR product for gel electrophoresis.</li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>The dilutions for the forward and APRev primers were performed twice.</li>
+        </ul>
+    `
+},
+{
+    "date": "24/06/14",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "Denaturing Agarose Gel Electrophoresis: Run",
+    "details": `
+        <strong>Partner(s):</strong> Sana Wahab, Stavan Patel <br>
+        <strong>Purpose/Objective of the lab:</strong> Analyzing the Results of the Transcription Experiment <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/14 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>PCR tubes</li>
+            <li>PCR tube holder</li>
+            <li>P10 micropipette and tips</li>
+            <li>Thermocycler</li>
+            <li>Ice tray</li>
+            <li>Ice</li>
+            <li>Fume hood</li>
+            <li>UV transilluminator</li>
+            <li>Gel apparatus</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li><strong>Sample Prep:</strong>
+                <ul>
+                    <li>Transfer 2µL of each sample to PCR tubes.</li>
+                    <li>Add 2µL of RNA loading dye from the transcription kit (RiboRuler RNA Ladder, High Range).</li>
+                    <li>Heat both samples at 70°C for 10 minutes.</li>
+                    <li>Transfer samples to ice and let rest for 3 minutes.</li>
+                </ul>
+            </li>
+            <li><strong>Gel Run:</strong>
+                <ul>
+                    <li>Let the gel run for around 5 minutes at 110V.</li>
+                    <li>Load 2µL of each sample and the ladder onto the gel.</li>
+                    <li>Run for 35 minutes at 110V.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>The tubes were labeled as follows:
+                <ul>
+                    <li>Tube 1: Ladder</li>
+                    <li>Tube 5: Sample #1 (AP)</li>
+                    <li>Tube 6: Sample #2 (APL)</li>
+                    <li>Tube 7: Sample #3 (APTMSD)</li>
+                    <li>Tube 8: Sample #4 (Control)</li>
+                </ul>
+            </li>
+            <li>The gel was allowed to run for 35 minutes.</li>
+            <li>Between steps 2a and 2b, the gel run was stopped to load the samples in the wells.</li>
+            <li>The remaining 2µL of ladder + RNA loading dye mix was stored in the -20°C fridge.</li>
+            <li>Avoid buffer heating next time.</li>
+            <li>Faint bands/smearing likely due to partial transcription.</li>
+            <li>Band of interest should be bright.</li>
+            <li>Crooked bands may be caused by overcooling the agarose mixture before pouring.</li>
+            <li>Run the gel at a constant current (0.1mA).</li>
+            <li>For resolving small differences between samples, run the gel longer at cooler temperatures (in a fridge or cool room).</li>
+        </ul>
+
+        <strong>Results:</strong><br>
+        <img src="/img/gel3.png" alt="Gel"><br>
+
+    `
+},
+{
+    "date": "24/06/14",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "DNA Agarose Gel Electrophoresis",
+    "details": `
+        <strong>Partner(s):</strong> Jezrael Carpio, Amber Quo <br>
+        <strong>Purpose/Objective of the lab:</strong> PCR Amplification Confirmation for Aptazyme <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/14 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>Agarose (3 grams for 150mL gel)</li>
+            <li>Erlenmeyer flask</li>
+            <li>Running buffer (1X TBE or TAE, diluted with milli-q water)</li>
+            <li>Microwave</li>
+            <li>SYBR Safe dye (15µL)</li>
+            <li>Gel tray and casting apparatus</li>
+            <li>Comb for wells</li>
+            <li>Gel tank and power supply</li>
+            <li>DNA loading dye (6X concentration)</li>
+            <li>DNA ladder (1kB)</li>
+            <li>DNA samples (5µL each)</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li><strong>Preparation of the Gel</strong>
+                <ol>
+                    <li>Weigh out a 2% agarose gel in an Erlenmeyer flask: 3 grams for a 150mL gel.</li>
+                    <li>Add running buffer to the flask and swirl to mix. (Use milli-q water to dilute the buffer to 150mL).</li>
+                    <li>Melt the agarose/buffer mixture in a microwave in 30-second intervals, swirling between intervals until dissolved.</li>
+                    <li>Once the flask is cool enough to touch, add 15µL of SYBR Safe dye.</li>
+                    <li>Place the gel tray in the casting apparatus and insert the comb to create wells.</li>
+                    <li>Pour the agarose into the mold and allow it to set at room temperature. Remove the comb and place the gel in the gel tank with DNA running from negative to positive.</li>
+                </ol>
+            </li>
+            <li><strong>Running Gel</strong>
+                <ol>
+                    <li>Add 1µL of loading dye to 5µL of each DNA sample (10µL total volume per sample).</li>
+                    <li>Set the power supply to 120V (adjustable to 1-5V/cm between electrodes).</li>
+                    <li>Cover the gel with running buffer (~700mL) and attach the leads to the power supply.</li>
+                    <li>Load DNA samples and a DNA size marker (12µL) into the wells.</li>
+                    <li>Close the lid, check connections, and run the gel for approximately 30 minutes or until dye has migrated an appropriate distance.</li>
+                </ol>
+            </li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li><strong>Loading Details:</strong>
+                <ul>
+                    <li>Lane 2: DNA Ladder (1kB)</li>
+                    <li>Lane 3: 5seqT7AP</li>
+                    <li>Lane 4: 5seqT7APL</li>
+                    <li>Lane 5: 5seqT7APTMSDTAR</li>
+                    <li>Lane 6: Negative Control</li>
+                </ul>
+            </li>
+            <li>Gel Electrophoresis started at 11:00 AM and ended at 1:11 PM.</li>
+            <li>During sample prep, 5µL of DNA was mixed with 1µL of loading dye.</li>
+        </ul>
+
+        <strong>Results:</strong><br>
+        <img src="/img/gel4.jpg" alt="Gel"><br>
+        Figure 1: The bands for all wells were very faint; will do another set.
+Possible reasons for the faint bands could be that the amount of templates were not sufficient. 5 uL of template DNA was mixed with 1 uL of DNA loading dye.
+
+        img src="/img/gel5.jpg" alt="Gel"><br>
+        Figure 2: During this round of gel, the protocol was followed and 10 uL of template DNA was mixed with 2 uL of loading dye. However, there was a band noticeable in the control lane. Possible reasons could be that the mixtures weren’t loaded on the gel properly or that PCR did not work as intended.
+    `
+}, {
+    "date": "24/06/17",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "Aptazyme PCR",
+    "details": `
+        <strong>Partner(s):</strong> Jezrael Carpio, Meagan Davies <br>
+        <strong>Purpose/Objective of the lab:</strong> PCR Amplification for Aptazyme <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/17 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>PCR SuperMix</li>
+            <li>Template DNA</li>
+            <li>Forward primers</li>
+            <li>Reverse primers</li>
+            <li>DEPC/UltraPure Water</li>
+            <li>RNase-free microcentrifuge tubes</li>
+            <li>RNase-free PCR tubes</li>
+            <li>96-well PCR tube holder</li>
+            <li>Ice bucket</li>
+            <li>Thermal cycler</li>
+            <li>-4°C and/or -20°C storage</li>
+            <li>Pipettes</li>
+            <li>RNase-free pipette tips</li>
+            <li>Bunsen burner</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li>Combine the following components in PCR tubes. The primer stocks and DNA templates were taken from the “PCR Stock Dilutions”.</li>
+        </ol>
+
+        <strong>Table 5: PCR Setup</strong>
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>50 µL rxn</th>
+                    <th>Tube 1</th>
+                    <th>Tube 2</th>
+                    <th>Tube 3</th>
+                    <th>Tube 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>RNase-free Water</td>
+                    <td>To 50 µL</td>
+                    <td>0 µL</td>
+                    <td>0 µL</td>
+                    <td>0 µL</td>
+                    <td>3 µL</td>
+                </tr>
+                <tr>
+                    <td>PCR SuperMix</td>
+                    <td>45 µL</td>
+                    <td>45 µL</td>
+                    <td>45 µL</td>
+                    <td>45 µL</td>
+                    <td>45 µL</td>
+                </tr>
+                <tr>
+                    <td>10µM Fwd primer</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                </tr>
+                <tr>
+                    <td>10µM Rev Primer</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                </tr>
+                <tr>
+                    <td>DNA Template</td>
+                    <td>3 µL</td>
+                    <td>3 µL</td>
+                    <td>3 µL</td>
+                    <td>3 µL</td>
+                    <td>0 µL</td>
+                </tr>
+                <tr>
+                    <td>Total Volume</td>
+                    <td>50 µL</td>
+                    <td>50 µL</td>
+                    <td>50 µL</td>
+                    <td>50 µL</td>
+                    <td>50 µL</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <strong>Notes:</strong>
+        <ul>
+            <li>Tube 1 – 5seqT7AP</li>
+            <li>Tube 2 – 5seqT7APL</li>
+            <li>Tube 3 – 5seqT7APTMSDTAR</li>
+            <li>Tube 4 – Negative Control (Use Primers for 5seqT7AP)</li>
+        </ul>
+
+        <ol start="4">
+            <li>Label PCR tubes, determine the components that will go in each.</li>
+            <li>Place a 96-well plate into an ice bucket, place PCR tubes inside.</li>
+            <li>Pipette Master Mix into PCR tubes except for negative control.</li>
+            <li>Set up negative control in a separate PCR tube:
+                <ul>
+                    <li>Add all the same reagents as Master Mix except for the template DNA</li>
+                    <li>Increase the water volume (3 µL) to account for the missing template DNA.</li>
+                </ul>
+            </li>
+            <li>Add Template DNA as determined by the table above. Spin down briefly to combine.</li>
+            <li>Cap PCR tubes and place onto thermal cycler.</li>
+            <li>Thermal cycler settings:
+                <ul>
+                    <li>Initial denaturation: 94°C, 2 min</li>
+                    <li>25-35 PCR cycles:
+                        <ul>
+                            <li>Denature: 94°C, 15s</li>
+                            <li>Anneal: 62°C (based on primer and template Tm), 30s</li>
+                            <li>Extend: 72°C, 1 min/kb</li>
+                        </ul>
+                    </li>
+                    <li>Hold: 4°C, indefinite</li>
+                </ul>
+            </li>
+            <li>When the program finishes, store PCR tubes at 4°C for a few days or -20°C for several months.</li>
+            <li>Use 10µL of PCR product for gel electrophoresis.</li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>The reagents were obtained from the PCR Stock Dilutions dated 24/06/12.</li>
+        </ul>
+    `
+},
+
+{
+    "date": "24/06/17",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "DNA Agarose Gel Electrophoresis",
+    "details": `
+        <strong>Partner(s):</strong> Stavan Patel, Jezrael Carpio, Amber Quo <br>
+        <strong>Purpose/Objective of the lab:</strong> Preparation of Gel for Gel Electrophoresis of PCR Samples <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/17 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>2% Agarose</li>
+            <li>1X TBE or TAE Buffer</li>
+            <li>Milli-Q Water</li>
+            <li>SYBR Safe dye</li>
+            <li>Gel Tray and Casting Apparatus</li>
+            <li>Comb</li>
+            <li>DNA Samples</li>
+            <li>6X Loading Dye</li>
+            <li>DNA Size Marker</li>
+            <li>Power Supply</li>
+            <li>UV Transilluminator</li>
+            <li>Gel Documentation System (Gel Doc)</li>
+            <li>Erlenmeyer Flask</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <p>The procedure was followed as directed:</p>
+
+        <strong>Preparation of the Gel</strong>
+        <ol>
+            <li>Weigh out a 2% agarose gel in an Erlenmeyer flask (3 grams of agarose for a 150mL gel).</li>
+            <li>Add the correct volume of running buffer to the agarose-containing flask and swirl to mix.
+                <ul>
+                    <li>(1X) TBE or TAE buffer</li>
+                    <li>Use milli-q water to dilute to 150mL</li>
+                </ul>
+            </li>
+            <li>Melt the agarose/buffer mixture in a microwave at 30-second intervals, removing the flask to swirl the contents. Repeat until the agarose has completely dissolved.</li>
+            <li>Cool the flask until it is safe to touch, then add 15µL of SYBR Safe dye.</li>
+            <li>Clean and place the gel tray into the casting apparatus, then place an appropriate comb into the gel mold to create wells.</li>
+            <li>Pour the molten agarose into the gel mold and allow it to set at room temperature.</li>
+            <li>Once set, remove the comb and place the gel in the gel tank, ensuring the direction of DNA runs from negative to positive.</li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>The reagents were obtained from the PCR Stock Dilutions dated 24/06/12.</li>
+        </ul>
+
+        <strong>Results:</strong><br>
+                <img src="/img/gel6.jpg" alt="Gel"><br>
+        <ul>
+            <li>The bands were very faint, not visible on camera but somewhat visible in person.</li>
+            <li>In person, the bands followed the expected trend with the AP sequence as the shortest strand and APTMSDTar as the longest.</li>
+        </ul>
+    `
+},
+
+{
+    "date": "24/06/19",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "Aptazyme PCR (modified to 35 cycles)",
+    "details": `
+        <strong>Partner(s):</strong> Jezrael Carpio, Emma Klaffke <br>
+        <strong>Purpose/Objective of the lab:</strong> Determine if 35 PCR cycles increase resolution for gel electrophoresis <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/19 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>PCR SuperMix</li>
+            <li>Template DNA</li>
+            <li>Fwd primers</li>
+            <li>Rev primers</li>
+            <li>DEPC/UltraPure Water</li>
+            <li>RNase-free microcentrifuge tubes</li>
+            <li>RNase-free PCR tubes</li>
+            <li>96-well PCR tube holder</li>
+            <li>Ice bucket</li>
+            <li>Thermal cycler</li>
+            <li>-4°C and/or -20°C storage</li>
+            <li>Pipettes</li>
+            <li>RNase-free pipette tips</li>
+            <li>Bunsen Burner</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li>Thaw components of the PCR MasterMix, and briefly centrifuge to collect at the bottom.</li>
+            <li>Create 10 µM dilutions of the forward and reverse primers for each template:</li>
+            <table>
+                <caption>Table 1: Dilutions of Primers in Water</caption>
+                <tr><th>Primer</th><th>Total Quantity (µL)</th><th>Volume of Primer Stock (µL)</th><th>Volume of RNase-Free Water (µL)</th></tr>
+                <tr><td>5seqT7APFwd</td><td>3</td><td>0.29</td><td>2.71</td></tr>
+                <tr><td>5seqT7APRev</td><td>1.37</td><td>0.20</td><td>1.17</td></tr>
+                <tr><td>5seqT7APLRev</td><td>1.39</td><td>0.20</td><td>1.19</td></tr>
+                <tr><td>5seqT7APTMSDTA-RRev</td><td>1.54</td><td>0.20</td><td>1.34</td></tr>
+            </table>
+            <li>Set up a PCR Master Mix in a 1.5 mL microcentrifuge tube, mix by pipetting up and down, and spin down to combine.</li>
+            <table>
+                <caption>Table 2: PCR Master Mix</caption>
+                <tr><th>Component</th><th>50 µL rxn</th><th>Tube 1</th><th>Tube 2</th><th>Tube 3</th><th>Tube 4</th></tr>
+                <tr><td>RNase-free Water</td><td>To 50 µL</td><td>0 µL</td><td>0 µL</td><td>0 µL</td><td>3 µL</td></tr>
+                <tr><td>PCR SuperMix</td><td>45 µL</td><td>45 µL</td><td>45 µL</td><td>45 µL</td><td>45 µL</td></tr>
+                <tr><td>10µM Fwd primer</td><td>1 µL</td><td>1 µL</td><td>1 µL</td><td>1 µL</td><td>1 µL</td></tr>
+                <tr><td>10µM Rev Primer</td><td>1 µL</td><td>1 µL</td><td>1 µL</td><td>1 µL</td><td>1 µL</td></tr>
+                <tr><td>DNA Template</td><td>3 µL</td><td>3 µL</td><td>3 µL</td><td>3 µL</td><td>0 µL</td></tr>
+                <tr><td>Total Volume:</td><td>50 µL</td><td>50 µL</td><td>50 µL</td><td>50 µL</td><td>50 µL</td></tr>
+            </table>
+            <ul>
+                <li>Tube 1 – 5seqT7AP</li>
+                <li>Tube 2 – 5seqT7APL</li>
+                <li>Tube 3 – 5seqT7APTMSDTAR</li>
+                <li>Tube 4 – Negative Control (Use Primers for 5seqT7AP)</li>
+            </ul>
+            <li>Label PCR tubes and determine the components for each.</li>
+            <li>Place a 96-well plate into an ice bucket, and put the PCR tubes inside.</li>
+            <li>Pipette Master Mix into PCR tubes, except for the negative control.</li>
+            <li>Set up the negative control in a separate PCR tube by adding the same reagents as the Master Mix except for the template DNA. Increase water volume (3 µL) to account for the missing template DNA.</li>
+            <li>Add Template DNA as per the table above, and briefly spin down to combine.</li>
+            <li>Cap PCR tubes and place onto the thermal cycler with the following settings:
+                <ul>
+                    <li>Initial denaturation: 94°C, 2 min</li>
+                    <li>35 PCR cycles:</li>
+                    <ul>
+                        <li>Denature: 94°C, 15s</li>
+                        <li>Anneal: 62°C (based on primer Tm and template Tm), 30s</li>
+                        <li>Extend: 72°C, 1 min/kb</li>
+                    </ul>
+                    <li>Hold: 4°C, indefinite</li>
+                </ul>
+            </li>
+            <li>When the program is complete, store PCR tubes at 4°C for a few days or -20°C for several months.</li>
+            <li>Use 10 µL of PCR product for gel electrophoresis.</li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>The dilutions for the forward and APRev primers were performed twice.</li>
+        </ul>
+    `
+},
+{
+    "date": "24/06/19",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "DNA Agarose Gel Electrophoresis (for PCR samples with 35 cycles)",
+    "details": `
+        <strong>Partner(s):</strong> Jezrael Carpio, Emma Klaffke <br>
+        <strong>Purpose/Objective of the lab:</strong> Determine if changing the number of PCR cycles to 35 increases resolution <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 24/06/19 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>Agarose</li>
+            <li>Erlenmeyer flask (150mL)</li>
+            <li>1X TAE or TBE buffer</li>
+            <li>Microwave</li>
+            <li>SYBR Safe dye</li>
+            <li>Gel casting/running apparatus</li>
+            <li>PCR tubes</li>
+            <li>Gel loading dye</li>
+            <li>DNA to be run</li>
+            <li>1X TAE or TBE buffer</li>
+            <li>DNA size marker</li>
+            <li>Paper towels</li>
+            <li>UV transilluminator</li>
+            <li>Gel documentation system</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li>Preparation of the Gel:
+                <ul>
+                    <li>Weigh out 3 grams of agarose for a 150 mL gel in an Erlenmeyer flask to create a 2% agarose gel.</li>
+                    <li>Add the correct volume of 1X TAE or TBE buffer to the agarose-containing flask and swirl to mix.</li>
+                    <li>Use deionized water to dilute (150 mL).</li>
+                    <li>Melt the agarose/buffer mixture in a microwave in 30-second intervals, removing the flask and swirling to mix well. Repeat until the agarose has completely dissolved.</li>
+                    <li>Allow the flask to cool down enough to touch (without burning), and add 15 µL of SYBR Safe dye.</li>
+                    <li>Clean and place the gel tray into the casting apparatus. Insert an appropriate comb to create the wells.</li>
+                    <li>Pour the molten agarose into the gel mold. Let it set at room temperature.</li>
+                    <li>Remove the comb and place the gel in the gel tank. Ensure DNA runs from negative to positive.</li>
+                </ul>
+            </li>
+            <li>Sample Preparation and Running the Gel:
+                <ul>
+                    <li>Prepare PCR samples with gel loading dye.</li>
+                    <li>Load the DNA samples and DNA size marker into the wells of the gel.</li>
+                    <li>Place the gel in a gel tank and run the gel with 1X TAE or TBE buffer.</li>
+                </ul>
+            </li>
+            <li>Observing Results:
+                <ul>
+                    <li>Use a UV transilluminator to visualize the DNA bands after running the gel.</li>
+                    <li>Document the results using the gel documentation system.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>A new TBE buffer was made and used for the gel running apparatus.</li>
+            <li>Constant amperage (0.1A) was used instead of constant voltage during electrophoresis.</li>
+            <li>The gel ran from 12:10 PM to 1:30 PM under the specified conditions.</li>
+        </ul>
+
+        <strong>Results:</strong><br>
+        <img src="/img/gel7.png" alt="Gel"><br>
+    `
+},
+
+{
+    "date": "19/06/24",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "Performing Gel Electrophoresis with Different Gel Concentrations",
+    "details": `
+        <strong>Partner(s):</strong> Stavan Patel, Ziyad Syed <br>
+        <strong>Purpose/Objective of the lab:</strong> Perform gel electrophoresis at different gel concentrations to determine the optimal gel concentration <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 19/06/24 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>Agarose</li>
+            <li>Erlenmeyer flask (150mL)</li>
+            <li>1X TAE or TBE buffer</li>
+            <li>Microwave</li>
+            <li>SYBR Safe dye</li>
+            <li>Gel casting/running apparatus</li>
+            <li>PCR</li>
+            <li>Gel loading dye</li>
+            <li>DNA to be run</li>
+            <li>1X TAE or TBE buffer</li>
+            <li>DNA size marker</li>
+            <li>Paper towels</li>
+            <li>UV transilluminator</li>
+            <li>Gel documentation system</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li>Preparation of the Gel:
+                <ul>
+                    <li>Weigh out 3 grams of agarose for a 150 mL gel in an Erlenmeyer flask to create a 2% agarose gel.</li>
+                    <li>Add the correct volume of 1X TAE or TBE buffer to the agarose-containing flask and swirl to mix.</li>
+                    <li>Use deionized water to dilute (150 mL).</li>
+                    <li>Melt the agarose/buffer mixture in a microwave in 30-second intervals, removing the flask and swirling to mix well. Repeat until the agarose has completely dissolved.</li>
+                    <li>Allow the flask to cool down enough to touch (without burning), and add 15 µL of SYBR Safe dye.</li>
+                    <li>Clean and place the gel tray into the casting apparatus. Insert an appropriate comb to create the wells.</li>
+                    <li>Pour the molten agarose into the gel mold. Let it set at room temperature.</li>
+                    <li>Remove the comb and place the gel in the gel tank. Ensure DNA runs from negative to positive.</li>
+                </ul>
+            </li>
+            <li>Sample Preparation and Running the Gel:
+                <ul>
+                    <li>Prepare PCR samples with gel loading dye.</li>
+                    <li>Load the DNA samples and DNA size marker into the wells of the gel.</li>
+                    <li>Place the gel in a gel tank and run the gel with 1X TAE or TBE buffer.</li>
+                </ul>
+            </li>
+            <li>Observing Results:
+                <ul>
+                    <li>Use a UV transilluminator to visualize the DNA bands after running the gel.</li>
+                    <li>Document the results using the gel documentation system.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>The bands were very faint, with only the ladder clearly visible.</li>
+            <li>DNA used was from the first DNA purification attempt.</li>
+            <li>Testing with 2.5% and 3% gel was abandoned to focus on fixing PCR steps.</li>
+        </ul>
+
+        <strong>Results:</strong><br>
+        <img src="/img/gel8.jpg" alt="Gel"><br>
+    `
+},
+
+{
+    "date": "19/06/24",
+    "month": "June",
+    "type": "DNA",
+    "title": "Aptazyme DNA PCR, Checking for Faulty SuperMix",
+    "details": `
+        <strong>Partner(s):</strong> Stavan Patel, Ziyad Syed <br>
+        <strong>Purpose/Objective of the lab:</strong> To do PCR and determine if the SuperMix is the issue <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 19/06/24 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>Agarose</li>
+            <li>Erlenmeyer flask (150mL)</li>
+            <li>1X TAE or TBE buffer</li>
+            <li>Microwave</li>
+            <li>SYBR Safe dye</li>
+            <li>Gel casting/running apparatus</li>
+            <li>PCR</li>
+            <li>Gel loading dye</li>
+            <li>DNA to be run</li>
+            <li>1X TAE or TBE buffer</li>
+            <li>DNA size marker</li>
+            <li>Paper towels</li>
+            <li>Thermal cycler</li>
+            <li>UV transilluminator</li>
+            <li>Gel documentation system</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li>Preparation of the Gel:
+                <ul>
+                    <li>Weigh out 3 grams of agarose for a 150 mL gel in an Erlenmeyer flask to create a 2% agarose gel.</li>
+                    <li>Add the correct volume of 1X TAE or TBE buffer to the agarose-containing flask and swirl to mix.</li>
+                    <li>Use deionized water to dilute (150 mL).</li>
+                    <li>Melt the agarose/buffer mixture in a microwave in 30-second intervals, removing the flask and swirling to mix well. Repeat until the agarose has completely dissolved.</li>
+                    <li>Allow the flask to cool down enough to touch (without burning), and add 15 µL of SYBR Safe dye.</li>
+                    <li>Clean and place the gel tray into the casting apparatus. Insert an appropriate comb to create the wells.</li>
+                    <li>Pour the molten agarose into the gel mold. Let it set at room temperature.</li>
+                    <li>Remove the comb and place the gel in the gel tank. Ensure DNA runs from negative to positive.</li>
+                </ul>
+            </li>
+            <li>PCR Setup:
+                <ul>
+                    <li>Prepare 5 PCR tubes with the following contents:
+                        <ul>
+                            <li>Tube 1: Positive control (from TranscriptAid kit)</li>
+                            <li>Tube 2: Negative control (no template), using AP primers</li>
+                            <li>Tube 3: APL</li>
+                            <li>Tube 4: AP</li>
+                            <li>Tube 5: APTMSD</li>
+                        </ul>
+                    </li>
+                    <li>Run PCR for 35 cycles on the thermal cycler.</li>
+                    <li>Leave PCR samples overnight (O/N) at 4°C.</li>
+                </ul>
+            </li>
+            <li>Gel Electrophoresis:
+                <ul>
+                    <li>Prepare the gel as described in the Gel Preparation section.</li>
+                    <li>Load the samples into the gel as follows:
+                        <ul>
+                            <li>Ladder: Well 2 and Well 4 (from the right), reloaded due to improper loading the first time.</li>
+                            <li>Tube 1: Well 4</li>
+                            <li>Tube 2: Well 6</li>
+                            <li>Tube 3: Well 8</li>
+                            <li>Tube 4: Well 10</li>
+                            <li>Tube 5: Well 12</li>
+                        </ul>
+                    </li>
+                    <li>Run the gel from 11:00 AM to 11:37 AM under the specified conditions.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>Prepared 5 PCR tubes with distinct samples and controls.</li>
+            <li>Identified a mistake with the labeling of tube 3, which may actually be tube 5.</li>
+            <li>PCR samples left overnight at 4°C, and the gel tank was set up with 1µL of SYBR Safe dye to prevent leakage.</li>
+            <li>The ladder was loaded a second time due to improper loading in the first attempt.</li>
+        </ul>
+
+        <strong>Results:</strong><br>
+        <img src="/img/gel9.png" alt="Gel"><br>
+    `
+},
+{
+    "date": "19/06/24",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "Determining Stock Oligo Concentrations",
+    "details": `
+        <strong>Partner(s):</strong> Sana, Jezrael <br>
+        <strong>Purpose/Objective of the lab:</strong> To determine concentrations of stock oligonucleotides and assess whether the lack of DNA bands is due to the sample being below the detection ng/µL of the gel. <br>
+        <strong>Last Edited (yy/mm/dd):</strong> Not provided <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>P10 pipette and pipette tips</li>
+            <li>Nanodrop</li>
+            <li>DNA oligo samples from IDT</li>
+            <li>Kimwipe</li>
+            <li>RNase-free deionized water</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li>Blank the Nanodrop using 1 µL of RNase-free water.</li>
+            <li>Vortex each sample, then load 1 µL of each sample onto the Nanodrop.</li>
+            <li>Wipe the Nanodrop surface using a Milli-Q water-dampened Kimwipe between each sample.</li>
+            <li>Note absorbance values and the A260/A280 and A260/A230 ratios.</li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>Initial recordings gave negative absorbance values, which were resolved by vortexing the samples before pipetting and re-running the experiment.</li>
+            <li>Values presented reflect the results from the last run only.</li>
+            <li>The Nanodrop was set to measure ssDNA for the primers and dsDNA for the template.</li>
+            <li>Next time, run each sample three times and average the values to account for calibration or anomaly issues.</li>
+        </ul>
+
+        <strong>Results:</strong>
+        <table>
+            <tr>
+                <th>Sample</th>
+                <th>Concentration (ng/µL)</th>
+                <th>A260/A280</th>
+                <th>A260/A230</th>
+            </tr>
+            <tr>
+                <td>5SEQT7APFwd</td>
+                <td>735.0</td>
+                <td>1.88</td>
+                <td>1.14</td>
+            </tr>
+            <tr>
+                <td>5SEQT7APRev</td>
+                <td>525.0</td>
+                <td>1.94</td>
+                <td>1.34</td>
+            </tr>
+            <tr>
+                <td>5SEQT7APLRev</td>
+                <td>543.4</td>
+                <td>1.85</td>
+                <td>1.32</td>
+            </tr>
+            <tr>
+                <td>5SEQT7APTMSDTARRev</td>
+                <td>534.6</td>
+                <td>1.66</td>
+                <td>1.04</td>
+            </tr>
+            <tr>
+                <td>5SEQT7AP</td>
+                <td>1.2</td>
+                <td>1.11</td>
+                <td>-16.27</td>
+            </tr>
+            <tr>
+                <td>5SEQT7APL</td>
+                <td>1.6</td>
+                <td>1.76</td>
+                <td>3.07</td>
+            </tr>
+            <tr>
+                <td>5SEQT7APTMSDTAR</td>
+                <td>0.3</td>
+                <td>0.56</td>
+                <td>-0.13</td>
+            </tr>
+        </table>
+    `
+},
+{
+    "date": "24/06/20",
+    "month": "June",
+    "type": "Aptazyme",
+    "title": "PCR Purification and Quantification",
+    "details": `
+        <strong>Partner(s):</strong> Jezrael Carpio <br>
+        <strong>Purpose/Objective of the lab:</strong> Purify and quantify the PCR product with 35 PCR cycles. <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 20/06/24 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>Elution Buffer (10 mM Tris-HCl, pH 8.5)</li>
+            <li>PCR Binding Buffer</li>
+            <li>Wash Buffer W1</li>
+            <li>PureLink PCR Spin Columns with Collection Tubes</li>
+            <li>PureLink Elution Tubes</li>
+            <li>Pipette/Pipette Tips</li>
+            <li>Nanodrop</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li>Combine 4 volumes of Binding Buffer to 1 volume of PCR sample and mix well.</li>
+            <li>Pipet the sample into a PureLink spin column in a collection tube and centrifuge at max speed for 1 minute.</li>
+            <li>Discard the flow-through.</li>
+            <li>Re-insert the column into the collection tube and add 650 µL Wash Buffer. Centrifuge at max speed for 1 minute.</li>
+            <li>Discard the flow-through.</li>
+            <li>Place the column back into the collection tube and centrifuge at max speed for 3 minutes.</li>
+            <li>Discard the flow-through.</li>
+            <li>Place the column into a clean 1.7 mL Elution Tube and add 50 µL Elution Buffer to the center of the column.</li>
+            <li>Incubate at room temperature for ~1 minute.</li>
+            <li>Centrifuge the column at max speed for 2 minutes.</li>
+            <li>The elution tube should contain the purified PCR product.</li>
+            <li>Store the purified DNA at 4°C for immediate use or at -20°C for long-term storage.</li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>None recorded.</li>
+        </ul>
+
+        <strong>Results:</strong>
+        <table>
+            <tr>
+                <th>Sample</th>
+                <th>Concentration (ng/µL) - 1st Trial</th>
+                <th>Concentration (ng/µL) - 2nd Trial</th>
+                <th>Concentration (ng/µL) - 3rd Trial</th>
+                <th>Concentration (ng/µL) - 4th Trial</th>
+                <th>A260/A280 - 1st Trial</th>
+                <th>A260/A280 - 2nd Trial</th>
+                <th>A260/A280 - 3rd Trial</th>
+                <th>A260/A280 - 4th Trial</th>
+                <th>A260/A230 - 1st Trial</th>
+                <th>A260/A230 - 2nd Trial</th>
+                <th>A260/A230 - 3rd Trial</th>
+                <th>A260/A230 - 4th Trial</th>
+            </tr>
+            <tr>
+                <td>Tube 1 (5seqT7AP)</td>
+                <td>0.8</td>
+                <td>1.7</td>
+                <td>2.3</td>
+                <td>-</td>
+                <td>3.86</td>
+                <td>1.50</td>
+                <td>1.98</td>
+                <td>-</td>
+                <td>-1.57</td>
+                <td>1.82</td>
+                <td>2.19</td>
+            </tr>
+            <tr>
+                <td>Tube 2 (5seqT7APL)</td>
+                <td>1.9</td>
+                <td>29.9</td>
+                <td>2.9</td>
+                <td>2.3</td>
+                <td>1.56</td>
+                <td>1.56</td>
+                <td>1.95</td>
+                <td>1.41</td>
+                <td>0.95</td>
+                <td>0.54</td>
+                <td>1.27</td>
+                <td>1.00</td>
+            </tr>
+            <tr>
+                <td>Tube 3 (5seqT7APTMSDTar)</td>
+                <td>3.9</td>
+                <td>3.4</td>
+                <td>-</td>
+                <td>-</td>
+                <td>1.75</td>
+                <td>2.34</td>
+                <td>-</td>
+                <td>-</td>
+                <td>1.14</td>
+                <td>0.91</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </table>
+    `
+},
+{
+    "date": "20/06/20",
+    "month": "June",
+    "type": "DNA",
+    "title": "Aptazyme DNA PCR, Checking for faulty Thermal Cycler PCR Machine",
+    "details": `
+        <strong>Partner(s):</strong> Stavan Patel, Ziyad Syed <br>
+        <strong>Purpose/Objective of the lab:</strong> To perform PCR and determine if the current Thermal Cycler PCR machine is the issue. <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 20/06/24 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>Agarose</li>
+            <li>Erlenmeyer flask (150mL)</li>
+            <li>1X TAE or TBE</li>
+            <li>Microwave</li>
+            <li>SYBR Safe dye</li>
+            <li>Gel casting/running apparatus</li>
+            <li>PCR</li>
+            <li>Gel loading dye</li>
+            <li>DNA to be run</li>
+            <li>1X TAE or TBE</li>
+            <li>DNA size marker</li>
+            <li>Paper towels</li>
+            <li>Thermal Cycler (the one usually used by iGEM)</li>
+            <li>UV transilluminator</li>
+            <li>Gel documentation system</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ol>
+            <li>Weigh out a 2% agarose gel in an Erlenmeyer flask. (3 grams of agarose for a 150mL gel).</li>
+            <li>Add the correct volume of running buffer to the agarose-containing flask. Swirl to mix. (1X TBE or TAE buffer, Deionized water was used to dilute to 150mL).</li>
+            <li>Melt the agarose/buffer mixture in a microwave, at 30-second intervals. Remove the flask and swirl the contents to mix well. Repeat until the agarose has completely dissolved.</li>
+            <li>Wait until the flask is cooled enough to touch with the skin. Add 15µL of SYBR Safe dye.</li>
+            <li>Clean and place the gel tray into the casting apparatus. Place an appropriate comb into the gel mold to create the wells.</li>
+            <li>Pour the molten agarose into the gel mold and allow the agarose to set at room temperature.</li>
+            <li>Remove the comb and place the gel in the gel tank.</li>
+            <li>Place the gel in a tank with the direction of DNA running from negative to positive.</li>
+        </ol>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>None recorded.</li>
+        </ul>
+
+        <strong>Results:</strong><br>
+        <img src="/img/gel10.jpg" alt="Gel"><br>
+        Figure 1. 2% agarose gel ran for 1:21(time) at 100mA. Gel was visualized with SYBR Safe. Lanes were loaded with the following: lane 1 skipped, lane 2: negative control (AP’s primers), lane 3: positive control (DNA from TranscriptAid Transcription Kit). lane 4: AP (no product seemed to form), lane 5: APL, lane 6: APTMSD, lane 7: 1kB ladder.
+        <br>
+    Interpretation:<br>
+    It seems the issue is the PCR machine and maybe a faulty ladder. We should use the old PCR machine from now, using a new SuperMix ideally if possible (but the SuperMix has been ruled out as contaminated). Also next gel try using different ladders to ensure which ladder is working fine.
+
+    `
+},
+{
+    "date": "20/06/20",
+    "month": "June",
+    "type": "DNA",
+    "title": "Aptazyme PCR Purification",
+    "details": `
+        <strong>Partner(s):</strong> Ziyad, Jezrael <br>
+        <strong>Purpose/Objective of the lab:</strong> To purify DNA from a PCR <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 20/06/24 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>From Purification kit</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ul>
+            <li>From purification kit</li>
+        </ul>
+
+        <strong>Notes/Observations:</strong>
+        <ul>
+            <li>Only APL and APTMSD samples from Aptazyme DNA PCR were used for purification as analyzed by the gel run.</li>
+            <li>25µL of DEPC water was used to elute the DNA, NOT ELUTION BUFFER.</li>
+        </ul>
+
+        <strong>Results:</strong>
+        <table>
+            <tr>
+                <th>Sample</th>
+                <th>Concentration (ng/µL)</th>
+                <th>A260/280</th>
+                <th>A260/230</th>
+            </tr>
+            <tr>
+                <td>APL</td>
+                <td>21.0</td>
+                <td>1.82</td>
+                <td>1.25</td>
+            </tr>
+            <tr>
+                <td>APTMSD</td>
+                <td>19.4</td>
+                <td>1.89</td>
+                <td>1.60</td>
+            </tr>
+        </table>
+
+        <strong>Note about Nanodrop:</strong>
+        <ul>
+            <li>A260/280: indicates protein contamination. 1.8 is good for DNA, 2.0 is good for RNA.</li>
+            <li>A260/230: indicates salt contamination. 2.0-2.2 range is good.</li>
+        </ul>
+    `
+},
+
+{
+    "date": "20/06/20",
+    "month": "June",
+    "type": "DNA",
+    "title": "DNA Agarose Gel Electrophoresis and Aptazyme PCR",
+    "details": `
+        <strong>Partner(s):</strong> Stavan Patel, Amber Quo <br>
+        <strong>Purpose/Objective of the lab:</strong> Preparation of Gel for Gel Electrophoresis of PCR Samples <br>
+        <strong>Last Edited (yy/mm/dd):</strong> 20/06/24 <br>
+
+        <strong>Materials:</strong>
+        <ul>
+            <li>2% Agarose</li>
+            <li>1X TBE or TAE Buffer</li>
+            <li>Milli-Q Water</li>
+            <li>SYBR Safe dye</li>
+            <li>Gel Tray and Casting Apparatus</li>
+            <li>Comb</li>
+            <li>DNA Samples</li>
+            <li>6X Loading Dye</li>
+            <li>DNA Size Marker</li>
+            <li>Power Supply</li>
+            <li>UV Transilluminator</li>
+            <li>Gel Documentation System (Gel Doc)</li>
+            <li>Erlenmeyer Flask</li>
+        </ul>
+
+        <strong>Procedure:</strong>
+        <ul>
+            <li><strong>DNA agarose gel electrophoresis</strong></li>
+            <li>The procedure was followed as directed:</li>
+
+            <strong>Preparation of the Gel:</strong>
+            <ul>
+                <li>Weigh out a 2% agarose gel in an erlenmeyer flask (3 grams of agarose for a 150mL gel).</li>
+                <li>Add the correct volume of running buffer to the agarose-containing flask. Swirl to mix.</li>
+                <li>(1X) TBE or TAE buffer, use milli-Q water to dilute (150mL).</li>
+                <li>Melt the agarose/buffer mixture in a microwave, at 30 s intervals, remove the flask and swirl the contents to mix well. Repeat until the agarose has completely dissolved.</li>
+                <li>Wait until the flask is cooled enough to touch the skin, add 15µL of SYBR Safe dye.</li>
+                <li>Clean and place the gel tray into the casting apparatus. Place an appropriate comb into the gel mold to create the wells.</li>
+                <li>Pour the molten agarose into the gel mold. Allow the agarose to set at room temperature.</li>
+                <li>Remove the comb and place the gel in the gel tank, ensuring the DNA runs from negative to positive.</li>
+            </ul>
+
+            <strong>Aptamer PCR Prep:</strong>
+            <table>
+                <tr>
+                    <th>Primer</th>
+                    <th>Total Quantity (µL)</th>
+                    <th>Volume of Primer Stock (µL)</th>
+                    <th>Volume of RNase-Free Water (µL)</th>
+                </tr>
+                <tr>
+                    <td>5seqT7APFwd</td>
+                    <td>4.164</td>
+                    <td>0.40</td>
+                    <td>3.764</td>
+                </tr>
+                <tr>
+                    <td>5seqT7APRev</td>
+                    <td>2.052</td>
+                    <td>0.30</td>
+                    <td>1.752</td>
+                </tr>
+                <tr>
+                    <td>5seqT7APLRev</td>
+                    <td>1.39</td>
+                    <td>0.20</td>
+                    <td>1.19</td>
+                </tr>
+                <tr>
+                    <td>5seqT7APTMSDTA-RRev</td>
+                    <td>1.54</td>
+                    <td>0.20</td>
+                    <td>1.34</td>
+                </tr>
+            </table>
+
+            <strong>Set up PCR Master Mix:</strong>
+            <table>
+                <tr>
+                    <th>Component</th>
+                    <th>50 µL rxn</th>
+                    <th>Tube 5</th>
+                    <th>Tube 6</th>
+                    <th>Tube 7</th>
+                    <th>Tube 8</th>
+                </tr>
+                <tr>
+                    <td>RNase-free Water</td>
+                    <td>To 50 µL</td>
+                    <td>0 µL</td>
+                    <td>0 µL</td>
+                    <td>0 µL</td>
+                    <td>3 µL</td>
+                </tr>
+                <tr>
+                    <td>PCR SuperMix</td>
+                    <td>45 µL</td>
+                    <td>45 µL</td>
+                    <td>45 µL</td>
+                    <td>45 µL</td>
+                    <td>45 µL</td>
+                </tr>
+                <tr>
+                    <td>10µM Fwd primer</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                </tr>
+                <tr>
+                    <td>10µM Rev Primer</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                    <td>1 µL</td>
+                </tr>
+                <tr>
+                    <td>DNA Template</td>
+                    <td>3 µL</td>
+                    <td>3 µL</td>
+                    <td>3 µL</td>
+                    <td>3 µL</td>
+                    <td>0 µL</td>
+                </tr>
+                <tr>
+                    <td>Total Volume:</td>
+                    <td>50 µL</td>
+                    <td>50 µL</td>
+                    <td>50 µL</td>
+                    <td>50 µL</td>
+                    <td>50 µL</td>
+                </tr>
+            </table>
+
+            <ul>
+                <li>Label PCR tubes and determine the components for each.</li>
+                <li>Place a 96-well plate in an ice bucket, place PCR tubes inside.</li>
+                <li>Pipette Master Mix into PCR tubes except for the negative control.</li>
+                <li>For the negative control, add all reagents except the DNA template, and increase the water volume by 3 µL.</li>
+                <li>Add Template DNA as per the table above. Spin down briefly to combine.</li>
+                <li>Cap PCR tubes and place them onto the thermal cycler with the following settings:
+                    <ul>
+                        <li>Initial denaturation: 94°C, 2 min</li>
+                        <li>35 PCR cycles:
+                            <ul>
+                                <li>Denature: 94°C, 15s</li>
+                                <li>Anneal: 62°C, 30s</li>
+                                <li>Extend: 72°C, 1 min/kb</li>
+                            </ul>
+                        </li>
+                        <li>Hold: 4°C, indefinite</li>
+                    </ul>
+                </li>
+                <li>Store PCR tubes at 4°C for a few days or -20°C for long-term storage.</li>
+                <li>Use 10µL of PCR product for gel electrophoresis.</li>
+            </ul>
+
+            <strong>Running Gel:</strong>
+            <ul>
+                <li>Take 2µL of loading dye and place it on parafilm. Do this for all PCR tubes.</li>
+                <li>Take 10µL of DNA from the PCR tube and mix with the dye on the parafilm.</li>
+                <li>Program the power supply to 0.1A and add enough running buffer to cover the gel surface (700mL).</li>
+                <li>Attach the leads of the gel box to the power supply and ensure proper connections.</li>
+                <li>Carefully load the DNA samples into the gel and add the DNA ladder.</li>
+                <li>Place the lid on the gel box, check the connections, and turn on the power.</li>
+                <li>Run the gel for 30 min to 1 hour until the dye has migrated to an appropriate distance.</li>
+            </ul>
+
+            <strong>Results:</strong>
+            <ul>
+                <li>1: Ladder 1, worked well</li>
+                <li>2: AP</li>
+                <li>3: APL</li>
+                <li>4: APTMSD</li>
+                <li>5: Control</li>
+                <li>6: Ladder 2, didn’t seem to work</li>
+                <li>Started running gel for 1hr1min.</li>
+                <li>Try a different supermix?</li>
+            </ul>
+        </ul>
+
+        <br>
+         <img src="/img/gel11.jpg" alt="Gel"><br>
+
+    `
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];
 
