@@ -935,7 +935,7 @@ footer {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 30vh; /* Adjust as needed */
+    height: 40vh; /* Adjust as needed */
     display: flex;
     justify-content: center;
     align-items: center;
