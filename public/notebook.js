@@ -206,40 +206,55 @@ document.addEventListener("DOMContentLoaded", () => {
         const timelineItems = document.querySelectorAll('.timeline-item');
         timelineItems.forEach((item, i) => {
             item.classList.remove('active-week');
-            const blurb = item.querySelector('.timeline-blurb')
-            blurb.style.opacity = '0'
+            const blurb = item.querySelector('.timeline-blurb');
+            blurb.style.opacity = '0';
         });
         timelineItems[index].classList.add('active-week');
         const activeBlurb = timelineItems[index].querySelector('.timeline-blurb');
-        activeBlurb.style.opacity= '1'
+        activeBlurb.style.opacity = '1';
     }
 
     function updateActiveContent(index) {
         const weekContentContainers = document.querySelectorAll('.week-content');
-        weekContentContainers.forEach((item, _) => {
-            item.classList.remove('active-content')
-        })
-        weekContentContainers[index].classList.add('active-content')
+        weekContentContainers.forEach((item) => {
+            item.classList.remove('active-content');
+        });
+        weekContentContainers[index].classList.add('active-content');
     }
 
-    // Function to scroll to a specific week
+    // Enhanced scroll to week function
     function scrollToWeek(index) {
         if (index < 0 || index >= timelineItems.length) return;
+        
         const containerWidth = window.innerWidth;
-        const itemWidth = timelineScroll.children[index].offsetWidth;
+        const itemWidth = timelineScroll.children[0].offsetWidth;
+        const itemSpacing = 20; // Space between items
         const activeSpacing = 390;
-        const offset = (containerWidth / 2) - (itemWidth / 2) - activeSpacing;
-        const scrollPosition = -index * (itemWidth + 20) + offset;
+        
+        // Calculate the maximum scroll position that shows the last item
+        const maxScroll = -(timelineItems.length - 3) * (itemWidth + itemSpacing);
+        
+        // Calculate initial scroll position
+        let scrollPosition = -index * (itemWidth + itemSpacing) + (containerWidth / 2) - (itemWidth / 2) - activeSpacing;
+        
+        // Adjust scroll position for the last few items
+        if (index >= timelineItems.length - 3) {
+            scrollPosition = maxScroll;
+        }
+        // Adjust scroll position for the first few items
+        else if (index <= 2) {
+            scrollPosition = 0;
+        }
 
         timelineScroll.style.transform = `translateX(${scrollPosition}px)`;
         updateActiveWeek(index);
-        updateActiveContent(index)
+        updateActiveContent(index);
         currentIndex = index;
     }
 
     // Handle horizontal mouse wheel scrolling
     timelineScroll.addEventListener('wheel', (event) => {
-        event.preventDefault(); // Prevent vertical scroll
+        event.preventDefault();
         if (event.deltaY > 0) {
             scrollToWeek(currentIndex + 1);
         } else {
@@ -247,22 +262,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-
-    // arrow keys can update as well
-    timelineScroll.addEventListener('keydown', (event) => {
+    // Handle arrow key navigation
+    document.addEventListener('keydown', (event) => {
         if (event.key === 'ArrowLeft') {
-            scrollToWeek(currentIndex + 1)
+            scrollToWeek(currentIndex - 1);
         } else if (event.key === 'ArrowRight') {
-            scrollToWeek(currentIndex - 1)
+            scrollToWeek(currentIndex + 1);
         }
     });
-    
 
     // Initialize timeline items and active week
     createTimelineItems();
     scrollToWeek(currentIndex);
 });
-
 
 
 // Lab notebook data for grid (sample structure)
