@@ -4,7 +4,7 @@ const imgContainer = document.querySelector('.carousel-container')
 const img = document.getElementById('carousel');
 
 // link to pictures for carousel
-let pictures = ['/img/temp.jpg','/img/logo.png']
+let pictures = ['/img/teamgroup.JPG','/img/teamgroup2.JPG','/img/teamgroup3.JPG','/img/teamgroup4.JPG','/img/teamgroup5.JPG']
 let position = 0;
 
 const moveRight = () => {
