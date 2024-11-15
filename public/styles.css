@@ -316,17 +316,59 @@ body {
     align-self: flex-start;
 }
 
-.image-container {
-    float: left; /* Float the image to the left */
+/* Modelling Page */
+.modelling-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.modelling-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.modelling-container section {
+    margin-bottom: 3rem;
+}
+
+.image-container{
     margin: 0 20px 20px 0; /* Adjust margins as needed */
     text-align: center;
     max-width: 50%; /* Ensure the image does not exceed 50% of the container width */
 }
 
+.image-left{
+    float: left; /* Float the image to the left */
+}
+
+.image-right{
+    float: right; /* Float the image to the left */
+}
+
+.image-center{
+    place-self: center;
+}
 .image-container img {
     max-width: 100%;
-    height: auto;
+    max-height: 75vh;
+    place-self: center;
     display: block;
+}
+
+.contents-m ol li{
+    margin-left: 50px;
+}
+
+.contents-m h4{
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .figure-label {
@@ -1173,4 +1215,138 @@ footer {
 
 #scrollToTopBtn svg {
     fill: white;
+}
+
+
+/* lab notebook*/
+
+.notebook-container {
+    padding: 20px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.toggle-group h4 {
+    margin-bottom: 10px;
+}
+
+/* Toggle Slider Styling */
+.toggle-container {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-input {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+}
+
+.toggle-container .slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    margin-left: 10px;
+    transition: 0.4s;
+}
+
+.toggle-container {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-container input:checked + .slider {
+    background-color: #d9c5f5;
+}
+
+.toggle-container.active {
+    background-color: #d9c5f5; /* Apply the highlight when selected */
+}
+
+.toggle-input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+.notebook-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.experiment-box {
+    background-color: #e6e6fa;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.experiment-box:hover {
+    transform: scale(1.05);
+}
+
+/* Centered Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    text-align: left;
+    position: relative;
+}
+
+/* Style for month buttons */
+.month-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.month-button:hover {
+    background-color: #ddd;
+}
+
+/* Highlight selected month */
+.month-button.selected {
+    background-color: #d9c5f5; /* Light purple */
+    color: white;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
 }
