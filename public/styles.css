@@ -268,7 +268,20 @@ body {
 }
 
 .description-container {
-    padding: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.description-contents {
+    margin: 0 auto;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
@@ -289,6 +302,12 @@ body {
     text-align: left;
 }
 
+.sub-container {
+    padding: 10px 50px;
+    text-align: left;
+    display: inline-block;
+}
+
 .subtitle-divider {
     width: 150px; /* Adjust line width */
     height: 2px; /* Adjust line thickness */
@@ -297,17 +316,59 @@ body {
     align-self: flex-start;
 }
 
-.image-container {
-    float: left; /* Float the image to the left */
+/* Modelling Page */
+.modelling-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.modelling-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.modelling-container section {
+    margin-bottom: 3rem;
+}
+
+.image-container{
     margin: 0 20px 20px 0; /* Adjust margins as needed */
     text-align: center;
     max-width: 50%; /* Ensure the image does not exceed 50% of the container width */
 }
 
+.image-left{
+    float: left; /* Float the image to the left */
+}
+
+.image-right{
+    float: right; /* Float the image to the left */
+}
+
+.image-center{
+    place-self: center;
+}
 .image-container img {
     max-width: 100%;
-    height: auto;
+    max-height: 75vh;
+    place-self: center;
     display: block;
+}
+
+.contents-m ol li{
+    margin-left: 50px;
+}
+
+.contents-m h4{
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .figure-label {
@@ -432,6 +493,45 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.members-cont {
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.members-cont h2 {
+    text-align: center;
+}
+
+.card-sub {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+}
+
+.card-sub-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card-sub-info p {
+    line-height: 1.2;
 }
 
 .cards-grid {
@@ -824,11 +924,30 @@ footer {
 .experiments-container {
     width: 100%;
     margin: 0 auto;
-    max-width: 1200px;
 }
 
+.experiments-container section {
+    margin-bottom: 3rem;
+}
+
+.experiments-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Experiments diagram */
 .experiments-diagram {
     min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .experiments-timeline {
@@ -837,7 +956,7 @@ footer {
     position: relative;
     border-top: 2px solid #333;
     padding-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .experiments-month {
@@ -909,9 +1028,68 @@ footer {
 /* Results Section */
 .results-container {
     width: 100%;
-    height: 100vh;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.results-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.results-contents {
+    margin: 0 auto;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.results-container table {
+    border: 1px solid rgb(140, 140, 140);
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.results-container th,
+.results-container td {
+    border: 1px solid rgb(160, 160, 160);
+    padding: 4px 10px;
+}
+
+.nano-content {
+    display: flex;
+    align-items: center;
+}
+
+.apt-content {
+    text-align: center;
+}
+
+.apt-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.apt-table td {
+    width: 33.33%;
+}
+
+.apt-table img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* results subwindow with tabs */
@@ -950,14 +1128,72 @@ footer {
 }
 
 .tab-window {
+    margin-top: 2rem;
     width: 100%;
     display: none;
+    line-height: 2;
+    padding: 20px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.tab-window ol {
+    padding-left: 4rem;
+}
+
+.tab-window table caption {
+    font-size: 14px;
 }
 
 .tab-window.active {
     display: block;
 }
 
+/* Safety Section */
+.safety-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.safety-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    font-size: 1.2em;
+}
+
+.safety-table1 {
+    margin: 0 auto;
+}
+
+.safety-container ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+.safety-container table {
+    border: 1px solid rgb(140, 140, 140);
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.safety-container th,
+.safety-container td {
+    border: 1px solid rgb(160, 160, 160);
+    padding: 4px 10px;
+}
+
+.safety-container td:first-child {
+    text-align: center;
+}
 
 /* Scroll to top button */
 /* change styling as needed */

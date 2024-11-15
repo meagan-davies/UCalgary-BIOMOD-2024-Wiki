@@ -1,43 +1,289 @@
+<head>
+    <style>
+        :root {
+            --pink: pink;
+            --blue: rgb(188, 205, 248);
+        }
+
+        #pink {
+            background-color: var(--pink);
+        }
+
+        #blue {
+            background-color: var(--blue);
+        }
+
+        input {
+            margin-right: 10px;
+        }
+
+        input:checked:disabled + mark {
+            background-color: var(--pink);
+        }
+
+        input:disabled + mark {
+            background-color: var(--blue);
+        }
+
+        ul ul {
+            padding-left: 2em;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
 <header class="description-header">
     <div class="header-content">
         <h1>Description</h1>
         <div class="divider"></div>
     </div>
 </header>
-<main>
-    <section class="description-container">
-        <div class="container">
-            <div id="description-background">
+<main class="description-container">
+    <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+    <div class="toc-container">
+        <nav class="toc">
+            <ul>
+                <li><a href="#background">Background</a></li>
+                <li><a href="#aptazyme">Aptazyme Component</a></li>
+                <li><a href="#tmsd">Toehold-mediated Strand Displacement (TMSD)</a></li>
+                <li><a href="#nanopore">Nanopore</a></li>
+                <li><a href="#vesicles">Vesicles</a></li>
+                <li><a href="#feasibility">Feasibility</a></li>
+                <li><a href="#novelty">Novelty</a></li>
+                <li><a href="#innovation">Innovation</a></li>
+                <li><a href="#research-goals">Research Goals</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+            <svg 
+                class="toc-marker"
+                width="200"
+                height="200"
+                xmlns="http://www.w3.org/2000/svg">
+                <path 
+                    stroke="#ccfbf1"
+                    stroke-width="3"
+                    fill="transparent"
+                    stroke-dasharray="0, 0, 0, 1500"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="translate(-0.5, -0.5)" />
+            </svg>
+        </nav>
+    </div>
+    
+    <article class="description-contents">
+        <section id="background">
+            <div class="container">
                 <h2>Background</h2>
                 <div class="divider"></div>
-                <h3>What are we aiming to address?</h3>
-                <figure class="image-container">
-                    <img src="/img/logo.png" alt="Description Image">
-                    <figcaption class="figure-label">Figure 1: Caption for the image</figcaption>
-                </figure>
-                <p class="flow-text">
-                    There is an urgent need to detect neurodegenerative damaging diseases like Alzheimer’s disease (AD), in their early stages. Current technologies lack the sensitivity required for early detection. Additionally, the process for differential diagnosis, which is essential for conditions like AD, is hindered by the absence of a definitive standard for diagnosis. This process often also exposes patients to high levels of radiation through computed tomography (CT) and magnetic resonance imaging (MRI) scans. These solutions also tend to be unsustainable, relying on helium - a rapidly depleting non-renewable natural resource - to operate MRI scans, and taking large amounts of energy to operate CT and MRI machines.
-                    <br><br>
-                    Our goal is to create a sensitive and accurate system for the early detection of neurodegenerative diseases. This will in turn reduce patient exposure to radiation to enhance diagnostic safety. As well, we hope to promote sustainability by developing diagnostic methods that do not rely on non-renewable resources or that take up lots of energy.
-                    <br><br>
-                </p>
+                <p>Every day, Canada sees over 350 new cases of neurodegenerative diseases, like Alzheimer’s Disease (AD), impacting lives across the country [1]. There is then an urgent need to improve neurovascular health, and a significant step towards this goal is the early detection of neurodegenerative diseases. Current technologies, however, lack the sensitivity necessary for early detection, and the process for differential diagnosis is also often hindered by the absence of definitive diagnostic standards. In contrast to traditional diagnostic methods, our biosensor aims limits exposure of patients to high levels of radiation through computed tomography (CT) and Magnetic Resonance Imaging (MRI) scans. [2] The focus of this research aims to create a modular biosensor that is not only highly sensitive but selective towards target biomarkers. </p><br>
+                <p>DNADetect will consist of DNA origami nanopores inserted into Large Unilamellar Vesicles that encapsulates fluorescent dye molecules. Inside the Nanopore lumen, there is a linker strand that holds to an aptazyme component, hindering any molecules from flowing through. In the presence of a biomarker, the aptazyme self-cleaves upon binding and dissociates from the nanopore. The opening of the nanopore lumen then increases, allowing dye molecules to diffuse out of the vesicles. A noticeable change in fluorescence should then be detected, providing the optical signal that a neurodegenerative disease biomarker is present.</p><br>
+                <p>The selectivity of DNADetect is achieved through the aptazyme component. The aptazyme consists of a specific RNA sequence that folds into a pocket that binds only to a specific molecule. This ensures highly specific interactions regardless of the surrounding matrix solution. The biosensor is able to exhibit high sensitivity through its ability to induce a fluorescent change with the presence of just one target molecule that enables the cleavage reaction. This enables the biosensor to operate even at low concentrations of the biomarker.</p> <br>
                 <h3>Research Questions</h3>
                 <div class="subtitle-divider"></div>
-                <p class="flow-text"> 
+                <p class="flow-text">
                     1. How can we create a solution that is highly sensitive for early detection of neurodegenerative diseases?
-                    <br>2. How can we introduce sustainable practices into our experiments and the design of our solution to improve sustainability?
+                    <br>2. How can we design a modular biosensor that is suitable for detecting various biomarkers found in neurodegenerative diseases?
+                    <br>3. What minimally invasive diagnostic techniques for neurodegenerative diseases could be employed to reduce patient exposure to radiation?
                 </p>
+            </div>
+            <div style="text-align: center;">
+                <img src="/img/desc-1.png" alt="Description 1" style="width: 500px; height: auto;">
             </div>
             
-            <div id="description-solution">
-                <h2>Our Solution</h2>
+        </section>
+
+        <section id="aptazyme">
+            <div class="container">
+                <h2>Aptazyme Component</h2>
                 <div class="divider"></div>
-                <p class="flow-text"> 
-                    Nulla semper ipsum at ultricies consequat. Nam efficitur lacus porttitor ligula porttitor aliquam. Vivamus at enim id nisl interdum lobortis. Duis vulputate mauris vel dolor consequat, sit amet mattis lorem euismod. Ut pulvinar, nulla quis rhoncus tristique, tortor libero lacinia nisi, ut ornare tortor velit at mauris. Mauris ultricies, risus non egestas varius, augue augue fermentum tellus, ut elementum ex ante et diam. Vestibulum tincidunt, erat sit amet fringilla faucibus, augue lacus facilisis ante, et pharetra ipsum odio id magna. Aliquam mauris dolor, condimentum non velit varius, molestie condimentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                </p>
+                <p class="flow-text">The core sensing mechanism of the project comes from an RNA aptazyme. Aptazymes are a combination of aptamers and ribozymes. Aptamers encompass a group of short single-stranded oligonucleotides that form secondary and tertiary structures, using the intermolecular forces generated by their sequence and structure to bind to target ligands. Aptamers exist both naturally and can be produced artificially through guided selection from large pools of randomised sequences. Due to the fact it takes multiple rounds of selection to generate reliable aptazymes and the time constraints with working with the project we decided to select a test molecule, theophylline to begin designing a sensor around [3].<br><br>
+                Ribozymes on the other hand are enzymes composed mostly or entirely of RNA molecules. Unlike DNA, RNA contains an additional hydroxyl group on the 2’ carbon of its ribose sugar which is not present on the deoxyribose sugar found in DNA. This extra OH group allows RNA to be more reactive, allowing it to take part in reactions such as in ribosomes [4]. The specific ribozyme we are using is a hammerhead ribozyme, which is named after its shape which resembles the head of a hammerhead shark. The hammerhead ribozyme is unique in that the reaction it facilitates is the cutting of its sequence [5].
+                </p> <br>
+                <p>Combining both of these functions we arrive at our aptazyme, a short RNA sequence which cleaves itself upon binding of theophylline. It consists of a linker that attaches it inside of the nanopore lumen. When attached, the space in the lumen is limited, preventing the movement of materials from flowing across the nanopore. The space then “opens” up upon the aptazyme self cleavage induced by target binding, letting flow of materials through the lumen.</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="/img/desc-2.png" alt="Description 2" style="width: 700px; height: auto;">
+            </div>
+        </section>
+
+        <section id="tmsd">
+            <div class="container">
+                <h2>Toehold-mediated Strand Displacement (TMSD)</h2>
+                <div class="divider"></div>
+                <p>TMSD is a process often used in nanotechnology. In this process, one target strand of the RNA/DNA complex is displaced by a different incoming strand (invader strand) [6]. This is accomplished by the presence of a short, single-stranded segment at one end of both the target strand and the invader strand, which is referred to as the toehold. These two toehold sequences are complementary to one another, ultimately facilitating the displacement reaction through hybridization [7]. This project utilizes the principles of TMSD to displace the attached aptazyme component to the nanopore lumen. The incumbent strand is linked to the nanopore lumen and the Target strand is linked to the aptazyme. In the absence of the invader strand, the two sequences, being complementary to one another, attach the aptazyme to the lumen, effectively blocking the “opening” of the nanopore [8][9]. Suppose the biomarker of interest changes, since the aptamer portion of the aptazyme is specific to its target molecules, the whole aptazyme component should be exchanged for another [3]. This is accomplished by introducing the invader strand. Once this occurs, the aptazyme will be displaced, allowing a new aptazyme with an aptamer sequence tailored to the target of interest to bind to the nanopore. Detachment activities can be confirmed with the release of dye and a fluorescent change.</p> <br>
+
+                <img src="/img/desc-3.png" alt="Description 3" style="width: 100%;">
+                <p>[6]</p>
             </div>
 
-            <div id="diagram-container" style="position: relative;">
+            
+            
+        </section>
+
+        <section id="nanopore">
+            <div class="container">
+                <h2>Nanopore</h2>
+                <div class="divider"></div>
+                <p>A nanopore is a hollow channel that is entirely made up of DNA. The A-T and C-G base pairing through hydrogen bonds between DNA strands allow the channel to self-assemble. This technique of constructing complex nanoscaled structures through predictable interactions of DNA is termed DNA origami [9].</p><br>
+                <p>The 72 helix barrel nanopore structure used for DNADetect was generated from CaDNAno. To allow for insertion to the membrane the nanopore was designed to have up to 22 binding sites for universal cholesterol-modified DNA strands [9]. The advantage of using DNA origami to create a membrane channel is that it overcomes the requirement of having molecule-specific interactions and limited lumen sizes that come with protein nanopores. Furthermore, the well-characterised interactions of DNA allows for easier troubleshooting and on-demand molecular adjustment of the nanopore enabling rapid prototyping. </p><br>
+                <p>The 22 cholesterol-modified binding sites allow the nanopore to insert itself into a vesicle. Once inserted, a channel between the internal and external solutions is created, enabling free diffusion of molecules across the vesicle. This project aims to control the movement of molecules such that diffusion only occurs in response to target detection. To achieve this, aptazyme is attached to the nanopore lumen, acting as a “gatekeeper” [6]. In the presence of the target molecule, self-cleavage of the aptazyme occurs, opening the channel. The controlled release of the internal solution of the vesicle can then be designed to provide a measurable signal. Our design then incorporated two types of fluorescent dye with different sizes compatible to the space of the nanopore lumen. Thus, the nanopore serves as a pathway for molecular diffusion upon target binding, enabling a signal release mechanism that leverages the versatility of DNA origami [9].</p>
+
+                <div style="text-align: center;">
+                    <img src="/img/desc-4.png" alt="Description 4">
+                </div>
+            </div>
+        </section>
+
+        <section id="vesicles">
+            <div class="container">
+                <h2>Vesicles</h2>
+                <div class="divider"></div>
+                <p>The purpose of the large unilamellar vesicles (LUVs) is to house self-quenching dyes, specifically Sulforhodamine B (SRB) and dextrose-conjugated fluorescein (D-FTIC 20kDa) [10]. Our vesicles were made with both DOPC and DOPE phospholipids and purified with a size exclusion column [8][9]. The primary dye, SRB, was encapsulated at self-quenching concentrations during vesicle synthesis [9]. They are employed to act as fluorescent indicators for nanopore binding activities. The nanopore-aptamer (Naptazyme) component will be inserted into the LUVs. With or without an aptazyme linked to the nanopore lumen, insertion of the nanopore creates a path for the encapsulated SRB molecules to diffuse out of the vesicle. Through this mechanism, we would be able to determine if there was proper insertion of the nanopore [9]. Diffusion of the self-quenching dye to the external solution changes the dye’s effective concentration which is exhibited through a change in fluorescence, confirming insertion activity [9].</p><br>
+                <p>SRB dye molecules are a lot smaller in size in comparison to the D-FTIC 20kDa [11][12]. As a result, D-FITC 20 kDa can only diffuse out of the vesicle under two conditions: binding of the target molecule or exchange of the aptazyme component by introduction of the invader strand. Upon binding of the target molecule, the self-cleavage of the aptazyme “opens” up the nanopore lumen, allowing the dye molecules to diffuse and exhibit fluorescent change. When the invader strand is introduced to the biosensor, the aptazyme component is detached from the nanopore lumen [6]. In this scenario, aptazyme detachment activity can also be indicated through change in fluorescence of D-FITC 20 kDa as the dye is free to exit the vesicle. Through this approach, the vesicle system is then able to translate binding events into fluorescent signals.</p>
+            </div>
+        </section>
+
+        <section id="feasibility">
+            <div class="container">
+                <h2>Feasibility</h2>
+                <div class="divider"></div>
+                <p>Our proposed biosensor for early neurodegenerative disease detection leverages widely studied molecular structures and well-established biochemical principles. The main sensing component of our biosensor relies on RNA aptazymes, an integration of aptamers and ribozymes. As a proof of concept, theophylline was used as the test target to streamline the initial sensor design. Focusing on molecules with known binding interactions with a developed aptamer sequence allowed further optimization for the rest of the biosensor components. Additionally, using large unilamellar vesicles (LUVs) to house fluorescent dye molecules allows for visualization of the nanopore-aptazyme integration, making it possible to quantify the activity of the sensor.</p><br>
+                <p>Key mechanisms in our sensor, such as the TMSD and DNA origami, have also been well understood in the field of nanotechnology and biosensing. The employed TMSD mechanism in our biosensor allows for reversible aptazyme interactions which provides the user the option of modification. Lastly, the use of CaDNAno and simulation during the design of the DNA nanopore structure further highlights the feasibility of our biosensor as it confirms structural stability of the nanopore under controlled conditions.</p>
+            </div>
+        </section>
+        
+        <section id="novelty">
+            <div class="container">
+                <h2>Novelty</h2>
+                <div class="divider"></div>
+                <p>DNADetect biosensors offer unique functionalities that enable it to perform tasks that other conventional biosensors cannot. The RNA aptazyme is engineered to bind to one target with high specificity. However, the various separate components make adaptability possible as well as the ability to re-work the aptazyme to bind to different molecules. Incorporating a variety of DNA strand connections allows the sensor to be modular and streamlined such that every individual section can be developed in tandem. This ultimately permits troubleshooting of a particular part without delaying development of the entire sensor. This separation of components distinguishes DNADetect from other current biosensors, as it is more adaptable and modular. The integration of TMSD in the biosensor design allows for precise control of which target molecules are to be detected by simply introducing the invader strand and replacing the aptamer component. The “exchangeable” aspect of the biosensor represents significant improvement in the versatility of biosensors. Furthermore, the combination of DNA origami nanopores with RNA catalytic structures minimize limitations seen in protein-based sensors, including size constraints and the need for ligand-specific pores.</p>
+            </div>
+        </section>
+
+        <section id="innovation">
+            <div class="container">
+                <h2>Innovation</h2>
+                <div class="divider"></div>
+                <p>By operating the biosensor at nanoscale concentrations, the key design allows for DNADetect to be highly sensitive to target molecules. The sensitivity is achieved by the concentration change of the encapsulated fluorescent dye. As the target molecule binds to the aptamer, a conformational change causes the cleavage function of the ribozyme to become activated. The reaction then opens up the nanopore lumen to “open”, enabling the dye to diffuse out of the LUVs. Suppose the concentration of the encapsulated dye has self quenching properties, diffusion of the dye then dismisses these properties, thereby allowing it to fluoresce. Although there might be a limited number of target molecules, binding one to the aptazyme within the nanopore still triggers dye diffusion, which ultimately changes the effective concentration of the dye in the external solution, causing an optical signal – fluorescence. The precise signal amplification from target detection to fluorescence is key to the sensitivity of the biosensor as it provides clear and reliable indication of target presence without requiring other instrumentation. The particular combination of the aptazyme, nanopore, and LUVs makes DNADetect innovative technology that has not been previously created. Placing these parts together allows for a modular approach to biomarker detection with individual portions working together in a new and innovative manner. </p>
+            </div>
+        </section>
+
+        <section id="research-goals">
+            <div class="container">
+                <h2>Research Goals</h2>
+                <div class="divider"></div>
+                <p><mark id="pink">What we've done is highlighted in pink</mark></p>
+                <p><mark id="blue">What we’ve yet to do is highlighted in blue</mark></p><br>
+
+                <p><strong>Nanopore Folding</strong></p>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <input type="checkbox" disabled checked><mark> Design Nanopore Barrel with caDNAno</mark>
+                    </li>
+                    <li>
+                        <input type="checkbox" disabled checked><mark> Integrate Cholesterol Linkers into Nanopore with caDNAno</mark>
+                        <ul style="list-style-type: none;">
+                            <li><input type="checkbox" disabled checked><mark> Fold Nanopore Barrel</mark></li>
+                            <li>
+                                <input type="checkbox" disabled checked><mark> Integrate Cholesterol Linkers into Nanopore</mark>
+                                <ul style="list-style-type: none;">
+                                    <li><input type="checkbox" disabled checked><mark> Characterize by gel electrophoresis</mark></li>
+                                    <li><input type="checkbox" disabled><mark> Characterize by transmission electron microscopy (TEM)</mark></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                
+                <p><strong>Aptazyme</strong></p>
+                <ul>
+                    <li><input type="checkbox" disabled checked><mark> Obtain Aptazyme sequence</mark></li>
+                    <li><input type="checkbox" disabled checked><mark> Perform IVT on DNA oligonucleotides to make Aptazyme samples</mark></li>
+                    <li><input type="checkbox" disabled checked><mark> Confirm Cleavage Activity with Target molecules</mark></li>
+                    <li><input type="checkbox" disabled checked><mark> Confirm Toehold-mediated strand displacement activity</mark></li>
+                </ul><br>
+
+                <p><strong>Vesicle Synthesis</strong></p>
+                <ul>
+                    <li><input type="checkbox" disabled checked><mark> Perform Liposome Extrusion</mark></li>
+                    <li><input type="checkbox" disabled checked><mark> Encapsulate SRB Dye molecules with Liposomes</mark></li>
+                    <li><input type="checkbox" disabled><mark> Encapsulate Encapsulate FITC Dye molecules with Liposomes</mark></li>
+                    <li><input type="checkbox" disabled><mark> Encapsulate Mixed Dye with Liposomes</mark></li>
+                    <li><input type="checkbox" disabled checked><mark> Characterize with DLS and Microplate Reader</mark></li>
+                </ul><br>
+
+                <p><strong>Integration of Nanopore and Vesicle</strong></p>
+                <ul>
+                    <li><input type="checkbox" disabled checked><mark> Introduce Nanopore to the SRB Liposomes</mark></li>
+                    <li><input type="checkbox" disabled checked><mark> Characterize by dye flux analysis</mark>
+                        <ul>
+                            <li><input type="checkbox" disabled checked><mark> Confirm that SRB dye effluxes through change in fluorescence</mark>
+                        </ul>
+                    </li>
+                </ul><br>
+
+                <p><strong>Integration of Nanopore and Aptazyme</strong></p>
+                <ul>
+                    <li><input type="checkbox" disabled><mark> Introduce Aptazyme to Nanopore</mark></li>
+                    <li><input type="checkbox" disabled><mark> Introduce Nanopore with Aptazyme to Liposome</mark></li>
+                    <li><input type="checkbox" disabled><mark> Characterize by dye flux analysis</mark>
+                        <ul>
+                            <li><input type="checkbox" disabled><mark> Confirm with mixed dye test that only SRB dye effluxes through fluorescence</mark>
+                        </ul>
+                    </li>
+                </ul><br>
+
+                <p><strong>Finalization of Project</strong></p>
+                <ul>
+                    <li><input type="checkbox" disabled><mark> Introduce Aptazyme to Nanopore</mark></li>
+                    <li><input type="checkbox" disabled><mark> Introduce Nanopore with Aptazyme to Liposome</mark></li>
+                    <li><input type="checkbox" disabled><mark> Characterize integration of Naptazyme component using FITC dye liposomes</mark>
+                        <ul>
+                            <li><input type="checkbox" disabled><mark> Perform Dye Flux Analysis; no change in fluorescence should be observed</mark>
+                        </ul>
+                    </li>
+                    <li><input type="checkbox" disabled><mark> Characterize overall target binding of Biosensor</mark>
+                        <ul>
+                            <li><input type="checkbox" disabled><mark> Perform Dye Flux Analysis; change in fluorescence should be observed</mark>
+                        </ul>
+                    </li>
+                    <li><input type="checkbox" disabled><mark> Characterize overall Toehold-mediated Strand Displacement of Biosensor</mark>
+                        <ul>
+                            <li><input type="checkbox" disabled><mark> Perform Dye Flux Analysis; change in fluorescence should be observed</mark>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="references">
+            <div class="container">
+                <h3>References</h3>
+                <div class="subtitle-divider"></div>
+                <p>
+                    [1] 1.Alzheimer Society. Dementia numbers in Canada [Internet]. Alzheimer Society of Canada. 2024. Available from: https://alzheimer.ca/en/about-dementia/what-dementia/dementia-numbers-canada
+                    <br>[2] Roletto A, Moreno Zanardo, Giuseppe Roberto Bonfitto, Catania D, Sardanelli F, Zanoni S. The environmental impact of energy consumption and carbon emissions in radiology departments: a systematic review. European Radiology Experimental. 2024 Feb 29;8(1).
+                    <br>[3] Shanidze N, Lenkeit F, Hartig JS, Funck D. A Theophylline-Responsive Riboswitch Regulates Expression of Nuclear-Encoded Genes. Plant Physiology [Internet]. 2020 Jan 1 [cited 2023 Nov 7];182(1):123–35. Available from: https://pubmed.ncbi.nlm.nih.gov/31704721/
+                    <br>[4] Leonid Beigelman, McSwiggen J, Draper KG, Gonzalez C, Jensen K, Karpeisky A, et al. Chemical Modification of Hammerhead Ribozymes. 1995 Oct 27;270(43):25702–8.
+                    <br>[5] de la Peña M, García-Robles I, Cervera A. The Hammerhead Ribozyme: A Long History for a Short RNA. Molecules. 2017 Jan 4;22(1):78.
+                    <br>[6] Cabello-Garcia J, Bae W, Stan GB, Ouldridge TE. Handhold-Mediated Strand Displacement: A Nucleic Acid Based Mechanism for Generating Far-from-Equilibrium Assemblies through Templated Reactions. 2021 Jan 20;15(2):3272–83.
+                    <br>[7] Šulc P, Ouldridge Thomas E, Romano F, Doye Jonathan PK, Louis Ard A. Modelling Toehold-Mediated RNA Strand Displacement. Biophysical Journal. 2015 Mar;108(5):1238–47.
+                    <br>[8] Thomsen RP, Mette Galsgaard Malle, Anders Hauge Okholm, Krishnan S, Søren S.-R. Bohr, Rasmus Schøler Sørensen, et al. A large size-selective DNA nanopore with sensing applications. Nature Communications. 2019 Dec 11;10(1).
+                    <br>[9] Koch C, Reilly-O’Donnell B, Gutierrez R, Lucarelli C, Fu Siong Ng, Gorelik J, et al. Nanopore sequencing of DNA-barcoded probes for highly multiplexed detection of microRNA, proteins and small biomarkers. Nature Nanotechnology. 2023 Sep 25;
+                    <br>[10] Bae W, Yoon TY, Jeong C. Direct evaluation of self-quenching behavior of fluorophores at high concentrations using an evanescent field. Zhang X, editor. PLOS ONE. 2021 Feb 19;16(2):e0247326.
+                    <br>[11] Atkinson EG, Jones S, Ellis BA, Dumonde DC, Graham E. Molecular size of retinal vascular leakage determined by FITC-dextran angiography in patients with posterior uveitis. Eye [Internet]. 1991 Jul [cited 2024 Nov 14];5(4):440–6. Available from: https://www.nature.com/articles/eye199171.pdf
+                    <br>[12] Chenyakin Y, Ullmann DA, Evoy E, Renbaum-Wolff L, Kamal S, Bertram AK. Diffusion coefficients of organic molecules in sucrose–water solutions and comparison with Stokes–Einstein predictions. Atmospheric Chemistry and Physics. 2017 Feb 15;17(3):2423–35.
+                </p>
+            </div>
+        </section>
+    </article>
+
+            <!-- <div id="diagram-container" style="position: relative;">
                 <div class="diagram-label-container" id="label-original">
                     <div class="diagram-label" data-image="/img/test.png" style="top: 20%; left: 30%;">Label 1</div>
                     <div class="diagram-label" data-image="/img/logo.png" style="top: 40%; left: 50%;">Label 2</div>
@@ -55,14 +301,10 @@
                     <button onclick="document.getElementById('diagram-info-box').style.display='none'">x</button>
                 </div>
             
-                <!-- Position the button at the bottom corner -->
+                
                 <button id="diagram-revert-btn" style="position: absolute; bottom: 10px; right: 10px; padding: 5px 10px; font-size: 12px;">Go back</button>
-            </div>
-            
-            
-            
-        </div>
-    </section>
-
+            </div> -->
+    <link rel="stylesheet" href="/sidenav.css">
+    <script src="/sidenav.js"></script>
     <script src="/description-diagram.js"></script>
 </main>

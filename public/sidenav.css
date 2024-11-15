@@ -1,23 +1,11 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-}
-
-body {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Styling will have to depend on final version to account for not overlapping on footer area */
-.toc {
-    position: fixed;
+/* .toc {
+    position: sticky;
     left: 3em;
     top: 6em;
     padding: 0.5em;
-    width: 14em;
+    width: 13em;
     line-height: 1.5;
-}
+} */
 
 .toc ul {
     list-style: none;
@@ -55,8 +43,8 @@ body {
 }
 
 .contents {
-    padding-left: 16em;
-    max-width: 1000px;
+    padding-left: 10em;
+    max-width: 1200px;
     font-size: 1.2em;
 }
 
@@ -79,8 +67,13 @@ body {
 }
 
 .toc-container {
-    position: relative;
-    width: 14em;
+    position: sticky;
+    width: 10em;
+    top: 0;
+    padding-top: 3rem;
+    max-height: 100vh;
+    padding-right: 2em;
+    padding-left: 2em;
 }
 
 .toc.hidden{
