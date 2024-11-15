@@ -9,6 +9,14 @@
             --6: #d1ffc9;
             --7: #ffc9fa;
             --8: #cfa8e3;
+
+            --red: rgb(251, 162, 162); 
+            --green: rgb(208, 255, 208);
+        }
+
+        #nano-tab5 table tr th:nth-child(-n+8),
+        #nano-tab5 table tr td:nth-child(-n+8) {
+            background-color: var(--green);
         }
     </style>
 </head>
@@ -70,17 +78,23 @@
                     <li>
                         <a href="#experiments-aptazyme">Aptazyme</a>
                         <ul>
-                            <li><a href="#sub2-1">sub2</a></li>
-                            <li><a href="#sub2-2">sub2-2</a></li>
-                            <li><a href="#sub2-3">sub2-3</a></li>
+                            <li><a href="#aptazyme-tabs" onclick="openTab(event, 'apt-tab1', 'aptazyme')" class="toc-link">Polymerase chain reaction (PCR)</a></li>
+                            <li><a href="#aptazyme-tabs" onclick="openTab(event, 'apt-tab2', 'aptazyme')" class="toc-link">Agarose gel electrophoresis</a></li>
+                            <li><a href="#aptazyme-tabs" onclick="openTab(event, 'apt-tab3', 'aptazyme')" class="toc-link">In-vitro transcription</a></li>
+                            <li><a href="#aptazyme-tabs" onclick="openTab(event, 'apt-tab4', 'aptazyme')" class="toc-link">Denaturing urea-PAGE</a></li>
+                            <li><a href="#aptazyme-tabs" onclick="openTab(event, 'apt-tab5', 'aptazyme')" class="toc-link">Activity Assay</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#experiments-nanopore">Nanopore</a>
                         <ul>
-                            <li><a href="#sub2-1">sub2</a></li>
-                            <li><a href="#sub2-2">sub2-2</a></li>
-                            <li><a href="#sub2-3">sub2-3</a></li>
+                            <li><a href="#nanopore-tabs" onclick="openTab(event, 'nano-tab1', 'nanopore')" class="toc-link">Nanopore Synthesis-Round 1</a></li>
+                            <li><a href="#nanopore-tabs" onclick="openTab(event, 'nano-tab2', 'nanopore')" class="toc-link">Nanopore Synthesis-Round 2</a></li>
+                            <li><a href="#nanopore-tabs" onclick="openTab(event, 'nano-tab3', 'nanopore')" class="toc-link">Nanopore Synthesis-Round 3</a></li>
+                            <li><a href="#nanopore-tabs" onclick="openTab(event, 'nano-tab4', 'nanopore')" class="toc-link">Nanopore Synthesis-Round 5</a></li>
+                            <li><a href="#nanopore-tabs" onclick="openTab(event, 'nano-tab5', 'nanopore')" class="toc-link">Nanopore Synthesis-Round 6</a></li>
+                            <li><a href="#nanopore-tabs" onclick="openTab(event, 'nano-tab6', 'nanopore')" class="toc-link">Nanopore Gel Electrophoresis for Round 1, Round 2, and Round 3 Samples</a></li>
+                            <li><a href="#nanopore-tabs" onclick="openTab(event, 'nano-tab7', 'nanopore')" class="toc-link">Nanopore Gel Electrophoresis for Round 5 and Round 6 Samples</a></li>
                         </ul>
                     </li>
                     <li>
@@ -133,7 +147,7 @@
                     </div>
             
                     <div class="results-window">
-                        <div id="tab1" class="tab-window active" style="border-top-left-radius: 10px;">
+                        <div id="tab1" class="tab-window active">
                             <p><strong>Objective: </strong>To prepare samples of 200uM stock of TMSD oligos and 20uM working solutions for TMSD for TMSD strand interactions on PAGE.</p>
                             <br>
                             <ol>
@@ -508,7 +522,7 @@
                             </ol>
                         </div>
             
-                        <div id="tab4" class="tab-window" style="border-top-right-radius: 10px;">
+                        <div id="tab4" class="tab-window">
             
                         </div>
                     </div>
@@ -518,12 +532,1183 @@
             <section id="experiments-aptazyme">
                 <h2>Aptazyme</h2>
                 <p>The aptazyme serves as the gate of the nanopore and detecting mechanism of the sensor design. The first task with aptazyme experiments was to synthesize it from the DNA template strand.  The goal with aptazyme experimentation was to first and foremost show that aptazyme performs a cleavage reaction in the presence of theophylline target. Secondly, ideal cleavage conditions would be important to explore as well as specificity of the aptazymes. These factors would influence the function of the overall biosensor design.</p>
+
+                <div class="results-sub" data-group="aptazyme">
+                    <div class="results-tabs" id="aptazyme-tabs">
+                        <button class="results-tab active" onclick="openTab(event, 'apt-tab1', 'aptazyme')" style="border-top-left-radius: 10px;">Polymerase chain reaction (PCR)</button>
+                        <button class="results-tab" onclick="openTab(event, 'apt-tab2', 'aptazyme')">Agarose gel electrophoresis</button>
+                        <button class="results-tab" onclick="openTab(event, 'apt-tab3', 'aptazyme')">In-vitro transcription</button>
+                        <button class="results-tab" onclick="openTab(event, 'apt-tab4', 'aptazyme')">Denaturing urea-PAGE</button>
+                        <button class="results-tab" onclick="openTab(event, 'apt-tab5', 'aptazyme')" style="border-top-right-radius: 10px;">Activity Assay</button>
+                    </div>
+
+                    <div class="results-window">
+                        <div id="apt-tab1" class="tab-window active">
+                            <p><strong>Objective: </strong>To amplify DNA constructs from a template.</p>
+                            <ol>
+                                <li>Thaw components of PCR MasterMix, briefly centrifuge to collect at the bottom.</li>
+                                <li>Set up a PCR Master mix in a 1.8mL microcentrifuge tube on, mix by pipetting up and down, spin down to combine everything:
+                                    <ol type="a">
+                                        <li>
+                                            <table>
+                                                <tr>
+                                                    <th>Component</th>
+                                                    <th>25-µL rxn</th>
+                                                    <th>Custom</th>
+                                                    <th>Final Concentration</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>DEPC Water</td>
+                                                    <td>To 25µL</td>
+                                                    <td>To XµL</td>
+                                                    <td>---</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PCR SuperMix</td>
+                                                    <td>22.5µL</td>
+                                                    <td>90% v/v</td>
+                                                    <td>1X</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4">Prepare primers as part of the mastermix only if applicable. Otherwise keep them separated in the PCR tubes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10µM Fwd primer</td>
+                                                    <td>0.5µL</td>
+                                                    <td>2% v/v</td>
+                                                    <td>0.2µM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10µM Rev Primer</td>
+                                                    <td>0.5µL</td>
+                                                    <td>2% v/v</td>
+                                                    <td>0.2µM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DNA Template</td>
+                                                    <td>varies</td>
+                                                    <td>varies</td>
+                                                    <td>&lt; 500ng</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4">ADD TEMPLATE LAST (step 7)</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                        <li>The total volume of primers and templates should be 0.5-20µL.
+                                            <ol type="i">
+                                                <li>Use the desired amount from the 50µL PCR stock solution.</li>
+                                            </ol>
+                                        </li>
+                                        <li>If the final Mg concentration is adjusted to 1.5mM, the volume of primer and template solution that you can add to 45µL of SuperMix can be more than 50µL.</li>
+                                        <li>Prepare this MasterMix with the tubes on ice.</li>
+                                    </ol>
+                                </li>
+                                <li>Label PCR tubes, determine the components that will go in each.</li>
+                                <li>Place a 96-well plate into an ice bucket, place PCR tubes inside.</li>
+                                <li>Pipette Master Mix into PCR tubes except for negative control.</li>
+                                <li>Set up negative control in a separate PCR tube:
+                                    <ol type="a">
+                                        <li>Add all the same reagents as Master Mix except for the template DNA</li>
+                                        <li>Increase the volume of water added to account for the missing template DNA</li>
+                                    </ol>
+                                </li>
+                                <li>Add Template DNA as determined by the table above. Spin down briefly to combine.</li>
+                                <li>Cap PCR tubes and place onto thermal cycler
+                                    <ol type="a">
+                                        <li>Thermal cycler settings:
+                                            <ol type="i">
+                                                <li>Initial denaturation: 94C, 2 min</li>
+                                                <li>25-35 PCR cycles:
+                                                    <ol>
+                                                        <li>Denature: 94C, 15s</li>
+                                                        <li>Anneal: 62C (based primer Tm and template Tm), 30s</li>
+                                                        <li>Extend: 72C, 1 min/kb</li>
+                                                    </ol>
+                                                </li>
+                                                <li>Hold: 4C, indefinite</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>When the program is run, store PCR tubes at 4°C for a few days or -20°C for several months.</li>
+                                <li>Use 10µL of PCR product for gel electrophoresis</li>
+                            </ol>
+                        </div>
+
+                        <div id="apt-tab2" class="tab-window">
+                            <p><strong>Objective: </strong>Agarose gel electrophoresis is one of the most common ways to analyze oligonucleotide sequences based on size, used to check PCR products.</p><br>
+
+                            <p><u>Preparation of the gel</u></p>
+                            <ol>
+                                <li>Weigh out a 2% agarose gel in an erlenmeyer flask.
+                                    <ol type="a">
+                                        <li>3 grams of agarose for a 150mL gel.</li>
+                                    </ol>
+                                </li>
+                                <li>Add the correct volume of running buffer to the agarose-containing flask. Swirl to mix.
+                                    <ol type="a">
+                                        <li>(1X) TBE or TAE buffer
+                                            <ol type="i">
+                                                <li>Use milli-q water to dilute</li>
+                                            </ol>
+                                        </li>
+                                        <li>150mL</li>
+                                    </ol>
+                                </li>
+                                <li>Melt the agarose/buffer mixture in a microwave, at 30 s intervals, remove the flask and swirl the contents to mix well. Repeat until the agarose has completely dissolved.</li>
+                                <li>Wait until the flask is cooled  down enough to touch the skin, Add 15µL of SYBR Safe dye.</li>
+                                <li>Clean and place the gel tray into the casting apparatus. Place an appropriate comb into the gel mold to create the wells.</li>
+                                <li>Pour the molten agarose into the gel mold. Allow the agarose to set at room temperature.</li>
+                                <li>Remove the comb and place the gel in the gel tank.
+                                    <ol type="a">
+                                        <li>Place in a tank with the direction of DNA running from negative to positive.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <br>
+                            <p><u>Sample preparation and running gel</u></p>
+                            <ol>
+                                <li>Add loading dye to the DNA samples to be separated. Use about 10µL of DNA products.
+                                    <ol type="a">
+                                        <li>Gel loading dye is typically made at 6X concentration</li>
+                                        <li>2uL of loading dye to 10uL of sample</li>
+                                    </ol>
+                                </li>
+                                <li>Program the power supply to 120V
+                                    <ol type="a">
+                                        <li>(Could change to somewhere between 1-5V/cm between electrodes).</li>
+                                    </ol>
+                                </li>
+                                <li>Add enough running buffer to cover the surface of the gel.
+                                    <ol type="a">
+                                        <li>Same running buffer as the one used to make the gel, approx 700ml</li>
+                                    </ol>
+                                </li>
+                                <li>Attach the leads of the gel box to the power supply. Ensure everything is running properly.</li>
+                                <li>Remove the lid. Carefully load the DNA sample(s) into the gel.
+                                    <ol type="a">
+                                        <li>Including an appropriate DNA size marker should always be loaded along with experimental samples. 12uL is commonly used. Try to use the same volume as the sample youre loading.</li>
+                                    </ol>
+                                </li>
+                                <li>Replace the lid to the gel box. Double check the leads are connected properly.</li>
+                                <li>Turn on the power. Run the gel until the dye has migrated to an appropriate distance. This will take approximately 30 min
+                                    <ol type="a">
+                                        <li>At least over halfway, tweak time as needed.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <br>
+                            <p><u>Observing results</u></p>
+                            <ol>
+                                <li>When the gel has run, turn off power and remove the gel from the tank, drain off excess buffer.</li>
+                                <li>Place the gel tray on paper towels to absorb the extra buffer.</li>
+                                <li>Use a UV transilluminator to look at the gel.</li>
+                                <li>Image the gel using a gel documentation system (Gel Doc).</li>
+                                <li>Dispose of gel and running buffer properly.</li>
+                            </ol>
+                        </div>
+
+                        <div id="apt-tab3" class="tab-window">
+                            <p><strong>Objective: </strong>Transcribe RNA sequences using RNA polymerase from a DNA template. Generates the RNA aptazyme from the template construct.</p><br>
+                            <p><u>In vitro transcription</u></p>
+                            <ol>
+                                <li>Thaw all frozen reaction components, mix and briefly centrifuge to collect everything at the bottom.</li>
+                                <li>Keep TranscriptAid Enzyme Mix and nucleotides <u>on ice</u></li>
+                                <li>Keep 5X TranscriptAid Reaction buffer and DEPC-treated water at <u>room temp</u></li>
+                                <li>Combine equal volumes of the four NTP solution in one tube</li>
+                                <li>Combine the following reaction components at room temp in the given order:
+                                    <ol type="a">
+                                        <li>
+                                            <table>
+                                                <tr>
+                                                    <th>Component</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>DEPC-treated water</td>
+                                                    <td>To 20µL</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5X TranscriptAid Reaction Buffer</td>
+                                                    <td>4µL</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ATP/CTP/GTP/UTP mix</td>
+                                                    <td>8µL</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Template DNA</td>
+                                                    <td>1µg</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TranscriptAid Enzyme Mix</td>
+                                                    <td>2µL</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total volume</td>
+                                                    <td>20µL</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                        <li>Notes: Equal amounts of the four NTP solutions should be used.</li>
+                                        <li>2-5µL of PCR mixture can be directly used in 20 µL of in vitro transcription reaction</li>
+                                    </ol>
+                                </li>
+                                <li>Mix thoroughly by pipetting, spin to collect</li>
+                                <li>Incubate at <u>37°C</u> for 2hrs.</li>
+                                <li>Proceed to purification of RNA transcripts</li>
+                            </ol>
+                            <br>
+                            <p><u>Control reaction</u></p>
+                            <ol>
+                                <li>Combine the following components at room temp in the given order:
+                                    <table>
+                                        <tr>
+                                            <th>Component</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                        <tr>
+                                            <td>DEPC-treated water</td>
+                                            <td>4µL</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5X TranscriptAid Reaction Buffer</td>
+                                            <td>4µL</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ATP/CTP/GTP/UTP mix</td>
+                                            <td>8µL</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Control DNA (0.5µg/µL)</td>
+                                            <td>2µL</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TranscriptAid Enzyme Mix</td>
+                                            <td>2µL</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total volume</td>
+                                            <td>20µL</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>Mix thoroughly by pipetting up and down, briefly spin to collect</li>
+                                <li>Incubate at 37 C for 2hrs.</li>
+                                <li>Proceed to purification of RNA transcripts.</li>
+                            </ol>
+                            <br>
+                            <p><u>Removal of Template DNA after transcription</u></p>
+                            <ol>
+                                <li>Add 2U of DNase I, RNase-free per 1µg of template DNA directly to the transcription reaction mixture.
+                                    <ol type="a">
+                                        <li>The DNase I from the kit comes in a concentration of 1U/µL</li>
+                                        <li>This amount can also be adjusted as seen with empirical results.</li>
+                                    </ol>
+                                </li>
+                                <li>Incubate at 37°C for 15 min.</li>
+                                <li>Inactivate DNase I by chloroform extraction
+                                    <ol type="a">
+                                        <li>or inactivate by adding 2µL of 0.5M EDTA, pH 8.0 and incubated at 65°C for 10 min</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <br>
+                            <p><u>Purification of RNA Transcripts</u></p>
+                            <ol>
+                                <li>Extract three times with an equal volume of chloroform.
+                                    <ol type="a">
+                                        <li>Use chemical grade, if issues arise try DEPC treating the chloroform.</li>
+                                    </ol>
+                                </li>
+                                <li>Collect the aqueous phase and transfer to a new tube.</li>
+                                <li>To XµL of reaction mixture, add 5.75XµL of DEPC-treated water and 0.75XµL of 3M sodium acetate solution (pH 5.2; provided). Mix by pipetting up and down.
+                                    <ol type="a">
+                                        <li>To 20µL of reaction mixture, add 115µL of DEPC-treated water and 15µL of 3M sodium acetate solution (pH 5.2; provided). Mix by pipetting up and down.</li>
+                                    </ol>
+                                </li>
+                                <li>Precipitate RNA by adding 2 volumes of 96+% ethanol, incubate at -20C for at least 30 minutes</li>
+                                <li>Centrifuge and carefully remove the supernatant, rinse the pellet with 500µL of cold 70% ethanol</li>
+                                <li>Resuspend the RNA in 20µL of DEPC-water</li>
+                                <li>Store the RNA at -20C short-term or -70C long-term</li>
+                            </ol>
+                            <br>
+                            <p><u>Evaluation of transcripts</u></p>
+                            <ul>
+                                <li>Run a formaldehyde denaturing agarose gel to analyze transcripts</li>
+                            </ul>
+                        </div>
+
+                        <div id="apt-tab4" class="tab-window">
+                            <p><strong>Objective: </strong>A gel electrophoresis technique using polyacrylamide as the gel and urea to denature secondary oligonucleotide structures. Higher resolution technique than agarose gel electrophoresis.</p><br>
+                            <p><u>Gel preparation</u></p>
+                            <ol>
+                                <li>Assemble gel apparatus
+                                    <ol type="a">
+                                        <li>Use 0.5-1.5mm spacers</li>
+                                        <li>Check with water to ensure no leaks are occuring</li>
+                                    </ol>
+                                </li>
+                                <li>Prepare the gel solution as follows:
+                                    <ol type="a">
+                                        <li>Use the following table to prepare the required gel. This procedure prepares 9mL of gel solution.</li>
+                                        <li>30% APS (w/v) needs to be prepared beforehand if not available</li>
+                                        <li>ADD TEMED LAST IN THE FUME HOOD</li>
+                                        <li>Add urea to 30% Acrylamide, then add 10X TBE, and half the DEPC-treated water.
+                                            <ol type="i">
+                                                <li>Warm solution in the microwave for 20s or less, gel should be hand-warm
+                                                    <ol>
+                                                        <li>Repeat warming if using a larger gel</li>
+                                                        <li>If urea is heated too much it will degrade and produce an ammonia odor</li>
+                                                    </ol>
+                                                </li>
+                                                <li>This solution can be stored at 4C</li>
+                                            </ol>
+                                        </li>
+                                        <li>Once dissolved, allow to cool to room temperature before add remaining DEPC-treated  H2O up to 9 mL (or whatever volume the gel is for)</li>
+                                        <li>Add 30% APS and TEMED in the fume hood, gently mix
+                                            <ol type="i">
+                                                <li>If the gel is too warm it will polymerize too early</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                    <table>
+                                        <tr>
+                                            <th>Volume</th>
+                                            <td>9mL</td>
+                                            <td>10mL</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Concentration</th>
+                                            <td>6%</td>
+                                            <td>10%</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Urea g</th>
+                                            <td>4.32g</td>
+                                            <td>4.8g</td>
+                                        </tr>
+                                        <tr>
+                                            <th>30% Acrylamide (29:1) mL</th>
+                                            <td>1.8 mL</td>
+                                            <td>2.5 mL</td>
+                                        </tr>
+                                        <tr>
+                                            <th>10X TBE mL</th>
+                                            <td>0.9 mL</td>
+                                            <td>1 mL</td>
+                                        </tr>
+                                        <tr>
+                                            <th>DEPC-water mL</th>
+                                            <td>To 9 mL</td>
+                                            <td>To 10mL</td>
+                                        </tr>
+                                        <tr>
+                                            <th>30% APS uL</th>
+                                            <td>29.7 uL</td>
+                                            <td>3.33mL (or 2.5 mL of 40%)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>TEMED uL</th>
+                                            <td>3.6 uL</td>
+                                            <td>4 uL</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>Use a serological pipette or similar to pour gel into the caster apparatus
+                                    <ol type="a">
+                                        <li>Some gel solution should be left over, let it sit to be able to tell when the gel is set</li>
+                                    </ol>
+                                </li>
+                                <li>Immediately insert comb tilted at an angle (to minimize trapping air bubbles). Make sure you are wearing appropriate gloves. Lower completely.</li>
+                                <li>Allow gel to polymerise for >15 mins.
+                                    <ol type="a">
+                                        <li>Check the small amount of gel solution that remains to see if gel is set.</li>
+                                        <li>Gels can be stored at 4˚C wrapped in plastic (use within 3-5 days).</li>
+                                    </ol>
+                                </li>
+                                <li>After the gel is set, dismount the gel from the caster.</li>
+                                <li>Place gel in buffer chamber</li>
+                            </ol>
+                            <br>
+                            <p><u>Sample Preparation</u></p>
+                            <ol>
+                                <li>About 10uL of sample should be loaded into the well
+                                    <ol type="a">
+                                        <li>If running ssRNA, add loading dye and incubate for 10 min at 70°C.</li>
+                                    </ol>
+                                </li>
+                                <li>Run gel at desired settings, 120V for ~1hr.</li>
+                            </ol>
+                        </div>
+
+                        <div id="apt-tab5" class="tab-window">
+                            <p><strong>Objective: </strong>Observe the self-cleavage reaction of the aptazymes by incubating the sample with target, change in molecular weight visualized on a urea-PAGE gel used to determine cleavage.</p><br>
+                            <p><u>10X MOPS running buffer preparation</u></p>
+                            <ol>
+                                <li>Prepare 10x MOPS running buffer (if 10mL isn’t readily available):
+                                    <ol type="a">
+                                        <li>Add 41.85 g 4-morpholino propanesulfonic acid (MOPS-free acid) and 6.80 g sodium acetate–3H2O to 800 mL DEPC-treated dH2O and stir until completely dissolved.</li>
+                                        <li>Add 20 mL of a DEPC-treated 0.5 M Na2EDTA solution and adjust pH to 7.0 with 10 M sodium hydroxide or glacial acetic acid</li>
+                                        <li>Adjust volume to 1 L with DEPC-treated dH<sub>2</sub>O</li>
+                                    </ol>
+                                </li>
+                                <li>If MOPS 10x is not available, TBE buffer can also substitute.</li>
+                            </ol>
+                            <br>
+                            <p><u>Aptazyme Activity Assay: Modified Target Concentrations</u></p>
+                            <ol>
+                                <li>Moles of aptazyme in each tube is approximately 21.08 pmoles.</li>
+                                <li>Aptzyme and target were diluted in 50mM Tris-HCl (pH 8.0)</li>
+                            </ol>
+                            <table style="line-height: 1.1; text-align: center;">
+                                <tr>
+                                    <td>Tube</td>
+                                    <td>Ratio<br>(AP:Tar)</td>
+                                    <td>Aptazyme<br>(ng/uL)</td>
+                                    <td>Aptazyme<br>(pmoles)</td>
+                                    <td>Aptazyme<br>(uM)</td>
+                                    <td>Volume of aptazyme solution<br>(uL)</td>
+                                    <td style="background-color: var(--1);">Target<br>(uM)</td>
+                                    <td>Volume of target solution</td>
+                                    <td>50mM Tris-HCl pH 8.0</td>
+                                    <td>Total Vol.<br>(uL)</td>
+                                </tr>
+                                <tr>
+                                    <td>Negative control</td>
+                                    <td>1:0</td>
+                                    <td>50</td>
+                                    <td>~21.08</td>
+                                    <td>~2.108</td>
+                                    <td>10</td>
+                                    <td style="background-color: var(--1);">0</td>
+                                    <td>0</td>
+                                    <td>10</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>Activity test</td>
+                                    <td>1:1</td>
+                                    <td>50</td>
+                                    <td>~21.08</td>
+                                    <td>~2.108</td>
+                                    <td>10</td>
+                                    <td style="background-color: var(--1);">2.108</td>
+                                    <td>10</td>
+                                    <td>0</td>
+                                    <td>20</td>
+                                </tr>
+                            </table>
+                            <ol>
+                                <li>First, prepare PCR tubes of target concentrations without adding aptazyme samples using the following table above:
+                                    <ol type="a">
+                                        <li>There should be negative controls for each activity sample</li>
+                                    </ol>
+                                </li>
+                                <li>Add the correctly diluted Aptazyme solutions.
+                                    <ol type="a">
+                                        <li>Do this on ice.</li>
+                                    </ol>
+                                </li>
+                                <li>Incubate PCR tubes of aptazyme for 30 minutes at 37°C
+                                    <ol type="a">
+                                        <li>Will only use AP samples for now</li>
+                                    </ol>
+                                </li>
+                                <li>Take 5 uL aliquot from the PCR tubes for gel, quench immediately with the same volume of 2X RNA Loading dye.
+                                    <ol type="a">
+                                        <li>Also prepare Low Range Riboruler RNA ladder similarly</li>
+                                    </ol>
+                                </li>
+                                <li>IMMEDIATELY place the rest of the solution on ice or freeze to save
+                                    <ol type="a">
+                                        <li>Avoid cooling this solution to prevent annealing</li>
+                                    </ol>
+                                </li>
+                                <li>Incubate all samples at 70°C for 10 min.
+                                    <ol type="a">
+                                        <li>Place on ice for a few minutes after</li>
+                                    </ol>
+                                </li>
+                                <li>Run samples on a gel</li>
+                            </ol>
+                            <br>
+                            <p><u>2.5 % Agarose/Formaldehyde/TBE Gel Electrophoresis</u></p>
+                            <ol>
+                                <li>Rinse gel box, combs, and caster with millipure water and ensure all salt deposits are removed prior to undergoing electrophoresis</li>
+                                <li>Air dry the components</li>
+                                <li>Wipe components with RNase-eliminating solvent (RNase Zap).</li>
+                                <li>Melt agarose for a gel:
+                                    <ol type="a">
+                                        <li>Melt 0.8 grams of RNase-free agarose in 28 mL of RNase-free ddH2O n a 250 mL erlenmeyer flask</li>
+                                    </ol>
+                                </li>
+                                <li>Cool down to 60°C, or just until you can hold the flask to bare skin.
+                                    <ol type="a">
+                                        <li>In a fumehood, add 8 mL of 37% formaldehyde and 4 mL of 10X (MOPS or TBE) buffer to the agarose solution</li>
+                                        <li>Add 4uL SYBR Safe dye</li>
+                                    </ol>
+                                </li>
+                                <li>Cast the gel in the fumehood by placing the gel comb in the gel caster and pouring the melted agarose/formaldehyde/buffer solution in the gel caster.
+                                    <ol type="a">
+                                        <li>Cover and allow the gel to cool and polymerize.</li>
+                                    </ol>
+                                </li>
+                                <li>Heat the samples to be loaded to 70°C for 10 minutes</li>
+                                <li>Load each of each sample into each well of the gel</li>
+                                <li>Run the gel in 1x TBE buffer for approximately 12 minutes at 0.10 A (constant)
+                                    <ol type="a">
+                                        <li>Voltage should be set to 50V</li>
+                                        <li>Recirculate the running buffer while the gel runs if possible, otherwise stop the gel halfway and mix manually by pipetting the buffer from one side to the other.</li>
+                                    </ol>
+                                </li>
+                                <li>Photograph the gel using a gel doc system
+                                    <ol type="a">
+                                        <li>Destain more if necessary.</li>
+                                        <li>Get densitometry analysis image, in TIFF file format</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </section>
         
             <section id="experiments-nanopore">
                 <h2>Nanopore</h2>
                 <p>The objective of the protocol is to fold the nanopore with varying magnesium chloride concentrations. Afterwards, we confirm proper assembly by performing agarose gel electrophoresis on a daily basis. Then we purify and then quantify the final concentration of the folded nanopore to ensure that it is ready to be inserted into the sensor component and to be tested for dye flux. </p>
                 
+                <div class="results-sub" data-group="nanopore">
+                    <div class="results-tabs" id="nanopore-tabs">
+                        <button class="results-tab active" onclick="openTab(event, 'nano-tab1', 'nanopore')" style="border-top-left-radius: 10px;">Nanopore Synthesis - Round 1</button>
+                        <button class="results-tab" onclick="openTab(event, 'nano-tab2', 'nanopore')">Nanopore Synthesis - Round 2</button>
+                        <button class="results-tab" onclick="openTab(event, 'nano-tab3', 'nanopore')">Nanopore Synthesis - Round 3</button>
+                        <button class="results-tab" onclick="openTab(event, 'nano-tab4', 'nanopore')">Nanopore Synthesis - Round 5</button>
+                        <button class="results-tab" onclick="openTab(event, 'nano-tab5', 'nanopore')">Nanopore Synthesis - Round 6</button>
+                        <button class="results-tab" onclick="openTab(event, 'nano-tab6', 'nanopore')">Nanopore Gel Electrophoresis for Round 1, Round 2, and Round 3 Samples</button>
+                        <button class="results-tab" onclick="openTab(event, 'nano-tab7', 'nanopore')" style="border-top-right-radius: 10px;">Nanopore Gel Electrophoresis for Round 5 and Round 6 Samples</button>
+                    </div>
+
+                    <div class="results-window">
+                        <div id="nano-tab1" class="tab-window active">
+                            <p><strong>Objective: </strong>Synthesizing the first round of the DNA origami nanopores. In this attempt, various concentrations of magnesium chloride were used and only few samples had mineral oil as well. The varying magnesium chloride concentrations were used to assess the impact of those concentrations on the folding of the nanopore.</p>
+                            <br>
+                            <ol>
+                                <li>Take out 3 eppendorf tubes and label appropriately </li>
+                                <li>Take out 10 PCR tubes and label each tube</li>
+                                <li>Prepare a folding mastermix reaction of 180uL
+                                    <ol type="a">
+                                        <li>Add 86.2 uL of the staple strand </li>
+                                        <li>Add 53.8 uL of the scaffold DNA</li>
+                                        <li>Add 20 uL of the 10X TAE Buffer</li>
+                                        <li>Add 20 uL of deionized water</li>
+                                    </ol>
+                                </li>
+                                <li>Add 18uL of mastermix to each tube</li>
+                                <li>Prepare samples of the nanopore as shown in<strong>Table 1.</strong></li>
+                                <li>Add 2uL of deionized water into tubes 1 and 2 </li>
+                                <li>Centrifuge the tubes </li>
+                                <li>Place PCR tubes into the thermal cycler and choose the setting titled “NANO-GP” which should follow this protocol
+                                    <ol type="a">
+                                        <li>From 80°C to 60°C at a rate of 1°C per 5 min;</li>
+                                        <li>Followed by 60°C to 20°C at a rate of 1°C per 300 min (5 hours). </li>
+                                        <li>Infinite hold at 20°C</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <table style="line-height: 1.2;">
+                                <caption>Table 1. Breakdown of the contents added to each tube, all tubes include 18uL of the folding master mix</caption>
+
+                                <tr>
+                                    <td colspan="5">EXPERIMENTS</td>
+                                </tr>
+                                <tr>
+                                    <th>Tube #</th>
+                                    <th>MgCl<sub>2</sub> Concentration (mM)</th>
+                                    <th>Volume of MgCl<sub>2</sub> Added (uL)</th>
+                                    <th>Volume of Deionized water added (uL)</th>
+                                    <th>Mineral Oil</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>2</td>
+                                    <td style="background-color: var(--red);">No</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>2</td>
+                                    <td style="background-color: var(--green);">Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>0.7</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td style="background-color: var(--red);">No</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>0.7</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td style="background-color: var(--green);">Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>1.4</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td style="background-color: var(--red);">No</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>1.4</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td style="background-color: var(--red);">No</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>1.4</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td style="background-color: var(--green);">Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>1.4</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td style="background-color: var(--green);">Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>2.1</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td style="background-color: var(--red);">No</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2.1</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td style="background-color: var(--green);">Yes</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div id="nano-tab2" class="tab-window">
+                            <p><strong>Objective: </strong>Synthesizing the second round of the DNA origami nanopores. From the previous attempts we had learned that without the mineral oil, the samples in the tubes will evaporate. In this attempt, the same varying concentrations of magnesium chloride were used. The volume for the samples tested had also increased to 100 uL in an attempt to get better results for folding.</p>
+                            <br>
+                            <ol>
+                                <li>Take out 4 PCR tubes and label each tube</li>
+                                <li>Prepare samples as listed in <strong>Table 2.</strong></li>
+                                <li>Prepare MgCl2 samples with appropriate concentrations</li>
+                                <li>Centrifuge the tubes</li>
+                                <li>Add 100 uL mineral oil to all tubes</li>
+                                <li>Place PCR tubes into the thermal cycler and choose the setting titled “NANO-GP” which should follow this protocol
+                                    <ol type="a">
+                                        <li>From 80°C to 60°C at a rate of 1°C per 5 min;</li>
+                                        <li>Followed by 60°C to 20°C at a rate of 1°C per 300 min (5 hours).</li>
+                                        <li>Infinite hold at 20°C</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <table style="line-height: 1.2;">
+                                <caption>Table 2. Breakdown of contents added to each tube. Each tube had a total reaction mixture volume of 100uL and an overall total volume of 200uL.</caption>
+
+                                <tr>
+                                    <td colspan="8">EXPERIMENTS</td>
+                                </tr>
+                                <tr>
+                                    <th>Tube #</th>
+                                    <th>Volume of Staple Master Mix (uL)</th>
+                                    <th>Volume of Scaffold (uL)</th>
+                                    <th>MgCl<sub>2</sub> Concentration (mM)</th>
+                                    <th>Volume of MgCl<sub>2</sub> (uL)</th>
+                                    <th>Volume of Ultrapure 10X TAE buffer (uL)</th>
+                                    <th>Volume of Deionized water (uL)</th>
+                                    <th>Mineral Oil Added (uL)</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>43.1</td>
+                                    <td>26.9</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>10</td>
+                                    <td>20</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>43.1</td>
+                                    <td>26.9</td>
+                                    <td>0.7</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>43.1</td>
+                                    <td>26.9</td>
+                                    <td>1.4</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>43.1</td>
+                                    <td>26.9</td>
+                                    <td>2.1</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>100</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div id="nano-tab3" class="tab-window">
+                            <p><strong>Objective: </strong>Synthesizing the third round of the DNA origami nanopores. From the previous attempts we had learned that we should have multiple samples of the same concentrations in an attempt to minimize errors and get better folding results of the nanopore. In this attempt, the same varying concentrations of magnesium chloride were used. The volume for the samples tested had decreased, due to the maximum amount of total liquid in the thermal cycler being 100uL.</p>
+                            <br>
+                            <ol>
+                                <li>Take out 8 PCR tubes and label each tube</li>
+                                <li>Add following components as listed in <strong>Table 3.</strong></li>
+                                <li>Add 50 uL mineral oil to all tubes</li>
+                                <li>Place PCR tubes into the thermal cycler and choose the setting titled “NANO-GP” which should follow this protocol
+                                    <ol type="a">
+                                        <li>From 80°C to 60°C at a rate of 1°C per 5 min;</li>
+                                        <li>Followed by 60°C to 20°C at a rate of 1°C per 300 min (5 hours).</li>
+                                        <li>Infinite hold at 20°C</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <table style="line-height: 1.2; width: 100%;">
+                                <caption>Table 3. Breakdown of contents added to each tube. Each tube contained a total reaction mixture of 50uL and an overall total volume of 100uL.</caption>
+
+                                <tr>
+                                    <th>Tube #</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                </tr>
+                                <tr style="background-color: var(--green);">
+                                    <th>Staple (uL)</th>
+                                    <td>21.55</td>
+                                    <td>21.55</td>
+                                    <td>21.55</td>
+                                    <td>21.55</td>
+                                    <td>21.55</td>
+                                    <td>21.55</td>
+                                    <td>21.55</td>
+                                    <td>21.55</td>
+                                </tr>
+                                <tr style="background-color: var(--green);">
+                                    <th>Scaffold (uL)</th>
+                                    <td>13.45</td>
+                                    <td>13.45</td>
+                                    <td>13.45</td>
+                                    <td>13.45</td>
+                                    <td>13.45</td>
+                                    <td>13.45</td>
+                                    <td>13.45</td>
+                                    <td>13.45</td>
+                                </tr>
+                                <tr style="background-color: var(--green);">
+                                    <th>10X TAE (uL)</th>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                </tr>
+                                <tr style="background-color: var(--green);">
+                                    <th>MgCl<sub>2</sub> (uL)</th>
+                                    <td>0.00</td>
+                                    <td>0.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                </tr>
+                                <tr style="background-color: var(--green);">
+                                    <th>RNAse Free Water (uL)</th>
+                                    <td>10.00</td>
+                                    <td>10.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                    <td>5.00</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div id="nano-tab4" class="tab-window">
+                            <p><strong>Objective: </strong>Synthesizing the fifth round of the DNA origami nanopores. From the previous attempts we had learned that we should have multiple samples of the same concentrations in an attempt to minimize errors and get better folding results of the nanopore. Also, we should have samples that have a smaller volume and samples that have a larger volume as well to see the effect of total volume of sample on the folding of the nanopore. In this attempt, the same varying concentrations of magnesium chloride were used. </p><br>
+                            <ol>
+                                <li>Take out 10 PCR tubes and label each tube</li>
+                                <li>Add following components as listed in <strong>Table 5.</strong></li>
+                                <li>Add 20 uL mineral oil to all tubes</li>
+                                <li>Place PCR tubes into the thermal cycler and choose the setting titled “NANO-GP” which should follow this protocol
+                                    <ol type="a">
+                                        <li>From 80°C to 60°C at a rate of 1°C per 5 min;</li>
+                                        <li>Followed by 60°C to 20°C at a rate of 1°C per 300 min (5 hours).</li>
+                                        <li>Infinite hold at 20°C</li>
+                                    </ol>
+                                    <br>
+                                    <table style="line-height: 1.2;">
+                                        <caption>Table 5. Breakdown of contents added to each tube</caption>
+
+                                        <tr>
+                                            <th>Nanopore Run 5</th>
+                                            <th>Staple (150 nm)</th>
+                                            <th>Scaffold (30 nm)</th>
+                                            <th>Folding Buffer (1X)</th>
+                                            <th>Water</th>
+                                            <th>Total Volume</th>
+                                        </tr>
+                                        <tr>
+                                            <th>0.0 MgCl<sub>2</sub></th>
+                                            <td>9.55</td>
+                                            <td>6</td>
+                                            <td>2</td>
+                                            <td>2.45</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <th>1.4 MgCl<sub>2</sub></th>
+                                            <td>9.55</td>
+                                            <td>6</td>
+                                            <td>2</td>
+                                            <td>2.45</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <th>1.4 MgCl<sub>2</sub></th>
+                                            <td>9.55</td>
+                                            <td>6</td>
+                                            <td>2</td>
+                                            <td>2.45</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <th>2.1 MgCl<sub>2</sub></th>
+                                            <td>9.55</td>
+                                            <td>6</td>
+                                            <td>2</td>
+                                            <td>2.45</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <th>2.1 MgCl<sub>2</sub></th>
+                                            <td>9.55</td>
+                                            <td>6</td>
+                                            <td>2</td>
+                                            <td>2.45</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <th>0.0 MgCl<sub>2</sub></th>
+                                            <td>28.7</td>
+                                            <td>18</td>
+                                            <td>6</td>
+                                            <td>7.3</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <th>1.4 MgCl<sub>2</sub></th>
+                                            <td>28.7</td>
+                                            <td>18</td>
+                                            <td>6</td>
+                                            <td>7.3</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <th>1.4 MgCl<sub>2</sub></th>
+                                            <td>28.7</td>
+                                            <td>18</td>
+                                            <td>6</td>
+                                            <td>7.3</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <th>2.1 MgCl<sub>2</sub></th>
+                                            <td>28.7</td>
+                                            <td>18</td>
+                                            <td>6</td>
+                                            <td>7.3</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <th>2.1 MgCl<sub>2</sub></th>
+                                            <td>28.7</td>
+                                            <td>18</td>
+                                            <td>6</td>
+                                            <td>7.3</td>
+                                            <td>60</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div id="nano-tab5" class="tab-window">
+                            <p><strong>Objective: </strong>Synthesizing the sixth round of the DNA origami nanopores. From the previous attempts we had learned that an increase in concentration of magnesium chloride resulted in an increase in folding for the nanopore. Due to this, larger concentrations of magnesium chloride were used in an attempt to increase folding of the nanopore. In this attempt, the same varying concentrations of magnesium chloride were used.</p>
+                            <br>
+                            <ol>
+                                <li>Take out 9 PCR tubes and label each tube </li>
+                                <li>Add following components as listed in <strong>Table 6.</strong></li>
+                                <li>Add 20 uL mineral oil to all tubes</li>
+                                <li>Place PCR tubes into the thermal cycler and choose the setting titled “NANO-GP” which should follow this protocol
+                                    <ol type="a">
+                                        <li>From 80°C to 60°C at a rate of 1°C per 5 min;</li>
+                                        <li>Followed by 60°C to 20°C at a rate of 1°C per 300 min (5 hours).</li>
+                                        <li>Infinite hold at 20°C</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <table style="line-height: 1.2;">
+                                <caption>Table 6. Breakdown of contents added to each tube. Each tube contained a total reaction mixture of 80uL and an overall total volume of 100uL.</caption>
+
+                                <tr>
+                                    <th>Tube #</th>
+                                    <th>[MgCl<sub>2</sub>]</th>
+                                    <th>Staple (150nM) (uL)</th>
+                                    <th>Scaffold (30nM) (uL)</th>
+                                    <th>TBE Folding buffer (10X) (uL)</th>
+                                    <th>RNAse Free Water (uL)</th>
+                                    <th>MgCl<sub>2</sub> (uL)</th>
+                                    <th>Mineral Oil (uL)</th>
+                                    <th>TOTAL VOLUME (uL)</th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <td>0.0 MgCl<sub>2</sub></td>
+                                    <td>38.27</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>9.73</td>
+                                    <td>0.00</td>
+                                    <td>20</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>0.0 MgCl<sub>2</sub></td>
+                                    <td>38.27</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>9.73</td>
+                                    <td>0.00</td>
+                                    <td>20</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>1.4 MgCl<sub>2</sub></td>
+                                    <td>38.27</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>4.87</td>
+                                    <td>4.87</td>
+                                    <td>20</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <th>4</th>
+                                    <td>1.4 MgCl<sub>2</sub></td>
+                                    <td>38.27</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>4.87</td>
+                                    <td>4.87</td>
+                                    <td>20</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <th>5</th>
+                                    <td>2.1 MgCl<sub>2</sub></td>
+                                    <td>38.27</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>4.87</td>
+                                    <td>4.87</td>
+                                    <td>20</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <th>6</th>
+                                    <td>2.1 MgCl<sub>2</sub></td>
+                                    <td>38.27</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>4.87</td>
+                                    <td>4.87</td>
+                                    <td>20</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <th>7</th>
+                                    <td>14 MgCl<sub>2</sub></td>
+                                    <td>38.27</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>4.87</td>
+                                    <td>4.87</td>
+                                    <td>20</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <th>8</th>
+                                    <td>14 MgCl<sub>2</sub></td>
+                                    <td>38.27</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>4.87</td>
+                                    <td>4.87</td>
+                                    <td>20</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <th>9</th>
+                                    <td>21 MgCl<sub>2</sub></td>
+                                    <td>38.27</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>4.87</td>
+                                    <td>4.87</td>
+                                    <td>20</td>
+                                    <td>100</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div id="nano-tab6" class="tab-window">
+                            <p><strong>Objective: </strong>Gel electrophoresis was performed to visualize the folding of the nanopore. In these runs, 1X TAE buffer was used to create and run the gel at a constant amperage of 0.1A to allow for the nanopore to properly travel down the gel at a constant amperage to allow for better visualization of the folded nanopore. </p>
+                            <br>
+                            <p><u>Preparation of the Gel</u></p>
+                            <ol>
+                                <li>Weigh out a 2% agarose gel in an erlenmeyer flask.
+                                    <ol type="a">
+                                        <li>3 grams of agarose for a 150mL gel.</li>
+                                    </ol>
+                                </li>
+                                <li>Add 150mL of 1X TAE buffer to the agarose-containing flask. Swirl to mix.</li>
+                                <li>Melt the agarose/buffer mixture in a microwave, at 30 s intervals, remove the flask and swirl the contents to mix well. Repeat until the agarose has completely dissolved.</li>
+                                <li>Clean and place the gel tray into the casting apparatus. Place an appropriate comb into the gel mold to create the wells.</li>
+                                <li>Pour the molten agarose into the gel mold. Allow the agarose to set at room temperature.</li>
+                                <li>Remove the comb and place the gel in the gel tank.
+                                    <ol type="a">
+                                        <li>Place in a tank with the direction of DNA running from negative to positive.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <br>
+                            <p><u>Running the Gel</u></p>
+                            <ol>
+                                <li>Take out PCR tubes from the thermal cycler</li>
+                                <li>Pipette out 3uL of sample and add to a new PCR tube</li>
+                                <li>Pipette 3uL of loading dye and add to the new PCR tube that contains the 1uL of sample</li>
+                                <li>Mix by pipetting up and down</li>
+                                <li>Load 3uL of the sample + dye into the gel</li>
+                                <li>Repeat steps 1-5 for all PCR tubes</li>
+                                <li>Add 3uL of the folding mastermix to an empty PCR tube</li>
+                                <li>Add 3uL of loading dye to PCR tube containing 1uL of the mastermix and mix by pipetting up and down</li>
+                                <li>Load the sample into the gel</li>
+                                <li>Load DNA ladder into the gel</li>
+                                <li>Set the gel to run at a constant amperage of 0.1A and finish running once the dye has migrated over halfway across the gel.</li>
+                            </ol>
+                            <br>
+                            <p><u>Adding EtBr and imaging the gel </u></p>
+                            <ol>
+                                <li>For this gel, 22.5uL of EtBr was added to the container used for staining</li>
+                                <li>Cover the gel box with aluminum foil and avoid exposing the box to direct light</li>
+                                <li>Transfer gels to a rocking platform and agitate them for 30 minutes at 20 rpm at room temperature</li>
+                                <li>Image the gel using a transilluminator</li>
+                                <li>If there is high background observed, destain the gel in deionized water for 5-15 minutes to remove excess dye</li>
+                                <li>Post-stain image processing
+                                    <ol type="a">
+                                        <li>Open the gel image in ImageJ. Click on image on the top panel> color > split channels. Three windows should appear. Select the window with the green for the best results.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div id="nano-tab7" class="tab-window">
+                            <p><strong>Objective: </strong>Gel electrophoresis was performed to visualize the folding of the nanopore. In these runs, 1X TBE buffer with 6mM MgCl2 was used instead of 1X TAE buffer to create and run the gel at a constant amperage of 0.1A. The gel solution was changed to allow for better folding of the nanopore and better visualization of the folded nanopore on the gel.</p>
+                            <br>
+                            <p><u>Preparation of the Gel</u></p>
+                            <ol>
+                                <li>Weigh out a 2% agarose gel in an erlenmeyer flask.
+                                    <ol type="a">
+                                        <li>3 grams of agarose for a 150mL gel.</li>
+                                    </ol>
+                                </li>
+                                <li>Add the 150mL of 1X TBE buffer with 6mM MgCl2 to the agarose-containing flask. Swirl to mix.</li>
+                                <li>Melt the agarose/buffer mixture in a microwave, at 30 s intervals, remove the flask and swirl the contents to mix well. Repeat until the agarose has completely dissolved.</li>
+                                <li>Clean and place the gel tray into the casting apparatus. Place an appropriate comb into the gel mold to create the wells.</li>
+                                <li>Pour the molten agarose into the gel mold. Allow the agarose to set at room temperature.</li>
+                                <li>Remove the comb and place the gel in the gel tank.
+                                    <ol type="a">
+                                        <li>Place in a tank with the direction of DNA running from negative to positive.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <br>
+                            <p><u>Running the Gel</u></p>
+                            <ol>
+                                <li>Take out PCR tubes from the thermal cycler</li>
+                                <li>Pipette out 3uL of sample and add to a new PCR tube</li>
+                                <li>Pipette 3uL of loading dye and add to the new PCR tube that contains the 1uL of sample</li>
+                                <li>Mix by pipetting up and down </li>
+                                <li>Load 3uL of the sample + dye into the gel</li>
+                                <li>Repeat steps 1-5 for all PCR tubes </li>
+                                <li>Add 3uL of the folding mastermix to an empty PCR tube </li>
+                                <li>Add 3uL of loading dye to PCR tube containing 1uL of the mastermix and mix by pipetting up and down</li>
+                                <li>Load the sample into the gel</li>
+                                <li>Load DNA ladder into the gel </li>
+                                <li>Set the gel to run at a constant amperage of 0.1A and finish running once the dye has migrated over halfway across the gel.</li>
+                            </ol>
+                            <br>
+                            <p><u>Adding EtBr and imaging the gel</u></p>
+                            <ol>
+                                <li>For this gel, 22.5uL of EtBr was added to the container used for staining</li>
+                                <li>Cover the gel box with aluminum foil and avoid exposing the box to direct light </li>
+                                <li>Transfer gels to a rocking platform and agitate them for 30 minutes at 20 rpm at room temperature</li>
+                                <li>Image the gel using a transilluminator </li>
+                                <li>If there is high background observed, destain the gel in deionized water for 5-15 minutes to remove excess dye </li>
+                                <li>Post-stain image processing
+                                    <ol type="a">
+                                        <li>Open the gel image in ImageJ. Click on image on the top panel> color > split channels. Three windows should appear. Select the window with the green for the best results.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </section>
         
             <section id="experiments-liposome">

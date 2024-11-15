@@ -268,7 +268,20 @@ body {
 }
 
 .description-container {
-    padding: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.description-contents {
+    margin: 0 auto;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
@@ -287,6 +300,12 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: left;
+}
+
+.sub-container {
+    padding: 10px 50px;
+    text-align: left;
+    display: inline-block;
 }
 
 .subtitle-divider {
@@ -474,6 +493,45 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.members-cont {
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.members-cont h2 {
+    text-align: center;
+}
+
+.card-sub {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+}
+
+.card-sub-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card-sub-info p {
+    line-height: 1.2;
 }
 
 .cards-grid {
@@ -970,9 +1028,68 @@ footer {
 /* Results Section */
 .results-container {
     width: 100%;
-    height: 100vh;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.results-header {
+    background-image: url('/img/draft-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.results-contents {
+    margin: 0 auto;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.results-container table {
+    border: 1px solid rgb(140, 140, 140);
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.results-container th,
+.results-container td {
+    border: 1px solid rgb(160, 160, 160);
+    padding: 4px 10px;
+}
+
+.nano-content {
+    display: flex;
+    align-items: center;
+}
+
+.apt-content {
+    text-align: center;
+}
+
+.apt-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.apt-table td {
+    width: 33.33%;
+}
+
+.apt-table img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* results subwindow with tabs */

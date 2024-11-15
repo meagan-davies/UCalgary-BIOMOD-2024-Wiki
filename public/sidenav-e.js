@@ -134,3 +134,20 @@ function adjustTocPosition() {
 window.addEventListener('scroll', adjustTocPosition);
 
 
+// Get references to contents and TOC containers
+const contentsContainer = document.querySelector('.contents-e');
+
+// Sync TOC scroll position with content scroll position
+function syncTocScroll() {
+    const contentsRect = contentsContainer.getBoundingClientRect();
+    const tocRect = tocContainer.getBoundingClientRect();
+
+    // Get the visible center of `.contents-e`
+    const contentScrollRatio = (window.scrollY - contentsContainer.offsetTop) / contentsContainer.scrollHeight;
+
+    // Scroll `.toc-container-e` proportionally
+    tocContainer.scrollTop = contentScrollRatio * (tocContainer.scrollHeight - tocContainer.clientHeight);
+}
+
+// Attach scroll listener to window
+window.addEventListener('scroll', syncTocScroll);

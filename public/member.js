@@ -1,11 +1,72 @@
 const members = [
-    { id: 1, name: 'Amber Quo', role: 'role', img: '/img/temp.jpg', blurb: 'this is a blurb' },
-    { id: 2, name: 'Emma Klaffke', role: 'role', img: '/img/temp.jpg', blurb: 'this is a blurb' },
-    { id: 3, name: 'Ziyad Ali Syed', role: 'role', img: '/img/temp.jpg', blurb: 'this is a blurb' },
-    { id: 4, name: 'Sana Wahab', role: 'role', img: '/img/temp.jpg', blurb: 'this is a blurb' },
-    { id: 5, name: 'Meagan Davies', role: 'role', img: '/img/temp.jpg', blurb: 'this is a blurb' },
-    { id: 6, name: 'Stavan Patel', role: 'role', img: '/img/temp.jpg', blurb: 'this is a blurb' },
-    { id: 7, name: 'Jezrael Carpio', role: 'role', img: '/img/temp.jpg', blurb: 'this is a blurb' }
+    { 
+        id: 1, 
+        name: 'Meagan Davies', 
+        role: 'Dry Lab Lead', 
+        img: '/img/temp.jpg', 
+        blurb: 'I am passionate about interdisciplinary teamwork and research. Eager to build my leadership and technical skills, I thrive in collaborative environments, solving complex challenges at the intersection of biology, medicine, engineering, physics, and astronomy.', 
+        program: 'Astrophysics & Biomedical Engineering', 
+        year: '4', 
+        attributions: 'Experimental Planning, Design, Modelling, Wiki, Video Development' },
+    { 
+        id: 2, name: 'Amber Quo', 
+        role: 'Wet Lab Member', 
+        img: '/img/temp.jpg', 
+        blurb: 'I am inspired by the detailed processes that biomedical engineering unveil, specifically the ability to solve problems using biological systems. This project has given me an opportunity to utilise these skills and be a part of innovative research!',
+        program: 'Biomedical Engineering w/ minor in Digital Engineering',
+        year: '3',
+        attributions: 'Experimental Planning, Protocol Development, Wiki Content, Wet Lab Experimentation, Wiki'
+    },
+    { 
+        id: 3, 
+        name: 'Jezrael Carpio', 
+        role: 'Wet Lab Member', 
+        img: '/img/temp.jpg', 
+        blurb: 'I have a deep fascination for the intricate processes unveiled by multiple scientific disciplines. From photochemistry and quantum mechanics, to biology and medicine, there are artistic sides to science that fuels my curiosity and drives my passion for research.',
+        program: 'Chemistry & Nanoscience',
+        year: '4',
+        attributions: 'Experimental Planning, Protocol Development, Wiki Content, Wet Lab Experimentation'
+    },
+    { 
+        id: 4, 
+        name: 'Stavan Patel', 
+        role: 'Wet Lab Member', 
+        img: '/img/temp.jpg', 
+        blurb: 'The biological sciences field has always been a passion of mine, from the complex, yet fascinating, mechanisms of the human body to the profound impact of various medicines and treatments on the body. This passion has fueled my curiosity and driven me to pursue research related to the complexities of life at the molecular and cellular levels.', 
+        program: 'Biological Sciences (Genetics & Evolution)',
+        year: '4',
+        attributions: 'Experimental Planning, Protocol Development, Wiki Content, Wet Lab Experimentation'
+    },
+    { 
+        id: 5, 
+        name: 'Emma Klaffke', 
+        role: 'Wet Lab Member', 
+        img: '/img/temp.jpg', 
+        blurb: 'The field of chemistry/chemical research has always been very interesting to me. The understanding of matter and chemical substances as they relate to real-world processes and solutions is a passion of mine, which I am very excited to pursue through research. ',
+        program: 'Chemistry and Philosophy',
+        year: '5',
+        attributions: 'Experimental Planning, Protocol Development, Wiki Content, Wet Lab Experimentation'
+    },
+    { 
+        id: 6, 
+        name: 'Ziyad Syed', 
+        role: 'Wet Lab Member', 
+        img: '/img/temp.jpg', 
+        blurb: 'The machinery that allows cells and microorganisms to grow, sustain themselves, and replicate are teeming with complex activities and mechanisms. Studying these systems is something I love to explore in the lab. Seeing how we can manipulate and change what they do.' ,
+        program: 'Cellular, Molecular and Microbial Biology',
+        year: '4',
+        attributions: 'Experimental Planning, Protocol Development, Wiki Content, Wet Lab Experimentation'
+    },
+    { 
+        id: 7, 
+        name: 'Sana Wahab', 
+        role: 'Wet Lab Lead', 
+        img: '/img/temp.jpg', 
+        blurb: 'The complexity on the molecular and nanoscale is simply fascinating. The fact that something so small when studied, manipulated, and used to problem solve has the potential to impact people on a grander scale (e.g., Chimeric Antigen Receptor T-cell Therapy to solve cancer) is what drives me to keep researching and growing as a scientist in the field of biotechnology.',
+        program: 'Biological Sciences (Biotechnology Concentration)',
+        year: '4',
+        attributions: 'Experimental Planning, Protocol Development, Wiki Content, Wet Lab Experimentation'
+    }
 ]
 
 // TODO: add advisors (or just get #)
@@ -46,6 +107,9 @@ function openInfo(memberId) {
         document.getElementById('infoName').innerText = member.name
         document.getElementById('infoRole').innerText = member.role
         document.getElementById('infoBlurb').innerText = member.blurb
+        document.getElementById('infoProgram').innerHTML = "<strong>Program: </strong>" +  member.program
+        document.getElementById('infoYear').innerHTML = "<strong>Year: </strong>" +  member.year
+        document.getElementById('infoA').innerHTML = "<strong>Attributions: </strong>" +  member.attributions
     }
 }
 

@@ -21,7 +21,8 @@ body {
     position: sticky;
     max-height: 100vh;
     overflow-y: auto;
-    padding-right: 40px;
+    padding-right: 30px;
+    width: 17rem;
 }
 
 /* Style for sticky TOC when the header is out of view */
@@ -110,7 +111,7 @@ body {
 
 .contents-e {
     margin-top: -45%;
-    padding-left: 14em;
+    padding-left: 15em;
     max-width: 1300px;
     font-size: 1.2em;
 }
