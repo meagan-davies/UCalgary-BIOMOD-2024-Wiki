@@ -10,6 +10,7 @@
 - Run website by running: node app.js
 
 ### Wiki Page Guide
+- Home
 - Project
     - Description
     - Modelling
@@ -17,8 +18,6 @@
     - Results
     - Notebook
 - ELSI
-    - Safety
     - Ethics
+    - Safety
 - Team
-    - Members
-    - Sponsors
