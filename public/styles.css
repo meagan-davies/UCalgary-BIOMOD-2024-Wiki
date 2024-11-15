@@ -329,10 +329,7 @@ body {
     text-align: center;
 }
 
-.modelling-container {
-    width: 100%;
-    margin: 0 auto;
-}
+
 
 .modelling-container section {
     margin-bottom: 3rem;
@@ -360,6 +357,19 @@ body {
     max-height: 75vh;
     place-self: center;
     display: block;
+}
+
+@media (max-width: 1500px) {
+    .contents-m {
+        padding: 0;
+        transform: scale(0.96);
+    }
+    .container {
+        padding: 0;
+    }
+    .modelling-contents {
+        top: -10%;
+    }
 }
 
 .contents-m ol li{
@@ -1032,6 +1042,27 @@ footer {
     display: flex;
     position: relative;
 }
+
+/* Modelling */
+.modelling-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.modelling-contents {
+    margin: 0 auto;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width:1500px) {
+}
+
 
 /* Results Section */
 .results-container {
