@@ -131,6 +131,7 @@ function adjustTocPosition() {
     }
 }
 
+
 window.addEventListener('scroll', adjustTocPosition);
 
 
@@ -151,3 +152,21 @@ function syncTocScroll() {
 
 // Attach scroll listener to window
 window.addEventListener('scroll', syncTocScroll);
+
+// Select the toc element
+const ethicscont = document.querySelector('.ethics-container')
+const toc = ethicscont.querySelector('.toc-container-e');
+
+// Set an initial offset
+let initialTop = parseInt(window.getComputedStyle(toc).top) || 0;
+
+window.addEventListener('scroll', () => {
+    // Calculate the scroll offset
+    const scrollPosition = window.scrollY;
+
+    // Set the amount to move the TOC (adjust this value to control the speed)
+    const moveUpDistance = scrollPosition * 0.08;
+
+    // Update the `top` property to move the TOC up
+    toc.style.top = `${initialTop - moveUpDistance}px`;
+});

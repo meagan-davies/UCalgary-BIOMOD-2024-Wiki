@@ -1025,10 +1025,17 @@ footer {
     }
 }
 
+/* Ethics */
+.ethics-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
 /* Results Section */
 .results-container {
     width: 100%;
-    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     position: relative;
@@ -1054,6 +1061,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 2em;
 }
 
 .results-container table {

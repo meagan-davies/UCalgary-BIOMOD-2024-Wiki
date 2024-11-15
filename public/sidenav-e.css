@@ -13,8 +13,11 @@ body {
 
 /* Styling will have to depend on final version to account for not overlapping on footer area */
 .toc-container {
+    position: sticky;
     overflow-y: auto;
     padding-right: 40px;
+    max-height: 100vh;
+    width: 17rem;
 }
 
 .toc-container-e {
@@ -23,6 +26,7 @@ body {
     overflow-y: auto;
     padding-right: 30px;
     width: 17rem;
+    overflow-y: hidden;
 }
 
 /* Style for sticky TOC when the header is out of view */
@@ -30,12 +34,13 @@ body {
     position: sticky;
     top: 10px;
     left: 0;
-    max-height: 100vh;
+    height: 100vh;
     padding-bottom: 400px;
     transition: top 0.3s ease;
     overflow-y: hidden;
     width: 16rem;
     z-index: 1;
+    overflow-x: hidden;
 }
 
 .toc {
@@ -44,6 +49,7 @@ body {
     padding: 0.5em;
     width: 16em;
     line-height: 1.5;
+    
 }
 
 .toc ul, .toc li {
@@ -95,10 +101,12 @@ body {
 }
 
 .contents {
-    margin-top: -60%;
-    padding-left: 14em;
-    max-width: 1200px;
-    font-size: 1.2em;
+    margin: 0 auto;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contents h2, h3 {
