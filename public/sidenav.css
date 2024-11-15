@@ -7,6 +7,11 @@
     line-height: 1.5;
 } */
 
+.toc {
+    width: 14em;
+    margin-right: 3rem;
+}
+
 .toc ul {
     list-style: none;
     padding: 0;
@@ -36,6 +41,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+    overflow: visible;
 }
 
 .toc-marker path {
@@ -43,7 +49,8 @@
 }
 
 .contents {
-    padding-left: 10em;
+    padding-left: 3em;
+    margin-right: 2em;
     max-width: 1200px;
     font-size: 1.2em;
 }
@@ -68,12 +75,24 @@
 
 .toc-container {
     position: sticky;
-    width: 10em;
+    width: 17em;
     top: 0;
     padding-top: 3rem;
     max-height: 100vh;
     padding-right: 2em;
     padding-left: 2em;
+}
+
+.toc-container-e {
+    position: sticky;
+    width: 17em;
+    top: 0;
+    padding-top: 3rem;
+    height: 100vh;
+    padding-right: 2em;
+    padding-left: 2em;
+    overflow-y: auto;
+    overflow: visible;
 }
 
 .toc.hidden{
@@ -113,4 +132,9 @@
     body {
         font-size: 14px;
     }
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 30px;
 }

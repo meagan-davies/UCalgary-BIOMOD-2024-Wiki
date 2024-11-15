@@ -66,6 +66,16 @@ thead {
     transform: rotate(180deg);
 }
 
+.dropdown-arrow2 {
+    font-size: 1em;
+    transition: transform 0.3s;
+}
+
+/* Rotate arrow when active */
+.dropdown-arrow2.active {
+    transform: rotate(180deg);
+}
+
 .dropdown-content {
     display: none;
     padding: 30px;
