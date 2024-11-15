@@ -130,11 +130,11 @@
 
 @media screen and (max-width: 1200px) {
     body {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
-ul {
+.contents-et ul {
     list-style-type: disc;
     margin-left: 30px;
 }
