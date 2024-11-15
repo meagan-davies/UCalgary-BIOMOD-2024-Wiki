@@ -34,6 +34,9 @@
             list-style-type: none;
         }
 
+        .references{
+            padding: 50px;
+        }
         
     </style>
 </head>
@@ -93,10 +96,9 @@
                     <br>3. What minimally invasive diagnostic techniques for neurodegenerative diseases could be employed to reduce patient exposure to radiation?
                 </p>
             </div>
-            <div style="text-align: center;">
-                <img src="/img/desc-1.png" alt="Description 1" style="width: 500px; height: auto;">
-            </div>
-            
+            <figure class="image-container image-center">
+                <img src="/img/desc-1.png" alt="Description 1">
+            </figure>            
         </section>
 
         <section id="aptazyme">
@@ -108,23 +110,20 @@
                 </p> <br>
                 <p>Combining both of these functions we arrive at our aptazyme, a short RNA sequence which cleaves itself upon binding of theophylline. It consists of a linker that attaches it inside of the nanopore lumen. When attached, the space in the lumen is limited, preventing the movement of materials from flowing across the nanopore. The space then “opens” up upon the aptazyme self cleavage induced by target binding, letting flow of materials through the lumen.</p>
             </div>
-            <div style="text-align: center;">
-                <img src="/img/desc-2.png" alt="Description 2" style="width: 700px; height: auto;">
-            </div>
+            <figure class="image-container image-center">
+                <img src="/img/desc-2.png" alt="Description 2">
+            </figure>
         </section>
 
         <section id="tmsd">
             <div class="container">
-                <h2>Toehold-mediated Strand Displacement (TMSD)</h2>
+                <h2>Toehold-Mediated Strand Displacement (TMSD)</h2>
                 <div class="divider"></div>
                 <p>TMSD is a process often used in nanotechnology. In this process, one target strand of the RNA/DNA complex is displaced by a different incoming strand (invader strand) [6]. This is accomplished by the presence of a short, single-stranded segment at one end of both the target strand and the invader strand, which is referred to as the toehold. These two toehold sequences are complementary to one another, ultimately facilitating the displacement reaction through hybridization [7]. This project utilizes the principles of TMSD to displace the attached aptazyme component to the nanopore lumen. The incumbent strand is linked to the nanopore lumen and the Target strand is linked to the aptazyme. In the absence of the invader strand, the two sequences, being complementary to one another, attach the aptazyme to the lumen, effectively blocking the “opening” of the nanopore [8][9]. Suppose the biomarker of interest changes, since the aptamer portion of the aptazyme is specific to its target molecules, the whole aptazyme component should be exchanged for another [3]. This is accomplished by introducing the invader strand. Once this occurs, the aptazyme will be displaced, allowing a new aptazyme with an aptamer sequence tailored to the target of interest to bind to the nanopore. Detachment activities can be confirmed with the release of dye and a fluorescent change.</p> <br>
-
-                <img src="/img/desc-3.png" alt="Description 3" style="width: 100%;">
-                <p>[6]</p>
+                <figure class="image-container image-center">
+                    <img src="/img/desc-3.png" alt="Description 3">
+                </figure>
             </div>
-
-            
-            
         </section>
 
         <section id="nanopore">
@@ -132,12 +131,11 @@
                 <h2>Nanopore</h2>
                 <div class="divider"></div>
                 <p>A nanopore is a hollow channel that is entirely made up of DNA. The A-T and C-G base pairing through hydrogen bonds between DNA strands allow the channel to self-assemble. This technique of constructing complex nanoscaled structures through predictable interactions of DNA is termed DNA origami [9].</p><br>
+                <figure class="image-container image-right">
+                    <img src="/img/desc-4.png" alt="Description 4">
+                </figure>
                 <p>The 72 helix barrel nanopore structure used for DNADetect was generated from CaDNAno. To allow for insertion to the membrane the nanopore was designed to have up to 22 binding sites for universal cholesterol-modified DNA strands [9]. The advantage of using DNA origami to create a membrane channel is that it overcomes the requirement of having molecule-specific interactions and limited lumen sizes that come with protein nanopores. Furthermore, the well-characterised interactions of DNA allows for easier troubleshooting and on-demand molecular adjustment of the nanopore enabling rapid prototyping. </p><br>
                 <p>The 22 cholesterol-modified binding sites allow the nanopore to insert itself into a vesicle. Once inserted, a channel between the internal and external solutions is created, enabling free diffusion of molecules across the vesicle. This project aims to control the movement of molecules such that diffusion only occurs in response to target detection. To achieve this, aptazyme is attached to the nanopore lumen, acting as a “gatekeeper” [6]. In the presence of the target molecule, self-cleavage of the aptazyme occurs, opening the channel. The controlled release of the internal solution of the vesicle can then be designed to provide a measurable signal. Our design then incorporated two types of fluorescent dye with different sizes compatible to the space of the nanopore lumen. Thus, the nanopore serves as a pathway for molecular diffusion upon target binding, enabling a signal release mechanism that leverages the versatility of DNA origami [9].</p>
-
-                <div style="text-align: center;">
-                    <img src="/img/desc-4.png" alt="Description 4">
-                </div>
             </div>
         </section>
 

@@ -1061,6 +1061,9 @@ footer {
 }
 
 @media (max-width:1500px) {
+    .container{
+        padding: 20px;
+    }
 }
 
 
